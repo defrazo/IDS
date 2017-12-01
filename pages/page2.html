@@ -80,11 +80,6 @@
     <span class="progress-message"></span>
   </div>
 </div>
-		<!--div id="replaceble_block">
-			<div class="row">
-			
-				<a id="swon" class="btn btn-success">Секундомер</a>
-			</div-->
 
 			<div class="row">
 				<div class="col-md-12">
@@ -92,14 +87,13 @@
 						<span class="ok">Настройки</span>
 						<input type="checkbox" id="buttonThree2" />
   			<label class="z2" for="buttonThree2">
-  			<!-- class="attention" -->
     		<i></i>
   			</label>
  
 				</div>
 				<div class="col-md-2 text-center no-gutter">
 					<div id="fourthnext">
-			<a class="btn btn-success btn-lg" id="fourthnextb" onclick="localStorage.setItem('mval', 4); get_data();" href="./transit.html">Продолжить</a>
+			<a class="but" id="fourthnextb" onclick="localStorage.setItem('mval', 4); get_data();">Продолжить</a>
 		</div>
 
 				</div>
@@ -107,29 +101,13 @@
 <span class="ok">Секундомер</span>
 			<input type="checkbox" id="buttonThree" />
   			<label class="z1" for="buttonThree">
-  			<!-- class="attention" -->
     		<i></i>
   			</label>
 			</div>
 </div>
-			<!--/div>
-			<div class="row">
-			<div id="sw" class="col-md-12 text-center">
-				<form name="SW">
-					<input type=button class="btn btn-primary" value="Обнулить" onclick="ClearСlock()">  
-					<input name="stopwatch" class="stopwatch_value" size=10 value="00:00:00.00">  <br>
-					 <br>
-					<input type=button class="btn btn-primary" value="Пуск/Стоп" onclick="StartStop()">
-				<!br>
-					<input type=button class="btn btn-primary"  value="Выключить" onclick="Stop();"> 
-				</form>
-			</div>
-			</div>
-		</div-->
+			
 	</div>
-  
   <div class="container1">
-			<!-- time to add the controls -->
 			<input id="start" name="controls" type="radio" />
 			<input id="stop" name="controls" type="radio" />
 			<input id="reset" name="controls" type="radio" />
@@ -175,8 +153,43 @@
   
 
 		<br>
-		
-	
+		<div class="container2 col-md-offset-3 col-md-6">
+		<table>
+  <thead>
+    <tr>
+      <th>Опция</th>
+      <th>Параметр</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Тема</strong></td>
+      <td><select>
+	<option>Red</option>
+	<option>Grey</option>
+	<option>Blue</option>
+</select>
+</td>
+    </tr>
+    <tr>
+      <td><strong>Размер шрифта</strong></td>
+      <td><select>
+	<option>12 пт</option>
+	<option>14 пт</option>
+	<option>16 пт</option>
+</select></td>
+    </tr>
+    <tr>
+      <td><strong>Аудиофон</strong></td>
+      <td><select>
+	<option>Бах</option>
+	<option>Моцарт</option>
+	<option>Паганини</option>
+</select></td>
+    </tr>
+  </tbody>
+</table>
+	</div>
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script src="../js/bootstrap.min.js"></script>
@@ -193,14 +206,25 @@ $(function () {
 })
 
 
-	 $('#buttonThree').on('change', function(){ 
-	if($("#buttonThree").prop("checked")) {  
-    	$('.container1').css("display", "block");
-	} else {
-		$('.container1').css("display", "none");
-	}
+	$('#buttonThree').on('change', function() { 
+		if($("#buttonThree").prop("checked")) {
+			$("#buttonThree2").prop('checked', false);  
+    		$('.container1').css("display", "block");
+    		$('.container2').css("display", "none");
+		} else {
+			$('.container1').css("display", "none");
+		}
 	});
 
+	$('#buttonThree2').on('change', function() { 
+		if($("#buttonThree2").prop("checked")) { 
+			$("#buttonThree").prop('checked', false);   
+    		$('.container2').css("display", "block");
+    		$('.container1').css("display", "none");
+		} else {
+			$('.container2').css("display", "none");
+		}
+	});
 </script>
 	
 </body>
