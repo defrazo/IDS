@@ -6,17 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>VALEO</title>
 	<link rel="stylesheet" href="../css/bootstrap.css" media="all">
+	<link rel="stylesheet" href="../css/page.css" media="all">
 	<link rel="stylesheet" href="../css/style.css" media="all">
-	<link rel="stylesheet" href="../css/timer.css" media="all">
+	<link rel="stylesheet" href="../css/tip.css" media="all">
+	<link rel="stylesheet" href="../css/options.css" media="all">
+	<link rel="stylesheet" href="../css/stopwatch.css" media="all">
 </head>
 <body>
 	<div class="container">
-	<div class="header col-md-12 text-center">
-		<h1>Гуманитарный университет</h1>
-		<h2>Кафедра оздоровительной тренировки и профессионально-прикладной физической подготовки</h2>
-	</div>
-	<div class="content col-md-12 text-center no-gutter">
-	<div class="main_box">
+		<div class="header col-md-12 text-center">
+			<h1 class="text-uppercase">Гуманитарный университет</h1>
+			<h2>Кафедра оздоровительной тренировки и профессионально-прикладной физической подготовки</h2>
+		</div>
+		<div class="content col-md-12 text-center no-gutter">
+			<div class="main_box">
 				<div class="tabs">
 					<div class="tab">
 						<div class="first_tab">
@@ -34,7 +37,7 @@
 					<div class="tab">
 						<div class="question_field">
 							<p class="designation">Ваша фамилия:</p>
-								<input type="text" onkeydown="valide_fourth();" class="data_input_field" id="sname" required><span class="geek"></span><span id="validSname"></span>
+								<input type="text" onkeydown="valide_fourth();" class="data_input_field" id="sname" required><span id="validSname"></span>
 						</div>
 						<div class="question_field">
 							<p class="designation">Ваше имя:</p>
@@ -74,40 +77,31 @@
 				</div>
 			</div>
 		</div>
-		
-	<div class="col-md-12 text-center progress progress-striped active no-gutter">
-  	<div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
-    <span class="progress-message"></span>
-  </div>
-</div>
-
-			<div class="row">
-				<div class="col-md-12">
+		<div class="col-md-12 text-center progress progress-striped active no-gutter">
+			<div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+				<span class="progress-message"></span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12 no-gutter">
 				<div class="col-md-5 text-center no-gutter">
-						<span class="ok">Настройки</span>
-						<input type="checkbox" id="buttonThree2" />
-  			<label class="z2" for="buttonThree2">
-    		<i></i>
-  			</label>
- 
+					<span class="switch_name">Настройки</span>
+					<input type="checkbox" id="options_button" />
+					<label class="options_switch" for="options_button"><i></i></label>
 				</div>
 				<div class="col-md-2 text-center no-gutter">
 					<div id="fourthnext">
-			<a class="but" id="fourthnextb" onclick="localStorage.setItem('mval', 4); get_data();">Продолжить</a>
-		</div>
-
+						<a class="next_button" id="fourthnextb" onclick="localStorage.setItem('mval', 4); get_data();">Продолжить</a>
+					</div>
 				</div>
-			<div class="col-md-5 text-center no-gutter">
-<span class="ok">Секундомер</span>
-			<input type="checkbox" id="buttonThree" />
-  			<label class="z1" for="buttonThree">
-    		<i></i>
-  			</label>
+				<div class="col-md-5 text-center no-gutter">
+					<span class="switch_name">Секундомер</span>
+					<input type="checkbox" id="stopwatch_button" />
+					<label class="stopwatch_switch" for="stopwatch_button"><i></i></label>
+				</div>
 			</div>
-</div>
-			
-	</div>
-  <div class="container1">
+		</div>
+		<div class="stopwatch_container">
 			<input id="start" name="controls" type="radio" />
 			<input id="stop" name="controls" type="radio" />
 			<input id="reset" name="controls" type="radio" />
@@ -118,114 +112,87 @@
 				<div class="cell">
 					<div class="numbers hour moveten">0 1 2 3 4 5 6 7 8 9</div>
 				</div>
-				<div class="cell divider"><div class="numbers">:</div></div>
+				<div class="cell divider">
+					<div class="numbers">:</div>
+				</div>
 				<div class="cell">
 					<div class="numbers tenminute movesix">0 1 2 3 4 5 6</div>
 				</div>
 				<div class="cell">
 					<div class="numbers minute moveten">0 1 2 3 4 5 6 7 8 9</div>
 				</div>
-				<div class="cell divider"><div class="numbers">:</div></div>
+				<div class="cell divider">
+					<div class="numbers">:</div>
+				</div>
 				<div class="cell">
 					<div class="numbers tensecond movesix">0 1 2 3 4 5 6</div>
 				</div>
 				<div class="cell">
 					<div class="numbers second moveten">0 1 2 3 4 5 6 7 8 9</div>
 				</div>
-				<div class="cell divider"><div class="numbers">:</div></div>
+				<div class="cell divider">
+					<div class="numbers">:</div>
+				</div>
 				<div class="cell">
 					<div class="numbers milisecond moveten">0 1 2 3 4 5 6 7 8 9</div>
 				</div>
 				<div class="cell">
 					<div class="numbers tenmilisecond moveten">0 1 2 3 4 5 6 7 8 9</div>
 				</div>
-				<!--div class="cell">
-					<div class="numbers hundredmilisecond moveten">0 1 2 3 4 5 6 7 8 9</div>
-				</div-->
 			</div>
-			<!-- Lables for the controls -->
 			<div id="timer_controls">
 				<label for="start">Старт</label>
 				<label for="stop">Стоп</label>
 				<label for="reset">Сброс</label>
 			</div>
 		</div>
-  
-
-		<br>
-		<div class="container2 col-md-offset-3 col-md-6">
-		<table>
-  <thead>
-    <tr>
-      <th>Опция</th>
-      <th>Параметр</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong>Тема</strong></td>
-      <td><select>
-	<option>Red</option>
-	<option>Grey</option>
-	<option>Blue</option>
-</select>
-</td>
-    </tr>
-    <tr>
-      <td><strong>Размер шрифта</strong></td>
-      <td><select>
-	<option>12 пт</option>
-	<option>14 пт</option>
-	<option>16 пт</option>
-</select></td>
-    </tr>
-    <tr>
-      <td><strong>Аудиофон</strong></td>
-      <td><select>
-	<option>Бах</option>
-	<option>Моцарт</option>
-	<option>Паганини</option>
-</select></td>
-    </tr>
-  </tbody>
-</table>
-	</div>
+		<div class="options_container col-md-offset-3 col-md-6">
+			<table>
+				<thead>
+					<tr>
+						<th>Опция</th>
+						<th>Параметр</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Тема</td>
+						<td><select>
+							<option>Red</option>
+							<option>Grey</option>
+							<option>Blue</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>Размер шрифта</td>
+						<td><select>
+							<option>12 пт</option>
+							<option>14 пт</option>
+							<option>16 пт</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>Аудиофон</td>
+						<td><select>
+							<option>Бах</option>
+							<option>Моцарт</option>
+							<option>Паганини</option>
+							</select>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/script.js"></script>
 	<script src="../js/slider.js"></script>
 	<script src="../js/tip.js"></script>
 	<script src="../js/stopwatch.js"></script>
 	<script src="../js/prefixfree.js"></script>
 	<script src="../js/progressBar.js"></script>
-	<script>
-// после загрузки страницы
-$(function () {
-  // инициализировать все элементы на страницы, имеющих атрибут data-toggle="tooltip", как компоненты tooltip
-  $('[data-toggle="tooltip"]').tooltip()
-})
-
-
-	$('#buttonThree').on('change', function() { 
-		if($("#buttonThree").prop("checked")) {
-			$("#buttonThree2").prop('checked', false);  
-    		$('.container1').css("display", "block");
-    		$('.container2').css("display", "none");
-		} else {
-			$('.container1').css("display", "none");
-		}
-	});
-
-	$('#buttonThree2').on('change', function() { 
-		if($("#buttonThree2").prop("checked")) { 
-			$("#buttonThree").prop('checked', false);   
-    		$('.container2').css("display", "block");
-    		$('.container1').css("display", "none");
-		} else {
-			$('.container2').css("display", "none");
-		}
-	});
-</script>
-	
 </body>
 </html>
