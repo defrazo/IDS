@@ -11,12 +11,19 @@
 	<link rel="stylesheet" href="../css/tip.css" media="all">
 	<link rel="stylesheet" href="../css/options.css" media="all">
 	<link rel="stylesheet" href="../css/stopwatch.css" media="all">
+	<style>
+	/*.gr {
+		box-shadow: 0px 0px 15px 5px rgba(255, 9, 9, 0.75);
+		transition: all 0.7s ease;
+	}*/
+</style>
+
 </head>
 <body>
 	<div class="container">
 		<div class="header col-md-12 text-center">
 			<h1 class="text-uppercase">Гуманитарный университет</h1>
-			<h2>Кафедра оздоровительной тренировки и профессионально-прикладной физической подготовки</h2>
+			<h2>Субъективная оценка состояния здоровья <img src="../img/help.png" class="gr help-icon" data-toggle="tooltip" data-placement="right" title="Для субъективной оценки Вашего состояния здоровья Вам необходимо ответить на 29 вопросов. Для ответа на вопрос выберете «Да» или «Нет»"></h2>
 		</div>
 		<div class="content col-md-12 text-center no-gutter">
 			<div class="main_box">
@@ -246,60 +253,8 @@
 					<label class="options_switch" for="options_button"><i></i></label>
 				</div>
 				<div class="col-md-2 text-center no-gutter">
-					<div id="fourthnext">
-						<a class="next_button" id="fourthnextb" onclick="localStorage.setItem('mval', 4); get_data();">Продолжить</a>
-					</div>
+						<a href="results.html" class="next_button" id="test_submit" onclick="localStorage.setItem('mval', 4); get_data();">Продолжить</a>
 				</div>
-				<div class="col-md-5 text-center no-gutter">
-					<span class="switch_name">Секундомер</span>
-					<input type="checkbox" id="stopwatch_button" />
-					<label class="stopwatch_switch" for="stopwatch_button"><i></i></label>
-				</div>
-			</div>
-		</div>
-		<div class="stopwatch_container">
-			<input id="start" name="controls" type="radio" />
-			<input id="stop" name="controls" type="radio" />
-			<input id="reset" name="controls" type="radio" />
-			<div class="timer">
-				<div class="cell">
-					<div class="numbers tenhour moveten">0 1 2 3 4 5 6 7 8 9</div>
-				</div>
-				<div class="cell">
-					<div class="numbers hour moveten">0 1 2 3 4 5 6 7 8 9</div>
-				</div>
-				<div class="cell divider">
-					<div class="numbers">:</div>
-				</div>
-				<div class="cell">
-					<div class="numbers tenminute movesix">0 1 2 3 4 5 6</div>
-				</div>
-				<div class="cell">
-					<div class="numbers minute moveten">0 1 2 3 4 5 6 7 8 9</div>
-				</div>
-				<div class="cell divider">
-					<div class="numbers">:</div>
-				</div>
-				<div class="cell">
-					<div class="numbers tensecond movesix">0 1 2 3 4 5 6</div>
-				</div>
-				<div class="cell">
-					<div class="numbers second moveten">0 1 2 3 4 5 6 7 8 9</div>
-				</div>
-				<div class="cell divider">
-					<div class="numbers">:</div>
-				</div>
-				<div class="cell">
-					<div class="numbers milisecond moveten">0 1 2 3 4 5 6 7 8 9</div>
-				</div>
-				<div class="cell">
-					<div class="numbers tenmilisecond moveten">0 1 2 3 4 5 6 7 8 9</div>
-				</div>
-			</div>
-			<div id="timer_controls">
-				<label for="start">Старт</label>
-				<label for="stop">Стоп</label>
-				<label for="reset">Сброс</label>
 			</div>
 		</div>
 		<div class="options_container col-md-offset-3 col-md-6">
@@ -350,5 +305,25 @@
 	<script src="../js/stopwatch.js"></script>
 	<script src="../js/prefixfree.js"></script>
 	<script src="../js/progressBar.js"></script>
+	<script>
+	$(document).ready(function() {
+
+	var a = 0;
+	console.log("1");
+	$('.gr').mouseleave(function() {
+			 a++;
+			console.log("2");
+		})
+	function lol() {
+		
+		if (a == 0) {
+			console.log("3");
+			$(".gr").css('box-shadow', '0px 0px 15px 5px rgba(255, 9, 9, 0.75)');
+		} else {$(".gr").css('box-shadow', 'none');}
+		setTimeout(lol,1000);
+	}
+	lol();	
+});
+</script>
 </body>
 </html>
