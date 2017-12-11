@@ -7,84 +7,87 @@
 	<title>Внимание</title>
 	<link rel="stylesheet" href="../css/bootstrap.css" media="all">
 	<link rel="stylesheet" href="../css/page.css" media="all">
-	<link rel="stylesheet" href="../css/style.css" media="all">
+	<link rel="stylesheet" href="../css/results.css" media="all">
+	<link rel="stylesheet" href="../css/tip.css" media="all">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="../js/slider.js"></script>
+	<script src="../js/tip.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
 </head>
 <body>
 	<div class="container">
-	<div class="header col-md-12 text-center">
-		<h1>Гуманитарный университет</h1>
-		<h2>Результаты оценки биологического возраста</h2>
-	</div>
-	<div class="content col-md-12 text-center">
-		<div class="output_box output_print" align="center">
-			<table class="output_table">
-				<tr>
-					<td><p><b>Фамилия</b></p></td>
-					<td class="output_row" id="sname"></td>
-				</tr>
-				<tr>
-					<td><p><b>Имя</b></p></td>
-					<td class="output_row" id="fname"></td>
-				</tr>
-				<tr>
-					<td><p><b>Отчество</b></p></td>
-					<td class="output_row" id="mname"></td>
-				</tr>
-				<tr>
-					<td><p><b>Дата обследования</b></p></td>
-					<td class="output_row" id="date"></td>
-				</tr>
-				<tr>
-					<td><p><b>Пол</b></p></td>
-					<td class="output_row" id="gender"></td>
-				</tr>
-				<tr>
-					<td><p><b>Календарный возраст</b></p></td>
-					<td class="output_row" id="age"></td>
-				</tr>
-				<tr>
-					<td><p><b>Индивидуальный биологический возраст</b></p></td>
-					<td class="output_row" id="ibage"></td>
-				</tr>
-				<tr>
-					<td><p><b>Должный биологический возраст<span class="tip mini onscreen_no_print_tips" data-tooltip="Популяционный стандарт возрастного износа">!</span></b></p></td>
-					<td class="output_row" id="pbage"></td>
-				</tr>
-				<tr>
-					<td><p><b>Функциональный класс старения<span class="tip mini onscreen_no_print_tips" data-tooltip="Первый - наилучший. Пятый-наихудший">!</span></b></p></td>
-					<td class="output_row" id="faclass"></td>
-				</tr>
-				<tr>
-					<td><p><b>Темп старения</b></p></td>
-					<td class="output_row" id="arate"></td>
-				</tr>
-				<tr>
-					<td><p><b>Опережение сверстников по выраженности старения</b></p></td>
-					<td class="output_row" id="outrun"></td>
-				</tr>
-				<tr>
-					<td><p><b>Состояние здоровья</b></p></td><td class="output_row" id="status"></td>
-				</tr>
-				<tr>
-					<td><p><b>Патологический индекс<span class="tip mini onscreen_no_print_tips" data-tooltip="Число хронических заболеваний">!</span></b></p></td>
-					<td class="output_row" id="index"></td>
-				</tr>
-			</table>
-		</div>	
-		<div id="replaceble_block">
-			<div class="onscreen_no_print" align="center">
-				<a class="button_main" href="./classes.html">О классах</a>
-				<a class="button_main" href="./program.html">Продолжить</a>
-				<a class="button_main_print" onclick="print();"><img class="printImg" src="../images/prinet.png" width="35"> Печать</a>
+		<div class="header col-md-12 text-center">
+			<h1>Гуманитарный университет</h1>
+			<h2>Результаты оценки биологического возраста</h2>
+		</div>
+		<div class="col-md-12">
+			<div class="col-md-offset-2 col-md-8">
+				<table class="result_table table table-bordered table-hover">
+					<tr>
+						<td>Фамилия</td>
+						<td class="output_row" id="sname">Летунов</td>
+					</tr>
+					<tr>
+						<td>Имя</td>
+						<td class="output_row" id="fname">Евгений</td>
+					</tr>
+					<tr>
+						<td>Отчество</td>
+						<td class="output_row" id="mname">Дмитриевич</td>
+					</tr>
+					<tr>
+						<td>Дата обследования</td>
+						<td class="output_row" id="date">02.02.2017</td>
+					</tr>
+					<tr>
+						<td>Пол</td>
+						<td class="output_row" id="gender"></td>
+					</tr>
+					<tr>
+						<td>Календарный возраст</td>
+						<td class="output_row" id="age"></td>
+					</tr>
+					<tr>
+						<td>Индивидуальный биологический возраст</td>
+						<td class="output_row" id="ibage"></td>
+					</tr>
+					<tr>
+						<td>Должный биологический возраст <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="right" title="Популяционный стандарт возрастного износа."></td>
+						<td class="output_row" id="pbage"></td>
+					</tr>
+					<tr>
+						<td>Функциональный класс старения <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="right" title="Первый - наилучший. Пятый-наихудший."></td>
+						<td class="output_row" id="faclass">Первый</td>
+					</tr>
+					<tr>
+						<td>Темп старения</td>
+						<td class="output_row" id="arate"></td>
+					</tr>
+					<tr>
+						<td>Опережение сверстников по выраженности старения</td>
+						<td class="output_row" id="outrun"></td>
+					</tr>
+					<tr>
+						<td>Состояние здоровья</td><td class="output_row" id="status"></td>
+					</tr>
+					<tr>
+						<td>Патологический индекс <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="right" title="Число хронических заболеваний."></td>
+						<td class="output_row" id="index"></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div class="col-md-12 text-center no-gutter">
+			<div class="col-md-offset-3 col-md-2">
+				<a class="next_button" href="classes.html">О классах</a>
+			</div>
+			<div class="col-md-2">
+				<a class="next_button" href="end.html">Продолжить</a>
+			</div>
+			<div class="col-md-2">
+				<a class="next_button" onclick="print();"><img class="printImg" src="../images/prinet.png" width="35"> Печать</a>
 			</div>
 		</div>
 	</div>
-	<div class="col-md-offset-5 col-md-2 text-center">
-		<button type="button" class="btn btn-primary btn-lg">Продолжить</button>
-	</div>
-	</div>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-	<script src="../js/slider.js"></script>
-	<script src="../js/bootstrap.min.js"></script>
 </body>
 </html>

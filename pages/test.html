@@ -7,17 +7,39 @@
 	<title>VALEO</title>
 	<link rel="stylesheet" href="../css/bootstrap.css" media="all">
 	<link rel="stylesheet" href="../css/page.css" media="all">
-	<link rel="stylesheet" href="../css/style.css" media="all">
+	<link rel="stylesheet" href="../css/test.css" media="all">
+	<link rel="stylesheet" href="../css/slider.css" media="all">
 	<link rel="stylesheet" href="../css/tip.css" media="all">
 	<link rel="stylesheet" href="../css/options.css" media="all">
 	<link rel="stylesheet" href="../css/stopwatch.css" media="all">
-	<style>
-	/*.gr {
-		box-shadow: 0px 0px 15px 5px rgba(255, 9, 9, 0.75);
-		transition: all 0.7s ease;
-	}*/
-</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/script.js"></script>
+	<script src="../js/slider.js"></script>
+	<script src="../js/tip.js"></script>
+	<script src="../js/stopwatch.js"></script>
+	<script src="../js/prefixfree.js"></script>
+	<script src="../js/progressBar.js"></script>
+	<script>
+	$(document).ready(function() {
 
+		var a = 0;
+		console.log("1");
+		$('.gr').mouseleave(function() {
+				 a++;
+				console.log("2");
+			})
+		function lol() {
+			
+			if (a == 0) {
+				console.log("3");
+				$(".gr").css('box-shadow', '0px 0px 15px 5px rgba(255, 9, 9, 0.75)');
+			} else {$(".gr").css('box-shadow', 'none');}
+			setTimeout(lol,1000);
+		}
+		lol();	
+	});
+	</script>
 </head>
 <body>
 	<div class="container">
@@ -297,33 +319,5 @@
 			</table>
 		</div>
 	</div>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-	<script src="../js/bootstrap.min.js"></script>
-	<script src="../js/script.js"></script>
-	<script src="../js/slider.js"></script>
-	<script src="../js/tip.js"></script>
-	<script src="../js/stopwatch.js"></script>
-	<script src="../js/prefixfree.js"></script>
-	<script src="../js/progressBar.js"></script>
-	<script>
-	$(document).ready(function() {
-
-	var a = 0;
-	console.log("1");
-	$('.gr').mouseleave(function() {
-			 a++;
-			console.log("2");
-		})
-	function lol() {
-		
-		if (a == 0) {
-			console.log("3");
-			$(".gr").css('box-shadow', '0px 0px 15px 5px rgba(255, 9, 9, 0.75)');
-		} else {$(".gr").css('box-shadow', 'none');}
-		setTimeout(lol,1000);
-	}
-	lol();	
-});
-</script>
 </body>
 </html>
