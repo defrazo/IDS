@@ -1,3 +1,4 @@
+$(document).ready(function() {
 $('#stopwatch_button').on('change', function() { 
 	if($("#stopwatch_button").prop("checked")) {
 		$("#options_button").prop('checked', false);  
@@ -16,4 +17,5 @@ $('#options_button').on('change', function() {
 	} else {
 		$('.options_container').css("display", "none");
 	}
+});
 });

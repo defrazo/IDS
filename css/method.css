@@ -152,3 +152,18 @@ input[type=checkbox]:checked ~ .options_switch, input[type=checkbox]:checked ~ .
 input[type=checkbox]:checked ~ .options_switch i, input[type=checkbox]:checked ~ .stopwatch_switch i {
     right: -6px;
     }
+    #validSname,
+#validFname,
+#validMname,
+#validAge,
+#validWeight,
+#validSist,
+#validDia,
+#validInha,
+#validStatic {
+	margin-top: 13px;
+	margin-left: 3px;
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	}
