@@ -7,7 +7,7 @@ function get_data() { //Вносит заполненные данные из п
 	if (gender != 0) localStorage.setItem('genderinp', gender);
 
 	var sname = $("#sname").val();
-	if (sname != 0) localStorage.setItem('snameinp', sname);
+	if (sname != '') localStorage.setItem('snameinp', sname);
 	
 	var fname = $("#fname").val();
 	if (fname != 0) localStorage.setItem('fnameinp', fname);

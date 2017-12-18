@@ -6,10 +6,12 @@ $(document).ready(function() { //Проверка ввода фамилии
 		
 			if (isValidSname(sname)) { //Убирает класс ошибки с поля ввода
 				$("#validSname").css("background-image", "url('../img/validYes.png')");
+				$("#sname").css("border", "1px solid #aaa");
 				$(this).removeClass('error');
 				localStorage.setItem('vSname', 1);
 			} else { //Добавляет класс ошибки к полю ввода
 				$("#validSname").css("background-image", "url('../img/validNo.png')");
+				$("#sname").css("border", "1px solid #f00");
 				$(this).addClass('error');
 				$(this).val($(this).val().substr(0, 0)); //Удаляет строку
 			} 
@@ -35,10 +37,12 @@ $(document).ready(function() { //Проверка ввода имени
 			
 			if (isValidFname(fname)) {
 				$("#validFname").css("background-image", "url('../img/validYes.png')");
+				$("#fname").css("border", "1px solid #aaa");
 				$(this).removeClass('error');
 				localStorage.setItem('vFname', 1);
 			} else {
 				$("#validFname").css("background-image", "url('../img/validNo.png')");
+				$("#fname").css("border", "1px solid #f00");
 				$(this).addClass('error');
 				$(this).val($(this).val().substr(0, 0));
 			}
@@ -64,10 +68,12 @@ $(document).ready(function() { //Проверка ввода отчества
 			
 			if (isValidMname(mname)) {
 				$("#validMname").css("background-image", "url('../img/validYes.png')");
+				$("#mname").css("border", "1px solid #aaa");
 				$(this).removeClass('error');
 				localStorage.setItem('vMname', 1);
 			} else {
 				$("#validMname").css("background-image", "url('../img/validNo.png')");
+				$("#mname").css("border", "1px solid #f00");
 				$(this).val($(this).val().substr(0, 0));	
 				$(this).addClass('error');
 			}
@@ -96,10 +102,12 @@ $(document).ready(function() { //Проверка ввода возраста
 		
 			if (isValidAge(age)) {
 				$("#validAge").css("background-image", "url('../img/validYes.png')");
+				$("#age").css("border", "1px solid #aaa");
 				$(this).removeClass('error');
 				localStorage.setItem('vAge', 1);
 			} else {
 				$("#validAge").css("background-image", "url('../img/validNo.png')");
+				$("#age").css("border", "1px solid #f00");
 				$(this).addClass('error');
 				$(this).val($(this).val().substr(0, 0));
 			}
@@ -138,10 +146,12 @@ $(document).ready(function() { //Проверка ввода веса
 			
 			if (isValidWeight(weight)) {
 				$("#validWeight").css("background-image", "url('../img/validYes.png')");
+				$("#weight").css("border", "1px solid #aaa");
 				$(this).removeClass('error');
 				localStorage.setItem('vWeight', 1);
 			} else {
 				$("#validWeight").css("background-image", "url('../img/validNo.png')");
+				$("#weight").css("border", "1px solid #f00");
 				$(this).addClass('error');
 				$(this).val($(this).val().substr(0, 0));
 			}
@@ -180,10 +190,12 @@ $(document).ready(function() { //Проверка ввода систоличе�
 			
 			if (isValidSist(sist)) {
 				$("#validSist").css("background-image", "url('../img/validYes.png')");
+				$("#sist").css("border", "1px solid #aaa");
 				$(this).removeClass('error');
 				localStorage.setItem('vSist', 1);
 			} else {
 				$("#validSist").css("background-image", "url('../img/validNo.png')");
+				$("#sist").css("border", "1px solid #f00");
 				$(this).val($(this).val().substr(0, 0));
 				$(this).addClass('error');
 			}
@@ -216,10 +228,12 @@ $(document).ready(function() { //Проверка ввода диастолич�
 		if (dia != 0) {
 			if (isValidDia(dia)) {
 				$("#validDia").css("background-image", "url('../img/validYes.png')");
+				$("#dia").css("border", "1px solid #aaa");
 				$(this).removeClass('error');
 				localStorage.setItem('vDia', 1);
 			} else {
 				$("#validDia").css("background-image", "url('../img/validNo.png')");
+				$("#dia").css("border", "1px solid #f00");
 				$(this).val($(this).val().substr(0, 0));
 				$(this).addClass('error');
 			}
@@ -253,10 +267,12 @@ $(document).ready(function() { //Проверка ввода задержки д
 			
 			if (isValidInha(inha)) {
 				$("#validInha").css("background-image", "url('../img/validYes.png')");
+				$("#inha").css("border", "1px solid #aaa");
 				$(this).removeClass('error');
 				localStorage.setItem('vInha', 1);	
 			} else {
 				$("#validInha").css("background-image", "url('../img/validNo.png')");
+				$("#inha").css("border", "1px solid #f00");
 				$(this).val($(this).val().substr(0, 0));
 				$(this).addClass('error');
 			}
@@ -294,16 +310,18 @@ $(document).ready(function() { //Проверка ввода статическ�
 	$("#static").focusout(function() {
 		var static = $("#static").val();
 		
-		if ($(this).val() > 60) $(this).val($(this).val().substr(0, 0));
+		if ($(this).val() > 120) $(this).val($(this).val().substr(0, 0));
 
 		if (static != 0) {
 			
 			if (isValidStatic(static)) {
 				$("#validStatic").css("background-image", "url('../img/validYes.png')");
+				$("#static").css("border", "1px solid #aaa");
 				$(this).removeClass('error');	
 				localStorage.setItem('vStatic', 1);
 			} else {
 				$("#validStatic").css("background-image", "url('../img/validNo.png')");
+				$("#static").css("border", "1px solid #f00");
 				$(this).val($(this).val().substr(0, 0));
 				$(this).addClass('error');
 			}
@@ -316,7 +334,7 @@ $(document).ready(function() { //Проверка ввода статическ�
 	});  
 	
 	$('#static').keyup( function() {
-		if ($(this).val().length > 2) $(this).val($(this).val().substr(0, 2));        
+		if ($(this).val().length > 3) $(this).val($(this).val().substr(0, 3));        
 	});
 });
 

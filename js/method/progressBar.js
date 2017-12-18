@@ -1,5 +1,5 @@
 $(document).ready(function() { //Проверяет заполнение полей и заполняет ProgressBar
-	$(".tab").on('mouseover focuson focusout', function() {
+	$(".tab").on('click focuson focusout', function() {
 		var numValid = 0;
 		
 		$(".tab input[required]").each(function() {
@@ -10,9 +10,9 @@ $(document).ready(function() { //Проверяет заполнение пол�
 		    progressMessage = $(".progress-message");
 
 		if (numValid == 0) {
-			progress.css("width", "0%");
+			/*progress.css("width", "0%");
 		    progress.attr("aria-valuenow", "0");
-		    progressMessage.text("Прогресс: 0%");
+		    progressMessage.text("Прогресс: 0%");*/
 		}
 
 		if (numValid == 1) {

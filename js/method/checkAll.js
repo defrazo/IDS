@@ -15,37 +15,33 @@ $(document).mousemove(function() { //Проверяет заполнение в�
 
 	if ((v1) && (v2) && (v3) && (v4) && (v5) && (v6) && (v7) && (v8) && (v9) && (v10) && (v11)) {
 		
-		if ($("#fourthnext").is(":hidden")) { //Скрывает кнопку секундомера и отображает кнопку продолжить
-			
-			if ($("#swon").is(":visible")) $("#swon").css("display", "none");
+		if ($("#method_submit").is(":hidden")) { //Скрывает кнопку секундомера и отображает кнопку продолжить
 		
-			$("#fourthnext").css("display", "block");
+			$("#method_submit").css("display", "block");
 
-			$('#fourthnextb').removeClass("no_click"); //Активирует	
+			$('#method_submit').removeClass("no_click"); //Активирует	
 		}
 
-		if ($("#fourthnext").is(":visible")) { //Скрывает кнопку секундомера и отображает кнопку продолжить
+		if ($("#method_submit").is(":visible")) { //Скрывает кнопку секундомера и отображает кнопку продолжить
 
-			$('#fourthnextb').removeClass("no_click"); //Активирует	
+			$('#method_submit').removeClass("no_click"); //Активирует	
 		}
 	}
 
 	if ((!v1) || (!v2) || (!v3) || (!v4) || (!v5) || (!v6) || (!v7) || (!v8) || (!v9) || (!v10) || (!v11)) {
 		
-		$('#fourthnextb').addClass("no_click");
+		$('#method_submit').addClass("no_click");
 
-		if ($("#fourthnext").is(":visible")) { //Скрывает кнопку продолжить и отображает кнопку секундомера
+		if ($("#method_submit").is(":visible")) { //Скрывает кнопку продолжить и отображает кнопку секундомера
 		
-			if ($("#swon").is(":hidden")) $("#swon").css("display", "block");
-		
-			$("#fourthnext").css("display", "none");	
+			$("#method_submit").css("display", "none");	
 		}
 	}
 });
 
 function valide_fourth() {	//Проверяет заполненность поля
 
-	$('#fourthnextb').addClass("no_click"); //Деактивирует
+	$('#method_submit').addClass("no_click"); //Деактивирует
 
 	return false;
 };

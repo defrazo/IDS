@@ -149,3 +149,35 @@ input[type=checkbox]:checked ~ .options_switch {
 input[type=checkbox]:checked ~ .options_switch i {
     right: -6px;
     }
+
+@keyframes blink {
+	    0% { box-shadow: 0 0 30px red; }
+	    50% { box-shadow: none; }
+	    100% { box-shadow: 0 0 30px red; }
+	}
+
+	@-webkit-keyframes blink {
+	    0% { box-shadow: 0 0 30px red; }
+	    50% { box-shadow: 0 0 0; }
+	    100% { box-shadow: 0 0 30px red; }
+	}
+
+	.blink {
+	    -webkit-animation: blink 1.0s linear infinite;
+	    -moz-animation: blink 1.0s linear infinite;
+	    -ms-animation: blink 1.0s linear infinite;
+	    -o-animation: blink 1.0s linear infinite;
+	    animation: blink 1.0s linear infinite;
+	}
+
+		.error_designation {
+	box-shadow: 0 1px 0 red;
+	}	
+	
+	.error_radio {
+	border-radius: 10px !important;
+	box-shadow: 0 0 10px red;
+	}
+	#test_submit {
+		display: none;
+	}

@@ -37,6 +37,7 @@
     }
 
 .progress-message {
+	font-size: 15px;
     text-shadow: #000000 0 0 1px;
     }
 
@@ -167,3 +168,4 @@ input[type=checkbox]:checked ~ .options_switch i, input[type=checkbox]:checked ~
 	width: 16px;
 	height: 16px;
 	}
+
