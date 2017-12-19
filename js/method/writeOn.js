@@ -1,9 +1,9 @@
 function get_data() { //Вносит заполненные данные из полей формы в localStorage
-
+	
 	var date = $("#date").val();
 	if (date != 0) localStorage.setItem('dateinp', date);
 
-	var gender = $("['#gender']:checked").val();
+	var gender = $("input[name='gender']:checked").val();
 	if (gender != 0) localStorage.setItem('genderinp', gender);
 
 	var sname = $("#sname").val();
