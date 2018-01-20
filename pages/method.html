@@ -11,6 +11,8 @@
 	<link rel="stylesheet" href="../css/tip.css" media="all">
 	<link rel="stylesheet" href="../css/slider.css" media="all">
 	<link rel="stylesheet" href="../css/stopwatch.css" media="all">
+	<link rel="stylesheet" href="../css/options.css" media="all">
+	<link rel="stylesheet" href="../css/tes2t.css" media="all">
 	<script src="../js/jquery-3.js"></script>
 	<script src="../js/jquery-1.js"></script>
 	<script src="../js/bootstrap.js"></script>
@@ -23,7 +25,61 @@
 	<script src="../js/method/writeOn.js"></script>
 	<script src="../js/method/progressBar.js"></script>
 	<script src="../js/hotkeys.js"></script>
-	<script src="../js/keys.js"></script>
+	<!--script src="../js/keys.js"></script-->
+	<script>
+function changeFontSize(step) {
+	step = parseInt(step,10);
+
+	fontSize = $('.header').css('font-size');
+	newSize = parseInt(fontSize);
+	$('.header').css('font-size', newSize+step + 'px');
+	console.log(fontSize);
+	
+	fontSize = $('.designation').css('font-size');
+	newSize = parseInt(fontSize);
+	$('.designation').css('font-size', newSize+step + 'px');
+	console.log(fontSize);
+
+	fontSize = $('.data_input_field').css('font-size');
+	newSize = parseInt(fontSize);
+	$('.data_input_field').css('font-size', newSize+step + 'px');
+	console.log(fontSize);
+
+	fontSize = $('#timer_controls>label').css('font-size');
+	paddSize = $('.timer').css('padding');
+	newSize = parseInt(fontSize);
+	newPadd = parseInt(paddSize);
+	if (newSize < 20) {
+	$('#timer_controls>label').css('font-size', newSize+step + 'px');
+	$('.timer').css('padding', newPadd+step + 'px');
+	}
+	console.log(fontSize);
+
+
+
+	fontSize = $('.variant').css('font-size');
+	newSize = parseInt(fontSize);
+	$('.variant').css('font-size', newSize+step + 'px');
+	console.log(fontSize);
+}
+</script>
+
+	<script>
+		$(document).ready(function() {
+		    $("#switch_theme").change(function() {
+		        val = $("#switch_theme option:selected").text();
+		        if (val == 'Dark') {
+		        	$('body').css('background', 'url(../img/bg_dark.png)');
+		        	$('.header>h1').css('color','whitesmoke');
+		        	$('.header>h2').css('color','whitesmoke');
+		        }
+		       	if (val == 'Light') {
+		        	$('body').css('background', 'url(../img/bg_light.png)');
+		        }
+		    });
+		});
+	</script>
+
 </head>
 <body>
 	<div class="container">
@@ -97,30 +153,51 @@
 		</div>
 		<div class="row">
 			<div class="col-md-12 no-gutter">
-				<div class="col-md-offset-5 col-md-2 text-center no-gutter">
+				<div class="col-md-offset-1 col-md-3 text-center no-gutter">
+					<span class="switch_name">Настройки</span>
+					<input type="checkbox" id="options_button" />
+					<label class="options_switch" for="options_button"><i></i></label>
+				</div>
+				<div class="col-md-3 text-center no-gutter">
 						<a href="test.html" class="next_button" id="method_submit" onclick="localStorage.setItem('mval', 4); get_data();">Продолжить</a>
 				</div>
-				<div class="col-md-5 text-center no-gutter">
+				<div class="col-md-4 text-center no-gutter">
 					<span class="switch_name">Секундомер</span>
 					<input type="checkbox" id="stopwatch_button" />
 					<label class="stopwatch_switch" for="stopwatch_button"><i></i></label>
 				</div>
 			</div>
 		</div>
+
+		<div class="options_container col-md-offset-1 col-md-3">
+			<table>
+				<tbody>
+					<tr>
+						<td>
+							<span class="switch_name">Тема</span>
+							<select id="switch_theme">
+								<option selected disabled>Выберите</option>
+								<option value="dark">Dark</option>
+								<option value="light">Light</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span class="switch_name">Шрифт</span><br>
+							<a class="button_font" href="javascript:void(0);" onclick="changeFontSize('2');">+</a>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<a class="button_font" href="javascript:void(0);" onclick="changeFontSize(-2);">-</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
 		<div class="stopwatch_container">
 			<input id="start" name="controls" type="radio" />
 			<input id="stop" name="controls" type="radio" />
 			<input id="reset" name="controls" type="radio" />
 			<div class="timer">
-				<div class="cell">
-					<div class="numbers tenhour moveten">0 1 2 3 4 5 6 7 8 9</div>
-				</div>
-				<div class="cell">
-					<div class="numbers hour moveten">0 1 2 3 4 5 6 7 8 9</div>
-				</div>
-				<div class="cell divider">
-					<div class="numbers">:</div>
-				</div>
 				<div class="cell">
 					<div class="numbers tenminute movesix">0 1 2 3 4 5 6</div>
 				</div>

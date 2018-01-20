@@ -12,6 +12,15 @@ body {
     background: url(../img/bg.png); 
     }
 
+
+.theme_dark{
+    background: url(../img/bg_dark.png); 
+    }
+
+.theme_light{
+    background: url(../img/bg_light.png); 
+    }
+
 h1 {
     font-family: 'Bitter';
     color: #202020;
@@ -86,3 +95,24 @@ a.next_button:active {
  .no_click {
     pointer-events: none;
     }
+
+.button_font {
+    width:10px;
+    height: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 7px;
+    border: 1px black solid;
+    background-color: whitesmoke;
+    padding: 3px 20px;
+    text-decoration: none;
+}
+
+.button_font:hover {
+    text-decoration: none;
+}
+
+.tooltip-inner {
+    font-size: 16px;
+    max-width: 400px;
+}
