@@ -9,16 +9,7 @@
 
 body {
     padding: 5em 0;
-    background: url(../img/bg.png); 
-    }
-
-
-.theme_dark{
-    background: url(../img/bg_dark.png); 
-    }
-
-.theme_light{
-    background: url(../img/bg_light.png); 
+    background: url(../img/bg/bg.png); 
     }
 
 h1 {

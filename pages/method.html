@@ -19,6 +19,7 @@
 	<script src="../js/tip.js"></script>
 	<script src="../js/slider.js"></script>
 	<script src="../js/stopwatch.js"></script>
+	<script src="../js/themes.js"></script>
 	<script src="../js/method/script.js"></script>
 	<script src="../js/method/checkAll.js"></script>
 	<script src="../js/method/checkRecords.js"></script>
@@ -64,21 +65,7 @@ function changeFontSize(step) {
 }
 </script>
 
-	<script>
-		$(document).ready(function() {
-		    $("#switch_theme").change(function() {
-		        val = $("#switch_theme option:selected").text();
-		        if (val == 'Dark') {
-		        	$('body').css('background', 'url(../img/bg_dark.png)');
-		        	$('.header>h1').css('color','whitesmoke');
-		        	$('.header>h2').css('color','whitesmoke');
-		        }
-		       	if (val == 'Light') {
-		        	$('body').css('background', 'url(../img/bg_light.png)');
-		        }
-		    });
-		});
-	</script>
+
 
 </head>
 <body>
@@ -158,10 +145,10 @@ function changeFontSize(step) {
 					<input type="checkbox" id="options_button" />
 					<label class="options_switch" for="options_button"><i></i></label>
 				</div>
-				<div class="col-md-3 text-center no-gutter">
+				<div class="col-md-offset-1 col-md-2 text-center no-gutter">
 						<a href="test.html" class="next_button" id="method_submit" onclick="localStorage.setItem('mval', 4); get_data();">Продолжить</a>
 				</div>
-				<div class="col-md-4 text-center no-gutter">
+				<div class="col-md-offset-1 col-md-3 text-center no-gutter">
 					<span class="switch_name">Секундомер</span>
 					<input type="checkbox" id="stopwatch_button" />
 					<label class="stopwatch_switch" for="stopwatch_button"><i></i></label>
@@ -170,30 +157,37 @@ function changeFontSize(step) {
 		</div>
 
 		<div class="options_container col-md-offset-1 col-md-3">
-			<table>
+			<table class="options_table">
 				<tbody>
 					<tr>
 						<td>
 							<span class="switch_name">Тема</span>
 							<select id="switch_theme">
 								<option selected disabled>Выберите</option>
-								<option value="dark">Dark</option>
-								<option value="light">Light</option>
+								<option value="red">Red</option>
+								<option value="orange">Orange</option>
+								<option value="yellow">Yellow</option>
+								<option value="green">Green</option>
+								<option value="lightblue">Lightblue</option>
+								<option value="blue">Blue</option>
+								<option value="violet">Violet</option>
+								<option value="white">White</option>
+								<option value="grey">Grey</option>
+								<option value="black">Black</option>							
 							</select>
 						</td>
 					</tr>
 					<tr>
 						<td>
 							<span class="switch_name">Шрифт</span><br>
-							<a class="button_font" href="javascript:void(0);" onclick="changeFontSize('2');">+</a>
-							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-							<a class="button_font" href="javascript:void(0);" onclick="changeFontSize(-2);">-</a>
+							<button style="width: 48%; outline: none;" type="button" class="btn btn-default btn-md" onclick="changeFontSize('2');"><span class="glyphicon glyphicon-plus-sign"></span></button>
+							<button style="width: 48%; outline: none;" type="button" class="btn btn-default btn-md" onclick="changeFontSize(-2);"><span class="glyphicon glyphicon-minus-sign"></span></button>
 						</td>
 					</tr>
 				</tbody>
 			</table>
 		</div>
-		<div class="stopwatch_container">
+		<div class="stopwatch_container col-md-offset-4 col-md-4">
 			<input id="start" name="controls" type="radio" />
 			<input id="stop" name="controls" type="radio" />
 			<input id="reset" name="controls" type="radio" />
