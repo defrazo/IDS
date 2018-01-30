@@ -47,15 +47,27 @@ body {
         size: portrait;
         }
 
+    h1 {
+        font-size: 36px !important;
+        }
+
+    h2 {
+        font-size: 26px !important;
+        }
+        
     .help-icon{
         display: none;
         }
 
     .result_table td {
-        font-size: 25pt;
+        font-size: 25pt !important;
         }
 
     .controls {
         display: none;
+        }
+
+    .options_container {
+        display: none !important;
         }
     }

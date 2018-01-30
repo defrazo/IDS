@@ -89,4 +89,9 @@ function toDecreaseFont() {
 	if (newSize == '26')	$('.variant').css('font-size', '24px');
 	if (newSize == '24')	$('.variant').css('font-size', '22px');
 	if (newSize == '22')	$('.variant').css('font-size', '20px');
+
+	fontSize = $('a.next_button').css('font-size');
+	newSize = parseInt(fontSize);
+	if (newSize == '20')	$('a.next_button').css('font-size', '18px');
+	if (newSize == '18')	$('a.next_button').css('font-size', '16px');
 }

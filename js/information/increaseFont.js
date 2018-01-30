@@ -16,26 +16,15 @@ function toIncreaseFont() {
 	if (newSize == '32')	$('.header>h2').css('font-size', '34px');
 	if (newSize == '34')	$('.header>h2').css('font-size', '36px');
 
-	fontSize = $('.designation').css('font-size');
+	fontSize = $('.note').css('font-size');
 	newSize = parseInt(fontSize);
-	if (newSize == '22')	$('.designation').css('font-size', '24px');
-	if (newSize == '24')	$('.designation').css('font-size', '26px');
-	if (newSize == '26')	$('.designation').css('font-size', '28px');
-	if (newSize == '28')	$('.designation').css('font-size', '30px');
-	if (newSize == '30')	$('.designation').css('font-size', '32px');
-	
-	fontSize = $('.data_input_field').css('font-size');
-	newSize = parseInt(fontSize);
-	if (newSize == '20')	$('.data_input_field').css('font-size', '22px');
-	if (newSize == '22')	$('.data_input_field').css('font-size', '24px');
-	if (newSize == '24')	$('.data_input_field').css('font-size', '26px');
-	if (newSize == '26')	$('.data_input_field').css('font-size', '28px');
-	if (newSize == '28')	$('.data_input_field').css('font-size', '30px');
+	if (newSize == '24')	$('.note').css('font-size', '26px');
+	if (newSize == '26')	$('.note').css('font-size', '28px');
 
-	fontSize = $('.progress-message').css('font-size');
+	fontSize = $('.note b').css('font-size');
 	newSize = parseInt(fontSize);
-	if (newSize == '16')	$('.progress-message').css('font-size', '18px');
-	if (newSize == '18')	$('.progress-message').css('font-size', '20px');
+	if (newSize == '24')	$('.note b').css('font-size', '26px');
+	if (newSize == '26')	$('.note b').css('font-size', '28px');
 
 	fontSize = $('.switch_name').css('font-size');
 	newSize = parseInt(fontSize);

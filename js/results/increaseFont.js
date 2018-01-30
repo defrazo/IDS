@@ -15,19 +15,12 @@ function toIncreaseFont() {
 	if (newSize == '30')	$('.header>h2').css('font-size', '32px');
 	if (newSize == '32')	$('.header>h2').css('font-size', '34px');
 	if (newSize == '34')	$('.header>h2').css('font-size', '36px');
-
-	fontSize = $('.designation b').css('font-size');
+	
+	fontSize = $('.result_table td').css('font-size');
 	newSize = parseInt(fontSize);
-	if (newSize == '22')	$('.designation b').css('font-size', '24px');
-	if (newSize == '24')	$('.designation b').css('font-size', '26px');
-	if (newSize == '26')	$('.designation b').css('font-size', '28px');
-	if (newSize == '28')	$('.designation b').css('font-size', '30px');
-	if (newSize == '30')	$('.designation b').css('font-size', '32px');
-
-	fontSize = $('.progress-message').css('font-size');
-	newSize = parseInt(fontSize);
-	if (newSize == '16')	$('.progress-message').css('font-size', '18px');
-	if (newSize == '18')	$('.progress-message').css('font-size', '20px');
+	if (newSize == '20')	$('.result_table td').css('font-size', '22px');
+	if (newSize == '22')	$('.result_table td').css('font-size', '24px');
+	if (newSize == '24')	$('.result_table td').css('font-size', '26px');
 
 	fontSize = $('.switch_name').css('font-size');
 	newSize = parseInt(fontSize);
@@ -52,14 +45,6 @@ function toIncreaseFont() {
 	if (newSize == '20')	$('.glyphicon').css('font-size', '22px');
 	if (newSize == '22')	$('.glyphicon').css('font-size', '24px');
 	if (newSize == '24')	$('.glyphicon').css('font-size', '26px');
-
-	fontSize = $('.variant').css('font-size');
-	newSize = parseInt(fontSize);
-	if (newSize == '20')	$('.variant').css('font-size', '22px');
-	if (newSize == '22')	$('.variant').css('font-size', '24px');
-	if (newSize == '24')	$('.variant').css('font-size', '26px');
-	if (newSize == '26')	$('.variant').css('font-size', '28px');
-	if (newSize == '28')	$('.variant').css('font-size', '30px');
 
 	fontSize = $('a.next_button').css('font-size');
 	newSize = parseInt(fontSize);
