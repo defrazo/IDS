@@ -3,7 +3,7 @@
     }
 
 .main_box {
-    /*background: url(../img/bg/bg_mainbox.png);*/
+    background: url(../img/bg/bg_mainbox.png);
     box-shadow: 0 0 3px #AAAAAA;
     border-radius: 10px;
     background-color: none;
@@ -27,7 +27,7 @@
 .designation, .designation b {
     font-family: "Exo2";
     color: black;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: bold;
     margin: 0;
     cursor: default;
@@ -39,13 +39,13 @@
     box-shadow: 0px 0px 3px #ccc, 0 10px 15px #eee inset;
     border-radius: 2px;
     margin-top: 0.5em;
-    font-size: 16px;
+    font-size: 20px;
     padding: 1px 5px;
     text-align: center;
     }
 
 .progress-message {
-	font-size: 15px;
+	font-size: 16px;
     text-shadow: #000000 0 0 1px;
     }
 
@@ -171,16 +171,3 @@ input[type=checkbox]:checked ~ .stopwatch_switch i {
 	width: 16px;
 	height: 16px;
 	}
-.glyphicon {
-    font-size: 20px;
-}
-
-.options_table {
-    border: 1px solid black;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-#switch_theme {
-    outline: none;
-}

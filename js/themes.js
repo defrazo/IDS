@@ -1,15 +1,12 @@
 $(document).ready(function() {
     $("#switch_theme").change(function() {
         val = $("#switch_theme option:selected").val();
-        if (val == 'dark') {
-        	$('body').css('background', 'none');
-        	$('body').css('background', 'url(../img/bg_dark.png)');
-        	$('.header>h1').css('color','whitesmoke');
-        	$('.header>h2').css('color','whitesmoke');
-        }
+
 		if (val == 'red') {
 			$('body').css('background', 'none');
 			$('body').css('background', 'radial-gradient(ellipse, #FFFFFF, #e74c3c)');
+			$('.header>h1').css({'text-shadow' : 'white 0 0 9px'});
+			$('.header>h2').css({'text-shadow' : 'white 0 0 9px'});
 		}
 		if (val == 'orange') {
 			$('body').css('background', 'none');

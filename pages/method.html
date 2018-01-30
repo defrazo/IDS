@@ -12,7 +12,6 @@
 	<link rel="stylesheet" href="../css/slider.css" media="all">
 	<link rel="stylesheet" href="../css/stopwatch.css" media="all">
 	<link rel="stylesheet" href="../css/options.css" media="all">
-	<link rel="stylesheet" href="../css/tes2t.css" media="all">
 	<script src="../js/jquery-3.js"></script>
 	<script src="../js/jquery-1.js"></script>
 	<script src="../js/bootstrap.js"></script>
@@ -25,48 +24,10 @@
 	<script src="../js/method/checkRecords.js"></script>
 	<script src="../js/method/writeOn.js"></script>
 	<script src="../js/method/progressBar.js"></script>
+	<script src="../js/method/increaseFont.js"></script>
+	<script src="../js/method/decreaseFont.js"></script>
 	<script src="../js/hotkeys.js"></script>
 	<!--script src="../js/keys.js"></script-->
-	<script>
-function changeFontSize(step) {
-	step = parseInt(step,10);
-
-	fontSize = $('.header').css('font-size');
-	newSize = parseInt(fontSize);
-	$('.header').css('font-size', newSize+step + 'px');
-	console.log(fontSize);
-	
-	fontSize = $('.designation').css('font-size');
-	newSize = parseInt(fontSize);
-	$('.designation').css('font-size', newSize+step + 'px');
-	console.log(fontSize);
-
-	fontSize = $('.data_input_field').css('font-size');
-	newSize = parseInt(fontSize);
-	$('.data_input_field').css('font-size', newSize+step + 'px');
-	console.log(fontSize);
-
-	fontSize = $('#timer_controls>label').css('font-size');
-	paddSize = $('.timer').css('padding');
-	newSize = parseInt(fontSize);
-	newPadd = parseInt(paddSize);
-	if (newSize < 20) {
-	$('#timer_controls>label').css('font-size', newSize+step + 'px');
-	$('.timer').css('padding', newPadd+step + 'px');
-	}
-	console.log(fontSize);
-
-
-
-	fontSize = $('.variant').css('font-size');
-	newSize = parseInt(fontSize);
-	$('.variant').css('font-size', newSize+step + 'px');
-	console.log(fontSize);
-}
-</script>
-
-
-
 </head>
 <body>
 	<div class="container">
@@ -163,25 +124,25 @@ function changeFontSize(step) {
 						<td>
 							<span class="switch_name">Тема</span>
 							<select id="switch_theme">
-								<option selected disabled>Выберите</option>
-								<option value="red">Red</option>
-								<option value="orange">Orange</option>
-								<option value="yellow">Yellow</option>
-								<option value="green">Green</option>
-								<option value="lightblue">Lightblue</option>
-								<option value="blue">Blue</option>
-								<option value="violet">Violet</option>
-								<option value="white">White</option>
-								<option value="grey">Grey</option>
-								<option value="black">Black</option>							
+								<option class="theme_option" selected disabled>Выберите</option>
+								<option class="theme_option" value="red">Red</option>
+								<option class="theme_option" value="orange">Orange</option>
+								<option class="theme_option" value="yellow">Yellow</option>
+								<option class="theme_option" value="green">Green</option>
+								<option class="theme_option" value="lightblue">Lightblue</option>
+								<option class="theme_option" value="blue">Blue</option>
+								<option class="theme_option" value="violet">Violet</option>
+								<option class="theme_option" value="white">White</option>
+								<option class="theme_option" value="grey">Grey</option>
+								<option class="theme_option" value="black">Black</option>							
 							</select>
 						</td>
 					</tr>
 					<tr>
 						<td>
 							<span class="switch_name">Шрифт</span><br>
-							<button style="width: 48%; outline: none;" type="button" class="btn btn-default btn-md" onclick="changeFontSize('2');"><span class="glyphicon glyphicon-plus-sign"></span></button>
-							<button style="width: 48%; outline: none;" type="button" class="btn btn-default btn-md" onclick="changeFontSize(-2);"><span class="glyphicon glyphicon-minus-sign"></span></button>
+							<button style="width: 48%; outline: none;" type="button" class="btn btn-default btn-md" onclick="toIncreaseFont();"><span class="glyphicon glyphicon-plus-sign"></span></button>
+							<button style="width: 48%; outline: none;" type="button" class="btn btn-default btn-md" onclick="toDecreaseFont();"><span class="glyphicon glyphicon-minus-sign"></span></button>
 						</td>
 					</tr>
 				</tbody>
