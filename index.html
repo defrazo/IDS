@@ -4,25 +4,68 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>BIOAGE</title>
+	<title>SPECTRUM</title>
 	<link rel="stylesheet" href="css/bootstrap.css" media="all">
-	<link rel="stylesheet" href="css/page.css" media="all">
-	<link rel="stylesheet" href="css/index.css" media="all">
-	<script src="../js/hotkeys.js"></script>
-	<script src="../js/keys.js"></script>
+	<link rel="stylesheet" href="css/styles.css" media="all">
+	<script src="js/jquery-3.js"></script>
+	<script src="js/jquery-1.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/hotkeys.js"></script>
+	<script src="js/tip.js"></script>
+	<!--script src="js/keys.js"></script-->
 </head>
 <body>
 	<div class="container">
 		<div class="header col-md-12 text-center">
 			<h1 class="text-uppercase">Гуманитарный университет</h1>
-			<h2>Кафедра оздоровительной тренировки и профессионально-прикладной физической подготовки</h2>
+			<h2>Информационно-диагностическая система «SPECTRUM»</h2>
 		</div>
-		<div class="content col-md-offset-1 col-md-10 text-center">
-			<h1 class="text-uppercase name">Определение биологического возраста</h1>
-			<h2 class="name">по методике профессора В. П. Войтенко</h2>
-		</div>
-		<div class="col-md-offset-4 col-md-4 text-center">
-			<a href="./pages/information.html" class="next_button" id="index_submit" onclick="localStorage.clear();">Начать</a>
+		<div class="content col-md-12 text-center">
+			<div class="row">
+				<div class="methodics col-md-2 text-center">
+					<img src="img/application1.png" class="img-responsive" alt="">
+				</div>
+				<div class="col-md-10">
+					<h2 data-toggle="tooltip" data-placement="top" title="Определение биологического возраста без использования специализированного диагностического оборудования.">Определение биологического возраста по методике профессора <br> В. П. Войтенко</h2>
+					<a href="applications//bioage/bioage.html" class="next_button" id="index_submit" onclick="localStorage.clear();">Начать</a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="methodics col-md-2 text-center">
+					<img src="img/application2.png" class="img-responsive" alt="">
+				</div>
+				<div class="col-md-10">
+					<h2 data-toggle="tooltip" data-placement="top" title="Определение биологического возраста требует специализированного оборудования и может быть реализовано в условиях стационара или в хорошо оснащенной поликлинике (диагностическом центре).">Определение биологического возраста по методике Института геронтологии АМН СССР</h2>
+					<a href="./pages/information.html" class="next_button" id="index_submit" onclick="localStorage.clear();">Начать</a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="methodics col-md-2 text-center">
+					<img src="img/application3.png" class="img-responsive" alt="">
+				</div>
+				<div class="col-md-10">
+					<h2 data-toggle="tooltip" data-placement="top" title="Определение биологического возраста требует специализированного оборудования.">Определение биологического возраста по методике Института геронтологии АМН СССР (упрощенная)</h2>
+					<a href="./pages/information.html" class="next_button" id="index_submit" onclick="localStorage.clear();">Начать</a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="methodics col-md-2 text-center">
+					<img src="img/application4.png" class="img-responsive" alt="">
+				</div>
+				<div class="col-md-10">
+					<h2 data-toggle="tooltip" data-placement="top" title="Определение биологического возраста опирается на общедоступные показатели (требуется оборудование для измереня жизненной емкости легких).">Определение биологического возраста по методике <br> профессора Г. Л. Апанасенко</h2>
+					<a href="./pages/information.html" class="next_button" id="index_submit" onclick="localStorage.clear();">Начать</a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="methodics col-md-2 text-center">
+					<img src="img/application5.png" class="img-responsive" alt="">
+				</div>
+				<div class="col-md-10">
+					<h2 data-toggle="tooltip" data-placement="top" title="Диагностика личностных особенностей. Методика позволяет выделить десять базовых (невротизм, психотизм, депрессия, совестливость, расторможенность, общая активность, стеснительность, общительность, эстетическая впечатлительность, женственность) личностных факторов.">Определение индивидуально-психических особенностей личности по методике В.Мельникова, Л.Ямпольского</h2>
+					<a href="./pages/information.html" class="next_button" id="index_submit" onclick="localStorage.clear();">Начать</a>
+				</div>
+			</div>
 		</div>
 	</div>
 </body>
