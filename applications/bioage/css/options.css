@@ -87,6 +87,7 @@ tr:last-of-type td:last-child {
 tbody select, tbody select option {
     padding: 5px 0 5px 10px;
     border: none;
+    cursor: pointer;
     background-color: white;
     box-shadow: 0 0 3px #aaa;
     border-radius: 10px;
