@@ -40,7 +40,9 @@
     }
 
 .progress-message {
+    font-size: 16px;
     text-shadow: #000000 0 0 1px;
+    cursor: default;
     }
 
 @keyframes blink {

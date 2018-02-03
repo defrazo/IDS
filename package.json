@@ -1,0 +1,29 @@
+{
+    "app_name": "SPECTRUM",
+    "main": "index.html",
+    "name": "SPECTRUM",
+    "webexe_settings": {
+        "blacklist": "",
+        "custom_script": "",
+        "download_dir": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Desktop",
+        "export_dir": "output",
+        "force_download": false,
+        "mac-x64": false,
+        "nw_compression_level": 0,
+        "nw_version": "0.28.0",
+        "output_pattern": "",
+        "sdk_build": false,
+        "uncompressed_folder": false,
+        "whitelist": "",
+        "windows-x32": false,
+        "windows-x64": true
+    },
+    "webkit": {},
+    "window": {
+        "frame": false,
+        "id": "SPECTRUM",
+        "kiosk": true,
+        "kiosk_emulation": false,
+        "title": "SPECTRUM"
+    }
+}

@@ -18,9 +18,9 @@ function toDecreaseFont() {
 	
 	fontSize = $('.result_table td').css('font-size');
 	newSize = parseInt(fontSize);
-	if (newSize == '30')	$('.result_table td').css('font-size', '28px');
-	if (newSize == '28')	$('.result_table td').css('font-size', '26px');
 	if (newSize == '26')	$('.result_table td').css('font-size', '24px');
+	if (newSize == '24')	$('.result_table td').css('font-size', '22px');
+	if (newSize == '22')	$('.result_table td').css('font-size', '20px');
 
 	fontSize = $('.switch_name').css('font-size');
 	newSize = parseInt(fontSize);

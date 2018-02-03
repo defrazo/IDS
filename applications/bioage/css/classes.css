@@ -47,12 +47,16 @@ body {
         size: portrait;
         }
 
+    body {
+        padding: 0;
+        }
+
     h1 {
-        font-size: 36px !important;
+        font-size: 26px !important;
         }
 
     h2 {
-        font-size: 26px !important;
+        font-size: 16px !important;
         }
         
     .help-icon{
@@ -60,7 +64,8 @@ body {
         }
 
     .result_table td {
-        font-size: 25pt !important;
+        border: 5px solid black !important;
+        font-size: 15pt !important;
         }
 
     .controls {

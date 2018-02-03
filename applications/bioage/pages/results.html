@@ -27,62 +27,64 @@
 	<div class="container">
 		<div class="header col-md-12 text-center">
 			<h1 class="text-uppercase">Гуманитарный университет</h1>
-			<h2>Кафедра оздоровительной тренировки и профессионально-прикладной физической подготовки</h2>
+			<h2>Информационно-диагностическая система «SPECTRUM»</h2>
 			<h1>Результаты оценки биологического возраста</h1>
 		</div>
 		<div class="col-md-12">
 			<div class="col-md-12 text-center">
 				<table class="result_table table table-bordered table-hover">
+					<col width="300" valign="top">
+   					<col width="200" valign="top">
 					<tr>
 						<td>Фамилия</td>
-						<td class="output_row" id="sname"></td>
+						<td id="sname"></td>
 					</tr>
 					<tr>
 						<td>Имя</td>
-						<td class="output_row" id="fname"></td>
+						<td id="fname"></td>
 					</tr>
 					<tr>
 						<td>Отчество</td>
-						<td class="output_row" id="mname"></td>
+						<td id="mname"></td>
 					</tr>
 					<tr>
 						<td>Дата обследования</td>
-						<td class="output_row" id="date"></td>
+						<td id="date"></td>
 					</tr>
 					<tr>
 						<td>Пол</td>
-						<td class="output_row" id="gender"></td>
+						<td id="gender"></td>
 					</tr>
 					<tr>
 						<td>Календарный возраст</td>
-						<td class="output_row" id="age"></td>
+						<td id="age"></td>
 					</tr>
 					<tr>
 						<td>Индивидуальный биологический возраст</td>
-						<td class="output_row" id="ibage"></td>
+						<td id="ibage"></td>
 					</tr>
 					<tr>
-						<td>Должный биологический возраст <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="right" title="Популяционный стандарт возрастного износа."></td>
-						<td class="output_row" id="pbage"></td>
+						<td>Должный биологический возраст <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="top" title="Популяционный стандарт возрастного износа."></td>
+						<td id="pbage"></td>
 					</tr>
 					<tr>
-						<td>Функциональный класс старения <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="right" title="Первый - наилучший. Пятый-наихудший."></td>
-						<td class="output_row" id="faclass"></td>
+						<td>Функциональный класс старения <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="top" title="Первый - наилучший. Пятый-наихудший."> &nbsp &nbsp &nbsp<a class="btn btn-danger btn-sm class-button" href="classes.html">О классах</a></td>
+						<td id="faclass"></td>
 					</tr>
 					<tr>
 						<td>Темп старения</td>
-						<td class="output_row" id="arate"></td>
+						<td id="arate"></td>
 					</tr>
 					<tr>
 						<td>Опережение сверстников по выраженности старения</td>
-						<td class="output_row" id="outrun"></td>
+						<td id="outrun"></td>
 					</tr>
 					<tr>
-						<td>Состояние здоровья</td><td class="output_row" id="status"></td>
+						<td>Состояние здоровья</td><td id="status"></td>
 					</tr>
 					<tr>
-						<td>Патологический индекс <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="right" title="Число хронических заболеваний."></td>
-						<td class="output_row" id="index"></td>
+						<td>Патологический индекс <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="top" title="Число хронических заболеваний."></td>
+						<td id="index"></td>
 					</tr>
 				</table>
 			</div>
@@ -93,13 +95,10 @@
 				<input type="checkbox" id="options_button" />
 				<label class="options_switch" for="options_button"><i></i></label>
 			</div>
-			<div class="col-md-3">
+			<div class="col-md-4">
 				<a class="next_button" href="end.html">Продолжить</a>
 			</div>
-			<div class="col-md-2">
-				<a class="next_button" href="classes.html">О классах</a>
-			</div>
-			<div class="col-md-2">
+			<div class="col-md-3">
 				<a class="next_button" onclick="print();"><img class="printImg" src="../img/prinet.png" width="35"> Печать</a>
 			</div>
 		</div>
