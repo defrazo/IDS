@@ -1,5 +1,5 @@
 $(document).ready(function() { //Проверяет заполнение полей и заполняет ProgressBar
-	$(".tab").on('click focuson focusout', function() {
+	$(".tab").on('click focuson focusout mousemove', function() {
 		var numValid = 0;
 		
 		$(".tab input[required]").each(function() {

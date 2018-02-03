@@ -13,7 +13,8 @@
 	<script src="../js/bootstrap.js"></script>
 	<script src="../js/tip.js"></script>
 	<script src="../js/hotkeys.js"></script>
-	<script src="../js/keys.js"></script>
+	<script src="../js/themes.js"></script>
+	<!--script src="../js/keys.js"></script-->
 </head>
 <body>
 	<div class="container">
@@ -27,12 +28,31 @@
 			<h1 class="name">Завершено</h1>
 		</div>
 		<div class="col-md-12 text-center no-gutter">
-			<div class="col-md-offset-3 col-md-3">
+			<div class="col-md-4">
 				<a class="next_button" href="../index.html">Начать заново</a>
 			</div>
-			<div class="col-md-3">
+			<div class="col-md-4">
+				<a class="next_button" href="../../../index.html">Главное меню</a>
+			</div>
+			<div class="col-md-4">
 				<a class="next_button" onclick="window.close();">Выход</a>
 			</div>
+		</div>
+		<div class="theme">
+			<select class="switch_theme">
+				<option class="theme_option" selected disabled>Выберите</option>
+				<option class="theme_option" value="red">Red</option>
+				<option class="theme_option" value="orange">Orange</option>
+				<option class="theme_option" value="yellow">Yellow</option>
+				<option class="theme_option" value="green">Green</option>
+				<option class="theme_option" value="lightblue">Lightblue</option>
+				<option class="theme_option" value="blue">Blue</option>
+				<option class="theme_option" value="violet">Violet</option>
+				<option class="theme_option" value="white">White</option>
+				<option class="theme_option" value="grey">Grey</option>
+				<option class="theme_option" value="black">Black</option>	
+				<option class="theme_option" value="defaultt">Default</option>
+			</select>
 		</div>
 	</div>
 </body>
