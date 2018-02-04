@@ -1,19 +1,19 @@
 $(document).ready(function() { //Проверка ввода фамилии 
-	$("#sname").focusout(function() { //Проверяет значение поля при снятии фокуса с него
-		var sname = $("#sname").val();
+	$('#sname').focusout(function() { //Проверяет значение поля при снятии фокуса с него
+		var sname = $('#sname').val();
 		
 		if (sname != 0)	{
 		
 			if (isValidSname(sname)) { //Убирает класс ошибки с поля ввода
-				$("#sname").css("border", "1px solid #0dd01a");
+				$('#sname').css('border', '1px solid #0dd01a');
 				localStorage.setItem('vSname', 1);
 			} else { //Добавляет класс ошибки к полю ввода
-				$("#sname").css("border", "1px solid #f00");
+				$('#sname').css('border', '1px solid #f00');
 				$(this).val($(this).val().substr(0, 0)); //Удаляет строку
 			} 
 		}
 		
-		$("#sname").keyup(function() { //Убирает пробелы и прочие символы
+		$('#sname').keyup(function() { //Убирает пробелы и прочие символы
 			$(this).val($(this).val().trim());
 		});
 	});
@@ -25,21 +25,21 @@ function isValidSname(valsname) { //Проверяет соответствие 
 }
 
 $(document).ready(function() { //Проверка ввода имени
-	$("#fname").focusout(function() {
-		var fname = $("#fname").val();
+	$('#fname').focusout(function() {
+		var fname = $('#fname').val();
 		
 		if (fname != 0)	{
 			
 			if (isValidFname(fname)) {
-				$("#fname").css("border", "1px solid #0dd01a");
+				$('#fname').css('border', '1px solid #0dd01a');
 				localStorage.setItem('vFname', 1);
 			} else {
-				$("#fname").css("border", "1px solid #f00");
+				$('#fname').css('border', '1px solid #f00');
 				$(this).val($(this).val().substr(0, 0));
 			}
 		}
 		
-		$("#fname").keyup(function() {
+		$('#fname').keyup(function() {
 			$(this).val($(this).val().trim());
 		});
 	});
@@ -51,21 +51,21 @@ function isValidFname(valfname) {
 }
 
 $(document).ready(function() { //Проверка ввода отчества
-	$("#mname").focusout(function() {
-		var mname = $("#mname").val();
+	$('#mname').focusout(function() {
+		var mname = $('#mname').val();
 		
 		if (mname != 0)	{
 			
 			if (isValidMname(mname)) {
-				$("#mname").css("border", "1px solid #0dd01a");
+				$('#mname').css('border', '1px solid #0dd01a');
 				localStorage.setItem('vMname', 1);
 			} else {
-				$("#mname").css("border", "1px solid #f00");
+				$('#mname').css('border', '1px solid #f00');
 				$(this).val($(this).val().substr(0, 0));	
 			}
 		}
 		
-		$("#mname").keyup(function() {
+		$('#mname').keyup(function() {
 			$(this).val($(this).val().trim());
 		});
 	});
@@ -78,18 +78,18 @@ function isValidMname(valmname) {
 
 
 $(document).ready(function() { //Проверка ввода возраста
-	$("#age").focusout(function() {
-		var age = $("#age").val();
+	$('#age').focusout(function() {
+		var age = $('#age').val();
 		
 		if (($(this).val() < 6) || ($(this).val() > 70)) $(this).val($(this).val().substr(0, 0));
 
 		if (age != 0) {
 		
 			if (isValidAge(age)) {
-				$("#age").css("border", "1px solid #0dd01a");
+				$('#age').css('border', '1px solid #0dd01a');
 				localStorage.setItem('vAge', 1);
 			} else {
-				$("#age").css("border", "1px solid #f00");
+				$('#age').css('border', '1px solid #f00');
 				$(this).val($(this).val().substr(0, 0));
 			}
 		}
@@ -105,35 +105,35 @@ $(document).ready(function() { //Проверка ввода возраста
 });
 
 function isValidAge(valage) {
-	if ($("#age").val().length == 1) { //Проверяет при длине значения = 1
+	if ($('#age').val().length == 1) { //Проверяет при длине значения = 1
 		var pattern = new RegExp(/[0-9]/);
 		return pattern.test(valage);
 	} 
 
-	if ($("#age").val().length == 2) { //Проверяет при длине значения = 2
+	if ($('#age').val().length == 2) { //Проверяет при длине значения = 2
 		var pattern = new RegExp(/[0-9][0-9]/);
 		return pattern.test(valage);
 	}
 }
 
 $(document).ready(function() { //Проверка ввода веса 
-	$("#weight").focusout(function() {
-		var weight = $("#weight").val();
+	$('#weight').focusout(function() {
+		var weight = $('#weight').val();
 		
 		if (($(this).val() < 30) || ($(this).val() > 150)) $(this).val($(this).val().substr(0, 0));
 
 		if (weight != 0) {
 			
 			if (isValidWeight(weight)) {
-				$("#weight").css("border", "1px solid #0dd01a");
+				$('#weight').css('border', '1px solid #0dd01a');
 				localStorage.setItem('vWeight', 1);
 			} else {
-				$("#weight").css("border", "1px solid #f00");
+				$('#weight').css('border', '1px solid #f00');
 				$(this).val($(this).val().substr(0, 0));
 			}
 		}
 		
-		$("#weight").keyup(function() {
+		$('#weight').keyup(function() {
 			$(this).val($(this).val().trim());
 		});
 	});
@@ -144,35 +144,35 @@ $(document).ready(function() { //Проверка ввода веса
 });
 
 function isValidWeight(valweight) {
-	if ($("#weight").val().length == 2) {
+	if ($('#weight').val().length == 2) {
 		var pattern = new RegExp(/[0-9][0-9]/);
 		return pattern.test(valweight);
 	}
 
-	if ($("#weight").val().length == 3) {
+	if ($('#weight').val().length == 3) {
 		var pattern = new RegExp(/[0-9][0-9][0-9]/);
 		return pattern.test(valweight);
 	}
 }
 
 $(document).ready(function() { //Проверка ввода систолического давления  
-	$("#sist").focusout(function() {
-		var sist = $("#sist").val();
+	$('#sist').focusout(function() {
+		var sist = $('#sist').val();
 		
 		if (($(this).val() < 100) || ($(this).val() > 250)) $(this).val($(this).val().substr(0, 0));
 		
 		if (sist != 0) {
 			
 			if (isValidSist(sist)) {
-				$("#sist").css("border", "1px solid #0dd01a");
+				$('#sist').css('border', '1px solid #0dd01a');
 				localStorage.setItem('vSist', 1);
 			} else {
-				$("#sist").css("border", "1px solid #f00");
+				$('#sist').css('border', '1px solid #f00');
 				$(this).val($(this).val().substr(0, 0));
 			}
 		}
 		
-		$("#sist").keyup(function() {
+		$('#sist').keyup(function() {
 			$(this).val($(this).val().trim());
 		});
 	});  
@@ -183,29 +183,29 @@ $(document).ready(function() { //Проверка ввода систоличе�
 });
 
 function isValidSist(valsist) {
-	if ($("#sist").val().length == 3) {
+	if ($('#sist').val().length == 3) {
 		var pattern = new RegExp(/[0-9][0-9][0-9]/);
 		return pattern.test(valsist);
 	}
 }
 
 $(document).ready(function() { //Проверка ввода диастолического давления 
-	$("#dia").focusout(function() {
-		var dia = $("#dia").val();
+	$('#dia').focusout(function() {
+		var dia = $('#dia').val();
 		
 		if (($(this).val() < 50) || ($(this).val() > 99)) $(this).val($(this).val().substr(0, 0));
 
 		if (dia != 0) {
 			if (isValidDia(dia)) {
-				$("#dia").css("border", "1px solid #0dd01a");
+				$('#dia').css('border', '1px solid #0dd01a');
 				localStorage.setItem('vDia', 1);
 			} else {
-				$("#dia").css("border", "1px solid #f00");
+				$('#dia').css('border', '1px solid #f00');
 				$(this).val($(this).val().substr(0, 0));
 			}
 		}
 		
-		$("#dia").keyup(function() {
+		$('#dia').keyup(function() {
 			$(this).val($(this).val().trim());
 		});
 	});
@@ -216,30 +216,30 @@ $(document).ready(function() { //Проверка ввода диастолич�
 });
 
 function isValidDia(valdia) {
-	if ($("#dia").val().length == 2) {
+	if ($('#dia').val().length == 2) {
 		var pattern = new RegExp(/[0-9][0-9]/);
 		return pattern.test(valdia);
 	}
 }
 
 $(document).ready(function() { //Проверка ввода задержки дыхания после вдоха
-	$("#inha").focusout(function() {
-		var inha = $("#inha").val();
+	$('#inha').focusout(function() {
+		var inha = $('#inha').val();
 		
 		if ($(this).val() > 300) $(this).val($(this).val().substr(0, 0));
 
 		if (inha != 0) {
 			
 			if (isValidInha(inha)) {
-				$("#inha").css("border", "1px solid #0dd01a");
+				$('#inha').css('border', '1px solid #0dd01a');
 				localStorage.setItem('vInha', 1);	
 			} else {
-				$("#inha").css("border", "1px solid #f00");
+				$('#inha').css('border', '1px solid #f00');
 				$(this).val($(this).val().substr(0, 0));
 			}
 		}
 		
-		$("#inha").keyup(function() {
+		$('#inha').keyup(function() {
 			$(this).val($(this).val().trim());
 		});
 	});
@@ -250,40 +250,40 @@ $(document).ready(function() { //Проверка ввода задержки д
 });
 
 function isValidInha(valinha) {
-	if ($("#inha").val().length == 1) {
+	if ($('#inha').val().length == 1) {
 		var pattern = new RegExp(/[0-9]/);
 		return pattern.test(valinha);
 	} 
 
-	if ($("#inha").val().length == 2) {
+	if ($('#inha').val().length == 2) {
 		var pattern = new RegExp(/[0-9][0-9]/);
 		return pattern.test(valinha);
 	}
 
-	if ($("#inha").val().length == 3) {
+	if ($('#inha').val().length == 3) {
 		var pattern = new RegExp(/[0-9][0-9][0-9]/);
 		return pattern.test(valinha);
 	}
 }
 
 $(document).ready(function() { //Проверка ввода статической балансировки
-	$("#static").focusout(function() {
-		var static = $("#static").val();
+	$('#static').focusout(function() {
+		var static = $('#static').val();
 		
 		if ($(this).val() > 120) $(this).val($(this).val().substr(0, 0));
 
 		if (static != 0) {
 			
 			if (isValidStatic(static)) {
-				$("#static").css("border", "1px solid #0dd01a");	
+				$('#static').css('border', '1px solid #0dd01a');	
 				localStorage.setItem('vStatic', 1);
 			} else {
-				$("#static").css("border", "1px solid #f00");
+				$('#static').css('border', '1px solid #f00');
 				$(this).val($(this).val().substr(0, 0));
 			}
 		}
 		
-		$("#static").keyup(function() {
+		$('#static').keyup(function() {
 			$(this).val($(this).val().trim());
 		});
 	});  
@@ -294,12 +294,12 @@ $(document).ready(function() { //Проверка ввода статическ�
 });
 
 function isValidStatic(valstatic) {
-	if ($("#static").val().length == 1) {
+	if ($('#static').val().length == 1) {
 		var pattern = new RegExp(/[0-9]/);
 		return pattern.test(valstatic);
 	} 
 
-	if ($("#static").val().length == 2) {
+	if ($('#static').val().length == 2) {
 		var pattern = new RegExp(/[0-9][0-9]/);
 		return pattern.test(valstatic);
 	}

@@ -1,4 +1,4 @@
-function toIncreaseFont() {
+function toIncreaseFont() { //Увеличение шрифта
 	
 	fontSize = $('.header>h1').css('font-size');
 	newSize = parseInt(fontSize);

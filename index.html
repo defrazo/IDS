@@ -12,15 +12,15 @@
 	<script src="js/bootstrap.js"></script>
 	<script src="js/hotkeys.js"></script>
 	<script src="js/tip.js"></script>
-	<!--script src="js/keys.js"></script-->
+	<script src="js/keys.js"></script>
 </head>
 <body>
 	<div class="container">
-		<div class="header col-md-12 text-center">
+		<div class="header text-center">
 			<h1 class="text-uppercase">Гуманитарный университет</h1>
 			<h2>Информационно-диагностическая система «SPECTRUM»</h2>
 		</div>
-		<div class="content col-md-12 text-center">
+		<div class="content text-center">
 			<div class="row">
 				<div class="methodics col-md-2 text-center">
 					<img src="img/application1.png" class="img-responsive" alt="">
@@ -65,6 +65,12 @@
 					<h2 data-toggle="tooltip" data-placement="top" title="Диагностика личностных особенностей. Методика позволяет выделить десять базовых (невротизм, психотизм, депрессия, совестливость, расторможенность, общая активность, стеснительность, общительность, эстетическая впечатлительность, женственность) личностных факторов.">Определение индивидуально-психических особенностей личности по методике В.Мельникова, Л.Ямпольского</h2>
 					<a href="./pages/information.html" class="next_button" id="index_submit" onclick="localStorage.clear();">Начать</a>
 				</div>
+			</div>
+			<div class="col-md-offset-2 col-md-4">
+				<a class="next_button" onclick="window.close(); localStorage.clear();">Выход</a>
+			</div>
+			<div class="col-md-4">
+				<a class="next_button" data-toggle="tooltip" data-placement="top" title="Очистка данных, введенных другим пользователем (нажмите, если проводится обследование более одного человека подряд без перезапуска программы)." onclick="localStorage.clear();">Очистка данных</a>
 			</div>
 		</div>
 	</div>

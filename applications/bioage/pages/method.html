@@ -2,13 +2,11 @@
 <html onselectstart="return false;" lang="ru">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>BIOAGE</title>
+	<title>Сбор данных</title>
 	<link rel="stylesheet" href="../css/bootstrap.css" media="all">
 	<link rel="stylesheet" href="../css/page.css" media="all">
 	<link rel="stylesheet" href="../css/method.css" media="all">
-	<link rel="stylesheet" href="../css/tip.css" media="all">
 	<link rel="stylesheet" href="../css/slider.css" media="all">
 	<link rel="stylesheet" href="../css/stopwatch.css" media="all">
 	<link rel="stylesheet" href="../css/options.css" media="all">
@@ -17,7 +15,6 @@
 	<script src="../js/bootstrap.js"></script>
 	<script src="../js/tip.js"></script>
 	<script src="../js/slider.js"></script>
-	<script src="../js/stopwatch.js"></script>
 	<script src="../js/themes.js"></script>
 	<script src="../js/method/script.js"></script>
 	<script src="../js/method/checkAll.js"></script>
@@ -28,11 +25,11 @@
 	<script src="../js/method/decreaseFont.js"></script>
 	<script src="../js/restoreValues.js"></script>
 	<script src="../js/hotkeys.js"></script>
-	<!--script src="../js/keys.js"></script-->
+	<script src="../js/keys.js"></script>
 </head>
 <body>
 	<div class="container">
-		<div class="header col-md-12 text-center">
+		<div class="header text-center">
 			<h1 class="text-uppercase">Гуманитарный университет</h1>
 			<h2>Методика Профессора В. П. Войтенко</h2>
 		</div>
@@ -76,11 +73,11 @@
 					</div>		
 					<div class="tab">
 						<div class="question_field">
-							<p class="designation">Ваше давление систолическое: <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="right" title="Измеряется по общепринятой методике с помощью аппарата Рива-Роччи: на правой руке в положении сидя трижды с интервалом 5 минут. Учитывается наименьшая величина."></p>
+							<p class="designation">Ваше давление систолическое: <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="right" title="Измеряется по общепринятой методике при помощи аппарата Рива-Роччи: на правой руке в положении сидя трижды с интервалом 5 минут. Учитывается наименьшая величина."></p>
 							<input type="text" onkeydown="valide_fourth();" placeholder="мм рт. ст." class="data_input_field" id="sist" required><span id="validSist"></span>
 						</div>
 						<div class="question_field">
-							<p class="designation">Ваше давление диастолическое: <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="right" title="Измеряется по общепринятой методике с помощью аппарата Рива-Роччи: на правой руке в положении сидя трижды с интервалом 5 минут. Учитывается наименьшая величина."></p>
+							<p class="designation">Ваше давление диастолическое: <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="right" title="Измеряется по общепринятой методике при помощи аппарата Рива-Роччи: на правой руке в положении сидя трижды с интервалом 5 минут. Учитывается наименьшая величина."></p>
 							<input type="text" onkeydown="valide_fourth();" placeholder="мм рт. ст." class="data_input_field" id="dia" required><span id="validDia"></span>
 						</div>
 						<div class="question_field">
@@ -95,29 +92,26 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-md-12 text-center progress progress-striped active no-gutter">
+		<div class="col-md-12 progress progress-striped active text-center no-gutter">
 			<div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
 				<span class="progress-message"></span>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-12 no-gutter">
-				<div class="col-md-offset-1 col-md-3 text-center no-gutter">
-					<span class="switch_name">Настройки</span>
-					<input type="checkbox" id="options_button" />
-					<label class="options_switch" for="options_button"><i></i></label>
-				</div>
-				<div class="col-md-offset-1 col-md-2 text-center no-gutter">
-						<a href="test.html" class="next_button" id="method_submit" onclick="localStorage.setItem('mval', 4); get_data();">Продолжить</a>
-				</div>
-				<div class="col-md-offset-1 col-md-3 text-center no-gutter">
-					<span class="switch_name">Секундомер</span>
-					<input type="checkbox" id="stopwatch_button" />
-					<label class="stopwatch_switch" for="stopwatch_button"><i></i></label>
-				</div>
+			<div class="col-md-offset-1 col-md-3 text-center no-gutter">
+				<span class="switch_name">Настройки</span>
+				<input type="checkbox" id="options_button" />
+				<label class="options_switch" for="options_button"><i></i></label>
+			</div>
+			<div class="col-md-offset-1 col-md-2 text-center no-gutter">
+					<a href="test.html" class="next_button" id="method_submit" onclick="localStorage.setItem('mval', 4); get_data();">Продолжить</a>
+			</div>
+			<div class="col-md-offset-1 col-md-3 text-center no-gutter">
+				<span class="switch_name">Секундомер</span>
+				<input type="checkbox" id="stopwatch_button" />
+				<label class="stopwatch_switch" for="stopwatch_button"><i></i></label>
 			</div>
 		</div>
-
 		<div class="options_container col-md-offset-1 col-md-3">
 			<table class="options_table">
 				<tbody>

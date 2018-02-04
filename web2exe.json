@@ -2,7 +2,7 @@
     "webexe_settings": {
         "blacklist": "",
         "custom_script": "",
-        "download_dir": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Desktop",
+        "download_dir": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Downloads",
         "export_dir": "output",
         "force_download": false,
         "mac-x64": false,

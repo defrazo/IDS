@@ -1,5 +1,4 @@
-
-function fourth() { //Обработчик четвертой методики
+function method() { //Обработчик четвертой методики
 	var gender = localStorage.getItem('genderinp'), category = 0;
 	
 	if (gender == "Мужской") {

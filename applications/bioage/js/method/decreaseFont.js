@@ -1,4 +1,4 @@
-function toDecreaseFont() {
+function toDecreaseFont() { //Уменьшение шрифта
 
 	fontSize = $('.header>h1').css('font-size');
 	newSize = parseInt(fontSize);
@@ -65,7 +65,7 @@ function toDecreaseFont() {
 	newSize = parseInt(fontSize);
 	if (newSize == '22')	$('#timer_controls>label').css('font-size', '20px');
 	if (newSize == '20')	$('#timer_controls>label').css('font-size', '18px');
-	if (newSize == '14')	$('#timer_controls>label').css('font-size', '16px');
+	if (newSize == '18')	$('#timer_controls>label').css('font-size', '16px');
 	if (newSize == '16')	$('#timer_controls>label').css('font-size', '14px');
 
 	newSize = $('.timer').css('padding');

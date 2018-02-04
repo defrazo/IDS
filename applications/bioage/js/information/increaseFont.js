@@ -1,4 +1,4 @@
-function toIncreaseFont() {
+function toIncreaseFont() { //Увеличение шрифта
 	
 	fontSize = $('.header>h1').css('font-size');
 	newSize = parseInt(fontSize);
@@ -49,35 +49,6 @@ function toIncreaseFont() {
 	if (newSize == '20')	$('.glyphicon').css('font-size', '22px');
 	if (newSize == '22')	$('.glyphicon').css('font-size', '24px');
 	if (newSize == '24')	$('.glyphicon').css('font-size', '26px');
-
-	fontSize = $('#timer_controls>label').css('font-size');
-	newSize = parseInt(fontSize);
-	if (newSize == '14')	$('#timer_controls>label').css('font-size', '16px');
-	if (newSize == '16')	$('#timer_controls>label').css('font-size', '18px');
-	if (newSize == '18')	$('#timer_controls>label').css('font-size', '20px');
-	if (newSize == '20')	$('#timer_controls>label').css('font-size', '22px');
-
-	fontSize = $('.timer').css('padding');
-	newSize = parseInt(fontSize);
-	if (newSize == '10')	$('.timer').css('padding', '12px');
-	if (newSize == '12')	$('.timer').css('padding', '14px');
-	if (newSize == '14')	$('.timer').css('padding', '16px');
-
-	fontSize = $('.numbers').css('font-size');
-	newSize = parseInt(fontSize);
-	if (newSize == '36')	$('.numbers').css('font-size', '40px');
-	if (newSize == '40')	$('.numbers').css('font-size', '44px');
-	if (newSize == '44')	$('.numbers').css('font-size', '48px');
-	if (newSize == '48')	$('.numbers').css('font-size', '52px');
-	if (newSize == '52')	$('.numbers').css('font-size', '56px');
-
-	fontSize = $('.variant').css('font-size');
-	newSize = parseInt(fontSize);
-	if (newSize == '20')	$('.variant').css('font-size', '22px');
-	if (newSize == '22')	$('.variant').css('font-size', '24px');
-	if (newSize == '24')	$('.variant').css('font-size', '26px');
-	if (newSize == '26')	$('.variant').css('font-size', '28px');
-	if (newSize == '28')	$('.variant').css('font-size', '30px');
 
 	fontSize = $('a.next_button').css('font-size');
 	newSize = parseInt(fontSize);

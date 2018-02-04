@@ -1,8 +1,8 @@
 $(document).ready(function() {
 
-	if (localStorage.getItem('theme') != '') $(".switch_theme option:selected").val(localStorage.getItem('theme'));
+	if (localStorage.getItem('theme') != '') $('.switch_theme option:selected').val(localStorage.getItem('theme'));
 
-        val = $(".switch_theme option:selected").val();
+        val = $('.switch_theme option:selected').val();
 
 		if (val == 'red') {
 			$('body').css('background', 'none');

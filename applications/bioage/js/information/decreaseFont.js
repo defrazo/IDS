@@ -1,4 +1,4 @@
-function toDecreaseFont() {
+function toDecreaseFont() { //Уменьшение шрифта
 
 	fontSize = $('.header>h1').css('font-size');
 	newSize = parseInt(fontSize);

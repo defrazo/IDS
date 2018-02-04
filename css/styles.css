@@ -50,31 +50,12 @@ h2 {
         border-radius: 10px;
         -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
         }
- 
-.no_click {
-    pointer-events: none;
-    }
-
-.button_font {
-    width:10px;
-    height: 10px;
-    font-size: 20px;
-    font-weight: bold;
-    border-radius: 7px;
-    border: 1px black solid;
-    background-color: whitesmoke;
-    padding: 3px 20px;
-    text-decoration: none;
-}
-
-.button_font:hover {
-    text-decoration: none;
-}
 
 .tooltip-inner {
     font-size: 16px;
     max-width: 600px;
-}
+    }
+
 .content {
     margin-top: 3em;
     margin-bottom: 3em;
@@ -119,4 +100,4 @@ a.next_button:active {
 
 .row {
     margin-bottom: 2em;
-}
+    }
