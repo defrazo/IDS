@@ -1,0 +1,79 @@
+body {
+    padding: 2em 0;
+    }
+
+.result_table {
+    background-color: #fff;
+    border: solid 3px #797373;
+    cursor: default;
+    }
+
+.result_table td {
+    font-size: 20px;
+    font-family: 'Exo2';
+    vertical-align: middle !important;
+    }
+
+.printImg {
+    width: 18px;
+    }
+
+#neuroticism1, #neuroticism2, #neuroticism3,.neuroticismR1, .neuroticismR2, .neuroticismR3,
+#psychotism1, #psychotism2, #psychotism3, .psychotismR1, .psychotismR2, .psychotismR3,
+#depression1, #depression2, #depression3, .depressionR1, .depressionR2, .depressionR3,
+#conscientiousness1, #conscientiousness2, #conscientiousness3, .conscientiousnessR1, .conscientiousnessR2, .conscientiousnessR3,
+#disinhibition1, #disinhibition2, #disinhibition3, .disinhibitionR1, .disinhibitionR2, .disinhibitionR3,
+#activity1, #activity2, #activity3, .activityR1, .activityR2, .activityR3,
+#shyness1, #shyness2, #shyness3, .shynessR1, .shynessR2, .shynessR3,
+#sociability1, #sociability2, #sociability3, .sociabilityR1, .sociabilityR2, .sociabilityR3,
+#susceptibility1, #susceptibility2, #susceptibility3, .susceptibilityR1, .susceptibilityR2, .susceptibilityR3,
+#femininity1, #femininity2, #femininity3, .femininityR1, .femininityR2, .femininityR3 {
+    display: none;
+    }
+
+.test_info {
+    display: inline-block;
+    }
+
+.person {
+    margin: 10px;
+    background: url(../img/bg/bg_mainbox.png);
+    width: auto;
+    height: auto;
+    border: 2px solid black;
+    }
+
+@media print {
+    @page {
+        size: portrait;
+        }
+
+    h1 {
+        font-size: 26px !important;
+        }
+
+    h2 {
+        font-size: 16px !important;
+        }
+
+    .help-icon{
+        display: none;
+        }
+
+    .result_table td {
+        border: 5px solid black !important;
+        font-size: 15pt !important;
+        }
+
+    .controls {
+        display: none;
+        }
+
+    .options_container {
+        display: none !important;
+        }
+
+    .class-button {
+        display: none !important;
+        }
+    }
