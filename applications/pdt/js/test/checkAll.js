@@ -200,12 +200,12 @@ $(document).mousemove(function() { // Проверяет заполнение в
 		(vq161) && (vq162) && (vq163) && (vq164) && (vq165) && (vq166) && (vq167) && (vq168) && (vq169) && (vq170) &&
 		(vq171) && (vq172) && (vq173) && (vq174)) {
 
-			if ($("#testnext").is(":hidden")) $("#testnext").css("display", "block"); // Отображает кнопку "Продолжить"
+			if ($("#test_submit").is(":hidden")) $("#test_submit").css("display", "block"); // Отображает кнопку "Продолжить"
 		}
 
 	if ((!v1) || (!v2) || (!v3)) {
 		
-		if ($("#testnext").is(":visible")) $("#testnext").css("display", "none"); // Скрывает кнопку "Продолжить"
+		if ($("#test_submit").is(":visible")) $("#test_submit").css("display", "none"); // Скрывает кнопку "Продолжить"
 	}
 	
 	if (vq174) { // Индикатор пропущенных вопросов 

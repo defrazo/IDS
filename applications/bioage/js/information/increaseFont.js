@@ -5,16 +5,12 @@ function toIncreaseFont() { //Увеличение шрифта
 	if (newSize == '36')	$('.header>h1').css('font-size', '38px');
 	if (newSize == '38')	$('.header>h1').css('font-size', '40px');
 	if (newSize == '40')	$('.header>h1').css('font-size', '42px');
-	if (newSize == '42')	$('.header>h1').css('font-size', '44px');
-	if (newSize == '44')	$('.header>h1').css('font-size', '46px');
 
 	fontSize = $('.header>h2').css('font-size');
 	newSize = parseInt(fontSize);
 	if (newSize == '26')	$('.header>h2').css('font-size', '28px');
 	if (newSize == '28')	$('.header>h2').css('font-size', '30px');
 	if (newSize == '30')	$('.header>h2').css('font-size', '32px');
-	if (newSize == '32')	$('.header>h2').css('font-size', '34px');
-	if (newSize == '34')	$('.header>h2').css('font-size', '36px');
 
 	fontSize = $('.note').css('font-size');
 	newSize = parseInt(fontSize);

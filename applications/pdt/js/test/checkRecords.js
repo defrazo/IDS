@@ -1,52 +1,45 @@
-$(document).ready(function() { // Проверка ввода фамилии
-	$("#sname").focusout(function() { // Проверяет значение поля при снятии фокуса с него
-		var sname = $("#sname").val();
+$(document).ready(function() { //Проверка ввода фамилии 
+	$('#sname').focusout(function() { //Проверяет значение поля при снятии фокуса с него
+		var sname = $('#sname').val();
 		
 		if (sname != 0)	{
-			
-			if (isValidSname(sname)) { // Добавляет класс ошибки к полю ввода
-				$("#validSname").css("background-image", "url('../images/validYes.png')");
-				$(this).removeClass('error');
+		
+			if (isValidSname(sname)) { //Убирает класс ошибки с поля ввода
+				$('#sname').css('border', '1px solid #0dd01a');
 				localStorage.setItem('vSname', 1);
-
-			} else { // Убирает класс ошибки с поля ввода
-				$("#validSname").css("background-image", "url('../images/validNo.png')");
-				$(this).addClass('error');
-				$(this).val($(this).val().substr(0, 0)); // Удаляет строку
+			} else { //Добавляет класс ошибки к полю ввода
+				$('#sname').css('border', '1px solid #f00');
+				$(this).val($(this).val().substr(0, 0)); //Удаляет строку
 			} 
 		}
 		
-		$("#sname").keyup(function() { // Убирает изображение ошибки при вводе значения
-			$("#validSname").css("background-image", "none");
+		$('#sname').keyup(function() { //Убирает пробелы и прочие символы
 			$(this).val($(this).val().trim());
 		});
 	});
 });
 
-function isValidSname(valsname) { // Проверяет соответствие значения поля типу данных
+function isValidSname(valsname) { //Проверяет соответствие значения поля типу данных
 	var pattern = new RegExp(/^[А-Я]{1}[а-я]+$/); 
 	return pattern.test(valsname);
 }
 
-$(document).ready(function() { // Проверка ввода имени 
-	$("#fname").focusout(function() {
-		var fname = $("#fname").val();
+$(document).ready(function() { //Проверка ввода имени
+	$('#fname').focusout(function() {
+		var fname = $('#fname').val();
 		
 		if (fname != 0)	{
 			
 			if (isValidFname(fname)) {
-				$("#validFname").css("background-image", "url('../images/validYes.png')");
-				$(this).removeClass('error');
+				$('#fname').css('border', '1px solid #0dd01a');
 				localStorage.setItem('vFname', 1);
 			} else {
-				$("#validFname").css("background-image", "url('../images/validNo.png')");
-				$(this).addClass('error');
+				$('#fname').css('border', '1px solid #f00');
 				$(this).val($(this).val().substr(0, 0));
 			}
 		}
 		
-		$("#fname").keyup(function() {
-			$("#validFname").css("background-image", "none");
+		$('#fname').keyup(function() {
 			$(this).val($(this).val().trim());
 		});
 	});
@@ -57,25 +50,22 @@ function isValidFname(valfname) {
 	return pattern.test(valfname);
 }
 
-$(document).ready(function() { // Проверка ввода отчества 
-	$("#mname").focusout(function() {
-		var mname = $("#mname").val();
+$(document).ready(function() { //Проверка ввода отчества
+	$('#mname').focusout(function() {
+		var mname = $('#mname').val();
 		
 		if (mname != 0)	{
 			
 			if (isValidMname(mname)) {
-				$("#validMname").css("background-image", "url('../images/validYes.png')");
-				$(this).removeClass('error');
+				$('#mname').css('border', '1px solid #0dd01a');
 				localStorage.setItem('vMname', 1);
 			} else {
-				$("#validMname").css("background-image", "url('../images/validNo.png')");
+				$('#mname').css('border', '1px solid #f00');
 				$(this).val($(this).val().substr(0, 0));	
-				$(this).addClass('error');
 			}
 		}
 		
-		$("#mname").keyup(function() {
-			$("#validMname").css("background-image", "none");
+		$('#mname').keyup(function() {
 			$(this).val($(this).val().trim());
 		});
 	});

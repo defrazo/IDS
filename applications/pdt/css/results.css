@@ -29,6 +29,7 @@ body {
 #susceptibility1, #susceptibility2, #susceptibility3, .susceptibilityR1, .susceptibilityR2, .susceptibilityR3,
 #femininity1, #femininity2, #femininity3, .femininityR1, .femininityR2, .femininityR3 {
     display: none;
+    font-weight: normal;
     }
 
 .test_info {
@@ -43,17 +44,24 @@ body {
     border: 2px solid black;
     }
 
+.name {
+    font-weight: bold;
+    }
+
 @media print {
     @page {
         size: portrait;
         }
+    body {
+    padding: 0;
+    }
 
     h1 {
         font-size: 26px !important;
         }
 
     h2 {
-        font-size: 16px !important;
+        font-size: 26px !important;
         }
 
     .help-icon{
