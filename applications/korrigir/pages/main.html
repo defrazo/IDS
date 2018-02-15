@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html onselectstart="return false;" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>О программе</title>
+	<link rel="stylesheet" href="../css/bootstrap.css" media="all">
+	<link rel="stylesheet" href="../css/page.css" media="all">
+	<link rel="stylesheet" href="../css/information.css" media="all">
+	<link rel="stylesheet" href="../css/options.css" media="all">
+	<script src="../js/jquery-3.js"></script>
+	<script src="../js/jquery-1.js"></script>
+	<script src="../js/bootstrap.js"></script>
+	<script src="../js/themes.js"></script>
+	<script src="../js/information/increaseFont.js"></script>
+	<script src="../js/information/decreaseFont.js"></script>
+	<script src="../js/information/script.js"></script>
+	<script src="../js/hotkeys.js"></script>
+	<script src="../js/keys.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="header text-center">
+			<h1 class="text-uppercase">Гуманитарный университет</h1>
+			<h2>Кафедра оздоровительной тренировки и профессионально-прикладной физической подготовки</h2>
+		</div>
+		<div class="text-center no-gutter">
+			<div class="row">
+				<div class="methodics col-md-offset-1 col-md-2 text-center">
+					<img src="../img/icon1.png" class="img-responsive" alt="">
+				</div>
+				<div class="col-md-7">
+					<h2 class="title_subpage">Теоретические основы</h2>
+					<a href="applications/bioage/index.html" class="next_button" id="index_submit">Начать</a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="methodics col-md-offset-1 col-md-2 text-center">
+					<img src="../img/icon2.png" class="img-responsive" alt="">
+				</div>
+				<div class="col-md-7">
+					<h2 class="title_subpage">Условия функционирования и безопасности</h2>
+					<a href="applications/pdt/index.html" class="next_button" id="index_submit">Начать</a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="methodics col-md-offset-1 col-md-2 text-center">
+					<img src="../img/icon3.png" class="img-responsive" alt="">
+				</div>
+				<div class="col-md-7">
+					<h2 class="title_subpage">Критерии освоения программы</h2>
+					<a href="applications/ruffier/index.html" class="next_button" id="index_submit">Начать</a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="methodics col-md-offset-1 col-md-2 text-center">
+					<img src="../img/icon4.png" class="img-responsive" alt="">
+				</div>
+				<div class="col-md-7">
+					<h2 class="title_subpage">Основы методики</h2>
+					<a href="./pages/information.html" class="next_button" id="index_submit">Начать</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="options_container col-md-offset-1 col-md-3">
+			<table class="options_table">
+				<tbody>
+					<tr>
+						<td>
+							<span class="switch_name">Тема</span>
+							<select class="switch_theme">
+								<option class="theme_option" selected disabled>Выберите</option>
+								<option class="theme_option" value="red">Red</option>
+								<option class="theme_option" value="orange">Orange</option>
+								<option class="theme_option" value="yellow">Yellow</option>
+								<option class="theme_option" value="green">Green</option>
+								<option class="theme_option" value="lightblue">Lightblue</option>
+								<option class="theme_option" value="blue">Blue</option>
+								<option class="theme_option" value="violet">Violet</option>
+								<option class="theme_option" value="white">White</option>
+								<option class="theme_option" value="grey">Grey</option>
+								<option class="theme_option" value="black">Black</option>
+								<option class="theme_option" value="defaultt">Default</option>	
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span class="switch_name">Шрифт</span><br>
+							<button style="width: 48%; outline: none;" type="button" class="btn btn-default btn-md" onclick="toIncreaseFont();"><span class="glyphicon glyphicon-plus-sign"></span></button>
+							<button style="width: 48%; outline: none;" type="button" class="btn btn-default btn-md" onclick="toDecreaseFont();"><span class="glyphicon glyphicon-minus-sign"></span></button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</body>
+</html>

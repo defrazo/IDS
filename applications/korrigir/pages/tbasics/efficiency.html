@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html onselectstart="return false;" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>О программе</title>
+	<link rel="stylesheet" href="../../css/bootstrap.css" media="all">
+	<link rel="stylesheet" href="../../css/page.css" media="all">
+	<link rel="stylesheet" href="../../css/information.css" media="all">
+	<link rel="stylesheet" href="../../css/options.css" media="all">
+	<script src="../../js/jquery-3.js"></script>
+	<script src="../../js/jquery-1.js"></script>
+	<script src="../../js/bootstrap.js"></script>
+	<script src="../../js/themes.js"></script>
+	<script src="../../js/information/increaseFont.js"></script>
+	<script src="../../js/information/decreaseFont.js"></script>
+	<script src="../../js/information/script.js"></script>
+	<script src="../../js/hotkeys.js"></script>
+	<script src="../../js/keys.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="header text-center">
+			<h1 class="text-uppercase">Гуманитарный университет</h1>
+			<h2>Эффективность занятий бодибилдингом</h2>
+		</div>
+		<div class="text-center no-gutter">
+			<div class="content_box note_field field_shadow text-justify">
+				<h3>Занятия бодибилдингом приносят большую пользу:</h3>
+				<p class="note">- обеспечивают формирование красивого пропорционального тела, грациозной осанки и походки; коррекцию физических недостатков;</p>
+				<p class="note">- уменьшают излишнюю жировую прослойку;</p>
+				<p class="note">- увеличивают прочность костей и связок, число капилляров в мышцах, уровень гемоглобина, укрепляют сердце, нормализуют давление крови, развивают дыхательные мышцы и внутреннее дыхание, снижают уровень холестерина в крови;</p>
+				<p class="note">- повышают общую работоспособность организма, резис-тентность его к воздействию инфекций, различных неблагоприятных экологических факторов;</p>
+				<p class="note">- улучшают физическую подготовленность (увеличивают мышечную силу, выносливость, гибкость, координацию движений);</p>
+				<p class="note">- помогают предотвратить многие медицинские и сек¬суальные проблемы; являются действенной формой реабилитации после травм мышц и суставов;</p>
+				<p class="note">- способствуют формированию позитивного мнения о себе, повышают уверенность в своих силах;</p>
+				<p class="note">- содействуют формированию навыков рационального труда, отдыха, питания, личной гигиены, психогигиены, физической активности, искоренению вредных привычек, улучшают физическое состояние и психическое здоровье;</p>
+				<p class="note">- могут удовлетворить потребность в соревновательной деятельности, явиться средством дополнительного заработка (профессиональные культуристы неплохо зарабатывают, занимаясь бодибилдингом)</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-offset-1 col-md-3 text-center no-gutter">
+				<span class="switch_name">Настройки</span>
+				<input type="checkbox" id="options_button" />
+				<label class="options_switch" for="options_button"><i></i></label>
+			</div>
+			<div class="col-md-offset-1 col-md-2 text-center no-gutter">
+				<a href="method.html" class="next_button" id="information_submit">Продолжить</a>
+			</div>
+		</div>
+		<div class="options_container col-md-offset-1 col-md-3">
+			<table class="options_table">
+				<tbody>
+					<tr>
+						<td>
+							<span class="switch_name">Тема</span>
+							<select class="switch_theme">
+								<option class="theme_option" selected disabled>Выберите</option>
+								<option class="theme_option" value="red">Red</option>
+								<option class="theme_option" value="orange">Orange</option>
+								<option class="theme_option" value="yellow">Yellow</option>
+								<option class="theme_option" value="green">Green</option>
+								<option class="theme_option" value="lightblue">Lightblue</option>
+								<option class="theme_option" value="blue">Blue</option>
+								<option class="theme_option" value="violet">Violet</option>
+								<option class="theme_option" value="white">White</option>
+								<option class="theme_option" value="grey">Grey</option>
+								<option class="theme_option" value="black">Black</option>
+								<option class="theme_option" value="defaultt">Default</option>	
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span class="switch_name">Шрифт</span><br>
+							<button style="width: 48%; outline: none;" type="button" class="btn btn-default btn-md" onclick="toIncreaseFont();"><span class="glyphicon glyphicon-plus-sign"></span></button>
+							<button style="width: 48%; outline: none;" type="button" class="btn btn-default btn-md" onclick="toDecreaseFont();"><span class="glyphicon glyphicon-minus-sign"></span></button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</body>
+</html>
