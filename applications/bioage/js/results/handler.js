@@ -19,11 +19,11 @@ $(document).ready(function() {
 	$('#date').append(date);
 	$('#gender').append(gender);
 	$('#age').append(age).append(' лет');
-	$('#ibage').append(bage).append(' лет');;
-	$('#pbage').append(dbage).append(' лет');;
+	$('#ibage').append(bage).append(' лет');
+	$('#pbage').append(dbage).append(' лет');
 	$('#faclass').append(category);
 	$('#arate').append(arate);
-	$('#outrun').append(lag).append(' лет');;
+	$('#outrun').append(lag).append(' лет');
 	$('#status').append(status);
 	$('#index').append(index);
 });
