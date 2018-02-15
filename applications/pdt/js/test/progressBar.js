@@ -10,6 +10,12 @@ $(document).ready(function() { //Заполняет шкалу ProgressBar
 		var progress = $('.progress-bar'),
 		    progressMessage = $('.progress-message');
 
+		if (numValid == 0) {
+			progress.css('width', '0%');
+		    progress.attr('aria-valuenow', '0');
+		    progressMessage.text('');
+		}
+
 		if (numValid == 1) {
 			progress.css('width', '1%');
 		    progress.attr('aria-valuenow', '0.57');

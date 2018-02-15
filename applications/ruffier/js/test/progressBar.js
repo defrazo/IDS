@@ -13,7 +13,7 @@ $(document).ready(function() { //Проверяет заполнение пол�
 		if (numValid == 0) {
 			progress.css('width', '0');
 		    progress.attr('aria-valuenow', '0');
-		    progressMessage.text('');
+		    progressMessage.text('Прогресс: 0%');
 		}
 		
 		if (numValid == 1) {

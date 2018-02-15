@@ -9,6 +9,12 @@ $(document).ready(function() { //Проверяет заполнение пол�
 		var progress = $('.progress-bar'),
 		    progressMessage = $('.progress-message');
 
+		if (numValid == 0) {
+			progress.css('width', '0%');
+		    progress.attr('aria-valuenow', '0');
+		    progressMessage.text('');
+		}
+
 		if (numValid == 1) {
 			progress.css('width', '9.1%');
 		    progress.attr('aria-valuenow', '9.1');
