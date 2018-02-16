@@ -122,6 +122,11 @@ a.next_button:active {
     border:1px solid #00aaff;
     }
 
-input[type="radio"], input[type="checkbox"] {
-    outline: none;
-}
+.controls {
+    margin-top: 20px;
+    }
+
+.course_menu a.next_button {
+    font-size: 25px;
+    margin-bottom: 10px;
+    }
