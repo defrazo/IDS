@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html onselectstart="return false;" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Кривошея</title>
+	<link rel="stylesheet" href="../../../../../../../../css/bootstrap.css" media="all">
+	<link rel="stylesheet" href="../../../../../../../../css/page.css" media="all">
+	<link rel="stylesheet" href="../../../../../../../../css/efficiency.css" media="all">
+	<link rel="stylesheet" href="../../../../../../../../css/options.css" media="all">
+	<script src="../../../../../../../../js/jquery-3.js"></script>
+	<script src="../../../../../../../../js/jquery-1.js"></script>
+	<script src="../../../../../../../../js/bootstrap.js"></script>
+	<script src="../../../../../../../../js/themes.js"></script>
+	<script src="../../../../../../../../js/information/increaseFont.js"></script>
+	<script src="../../../../../../../../js/information/decreaseFont.js"></script>
+	<script src="../../../../../../../../js/information/script.js"></script>
+	<script src="../../../../../../../../js/hotkeys.js"></script>
+	<script src="../../../../../../../../js/keys.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="header text-center">
+			<h1 class="text-uppercase">Гуманитарный университет</h1>
+			<h2>Корригирующая тренировка при кривошее</h2>
+		</div>
+		<div class="text-center no-gutter">
+			<div class="content_box note_field field_shadow text-justify">
+				<p class="note"><b>Задачи тренировки:</b> улучшение трофики мышц шеи, уменьшение и ликвидация мышечной контрактуры на пораженной стороне, компенсаторное увеличение мышечного тонуса на здоровой стороне.</p>
+				<p class="note text-center"><b>Корригирующие упражнения</b></p>
+				<ul>
+					<li class="note">Массаж мышц на стороне поражения для уменьшения и ликвидации мышечной контрактуры с использованием приемов вводного поглаживания подушечками пальцев от уха к ключице, легкой вибрации в виде поколачивания кончиками пальцев в любом направлении и заключительного поглаживания.</li>
+					<li class="note">Массаж мышц на здоровой стороне для компенсаторного увеличения тонуса мышц с использованием вводного поглаживания, спиралевидного растирания, второго поглаживания, легкого разминания пальцами обеих рук и заключительного поглаживания. Расслабление мышц массируемой стороны достигается поворотом головы в эту сторону.</li>
+					<li class="note">Поглаживающий массаж шеи с обеих сторон.</li>
+					<li class="note">Наклоны головы в здоровую сторону.</li>
+					<li class="note">Поворот головы в здоровую сторону.</li>
+					<li class="note">Круговые движения головой вправо и влево.</li>
+					<li class="note">То же, что и упражнения 4 и 5, но с использованием головных лямок.</li>
+					<li class="note">То же, что и упражнения 4 и 5, но с самосопротивлением.</li>
+					<li class="note">Круговые движения туловищем с грузом за головой.</li>
+					<li class="note">Наклоны туловища вперед и в стороны с легкой штангой на шее.</li>
+					<li class="note">Повороты туловища вправо, влево с грузом на шее.</li>
+					<li class="note">Расслабление мышц шеи.</li>
+					<li class="note">Принятие правильной осанки у зеркала (с контролем инструктора).</li>
+				</ul>
+				<p class="note">Упражнения выполняются комплексно, сериями.</p>
+				<p class="note">Дозировка <b>1-3х8-12</b>.</p>
+				<p class="note">Темп медленный.</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-offset-1 col-md-3 text-center no-gutter">
+				<span class="switch_name">Настройки</span>
+				<input type="checkbox" id="options_button" />
+				<label class="options_switch" for="options_button"><i></i></label>
+			</div>
+			<div class="col-md-offset-1 col-md-2 text-center no-gutter">
+				<a href="../mssystem_main.html" class="next_button" id="information_submit">Назад</a>
+			</div>
+		</div>
+		<div class="options_container col-md-offset-1 col-md-3">
+			<table class="options_table">
+				<tbody>
+					<tr>
+						<td>
+							<span class="switch_name">Тема</span>
+							<select class="switch_theme">
+								<option class="theme_option" selected disabled>Выберите</option>
+								<option class="theme_option" value="red">Red</option>
+								<option class="theme_option" value="orange">Orange</option>
+								<option class="theme_option" value="yellow">Yellow</option>
+								<option class="theme_option" value="green">Green</option>
+								<option class="theme_option" value="lightblue">Lightblue</option>
+								<option class="theme_option" value="blue">Blue</option>
+								<option class="theme_option" value="violet">Violet</option>
+								<option class="theme_option" value="white">White</option>
+								<option class="theme_option" value="grey">Grey</option>
+								<option class="theme_option" value="black">Black</option>
+								<option class="theme_option" value="defaultt">Default</option>	
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span class="switch_name">Шрифт</span><br>
+							<button style="width: 48%; outline: none;" type="button" class="btn btn-default btn-md" onclick="toIncreaseFont();"><span class="glyphicon glyphicon-plus-sign"></span></button>
+							<button style="width: 48%; outline: none;" type="button" class="btn btn-default btn-md" onclick="toDecreaseFont();"><span class="glyphicon glyphicon-minus-sign"></span></button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</body>
+</html>
