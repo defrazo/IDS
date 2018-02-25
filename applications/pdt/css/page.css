@@ -10,12 +10,11 @@
 
 body {
     padding: 5em 0;
-    background: url(../img/bg/bg.png); 
+    background: radial-gradient(ellipse, #E2E2E2, #ECE9E6);
     }
 
 h1 {
     font-family: 'Bitter';
-    color: #202020;
     font-weight: bold;
     cursor: default;
     font-size: 36px;
@@ -23,7 +22,6 @@ h1 {
 
 h2 {
     font-family: 'Bitter';
-    color: #202020;
     font-size: 26px;
     cursor: default;
     }
@@ -103,7 +101,7 @@ a.next_button:active {
 
 .tooltip-inner {
     font-size: 16px;
-    max-width: 450px;
+    max-width: 400px;
     }
 
 .switch_theme {
@@ -123,4 +121,4 @@ a.next_button:active {
 
 input[type="radio"], input[type="checkbox"] {
     outline: none;
-}
+    }

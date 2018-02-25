@@ -10,12 +10,11 @@
 
 body {
     padding: 5em 0;
-    background: url(../img/bg/bg.png); 
+    background: radial-gradient(ellipse, #E2E2E2, #ECE9E6);
     }
 
 h1 {
     font-family: 'Bitter';
-    color: #202020;
     font-weight: bold;
     cursor: default;
     font-size: 36px;
@@ -23,7 +22,6 @@ h1 {
 
 h2 {
     font-family: 'Bitter';
-    color: #202020;
     font-size: 26px;
     cursor: default;
     }
@@ -78,7 +76,6 @@ a.next_button i {
 
 a.next_button:hover {
     box-shadow: 0px 2px 1px white inset, 0px 0px 30px white, 0px 2px 5px rgba(0, 0, 0, 0.1), 0px 8px 10px rgba(0, 0, 0, 0.1);
-    background-color: #FFF;
     }
 
 a.next_button:active {
@@ -124,4 +121,4 @@ a.next_button:active {
 
 input[type="radio"], input[type="checkbox"] {
     outline: none;
-}
+    }
