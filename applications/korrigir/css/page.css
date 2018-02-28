@@ -122,3 +122,15 @@ a.next_button:active {
 input[type="radio"], input[type="checkbox"] {
     outline: none;
     }
+
+.title {
+    text-align: center !important;
+    }
+
+img {
+    border-radius: 5px;
+    }
+
+.complexes {
+    margin-right: 2em;
+    }
