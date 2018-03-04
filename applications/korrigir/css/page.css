@@ -53,7 +53,7 @@ h2 {
 a.next_button {
     background: #ECECEC;
     border-radius: 15px;
-    font-size: 16px;
+    font-size: 20px;
     padding: 5px 20px;
     display: block;
     font-family: "Exo2";
@@ -123,6 +123,15 @@ input[type="radio"], input[type="checkbox"] {
     outline: none;
     }
 
+.controls {
+    margin-top: 20px;
+    }
+
+.course_menu a.next_button {
+    font-size: 26px;
+    margin-bottom: 10px;
+    }
+
 .title {
     text-align: center !important;
     }
@@ -133,4 +142,12 @@ img {
 
 .complexes {
     margin-right: 2em;
+    }
+
+.home {
+    color: #AAA;
+    }
+
+.home:hover {
+    color: #FFF;
     }

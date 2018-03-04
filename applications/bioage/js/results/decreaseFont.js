@@ -18,12 +18,6 @@ function toDecreaseFont() { //Уменьшение шрифта
 	if (newSize == '24')	$('.result_table td').css('font-size', '22px');
 	if (newSize == '22')	$('.result_table td').css('font-size', '20px');
 
-	fontSize = $('.switch_name').css('font-size');
-	newSize = parseInt(fontSize);
-	if (newSize == '22')	$('.switch_name').css('font-size', '20px');
-	if (newSize == '20')	$('.switch_name').css('font-size', '18px');
-	if (newSize == '18')	$('.switch_name').css('font-size', '16px');
-
 	fontSize = $('tbody select').css('font-size');
 	newSize = parseInt(fontSize);
 	if (newSize == '22')	$('tbody select').css('font-size', '20px');
@@ -41,9 +35,4 @@ function toDecreaseFont() { //Уменьшение шрифта
 	if (newSize == '26')	$('.glyphicon').css('font-size', '24px');
 	if (newSize == '24')	$('.glyphicon').css('font-size', '22px');
 	if (newSize == '22')	$('.glyphicon').css('font-size', '20px');
-
-	fontSize = $('a.next_button').css('font-size');
-	newSize = parseInt(fontSize);
-	if (newSize == '20')	$('a.next_button').css('font-size', '18px');
-	if (newSize == '18')	$('a.next_button').css('font-size', '16px');
 }

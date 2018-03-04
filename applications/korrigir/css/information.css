@@ -61,8 +61,14 @@
 
 .title_subpage{
     font-size: 30px;
-}
+    }
 
-a.next_button {
-    padding: 10px 20px;
-}
+ul {
+    list-style: none;
+    }
+
+ul li:before {
+    content:  "—";
+    position: relative;
+    left: -15px;
+    }

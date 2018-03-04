@@ -2,7 +2,7 @@
     font-family: 'Bitter';
     padding-right: 10px;
     text-transform: uppercase;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bold;
     color: #0a0a0a;
     text-shadow: whitesmoke 0px 0px 10px;
@@ -130,7 +130,7 @@ input[type=checkbox]:checked ~ .options_switch i {
     }
 
 .glyphicon {
-    font-size: 20px;
+    font-size: 25px;
     }
 
 .options_table {

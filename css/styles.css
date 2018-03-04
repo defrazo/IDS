@@ -9,12 +9,13 @@
 
 body {
     padding: 1em 0;
-    background: url(../img/bg.png); 
+    background: radial-gradient(ellipse, #999c9e, #2c3e50);
     }
 
 h1 {
     font-family: 'Bitter';
-    color: #202020;
+    color: #FFFFFF;
+    text-shadow: #000000FF 0 0 10px;
     font-weight: bold;
     cursor: default;
     font-size: 36px;
@@ -22,8 +23,17 @@ h1 {
 
 h2 {
     font-family: 'Bitter';
-    color: #202020;
-    font-size: 26px;
+    color: #FFFFFF;
+    text-shadow: #000000FF 0 0 10px;
+    font-size: 28px;
+    cursor: default;
+    }
+
+h3 {
+    font-family: 'Bitter';
+    color: #FFFFFF;
+    text-shadow: #000000FF 0 0 10px;
+    font-size: 28px;
     cursor: default;
     }
 

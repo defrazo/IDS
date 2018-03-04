@@ -20,11 +20,6 @@ function toIncreaseFont() { //Увеличение шрифта
 	if (newSize == '24')	$('.note b').css('font-size', '26px');
 	if (newSize == '26')	$('.note b').css('font-size', '28px');
 
-	fontSize = $('.switch_name').css('font-size');
-	newSize = parseInt(fontSize);
-	if (newSize == '16')	$('.switch_name').css('font-size', '18px');
-	if (newSize == '18')	$('.switch_name').css('font-size', '20px');
-
 	fontSize = $('tbody select').css('font-size');
 	newSize = parseInt(fontSize);
 	if (newSize == '16')	$('tbody select').css('font-size', '18px');
@@ -39,9 +34,4 @@ function toIncreaseFont() { //Увеличение шрифта
 	newSize = parseInt(fontSize);
 	if (newSize == '20')	$('.glyphicon').css('font-size', '22px');
 	if (newSize == '22')	$('.glyphicon').css('font-size', '24px');
-
-	fontSize = $('a.next_button').css('font-size');
-	newSize = parseInt(fontSize);
-	if (newSize == '16')	$('a.next_button').css('font-size', '18px');
-	if (newSize == '18')	$('a.next_button').css('font-size', '20px');
 }
