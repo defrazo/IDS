@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html onselectstart="return false;" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Квалификация липидов</title>
+	<link rel="stylesheet" href="../../../../css/bootstrap.css" media="all">
+	<link rel="stylesheet" href="../../../../css/page.css" media="all">
+	<link rel="stylesheet" href="../../../../css/information.css" media="all">
+	<link rel="stylesheet" href="../../../../css/options.css" media="all">
+	<script src="../../../../js/jquery-3.js"></script>
+	<script src="../../../../js/jquery-1.js"></script>
+	<script src="../../../../js/bootstrap.js"></script>
+	<script src="../../../../js/themes.js"></script>
+	<script src="../../../../js/information/increaseFont.js"></script>
+	<script src="../../../../js/information/decreaseFont.js"></script>
+	<script src="../../../../js/information/script.js"></script>
+	<script src="../../../../js/hotkeys.js"></script>
+	<script src="../../../../js/keys.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="header text-center">
+			<h1 class="text-uppercase">Гуманитарный университет</h1>
+			<h2>Квалификация концентрации отдельных липидов и липопротеинов (моль/л) в плазме</h2>
+		</div>
+		<div class="text-center no-gutter">
+			<div class="content_box note_field field_shadow text-justify">
+				<p class="note">Параметры, не взятые в скобки, приняты в соответствии с американскими исследованиями (Expert panel, 1988).</p>
+				<p class="note">В скобки взяты параметры из европейских отчетов (Study Group, 1988).</p>
+				<table class="text-center">
+					<tr>
+						<td></td><td>Нормальные параметры</td><td>Пограничная область</td><td>Область риска</td>
+					</tr>
+					<tr>
+						<td>Весь холестерин</td><td>< 5.2</td><td>5.2 - 6.2 (5.2 - 6.5)</td><td>> 6.2 (> 6.5)</td>
+					</tr>
+					<tr>
+						<td>Холестерин ЛНП</td><td>< 3.4 (< 3.5)</td><td>3.4 - 4.1 (3.5 - 4.0)</td><td>> 4.1 (> 4.0)</td>
+					</tr>
+					<tr>
+						<td>Холестерин ЛВП</td><td>> 1.0</td><td>1.0 - 0.90</td><td>< 0.90</td>
+					</tr>
+					<tr>
+						<td>Триглицериды</td><td>< 2.8 (< 2.3)</td><td>2.8 - 5.6 (2.3 -5.6)</td><td>> 5.6</td>
+					</tr>
+				</table>
+				<p class="note">Вместе с обильными или энергетически плотными ежедневными приемами пищи увеличивается прилив энергии в организме и нагрузка на обмен веществ. Увеличивается формирование жиров в печени и концентрация ЛОНП.</p>
+				<p class="note">Регулярная физическая активность нормализует или уравновешивает энергетический баланс, (потребление энергии соответствует «съеденной» энергии), вопреки обильным ежедневным приемам пищи.</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-1">
+				<a href='../../../main.html' class="home" data-toggle="tooltip" data-placement="top" title="Главное меню"><span class="glyphicon glyphicon-home"></span></a>
+			</div>
+			<div class="col-md-3 text-center no-gutter">
+				<span class="switch_name">Настройки</span>
+				<input type="checkbox" id="options_button" />
+				<label class="options_switch" for="options_button"><i></i></label>
+			</div>
+			<div class="col-md-offset-1 col-md-2 text-center no-gutter">
+				<a href="lipid_main.html" class="next_button" id="information_submit">Назад</a>
+			</div>
+		</div>
+		<div class="options_container col-md-offset-1 col-md-3">
+			<table class="options_table">
+				<tbody>
+					<tr>
+						<td>
+							<span class="table_name">Тема</span>
+							<select class="switch_theme">
+								<option class="theme_option" selected disabled>Выберите</option>
+								<option class="theme_option" value="white">Белая</option>
+								<option class="theme_option" value="blue">Синяя</option>
+								<option class="theme_option" value="grey">Серая</option>
+								<option class="theme_option" value="black">Черная</option>	
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span class="table_name">Шрифт</span><br>
+							<button style="width: 48%; outline: none;" type="button" class="btn btn-default btn-md plus" onclick="toIncreaseFont();"><span class="glyphicon glyphicon-plus-sign"></span></button>
+							<button style="width: 48%; outline: none;" type="button" class="btn btn-default btn-md minus" onclick="toDecreaseFont();"><span class="glyphicon glyphicon-minus-sign"></span></button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</body>
+</html>

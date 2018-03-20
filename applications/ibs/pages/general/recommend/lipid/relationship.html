@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html onselectstart="return false;" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Связь изменений</title>
+	<link rel="stylesheet" href="../../../../css/bootstrap.css" media="all">
+	<link rel="stylesheet" href="../../../../css/page.css" media="all">
+	<link rel="stylesheet" href="../../../../css/information.css" media="all">
+	<link rel="stylesheet" href="../../../../css/options.css" media="all">
+	<script src="../../../../js/jquery-3.js"></script>
+	<script src="../../../../js/jquery-1.js"></script>
+	<script src="../../../../js/bootstrap.js"></script>
+	<script src="../../../../js/themes.js"></script>
+	<script src="../../../../js/information/increaseFont.js"></script>
+	<script src="../../../../js/information/decreaseFont.js"></script>
+	<script src="../../../../js/information/script.js"></script>
+	<script src="../../../../js/hotkeys.js"></script>
+	<script src="../../../../js/keys.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="header text-center">
+			<h1 class="text-uppercase">Гуманитарный университет</h1>
+			<h2>Связь изменений в обмене липопротеинов с риском середечно-сосудистых заболеваний</h2>
+		</div>
+		<div class="text-center no-gutter">
+			<div class="content_box note_field field_shadow text-justify">
+				<p class="note">Чем выше уровень ЛНП в крови, тем выше риск ИБС. Однако оказалось, что слишком низкий уровень ЛВП в крови может привести к таким же последствиям в организме, что и слишком высокий уровень ЛНП. Чем больше в крови ЛВП, тем сильнее эти соединения могут противодействовать эффектам «плохого холестерина». Если ЛВП в крови мало, риск сердечного приступа велик даже в том случае, если общий уровень холестерина у человека не превосходит опасных значений (менее 200 мг в 100 мл крови).</p>
+				<p class="note">Национальный институт сердца, легких и крови пришел к выводу, что люди, общий уровень холестерина у которых составляет от 200 до 239 мг%, по сути дела находятся на грани высокого риска ИБС, а те, у кого этот показатель достигает 240 мг% и выше, подвергаются высокому риску этого заболевания. По мнению ученых, уровень ЛНП у человека не должен превосходить 130 мг%. В 70 - 80-е гг. считалось, что, в каком бы количестве ни содержались ЛВП в крови, они защищают человека от ИБС. Установлено, однако, что даже если показатели общего холестерина находятся в области безопасных значений, уровень ЛВП в крови ниже 35 мг% ставит человека под угрозу ИБС. О риске ИБС наиболее правильно судить по соотношению общего холестерина и ЛВП.</p>
+				<p class="note">Так, например, если общий уровень холестерина у че-ловека составляет 200 мг%, а ЛВП у него – 50 мг%, это соотношение равно 4. У людей же с ИБС это соотношение обычно составляет 4,5 и выше.</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-1">
+				<a href='../../../main.html' class="home" data-toggle="tooltip" data-placement="top" title="Главное меню"><span class="glyphicon glyphicon-home"></span></a>
+			</div>
+			<div class="col-md-3 text-center no-gutter">
+				<span class="switch_name">Настройки</span>
+				<input type="checkbox" id="options_button" />
+				<label class="options_switch" for="options_button"><i></i></label>
+			</div>
+			<div class="col-md-offset-1 col-md-2 text-center no-gutter">
+				<a href="lipid_main.html" class="next_button" id="information_submit">Назад</a>
+			</div>
+		</div>
+		<div class="options_container col-md-offset-1 col-md-3">
+			<table class="options_table">
+				<tbody>
+					<tr>
+						<td>
+							<span class="table_name">Тема</span>
+							<select class="switch_theme">
+								<option class="theme_option" selected disabled>Выберите</option>
+								<option class="theme_option" value="white">Белая</option>
+								<option class="theme_option" value="blue">Синяя</option>
+								<option class="theme_option" value="grey">Серая</option>
+								<option class="theme_option" value="black">Черная</option>	
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span class="table_name">Шрифт</span><br>
+							<button style="width: 48%; outline: none;" type="button" class="btn btn-default btn-md plus" onclick="toIncreaseFont();"><span class="glyphicon glyphicon-plus-sign"></span></button>
+							<button style="width: 48%; outline: none;" type="button" class="btn btn-default btn-md minus" onclick="toDecreaseFont();"><span class="glyphicon glyphicon-minus-sign"></span></button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</body>
+</html>

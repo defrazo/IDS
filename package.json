@@ -7,7 +7,7 @@
     "webexe_settings": {
         "blacklist": "",
         "custom_script": "",
-        "download_dir": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Desktop",
+        "download_dir": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Desktop\\\u0414\u0438\u043f\u043b\u043e\u043c\\\u041f\u0440\u043e\u0435\u043a\u0442",
         "export_dir": "output",
         "force_download": false,
         "mac-x64": false,
@@ -17,13 +17,15 @@
         "sdk_build": false,
         "uncompressed_folder": false,
         "whitelist": "",
-        "windows-x32": false,
+        "windows-x32": true,
         "windows-x64": true
     },
     "webkit": {},
     "window": {
         "always_on_top": true,
+        "exe_icon": "icon.png",
         "frame": false,
+        "icon": "icon.png",
         "id": "SPECTRUM",
         "kiosk": true,
         "kiosk_emulation": false,
