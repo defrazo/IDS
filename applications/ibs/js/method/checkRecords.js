@@ -76,119 +76,106 @@ function isValidMname(valmname) {
 	return pattern.test(valmname);
 }
 
-$(document).ready(function() { 
-	$('#result1').focusout(function() {
-		var result1 = $('#result1').val();
+$(document).ready(function() { //Проверка ввода отчества
+	$('#age').focusout(function() {
+		var mname = $('#age').val();
 		
-		if (($(this).val() < 1) || ($(this).val() > 60)) $(this).val($(this).val().substr(0, 0));
-
-		if (result1 != 0) {
+		if (mname != 0)	{
 			
-			if (isValidresult1(result1)) {
-				$('#result1').css('border', '1px solid #0dd01a');
-				localStorage.setItem('vresult1', 1);
+			if (isValidAge(mname)) {
+				$('#age').css('border', '1px solid #0dd01a');
+				localStorage.setItem('vMname', 1);
 			} else {
-				$('#result1').css('border', '1px solid #f00');
+				$('#age').css('border', '1px solid #f00');
+				$(this).val($(this).val().substr(0, 0));	
+			}
+		}
+		
+		$('#age').keyup(function() {
+			$(this).val($(this).val().trim());
+		});
+	});
+});
+
+function isValidAge(valage) {
+	var pattern = new RegExp(/^[А-Я]{1}[а-я]+$/); 
+	return pattern.test(valmname);
+}
+
+$(document).ready(function() { //Проверка ввода возраста
+	$('#age').focusout(function() {
+		var age = $('#age').val();
+		
+		if (($(this).val() < 6) || ($(this).val() > 70)) $(this).val($(this).val().substr(0, 0));
+
+		if (age != 0) {
+		
+			if (isValidAge(age)) {
+				$('#age').css('border', '1px solid #0dd01a');
+				localStorage.setItem('vAge', 1);
+			} else {
+				$('#age').css('border', '1px solid #f00');
 				$(this).val($(this).val().substr(0, 0));
 			}
 		}
 		
-		$('#result1').keyup(function() {
+		$('#age').keyup(function() {
 			$(this).val($(this).val().trim());
 		});
 	});
 	
-	$('#result1').keyup(function() {
-		if ($(this).val().length > 2) $(this).val($(this).val().substr(0, 2));          
+	$('#age').keyup(function() {
+		if ($(this).val().length > 2) $(this).val($(this).val().substr(0, 2));
 	});
 });
 
-function isValidresult1(valresult1) {
-	if ($('#result1').val().length == 1) {
-		var pattern = new RegExp(/[1-9]/);
-		return pattern.test(valresult1);
-	}
+function isValidAge(valage) {
+	if ($('#age').val().length == 1) { //Проверяет при длине значения = 1
+		var pattern = new RegExp(/[0-9]/);
+		return pattern.test(valage);
+	} 
 
-	if ($('#result1').val().length == 2) {
-		var pattern = new RegExp(/[1-9][0-9]/);
-		return pattern.test(valresult1);
+	if ($('#age').val().length == 2) { //Проверяет при длине значения = 2
+		var pattern = new RegExp(/[0-9][0-9]/);
+		return pattern.test(valage);
 	}
 }
 
-$(document).ready(function() { 
-	$('#result2').focusout(function() {
-		var result2 = $('#result2').val();
+$(document).ready(function() { //Проверка ввода веса 
+	$('#weight').focusout(function() {
+		var weight = $('#weight').val();
 		
-		if (($(this).val() < 1) || ($(this).val() > 60)) $(this).val($(this).val().substr(0, 0));
+		if (($(this).val() < 30) || ($(this).val() > 150)) $(this).val($(this).val().substr(0, 0));
 
-		if (result2 != 0) {
+		if (weight != 0) {
 			
-			if (isValidresult2(result2)) {
-				$('#result2').css('border', '1px solid #0dd01a');
-				localStorage.setItem('vresult2', 1);
+			if (isValidWeight(weight)) {
+				$('#weight').css('border', '1px solid #0dd01a');
+				localStorage.setItem('vWeight', 1);
 			} else {
-				$('#result2').css('border', '1px solid #f00');
+				$('#weight').css('border', '1px solid #f00');
 				$(this).val($(this).val().substr(0, 0));
 			}
 		}
 		
-		$('#result2').keyup(function() {
+		$('#weight').keyup(function() {
 			$(this).val($(this).val().trim());
 		});
 	});
 	
-	$('#result2').keyup(function() {
-		if ($(this).val().length > 2) $(this).val($(this).val().substr(0, 2));          
+	$('#weight').keyup(function() {
+		if ($(this).val().length > 3) $(this).val($(this).val().substr(0, 3));          
 	});
 });
 
-function isValidresult2(valresult2) {
-	if ($('#result2').val().length == 1) {
-		var pattern = new RegExp(/[1-9]/);
-		return pattern.test(valresult2);
+function isValidWeight(valweight) {
+	if ($('#weight').val().length == 2) {
+		var pattern = new RegExp(/[0-9][0-9]/);
+		return pattern.test(valweight);
 	}
 
-	if ($('#result2').val().length == 2) {
-		var pattern = new RegExp(/[1-9][0-9]/);
-		return pattern.test(valresult2);
-	}
-}
-
-$(document).ready(function() { 
-	$('#result3').focusout(function() {
-		var result3 = $('#result3').val();
-		
-		if (($(this).val() < 1) || ($(this).val() > 60)) $(this).val($(this).val().substr(0, 0));
-
-		if (result3 != 0) {
-			
-			if (isValidresult3(result3)) {
-				$('#result3').css('border', '1px solid #0dd01a');
-				localStorage.setItem('vresult3', 1);
-			} else {
-				$('#result3').css('border', '1px solid #f00');
-				$(this).val($(this).val().substr(0, 0));
-			}
-		}
-		
-		$('#result3').keyup(function() {
-			$(this).val($(this).val().trim());
-		});
-	});
-	
-	$('#result3').keyup(function() {
-		if ($(this).val().length > 2) $(this).val($(this).val().substr(0, 2));          
-	});
-});
-
-function isValidresult3(valresult3) {
-	if ($('#result3').val().length == 1) {
-		var pattern = new RegExp(/[1-9]/);
-		return pattern.test(valresult3);
-	}
-
-	if ($('#result3').val().length == 2) {
-		var pattern = new RegExp(/[1-9][0-9]/);
-		return pattern.test(valresult3);
+	if ($('#weight').val().length == 3) {
+		var pattern = new RegExp(/[0-9][0-9][0-9]/);
+		return pattern.test(valweight);
 	}
 }

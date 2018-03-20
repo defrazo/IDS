@@ -170,3 +170,12 @@ input[type=checkbox]:checked ~ .stopwatch_switch i {
 .no_click {
     pointer-events: none;
     }
+
+.error_designation {
+    box-shadow: 0 1px 0 red;
+    }   
+    
+.error_radio {
+    border-radius: 10px !important;
+    box-shadow: 0 0 10px red;
+    }

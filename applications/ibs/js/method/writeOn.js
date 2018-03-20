@@ -15,12 +15,48 @@ function get_data() { //Вносит заполненные данные из п
 	var mname = $('#mname').val();
 	if (mname != 0) localStorage.setItem('mnameinp', mname);
 
-	var result1 = $('#result1').val();
-	if (result1 != 0) localStorage.setItem('result1inp', result1);
+	var age = $('#age').val();
+	if (age != 0) localStorage.setItem('ageinp', age);
 
-	var result2 = $('#result2').val();
-	if (result2 != 0) localStorage.setItem('result2inp', result2);
+	var height = $('#height').val();
+	if (height != 0) localStorage.setItem('heightinp', height);
 
-	var result3 = $('#result3').val();
-	if (result3 != 0) localStorage.setItem('result3inp', result3);
+	var weight = $('#weight').val();
+	if (weight != 0) localStorage.setItem('weightinp', weight);
+
+	var q1 = $("input[name='q1']:checked").val();
+	if (q1) {
+		localStorage.setItem("q1", q1);
+		localStorage.setItem('v1', 1);	
+	}
+	
+	var q2 = $("input[name='q2']:checked").val();
+	if (q2) {
+		localStorage.setItem("q2", q2);
+		localStorage.setItem('v2', 1);	
+	}
+	
+	var q3 = $("input[name='q3']:checked").val();
+	if (q3) {
+		localStorage.setItem("q3", q3);
+		localStorage.setItem('v3', 1);	
+	}
+	
+	var q4 = $("input[name='q4']:checked").val();
+	if (q4) {
+		localStorage.setItem("q4", q4);
+		localStorage.setItem('v4', 1);	
+	}
+	
+	var q5 = $("input[name='q5']:checked").val();
+	if (q5) {
+		localStorage.setItem("q5", q5);
+		localStorage.setItem('v5', 1);	
+	}
+	
+	var q6 = $("input[name='q6']:checked").val();
+	if (q6) {
+		localStorage.setItem("q6", q6);
+		localStorage.setItem('v6', 1);	
+	}
 };
