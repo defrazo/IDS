@@ -1,0 +1,59 @@
+body {
+    padding: 2em 0;
+    }
+
+.result_table {
+    background-color: #fff;
+    border: solid 3px #797373;
+    cursor: default;
+    }
+
+.result_table td {
+    font-size: 20px;
+    font-family: 'Exo2';
+    vertical-align: middle !important;
+    }
+
+.thead {
+    background: #cecece;
+    font-weight: bold;
+    }
+
+.printImg {
+    width: 18px;
+    }
+
+@media print {
+    @page {
+        size: portrait;
+        }
+
+    body {
+        padding: 0;
+        }
+
+    h1 {
+        font-size: 26px !important;
+        }
+
+    h2 {
+        font-size: 16px !important;
+        }
+        
+    .help-icon{
+        display: none;
+        }
+
+    .result_table td {
+        border: 5px solid black !important;
+        font-size: 15pt !important;
+        }
+
+    .controls {
+        display: none;
+        }
+
+    .options_container {
+        display: none !important;
+        }
+    }

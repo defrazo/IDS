@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html onselectstart="return false;" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Тест</title>
+	<link rel="stylesheet" href="../css/bootstrap.css" media="all">
+	<link rel="stylesheet" href="../css/page.css" media="all">
+	<link rel="stylesheet" href="../css/test.css" media="all">
+	<link rel="stylesheet" href="../css/slider.css" media="all">
+	<link rel="stylesheet" href="../css/options.css" media="all">
+	<script src="../js/jquery-3.js"></script>
+	<script src="../js/jquery-1.js"></script>
+	<script src="../js/bootstrap.js"></script>
+	<script src="../js/tip.js"></script>
+	<script src="../js/slider.js"></script>
+	<script src="../js/themes.js"></script>
+	<script src="../js/test/script.js"></script>
+	<script src="../js/test/checkAll.js"></script>
+	<script src="../js/test/handler.js"></script>
+	<script src="../js/test/writeOn.js"></script>
+	<script src="../js/test/progressBar.js"></script>
+	<script src="../js/test/increaseFont.js"></script>
+	<script src="../js/test/decreaseFont.js"></script>
+	<script src="../js/restoreValues.js"></script>
+	<script src="../js/hotkeys.js"></script>
+	<script src="../js/keys.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="header text-center">
+			<h1 class="text-uppercase">Гуманитарный университет</h1>
+			<h2>Субъективная оценка состояния здоровья <img src="../img/help.png" class="blink help-icon" data-toggle="tooltip" data-placement="top" title="Для субъективной оценки Вашего состояния здоровья Вам необходимо ответить на 29 вопросов. Для ответа на вопрос выберите «Да» или «Нет»"></h2>
+		</div>
+		<div class="content col-md-12 text-center no-gutter">
+			<div class="main_box">
+				<div class="tabs">
+					<div class="tab">
+						<div align="center">
+							<div class="question_field">
+								<p class="designation"><b id="d1">Беспокоят ли вас головные боли?</b></p>
+								<label class="variant"><input type="radio" name="head" id="head" value="yes" required> Да</label>
+								<label class="variant"><input type="radio" name="head" value="no"> Нет</label>
+							<br>
+							</div>
+							<div class="question_field">
+								<p class="designation"><b id="d2">Легко ли вы просыпаетесь от легкого шума?</b></p>
+								<label class="variant"><input type="radio" name="wake" id="wake" value="yes" required> Да</label>
+								<label class="variant"><input type="radio" name="wake" value="no"> Нет</label>
+							<br>
+							</div>
+							<div class="question_field">
+								<p class="designation"><b id="d3">Беспокоят ли вас боли в области сердца?</b></p>
+								<label class="variant"><input type="radio" name="heart" id="heart" value="yes" required> Да</label>
+								<label class="variant"><input type="radio" name="heart" value="no"> Нет</label>
+							<br>
+							</div>
+							<div class="question_field">
+								<p class="designation"><b id="d4">Считаете ли вы, что в последние годы у вас ухудшилось зрение?</b></p>
+								<label class="variant"><input type="radio" name="vision" id="vision" value="yes" required> Да</label>
+								<label class="variant"><input type="radio" name="vision" value="no"> Нет</label>
+							<br>
+							</div>
+							<div class="question_field">
+								<p class="designation"><b id="d5">Считаете ли вы, что в последние годы у вас ухудшился слух?</b></p>
+								<label class="variant"><input type="radio" name="hearing" id="hearing" value="yes" required> Да</label>
+								<label class="variant"><input type="radio" name="hearing" value="no"> Нет</label>
+							<br>
+							</div>
+						</div>
+					</div>
+					<div class="tab">
+						<div align="center">
+							<div class="question_field">
+								<p class="designation"><b id="d6">Стараетесь ли вы пить только кипяченую воду?</b></p>
+								<label class="variant"><input type="radio" name="water" id="water" value="yes" required> Да</label>
+								<label class="variant"><input type="radio" name="water" value="no"> Нет</label>
+							<br>
+							</div>
+							<div class="question_field">
+								<p class="designation"><b id="d7">Уступают ли вам место в общественном транспорте младшие по возрасту?</b></p>
+								<label class="variant"><input type="radio" name="seat" id="seat" value="yes" required> Да</label>
+								<label class="variant"><input type="radio" name="seat" value="no"> Нет</label>
+							<br>
+							</div>
+							<div class="question_field">
+								<p class="designation"><b id="d8">Беспокоят ли вас боли в суставах?</b></p>
+								<label class="variant"><input type="radio" name="joint" id="joint" value="yes" required> Да</label>
+								<label class="variant"><input type="radio" name="joint" value="no"> Нет</label>
+							<br>
+							</div>
+							<div class="question_field">
+								<p class="designation"><b id="d9">Бываете ли вы на пляже?</b></p>
+								<label class="variant"><input type="radio" name="beach" id="beach" value="yes" required> Да</label>
+								<label class="variant"><input type="radio" name="beach" value="no"> Нет</label>
+							<br>
+							</div>
+							<div class="question_field">
+								<p class="designation"><b id="d10">Влияет ли на ваше самочувствие перемена погоды?</b></p>
+								<label class="variant"><input type="radio" name="weather" id="weather" value="yes" required> Да</label>
+								<label class="variant"><input type="radio" name="weather" value="no"> Нет</label>
+							<br>
+							</div>
+						</div>
+					</div>
+					<div class="tab">
+						<div align="center">
+							<div class="question_field">
+								<p class="designation"><b id="d11">Бывают ли у вас такие периоды, когда из-за волнений вы теряете сон?</b></p>
+								<label class="variant"><input type="radio" name="sleep" id="sleep" value="yes" required> Да</label>
+								<label class="variant"><input type="radio" name="sleep" value="no"> Нет</label>
+							<br>
+							</div>
+							<div class="question_field">
+								<p class="designation"><b id="d12">Беспокоят ли вас запоры?</b></p>
+								<label class="variant"><input type="radio" name="constip" id="constip" value="yes" required> Да</label>
+								<label class="variant"><input type="radio" name="constip" value="no"> Нет</label>
+							<br>
+							</div>
+							<div class="question_field">
+								<p class="designation"><b id="d13">Считаете ли вы, что сейчас также работоспособны, как прежде?</b></p>
+								<label class="variant"><input type="radio" name="effic" id="effic" value="yes" required> Да</label>
+								<label class="variant"><input type="radio" name="effic" value="no"> Нет</label>
+							<br>
+							</div>
+							<div class="question_field">
+								<p class="designation"><b id="d14">Беспокоят ли вас боли в области печени?</b></p>
+								<label class="variant"><input type="radio" name="liver" id="liver" value="yes" required> Да</label>
+								<label class="variant"><input type="radio" name="liver" value="no"> Нет</label>
+							<br>
+							</div>
+							<div class="question_field">
+								<p class="designation"><b id="d15">Бывают ли у вас головокружения?</b></p>
+								<label class="variant"><input type="radio" name="dizzi" id="dizzi" value="yes" required> Да</label>
+								<label class="variant"><input type="radio" name="dizzi" value="no"> Нет</label>
+							<br>
+							</div>
+						</div>
+					</div>
+					<div class="tab">
+						<div align="center">
+							<div class="question_field">
+								<p class="designation"><b id="d16">Вам стало труднее сосредоточиться сейчас, чем в прошлые годы?</b></p>
+								<label class="variant"><input type="radio" name="focus" id="focus" value="yes" required> Да</label>
+								<label class="variant"><input type="radio" name="focus" value="no"> Нет</label>
+							<br>
+							</div>
+							<div class="question_field">
+								<p class="designation"><b id="d17">Беспокоит ли вас ослабление памяти, забывчивость?</b></p>
+								<label class="variant"><input type="radio" name="forget" id="forget" value="yes" required> Да</label>
+								<label class="variant"><input type="radio" name="forget" value="no"> Нет</label>
+							<br>
+							</div>
+							<div class="question_field">
+								<p class="designation"><b id="d18">Бывают ли вас в различных частях тела покалывание или "ползание мурашек"?</b></p>
+								<label class="variant"><input type="radio" name="creep" id="creep" value="yes" required> Да</label>
+								<label class="variant"><input type="radio" name="creep" value="no"> Нет</label>
+							<br>
+							</div>
+							<div class="question_field">
+								<p class="designation"><b id="d19">Часто ли вы чувствуете себя радостно возбужденным или счастливым?</b></p>
+								<label class="variant"><input type="radio" name="happy" id="happy" value="yes" required> Да</label>
+								<label class="variant"><input type="radio" name="happy" value="no"> Нет</label>
+							<br>
+							</div>
+							<div class="question_field">
+								<p class="designation"><b id="d20">Беспокоят ли вас шум или звон в ушах?</b></p>
+								<label class="variant"><input type="radio" name="noise" id="noise" value="yes" required> Да</label>
+								<label class="variant"><input type="radio" name="noise" value="no"> Нет</label>
+							<br>
+							</div>
+						</div>
+					</div>
+					<div class="tab">
+						<div align="center">
+							<div class="question_field">
+								<p class="designation"><b id="d21">Имеются ли у вас в домашней аптечке валидол или сердечные капли?</b></p>
+								<label class="variant"><input type="radio" name="medic" id="medic" value="yes" required> Да</label>
+								<label class="variant"><input type="radio" name="medic" value="no"> Нет</label>
+							<br>
+							</div>
+							<div class="question_field">
+								<p class="designation"><b id="d22">Бывают ли у вас отеки на ногах?</b></p>
+								<label class="variant"><input type="radio" name="swell" id="swell" value="yes" required> Да</label>
+								<label class="variant"><input type="radio" name="swell" value="no"> Нет</label>
+							<br>
+							</div>
+							<div class="question_field">
+								<p class="designation"><b id="d23">Приходится ли вам отказываться от некоторых блюд?</b></p>
+								<label class="variant"><input type="radio" name="dish" id="dish" value="yes" required> Да</label>
+								<label class="variant"><input type="radio" name="dish" value="no"> Нет</label>
+							<br>
+							</div>
+							<div class="question_field">
+								<p class="designation"><b id="d24">Бывает ли у вас одышка при быстрой ходьбе?</b></p>
+								<label class="variant"><input type="radio" name="dysp" id="dysp" value="yes" required> Да</label>
+								<label class="variant"><input type="radio" name="dysp" value="no"> Нет</label>
+							<br>
+							</div>
+							<div class="question_field">
+								<p class="designation"><b id="d25">Беспокоят ли вас боли в области поясницы?</b></p>
+								<label class="variant"><input type="radio" name="loins" id="loins" value="yes" required> Да</label>
+								<label class="variant"><input type="radio" name="loins" value="no"> Нет</label>
+							<br>
+							</div>
+						</div>
+					</div>
+					<div class="tab">
+						<div align="center">
+							<div class="question_field">
+								<p class="designation"><b id="d26">Приходится ли вам употреблять в лечебных целях минеральную воду?</b></p>
+								<label class="variant"><input type="radio" name="mineral" id="mineral" value="yes" required> Да</label>
+								<label class="variant"><input type="radio" name="mineral" value="no"> Нет</label>
+							<br>
+							</div>
+							<div class="question_field">
+								<p class="designation"><b id="d27">Беспокоит ли вас неприятный вкус во рту?</b></p>
+								<label class="variant"><input type="radio" name="taste" id="taste" value="yes" required> Да</label>
+								<label class="variant"><input type="radio" name="taste" value="no"> Нет</label>
+							<br>
+							</div>
+							<div class="question_field">
+								<p class="designation"><b id="d28">Можно ли сказать, что вы стали легко плакать?</b></p>
+								<label class="variant"><input type="radio" name="cry" id="cry" value="yes" required> Да</label>
+								<label class="variant"><input type="radio" name="cry" value="no"> Нет</label>
+							<br>
+							</div>
+							<div class="question_field">
+								<p class="designation"><b id="d29">Как вы оцениваете состояние своего здоровья?</b></p>
+								<div class="last_question">
+									<div class="last_questions_variants">
+										<label class="variant"><input type="radio" name="state" id="state" value="good" required> Хорошее</label>
+									</div>
+									<div class="last_questions_variants">
+										<label class="variant"><input type="radio" name="state" value="passably"> Удовлетворительное</label>
+									</div>
+									<div class="last_questions_variants">
+										<label class="variant"><input type="radio" name="state" value="bad"> Плохое</label>
+									</div>
+									<div class="last_questions_variants">
+										<label class="variant"><input type="radio" name="state" value="badly"> Очень плохое</label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>	
+			</div>
+		</div>
+		<div class="col-md-12 progress progress-striped active text-center no-gutter">
+			<div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+				<span class="progress-message"></span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-offset-1 col-md-3 text-center no-gutter">
+				<span class="switch_name">Настройки</span>
+				<input type="checkbox" id="options_button" />
+				<label class="options_switch" for="options_button"><i></i></label>
+			</div>
+			<div class="col-md-offset-1 col-md-2 text-center no-gutter">
+				<a href="results.html" class="next_button" id="test_submit">Продолжить</a>
+			</div>
+		</div>
+		<div class="options_container col-md-offset-1 col-md-3">
+			<table class="options_table">
+				<tbody>
+					<tr>
+						<td>
+							<span class="table_name">Тема</span>
+							<select class="switch_theme">
+								<option class="theme_option" selected disabled>Выберите</option>
+								<option class="theme_option" value="white">Белая</option>
+								<option class="theme_option" value="blue">Синяя</option>
+								<option class="theme_option" value="grey">Серая</option>
+								<option class="theme_option" value="black">Черная</option>	
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span class="table_name">Шрифт</span><br>
+							<button style="width: 48%; outline: none;" type="button" class="btn btn-default btn-md plus" onclick="toIncreaseFont();"><span class="glyphicon glyphicon-plus-sign"></span></button>
+							<button style="width: 48%; outline: none;" type="button" class="btn btn-default btn-md minus" onclick="toDecreaseFont();"><span class="glyphicon glyphicon-minus-sign"></span></button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</body>
+</html>
