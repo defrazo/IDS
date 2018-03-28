@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html onselectstart="return false;" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Функциональные классы</title>
+	<link rel="stylesheet" href="../css/bootstrap.css" media="all">
+	<link rel="stylesheet" href="../css/page.css" media="all">
+	<link rel="stylesheet" href="../css/classes.css" media="all">
+	<link rel="stylesheet" href="../css/options.css" media="all">
+	<script src="../js/jquery-3.js"></script>
+	<script src="../js/jquery-1.js"></script>
+	<script src="../js/bootstrap.js"></script>
+	<script src="../js/themes.js"></script>
+	<script src="../js/classes/script.js"></script>
+	<script src="../js/classes/increaseFont.js"></script>
+	<script src="../js/classes/decreaseFont.js"></script>
+	<script src="../js/hotkeys.js"></script>
+	<script src="../js/keys.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="header text-center">
+			<h1 class="text-uppercase">Гуманитарный университет</h1>
+			<h2>Информационно-диагностическая система самоуправления развитием личности и ее психофизической подготовленностью</h2>
+			<h2>Функциональные классы</h2>
+		</div>
+		<table class="result_table table table-bordered table-hover text-center">
+			<tr>
+				<td class="thead">Класс</td><td class="thead">Отклонение от популяционного стандарта</td>
+				<td class="thead">Состояние здоровья</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>-9.0 и менее</td>
+				<td>Состояние здоровья очень хорошее. <br>Диспансерному учету и реабилитации не подлежит.</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>от -8.9 до -3.0 </td>
+				<td>Состояние здоровья хорошее. <br>Диспансерному учету и реабилитации не подлежит.</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>от -2.9 до +2.9</td>
+				<td>Состояние здоровья среднее. <br>Рекомендуется ежегодный медицинский осмотр и профилактика.</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>от +3.0 до +8.9</td>
+				<td>Состояние здоровья плохое. <br>Большой риск болезней или утраты трудоспособности. <br>Требуется обязательный диспансерный контроль и санаторно-курортное лечение.</td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td>+9.0 и более</td>
+				<td>Состояние здоровья очень плохое. <br>Очень большой риск заболеваний и утраты трудоспобности. <br>Требуется тщательное медикоинструментальное обследование и медицинская реабилитация.</td>
+			</tr>
+		</table>
+		<div class="row controls text-center no-gutter">
+			<div class="col-md-offset-1 col-md-3 text-center no-gutter">
+				<span class="switch_name">Настройки</span>
+				<input type="checkbox" id="options_button" />
+				<label class="options_switch" for="options_button"><i></i></label>
+			</div>
+			<div class="col-md-4">
+				<a class="next_button" href="results.html">Результаты</a>
+			</div>
+			<div class="col-md-3">
+				<a class="next_button" onclick="print();"><img class="printImg" src="../img/prinet.png" width="35"> Печать</a>
+			</div>
+		</div>
+		<div class="options_container col-md-offset-1 col-md-3">
+			<table class="options_table">
+				<tbody>
+					<tr>
+						<td>
+							<span class="table_name">Тема</span>
+							<select class="switch_theme">
+								<option class="theme_option" selected disabled>Выберите</option>
+								<option class="theme_option" value="white">Белая</option>
+								<option class="theme_option" value="grey">Серая</option>
+								<option class="theme_option" value="blue">Синяя</option>
+								<option class="theme_option" value="black">Черная</option>
+								<option class="theme_option" value="yellow">Желтая</option>
+								<option class="theme_option" value="lightblue">Голубая</option>
+								<option class="theme_option" value="green">Зеленая</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span class="table_name">Шрифт</span><br>
+							<button style="width: 48%; outline: none;" type="button" class="btn btn-default btn-md plus" onclick="toIncreaseFont();"><span class="glyphicon glyphicon-plus-sign"></span></button>
+							<button style="width: 48%; outline: none;" type="button" class="btn btn-default btn-md minus" onclick="toDecreaseFont();"><span class="glyphicon glyphicon-minus-sign"></span></button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</body>
+</html>

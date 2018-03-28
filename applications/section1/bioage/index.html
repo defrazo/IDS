@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html onselectstart="return false;" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Начало работы</title>
+	<link rel="stylesheet" href="css/bootstrap.css" media="all">
+	<link rel="stylesheet" href="css/page.css" media="all">
+	<link rel="stylesheet" href="css/index.css" media="all">
+	<script src="js/jquery-3.js"></script>
+	<script src="js/jquery-1.js"></script>
+	<script src="js/hotkeys.js"></script>
+	<script src="js/themes.js"></script>
+	<script src="js/keys.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="header text-center">
+			<h1 class="text-uppercase">Гуманитарный университет</h1>
+			<h2>Информационно-диагностическая система самоуправления развитием личности и ее психофизической подготовленностью</h2>
+		</div>
+		<div class="content col-md-offset-1 col-md-10 text-center">
+			<h1 class="text-uppercase name">Определение биологического возраста</h1>
+			<h2 class="name">по методике профессора В. П. Войтенко (1982)</h2>
+		</div>
+		<div class="row">
+			<div class="col-md-offset-3 col-md-6 text-center">
+				<a href="./pages/information.html" class="next_button" id="index_submit">Начать</a>
+			</div>
+		</div>
+	<br>
+		<div class="row">
+			<div class="col-md-offset-3 col-md-3 text-center">
+				<a class="next_button" href="../../../index.html">Главное меню</a>
+			</div>
+			<div class="col-md-3 text-center">
+				<a class="next_button" onclick="window.close(); localStorage.clear();">Выход</a>
+			</div>
+		</div>
+		<div class="theme">
+			<select class="switch_theme">
+				<option class="theme_option" selected disabled>Выберите</option>
+				<option class="theme_option" value="white">Белая</option>
+				<option class="theme_option" value="grey">Серая</option>
+				<option class="theme_option" value="blue">Синяя</option>
+				<option class="theme_option" value="black">Черная</option>
+				<option class="theme_option" value="yellow">Желтая</option>
+				<option class="theme_option" value="lightblue">Голубая</option>
+				<option class="theme_option" value="green">Зеленая</option>
+			</select>
+		</div>
+	</div>
+</body>
+</html>
