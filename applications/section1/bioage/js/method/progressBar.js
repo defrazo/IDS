@@ -18,7 +18,7 @@ $(document).ready(function() { //Проверяет заполнение пол�
 		if (numValid == 1) {
 			progress.css('width', '9.1%');
 		    progress.attr('aria-valuenow', '9.1');
-		    progressMessage.text('Прогресс: 9%');
+		    progressMessage.text('');
 		}
 		
 		if (numValid == 2) {

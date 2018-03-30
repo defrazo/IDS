@@ -304,3 +304,33 @@ function isValidStatic(valstatic) {
 		return pattern.test(valstatic);
 	}
 }
+
+$(document).on('click focuson focusout mousemove', function() { //Подсветка правильности
+		var sname = $('#sname').val();
+		var fname = $('#fname').val();
+		var mname = $('#mname').val();
+		var age = $('#age').val();
+		var weight = $('#weight').val();
+		var sist = $('#sist').val();
+		var dia = $('#dia').val();
+		var inha = $('#inha').val();
+		var static = $('#static').val();
+		
+		if (isValidSname(sname)) $('#sname').css('border', '1px solid #0dd01a');	
+
+		if (isValidFname(fname)) $('#fname').css('border', '1px solid #0dd01a');	
+
+		if (isValidMname(mname)) $('#mname').css('border', '1px solid #0dd01a');	
+
+		if (isValidAge(age)) $('#age').css('border', '1px solid #0dd01a');	
+
+		if (isValidWeight(weight)) $('#weight').css('border', '1px solid #0dd01a');	
+
+		if (isValidSist(sist)) $('#sist').css('border', '1px solid #0dd01a');	
+
+		if (isValidDia(dia)) $('#dia').css('border', '1px solid #0dd01a');	
+
+		if (isValidInha(inha)) $('#inha').css('border', '1px solid #0dd01a');	
+
+		if (isValidStatic(static)) $('#static').css('border', '1px solid #0dd01a');	
+});

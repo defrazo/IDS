@@ -123,3 +123,8 @@ a.next_button:active {
 input[type="radio"], input[type="checkbox"] {
     outline: none;
     }
+
+.notice {
+    font-size: 25px;
+    cursor: help;
+}

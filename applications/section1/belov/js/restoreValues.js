@@ -7,7 +7,7 @@ $(document).ready(function() { //Восстанавливает значения
 	if (localStorage.getItem('snameinp') != '')	$('#sname').val(localStorage.getItem('snameinp'));
 	if (localStorage.getItem('fnameinp') != '')	$('#fname').val(localStorage.getItem('fnameinp'));
 	if (localStorage.getItem('mnameinp') != '')	$('#mname').val(localStorage.getItem('mnameinp'));
-	if (localStorage.getItem('ageinp') != '')	$('#age').val(localStorage.getItem('ageinp'));
+	if (localStorage.getItem('coldinp') != '')	$('#cold').val(localStorage.getItem('coldinp'));
 	if (localStorage.getItem('weightinp') != '')	$('#weight').val(localStorage.getItem('weightinp'));
 	if (localStorage.getItem('heightinp') != '')	$('#height').val(localStorage.getItem('heightinp'));
 	if (localStorage.getItem('pulseinp') != '')	$('#pulse').val(localStorage.getItem('pulseinp'));
