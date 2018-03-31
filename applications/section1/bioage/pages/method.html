@@ -14,6 +14,7 @@
 	<script src="../js/jquery-1.js"></script>
 	<script src="../js/bootstrap.js"></script>
 	<script src="../js/tip.js"></script>
+	<script src="../js/zoom.js"></script>
 	<script src="../js/slider.js"></script>
 	<script src="../js/themes.js"></script>
 	<script src="../js/method/script.js"></script>
@@ -21,8 +22,6 @@
 	<script src="../js/method/checkRecords.js"></script>
 	<script src="../js/method/writeOn.js"></script>
 	<script src="../js/method/progressBar.js"></script>
-	<script src="../js/method/increaseFont.js"></script>
-	<script src="../js/method/decreaseFont.js"></script>
 	<script src="../js/restoreValues.js"></script>
 	<script src="../js/hotkeys.js"></script>
 	<script src="../js/keys.js"></script>
@@ -133,8 +132,8 @@
 					<tr>
 						<td>
 							<span class="table_name">Шрифт</span><br>
-							<button style="width: 48%; outline: none;" type="button" class="btn btn-default btn-md plus" onclick="toIncreaseFont();"><span class="glyphicon glyphicon-plus-sign"></span></button>
-							<button style="width: 48%; outline: none;" type="button" class="btn btn-default btn-md minus" onclick="toDecreaseFont();"><span class="glyphicon glyphicon-minus-sign"></span></button>
+							<button style="width: 48%; outline: none;" type="button" class="btn btn-default btn-md plus" onclick="increase();"><span class="glyphicon glyphicon-plus-sign"></span></button>
+							<button style="width: 48%; outline: none;" type="button" class="btn btn-default btn-md minus" onclick="decrease();"><span class="glyphicon glyphicon-minus-sign"></span></button>
 						</td>
 					</tr>
 				</tbody>
