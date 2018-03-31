@@ -190,6 +190,6 @@ input[type=checkbox]:checked ~ .stopwatch_switch i {
     100% { box-shadow: 0 0 30px red; }
     }
 
-.blink {
+.blink1, .blink2, .blink3, .blink4 {
     animation: blink 1.0s linear infinite;
     }

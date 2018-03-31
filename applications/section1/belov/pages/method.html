@@ -40,81 +40,92 @@
 						<div class="first_tab">
 							<div class="question_field">
 								<p class="designation">Дата обследования:</p>
-								<input type="date" onclick="valide_fourth();" class="data_input_field" id="date" required>
+								<input type="date" onclick="valide();" class="data_input_field" id="date" required>
 							</div>
 							<div class="question_field">
 								<p class="designation">Ваш пол:</p>
-								<label class="variant"><input type="radio" onclick="valide_fourth();" name="gender" id="gender" value="Мужской" required> Мужской </label>
-								<label class="variant"><input type="radio" onclick="valide_fourth();" name="gender" value="Женский"> Женский </label>
+								<label class="variant"><input type="radio" onclick="valide();" name="gender" id="gender" value="Мужской" required> Мужской </label>
+								<label class="variant"><input type="radio" onclick="valide();" name="gender" value="Женский"> Женский </label>
+							</div>
+							<div class="question_field">
+								<p class="designation">Медицинская группа:</p>
+								<label class="variant"><input type="radio" onclick="valide();" name="group" id="group" value="Основная"> Основная </label>
+								<label class="variant"><input type="radio" onclick="valide();" name="group" value="Специальная"> Специальная </label>
 							</div>
 						</div>
 					</div>
 					<div class="tab">
 						<div class="question_field">
 							<p class="designation">Ваша фамилия:</p>
-								<input type="text" onkeydown="valide_fourth();" class="data_input_field" id="sname" required>
+								<input type="text" onkeydown="valide();" class="data_input_field" id="sname" required>
 						</div>
 						<div class="question_field">
 							<p class="designation">Ваше имя:</p>
-								<input type="text" onkeydown="valide_fourth();" class="data_input_field" id="fname" required>
+								<input type="text" onkeydown="valide();" class="data_input_field" id="fname" required>
 						</div>
 						<div class="question_field">
 							<p class="designation">Ваше отчество:</p>
-								<input type="text" onkeydown="valide_fourth();" class="data_input_field" id="mname" required>
+								<input type="text" onkeydown="valide();" class="data_input_field" id="mname" required>
 						</div>
 						<div class="question_field">
 							<p class="designation">Ваш вес: <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="right" title="Измеряется в легкой одежде, без обуви. Регистрируется с помощью медицинских весов."></p>
-							<input type="text" onkeydown="valide_fourth();" placeholder="кг" class="data_input_field" id="weight" required>
+							<input type="text" onkeydown="valide();" placeholder="кг" class="data_input_field" id="weight" required>
 						</div>
 						<div class="question_field">
 							<p class="designation">Ваш рост: <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="right" title="Измеряется без обуви. Регистрируется с помощью медицинского ростометра."></p>
-							<input type="text" onkeydown="valide_fourth();" placeholder="см" class="data_input_field" id="height" required>
+							<input type="text" onkeydown="valide();" placeholder="см" class="data_input_field" id="height" required>
 						</div>
 					</div>		
 					<div class="tab">
 						<div class="question_field">
 							<p class="designation">Ваше давление систолическое: <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="right" title="Измеряется по общепринятой методике при помощи аппарата Рива-Роччи: на правой руке в положении сидя трижды с интервалом 5 минут. Учитывается наименьшая величина."></p>
-							<input type="text" onkeydown="valide_fourth();" placeholder="мм рт. ст." class="data_input_field" id="sist" required>
+							<input type="text" onkeydown="valide();" placeholder="мм рт. ст." class="data_input_field" id="sist" required>
 						</div>
 						<div class="question_field">
 							<p class="designation">Ваше давление диастолическое: <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="right" title="Измеряется по общепринятой методике при помощи аппарата Рива-Роччи: на правой руке в положении сидя трижды с интервалом 5 минут. Учитывается наименьшая величина."></p>
-							<input type="text" onkeydown="valide_fourth();" placeholder="мм рт. ст." class="data_input_field" id="dia" required>
+							<input type="text" onkeydown="valide();" placeholder="мм рт. ст." class="data_input_field" id="dia" required>
 						</div>
 						
 						<div class="question_field">
 							<p class="designation">Ваш пульс: <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="right" title="Измеряется в легкой одежде, без обуви. Регистрируется с помощью медицинских весов."></p>
-							<input type="text" onkeydown="valide_fourth();" placeholder="уд/мин" class="data_input_field" id="pulse" required>
+							<input type="text" onkeydown="valide();" placeholder="уд/мин" class="data_input_field" id="pulse" required>
 						</div>
 						<div class="question_field">
 							<p class="designation">Количество простудных заболеваний в течение года:</p>
-							<input type="text" onkeydown="valide_fourth();" placeholder="раз" class="data_input_field" id="cold" required>
+							<input type="text" onkeydown="valide();" placeholder="раз" class="data_input_field" id="cold" required>
+						</div>
+						<div class="question_field">
+							<p class="designation">Жизненная емкость легких: <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="right" title="Измеряется спирометром."></p>
+							<input type="text" onkeydown="valide();" placeholder="см³" class="data_input_field" id="lung" required>
 						</div>
 					</div>
 					<div class="tab">
 						<div class="question_field">
-							<p class="designation">Бег 2 км: <img src="../img/help.png" class="help-icon blink" data-toggle="tooltip" data-placement="right" title="Лучший результат в забеге на 2 километра."></p>
-							<input type="text" onkeydown="valide_fourth();" placeholder="минут" class="data_input_field_time" id="run1" required>
-							<input type="text" onkeydown="valide_fourth();" placeholder="секунд" class="data_input_field_time" id="run2" required>
+							<div class="question_field">
+							<p class="designation">Стаж самостоятельных занятий: <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="right" title="более 2 раз в неделю по 30 минут."></p>
+							<input type="text" onkeydown="valide();" placeholder="см³" class="data_input_field" id="training" required>
 						</div>
-						<div class="question_field">
-							<p class="designation">Время восстановления ЧСС: <img src="../img/help.png" class="help-icon blink" data-toggle="tooltip" data-placement="right" title="Время восстановления пульса до состояния перед физической нагрузкой."></p>
-							<input type="text" onkeydown="valide_fourth();" placeholder="секунд" class="data_input_field" id="heart" required>
+							<label class="designation variant"><input type="radio" onclick="valide();" name="recovery" id="recovery" value="Бег"> Бег 2 км: <img src="../img/help.png" class="help-icon blink1" data-toggle="tooltip" data-placement="right" title="(Для подготовленных). Лучший результат в забеге на 2 километра."></label>
+						<br>
+							<label class="designation variant"><input type="radio" onclick="valide();" name="recovery" value="ЧСС"> Время восстановления ЧСС: <img src="../img/help.png" class="help-icon blink2" data-toggle="tooltip" data-placement="right" title="(Для начинающих). Время восстановления пульса до состояния перед физической нагрузкой."></label>
+						<br>
+							<input type="text" onkeydown="valide();" placeholder="минут" class="data_input_field_time" id="rec1" required>
+							<input type="text" onkeydown="valide();" placeholder="секунд" class="data_input_field_time" id="rec2" required>
 						</div>
 						<div class="question_field pull">
-							<p class="designation">Подтягивания на перекладине: <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="right" title="Подтягивания на перекладине осуществляются следующим образом: ухватитесь за турник верхним хватом, руки чуть шире ширины плеч. Повисните на перекладине. Далее подтянитесь, при этом постарайтесь коснуться верхней частью груди перекладины. Сделайте паузу на секунду в верхней точке амплитуды, а затем плавно вернитесь в стартовое положение."></p>
-							<input type="text" onkeydown="valide_fourth();" placeholder="повторений" class="data_input_field" id="pull" required>
-						</div>
-						<div class="question_field push">
-							<p class="designation">Сгибания рук в упоре лежа: <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="right" title="Сгибание и разгибание рук в упоре лежа выполняется из исходного положения: упор лежа на полу, руки на ширине плеч, кисти вперед, локти разведены не более чем на 45 градусов, плечи, туловище и ноги составляют прямую линию. Стопы упираются в пол без опоры. Засчитывается количество правильно выполненных сгибаний и разгибаний рук, фиксируемых счетом судьи. Сгибая руки, необходимо коснуться грудью пола (или контактной платформы высотой 5 см.), затем, разгибая руки, вернуться в исходное положение и, зафиксировав его на 1 с, продолжить выполнение испытания."></p>
-							<input type="text" onkeydown="valide_fourth();" placeholder="повторений" class="data_input_field" id="push" required>
+							<label class="designation variant"><input type="radio" onclick="valide();" name="exercise" id="exercise" value="push"> Подтягивания на перекладине:  <img src="../img/help.png" class="help-icon blink3" data-toggle="tooltip" data-placement="right" title="(Выберите один из двух вариантов). Подтягивания на перекладине осуществляются следующим образом: ухватитесь за турник верхним хватом, руки чуть шире ширины плеч. Повисните на перекладине. Далее подтянитесь, при этом постарайтесь коснуться верхней частью груди перекладины. Сделайте паузу на секунду в верхней точке амплитуды, а затем плавно вернитесь в стартовое положение."></label>
+						<br>
+							<label class="designation variant"><input type="radio" onclick="valide();" name="exercise" value="pull"> Сгибания рук в упоре лежа: <img src="../img/help.png" class="help-icon blink4" data-toggle="tooltip" data-placement="right" title="(Выберите один из двух вариантов). Сгибание и разгибание рук в упоре лежа выполняется из исходного положения: упор лежа на полу, руки на ширине плеч, кисти вперед, локти разведены не более чем на 45 градусов, плечи, туловище и ноги составляют прямую линию. Стопы упираются в пол без опоры. Засчитывается количество правильно выполненных сгибаний и разгибаний рук, фиксируемых счетом судьи. Сгибая руки, необходимо коснуться грудью пола (или контактной платформы высотой 5 см.), затем, разгибая руки, вернуться в исходное положение и, зафиксировав его на 1 с, продолжить выполнение испытания."></label>
+						<br>
+							<input type="text" onkeydown="valide();" placeholder="повторений" class="data_input_field" id="exercval" required>
 						</div>
 						<div class="question_field lift">
 							<p class="designation">Поднимание туловища из положения лежа: <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="right" title="Поднимание туловища из положения лежа на спине выполняется следующим образом: лежа на спине, на гимнастическом мате, руки за головой «в замок», лопатки касаются мата, ноги согнуты в коленях под прямым углом, ступни прижаты партнером к полу. Засчитывается количество правильно выполненных подниманий туловища."></p>
-							<input type="text" onkeydown="valide_fourth();" placeholder="повторений" class="data_input_field" id="lift" required>
+							<input type="text" onkeydown="valide();" placeholder="повторений" class="data_input_field" id="lift" required>
 						</div>
 						<div class="question_field">
 							<p class="designation">Прыжок в длину с места: <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="right" title="Прыжок осуществляется из исходного положения: ноги на ширине плеч, ступни параллельно, носки ног перед линией отталкивания. Одновременным толчком двух ног выполняется прыжок вперед. Мах руками допускается. Измерение производится по перпендикулярной прямой от места отталкивания любой ногой до ближайшего следа, оставленного любой частью тела участника. Предоставляются три попытки. В зачет идет лучший результат."></p>
-							<input type="text" onkeydown="valide_fourth();" placeholder="см" class="data_input_field" id="jump" required>
+							<input type="text" onkeydown="valide();" placeholder="см" class="data_input_field" id="jump" required>
 						</div>
 					</div>
 				</div>
@@ -132,7 +143,7 @@
 				<label class="options_switch" for="options_button"><i></i></label>
 			</div>
 			<div class="col-md-offset-1 col-md-2 text-center no-gutter">
-					<a href="results.html" class="next_button" id="method_submit" onclick="localStorage.setItem('mval', 4); get_data();">Продолжить</a>
+					<a href="results.html" class="next_button" id="method_submit" onclick="get_data();">Продолжить</a>
 			</div>
 			<div class="col-md-offset-1 col-md-3 text-center no-gutter">
 				<span class="switch_name">Секундомер</span>

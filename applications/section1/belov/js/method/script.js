@@ -9,10 +9,22 @@ $(document).ready(function() {
 		else	$('.options_container').css('display', 'none');
 	});
 
-	$('.blink').mouseover(function() {
-		$('.blink').removeClass('blink');
+	$('.blink1').mouseover(function() {
+		$('.blink1').removeClass('blink1');
 	});
 
+	$('.blink2').mouseover(function() {
+		$('.blink2').removeClass('blink2');
+	});
+
+	$('.blink3').mouseover(function() {
+		$('.blink3').removeClass('blink3');
+	});
+
+	$('.blink4').mouseover(function() {
+		$('.blink4').removeClass('blink4');
+	});
+	
 	$(document).on('click mousemove', function() {
 		fontSize = $('.header>h1').css('font-size');
 		if (fontSize == '36px') {$('.plus').prop('disabled', false); $('.minus').prop('disabled', true);}
