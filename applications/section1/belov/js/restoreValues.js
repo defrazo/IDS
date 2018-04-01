@@ -32,4 +32,5 @@ $(document).ready(function() { //Восстанавливает значения
 	if (localStorage.getItem('jumpinp') != '')	$('#jump').val(localStorage.getItem('jumpinp'));
 	if (localStorage.getItem('lunginp') != '')	$('#lung').val(localStorage.getItem('lunginp'));
 	if (localStorage.getItem('traininginp') != '')	$('#training').val(localStorage.getItem('traininginp'));
+	if (localStorage.getItem('facinp') != '')	$('#fac').val(localStorage.getItem('facinp'));
 });

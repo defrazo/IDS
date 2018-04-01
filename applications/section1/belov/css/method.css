@@ -174,7 +174,7 @@ input[type=checkbox]:checked ~ .stopwatch_switch i {
     pointer-events: none;
     }
 
-.lift, .push, .pull {
+.lift, .push, .pull, .spec {
     display: none;
 }
 
@@ -192,4 +192,26 @@ input[type=checkbox]:checked ~ .stopwatch_switch i {
 
 .blink1, .blink2, .blink3, .blink4 {
     animation: blink 1.0s linear infinite;
+    }
+
+.switch_fac, .switch_fac option {
+    padding: 5px 0 5px 10px;
+    border: none;
+    cursor: pointer;
+    background-color: white;
+    box-shadow: 0 0 3px #aaa;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    width: 45%;
+     text-align-last: center;
+    }
+
+.switch_fac:hover select {
+    border: none;
+    background-color: transparent;
+    box-shadow: 0 0 3px #aaa;
+    border-radius: 5px;
+    width: 45%;
+    text-align-last: center;
     }

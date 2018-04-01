@@ -52,4 +52,20 @@ $(document).mousemove(function() {
 			$('.pull').css('display', 'none');
 			$('.lift').css('display', 'block');
 			}
+
+	$('input[name="group"]').change(function() {
+		var groupValue = $('input[name="group"]:checked').val();
+			if (groupValue) {
+				localStorage.setItem('groupinp', groupValue);	
+				localStorage.setItem('vgroup', 1);	
+			}
+		});
+
+	if ($('input[name="group"]:checked').val() == 'Специальная') {
+		$('.spec').css('display', 'block');
+		$('.nospec').css('display', 'none');
+		} else {
+			$('.spec').css('display', 'none');
+			$('.nospec').css('display', 'block');
+			}
 })

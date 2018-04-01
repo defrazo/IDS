@@ -21,9 +21,10 @@ $(document).mousemove(function() { //Проверяет заполнение в�
 	v18 = $('#jump').val(),
 	v19 = $('#group').val(),
 	v20 = $('#lung').val();
+	v21 = $('#fac').val();
 	
 	if ($('input[name="gender"]:checked').val() == 'Мужской') {
-		if ((v1) && (v2) && (v3) && (v4) && (v5) && (v6) && (v7) && (v8) && (v9) && (v10) && (v11) && (v12) && (v13) && (v14) && (v15) && (v16) && (v18) && (v19)) {
+		if ((v1) && (v2) && (v3) && (v4) && (v5) && (v6) && (v7) && (v8) && (v9) && (v10) && (v11) && (v12) && (v13) && (v14) && (v15) && (v16) && (v18) && (v19) && (v21)) {
 			if ($('#method_submit').is(':hidden')) {
 				$('#method_submit').css('display', 'block');
 				$('#method_submit').removeClass('no_click'); //Активирует	
@@ -32,12 +33,12 @@ $(document).mousemove(function() { //Проверяет заполнение в�
 		if ($('#method_submit').is(':visible')) $('#method_submit').removeClass('no_click');
 	}
 
-		if ((!v1) || (!v2) || (!v3) || (!v4) || (!v5) || (!v6) || (!v7) || (!v8) || (!v9) || (!v10) || (!v11) || (!v12) || (!v13) || (!v14) || (!v15) || (!v16) || (!v18) || (!v19)) {
+		if ((!v1) || (!v2) || (!v3) || (!v4) || (!v5) || (!v6) || (!v7) || (!v8) || (!v9) || (!v10) || (!v11) || (!v12) || (!v13) || (!v14) || (!v15) || (!v16) || (!v18) || (!v19) || (!v21)) {
 			$('#method_submit').addClass('no_click');
 			if ($('#method_submit').is(':visible')) $('#method_submit').css('display', 'none');
 		}
 	} else {
-		if ((v1) && (v2) && (v3) && (v4) && (v5) && (v6) && (v7) && (v8) && (v9) && (v10) && (v11) && (v12) && (v13) && (v16) && (v17) && (v18) && (v19)) {
+		if ((v1) && (v2) && (v3) && (v4) && (v5) && (v6) && (v7) && (v8) && (v9) && (v10) && (v11) && (v12) && (v13) && (v16) && (v17) && (v18) && (v19) && (v21)) {
 			if ($('#method_submit').is(':hidden')) {
 				$('#method_submit').css('display', 'block');
 				$('#method_submit').removeClass('no_click'); //Активирует	
@@ -46,7 +47,7 @@ $(document).mousemove(function() { //Проверяет заполнение в�
 		if ($('#method_submit').is(':visible')) $('#method_submit').removeClass('no_click');
 	}
 
-		if ((!v1) || (!v2) || (!v3) || (!v4) || (!v5) || (!v6) || (!v7) || (!v8) || (!v9) || (!v10) || (!v11) || (!v12) || (!v13) || (!v16) || (!v17) || (!v18) || (!v19)) {
+		if ((!v1) || (!v2) || (!v3) || (!v4) || (!v5) || (!v6) || (!v7) || (!v8) || (!v9) || (!v10) || (!v11) || (!v12) || (!v13) || (!v16) || (!v17) || (!v18) || (!v19) || (!v21)) {
 			$('#method_submit').addClass('no_click');
 			if ($('#method_submit').is(':visible')) $('#method_submit').css('display', 'none');
 		}

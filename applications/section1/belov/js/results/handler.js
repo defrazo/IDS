@@ -20,6 +20,7 @@ $(document).ready(function() {
 	exercise = localStorage.getItem('exerciseinp');
 	lung = localStorage.getItem('lunginp');
 	training = localStorage.getItem('traininginp');
+	fac = localStorage.getItem('facinp');
 	
 	imt = height - weight;
 	cap = lung / weight;
@@ -283,10 +284,6 @@ $(document).ready(function() {
 			case ((training >= 5) && (training <= 7)) : points = points + 7; break;
 			case ((training >= 8) && (training <= 10)) : points = points + 8; break;
 			case (training > 10) : points = points + 9; break;
-			
-			
-			
-			
 		}
 
 		switch (true) {
@@ -296,17 +293,31 @@ $(document).ready(function() {
 			case (cold <= 1): points = points + 7.5; break;
 		}
 	}
+	var gr = localStorage.getItem('groupinp');
+	if (gr == 'Основная') {
+		avg = points / 6;
 
-	avg = points / 6;
+		switch (true) {
+			case (avg >= 6.0) : status = 'Супервысокий'; break;
+			case (avg >= 4.9) && (avg <= 5.0) : status = 'Очень высокий'; break;
+			case (avg >= 4.0) && (avg <= 4.9) : status = 'Высокий'; break;
+			case (avg >= 3.0) && (avg <= 3.9) : status = 'Средний'; break;
+			case (avg >= 2.0) && (avg <= 2.9) : status = 'Низкий'; break;
+			case (avg <= 1.9) : status = 'Очень низкий'; break;
+		} 
+	} else { 
+			avg = points / 10;
 
-	switch (true) {
-		case (avg >= 6.0) : status = 'Супервысокий'; break;
-		case (avg >= 4.9) && (avg <= 5.0) : status = 'Очень высокий'; break;
-		case (avg >= 4.0) && (avg <= 4.9) : status = 'Высокий'; break;
-		case (avg >= 3.0) && (avg <= 3.9) : status = 'Средний'; break;
-		case (avg >= 2.0) && (avg <= 2.9) : status = 'Низкий'; break;
-		case (avg <= 1.9) : status = 'Очень низкий'; break;
+		switch (true) {
+			case (avg >= 6.0) : status = 'Супервысокий'; break;
+			case (avg >= 4.9) && (avg <= 5.0) : status = 'Очень высокий'; break;
+			case (avg >= 4.0) && (avg <= 4.9) : status = 'Высокий'; break;
+			case (avg >= 3.0) && (avg <= 3.9) : status = 'Средний'; break;
+			case (avg >= 2.0) && (avg <= 2.9) : status = 'Низкий'; break;
+			case (avg <= 1.9) : status = 'Очень низкий'; break;
+		}
 	}
+	
 
 	$('#sname').append(sname);
 	$('#fname').append(fname);
@@ -316,4 +327,5 @@ $(document).ready(function() {
 	$('#points').append(avg);
 	$('#status').append(status);
 	$('#group').append(group);
+	$('#fac').append(fac);
 });

@@ -291,116 +291,149 @@ function isValidDia(valdia) {
 }
 
 $(document).ready(function() { //Проверка ввода диастолического давления 
-	$('#run1').focusout(function() {
-		var run1 = $('#run1').val();
+	$('#rec1').focusout(function() {
+		var rec1 = $('#rec1').val();
 		
-		if (($(this).val() >= 20) || ($(this).val() <= 5)) $(this).val($(this).val().substr(0, 0));
+		if ($(this).val() >= 20) $(this).val($(this).val().substr(0, 0));
 
-		if (run1 != 0) {
-			if (isValidRun1(run1)) {
-				$('#run1').css('border', '1px solid #0dd01a');
-				localStorage.setItem('vrun1', 1);
+		if (rec1 != '') {
+			if (isValidRec1(rec1)) {
+				$('#rec1').css('border', '1px solid #0dd01a');
+				localStorage.setItem('vrec1', 1);
 			} else {
-				$('#run1').css('border', '1px solid #f00');
+				$('#rec1').css('border', '1px solid #f00');
 				$(this).val($(this).val().substr(0, 0));
 			}
 		}
 		
-		$('#run1').keyup(function() {
+		$('#rec1').keyup(function() {
 			$(this).val($(this).val().trim());
 		});
 	});
 	
-	$('#run1').keyup(function() {
+	$('#rec1').keyup(function() {
 		if ($(this).val().length > 2) $(this).val($(this).val().substr(0, 2));         
 	});
 });
 
-function isValidRun1(valrun1) {
-	if ($('#run1').val().length == 1) {
+function isValidRec1(valrec1) {
+	if ($('#rec1').val().length == 1) {
 		var pattern = new RegExp(/[0-9]/);
-		return pattern.test(valrun1);
+		return pattern.test(valrec1);
 	}
 
-	if ($('#run1').val().length == 2) {
+	if ($('#rec1').val().length == 2) {
 		var pattern = new RegExp(/[0-9][0-9]/);
-		return pattern.test(valrun1);
+		return pattern.test(valrec1);
 	}
 }
 
 $(document).ready(function() { //Проверка ввода диастолического давления 
-	$('#run2').focusout(function() {
-		var run2 = $('#run2').val();
+	$('#rec2').focusout(function() {
+		var rec2 = $('#rec2').val();
 		
 		if ($(this).val() >= 60) $(this).val($(this).val().substr(0, 0));
 
-		if (run2 != 0) {
-			if (isValidRun2(run2)) {
-				$('#run2').css('border', '1px solid #0dd01a');
-				localStorage.setItem('vrun2', 1);
+		if (rec2 != '') {
+			if (isValidRec2(rec2)) {
+				$('#rec2').css('border', '1px solid #0dd01a');
+				localStorage.setItem('vrec2', 1);
 			} else {
-				$('#run2').css('border', '1px solid #f00');
+				$('#rec2').css('border', '1px solid #f00');
 				$(this).val($(this).val().substr(0, 0));
 			}
 		}
 		
-		$('#run2').keyup(function() {
+		$('#rec2').keyup(function() {
 			$(this).val($(this).val().trim());
 		});
 	});
 	
-	$('#run2').keyup(function() {
+	$('#rec2').keyup(function() {
 		if ($(this).val().length > 2) $(this).val($(this).val().substr(0, 2));         
 	});
 });
 
-function isValidRun2(valrun2) {
-	if ($('#run2').val().length == 1) {
+function isValidRec2(valrec2) {
+	if ($('#rec2').val().length == 1) {
 		var pattern = new RegExp(/[0-9]/);
-		return pattern.test(valrun2);
+		return pattern.test(valrec2);
 	}
 
-	if ($('#run2').val().length == 2) {
+	if ($('#rec2').val().length == 2) {
 		var pattern = new RegExp(/[0-9][0-9]/);
-		return pattern.test(valrun2);
+		return pattern.test(valrec2);
 	}
 }
 
 $(document).ready(function() { //Проверка ввода диастолического давления 
-	$('#heart').focusout(function() {
-		var heart = $('#heart').val();
+	$('#lung').focusout(function() {
+		var lung = $('#lung').val();
 		
-		if (($(this).val() >= 60) || ($(this).val() <= 0)) $(this).val($(this).val().substr(0, 0));
+		if (($(this).val() >= 7000) || ($(this).val() <= 1500)) $(this).val($(this).val().substr(0, 0));
 
-		if (heart != 0) {
-			if (isValidHeart(heart)) {
-				$('#heart').css('border', '1px solid #0dd01a');
-				localStorage.setItem('vheart', 1);
+		if (lung != 0) {
+			if (isValidLung(lung)) {
+				$('#lung').css('border', '1px solid #0dd01a');
+				localStorage.setItem('vlung', 1);
 			} else {
-				$('#heart').css('border', '1px solid #f00');
+				$('#lung').css('border', '1px solid #f00');
 				$(this).val($(this).val().substr(0, 0));
 			}
 		}
 		
-		$('#heart').keyup(function() {
+		$('#lung').keyup(function() {
 			$(this).val($(this).val().trim());
 		});
 	});
 	
-	$('#heart').keyup(function() {
+	$('#lung').keyup(function() {
+		if ($(this).val().length > 4) $(this).val($(this).val().substr(0, 4));         
+	});
+});
+
+function isValidLung(vallung) {
+	if ($('#lung').val().length == 4) {
+		var pattern = new RegExp(/[0-9][0-9][0-9][0-9]/);
+		return pattern.test(vallung);
+	}
+}
+
+$(document).ready(function() { //Проверка ввода диастолического давления 
+	$('#training').focusout(function() {
+		var training = $('#training').val();
+		
+		if ($(this).val() >= 15) $(this).val($(this).val().substr(0, 0));
+
+		if (training != 0) {
+			if (isValidTraining(training)) {
+				$('#training').css('border', '1px solid #0dd01a');
+				localStorage.setItem('vtraining', 1);
+			} else {
+				$('#training').css('border', '1px solid #f00');
+				$(this).val($(this).val().substr(0, 0));
+			}
+		}
+		
+		$('#training').keyup(function() {
+			$(this).val($(this).val().trim());
+		});
+	});
+	
+	$('#training').keyup(function() {
 		if ($(this).val().length > 2) $(this).val($(this).val().substr(0, 2));         
 	});
 });
 
-function isValidHeart(valheart) {
-	if ($('#heart').val().length == 1) {
+function isValidTraining(valtraining) {
+	if ($('#training').val().length == 1) {
 		var pattern = new RegExp(/[0-9]/);
-		return pattern.test(valheart);
+		return pattern.test(valtraining);
 	}
 
-	if ($('#heart').val().length == 2) {
+	if ($('#training').val().length == 2) {
 		var pattern = new RegExp(/[0-9][0-9]/);
-		return pattern.test(valheart);
+		return pattern.test(valtraining);
 	}
 }
 
@@ -550,11 +583,6 @@ $(document).ready(function() { //Проверка ввода диастолич�
 });
 
 function isValidJump(valjump) {
-	if ($('#jump').val().length == 2) {
-		var pattern = new RegExp(/[0-9][0-9]/);
-		return pattern.test(valjump);
-	}
-
 	if ($('#jump').val().length == 3) {
 		var pattern = new RegExp(/[0-9][0-9][0-9]/);
 		return pattern.test(valjump);
