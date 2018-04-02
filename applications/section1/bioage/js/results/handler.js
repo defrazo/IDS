@@ -12,6 +12,7 @@ $(document).ready(function() {
 	status = localStorage.getItem('statusinp');
 	category = localStorage.getItem('categoryinp');
 	gender = localStorage.getItem('genderinp');
+	fac = localStorage.getItem('facinp');
 	
 	$('#sname').append(sname);
 	$('#fname').append(fname);
@@ -26,6 +27,7 @@ $(document).ready(function() {
 	$('#outrun').append(lag).append(' лет');
 	$('#status').append(status);
 	$('#index').append(index);
+	$('#fac').append(fac);
 });
 
 method();

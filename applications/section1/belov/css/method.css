@@ -17,15 +17,15 @@
     }
 
 .first_tab {
-    padding: 7.5em 0;
+    padding: 1.5em 0;
+    }
+    
+.first_tab .question_field {
+    padding-top: 2em;
     }
 
 .question_field {
     padding-top: 0.5em;
-    }
-
-.progress {
-    box-shadow: 0 0 3px #AAAAAA;
     }
 
 .designation, .designation b {
@@ -58,12 +58,6 @@
     padding: 1px 5px;
     text-align: center;
     width: 124px;
-    }
-
-.progress-message {
-	font-size: 16px;
-    text-shadow: #000000 0 0 1px;
-    cursor: default;
     }
 
 .stopwatch_switch {
@@ -203,8 +197,8 @@ input[type=checkbox]:checked ~ .stopwatch_switch i {
     border-radius: 5px;
     font-size: 16px;
     font-weight: bold;
-    width: 45%;
-     text-align-last: center;
+    width: 30%;
+    text-align-last: center;
     }
 
 .switch_fac:hover select {
@@ -212,6 +206,6 @@ input[type=checkbox]:checked ~ .stopwatch_switch i {
     background-color: transparent;
     box-shadow: 0 0 3px #aaa;
     border-radius: 5px;
-    width: 45%;
+    width: 30%;
     text-align-last: center;
     }

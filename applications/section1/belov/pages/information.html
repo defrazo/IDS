@@ -12,8 +12,7 @@
 	<script src="../js/jquery-1.js"></script>
 	<script src="../js/bootstrap.js"></script>
 	<script src="../js/themes.js"></script>
-	<script src="../js/information/increaseFont.js"></script>
-	<script src="../js/information/decreaseFont.js"></script>
+	<script src="../js/zoom.js"></script>
 	<script src="../js/information/script.js"></script>
 	<script src="../js/hotkeys.js"></script>
 	<script src="../js/keys.js"></script>
@@ -26,12 +25,8 @@
 		</div>
 		<div class="text-center no-gutter">
 			<div class="content_box note_field field_shadow text-justify">
-			<p class="note">Система кровообращения играет ведущую роль в обеспечении адаптационной деятельности организма. Эта роль определяется, прежде всего, ее функцией траснспорта питательных веществ и кислорода - основных источников энергии для клеток и тканей.</p>
-			<p class="note">Энергетический механизм занимает главное место в процессах адаптации.</p>
-			<p class="note">Именно дефицит энергии является пусковым сигналом, запускающим всю цепь регуляторных приспособлений, формирующих необходимый адаптационный потенциал на новом гомеостатическом уровне.</p>
-			<p class="note">Как известно, заболевание не возникает внезапно. Оно является результатом постепенного перехода количественных изменений в качественные. При донозологических состояниях функциональные возможности еще не снижены, но их поддержание на данном уровне осуществляется за счет определенного напряжения регуляторных систем.</p>
-			<p class="note">В интервале между полным здоровьем и первыми специфическими проявлениями сердечно-сосудистой патологии выделяется ряд условных градаций функионального состояния, определяемых степенью адаптации организма к условиям внешнй среды.</p>
-			<p class="note">Для количественной оценки уровня адаптации организма Р. М. Баевским был разработан ряд формул, позволяющих вычислять адаптационный потенциал по заданному набору показателей с помощь уравнений множественной регрессии.</p>
+			<p class="note">Здоровье человека характеризуется как отсутствием болезней, так и <b>определенным уровнем</b> физической тренированности, подготовленности, функционального состояния организма. Для оценки уровня здоровья используются различные методы, большинство которых требует применения специальной аппаратуры. Это обстоятельство не дает возможности проведения массовых обследований населения.</p>
+			<p class="note"><b>Методика В.И. Белова не требует</b> использования специального оборудования, что дает возможность ее широкого применения с целью определения уровня физического здоровья лицам, занимающихся оздоровительной физической культурой. Для этого студентам необходимо определить <b>некоторые показатели</b> своего организма на лабораторном занятии и занятии по физической культуре.</p>
 			</div>
 		</div>
 		<div class="row">
@@ -65,8 +60,8 @@
 					<tr>
 						<td>
 							<span class="table_name">Шрифт</span><br>
-							<button style="width: 48%; outline: none;" type="button" class="btn btn-default btn-md plus" onclick="toIncreaseFont();"><span class="glyphicon glyphicon-plus-sign"></span></button>
-							<button style="width: 48%; outline: none;" type="button" class="btn btn-default btn-md minus" onclick="toDecreaseFont();"><span class="glyphicon glyphicon-minus-sign"></span></button>
+							<button style="width: 48%; outline: none;" type="button" class="btn btn-default btn-md plus" onclick="increase();"><span class="glyphicon glyphicon-plus-sign"></span></button>
+							<button style="width: 48%; outline: none;" type="button" class="btn btn-default btn-md minus" onclick="decrease();"><span class="glyphicon glyphicon-minus-sign"></span></button>
 						</td>
 					</tr>
 				</tbody>

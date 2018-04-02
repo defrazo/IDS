@@ -8,6 +8,8 @@ $(document).ready(function(){
 	if (localStorage.getItem('dinp') != '') $('.data_input_field').css('font-size', localStorage.getItem('dinp'));
 	if (localStorage.getItem('tbodys') != '') $('.tbody select').css('font-size', localStorage.getItem('tbodys'));
 	if (localStorage.getItem('tbodyso') != '') $('.tbody select option').css('font-size', localStorage.getItem('tbodyso'));
+	if (localStorage.getItem('switchfac') != '') $('.switch_fac').css('font-size', localStorage.getItem('switchfac'));
+	if (localStorage.getItem('switchfaco') != '') $('.switch_fac option').css('font-size', localStorage.getItem('switchfaco'));
 	if (localStorage.getItem('glyph') != '') $('.glyphicon').css('font-size', localStorage.getItem('glyph'));
 	if (localStorage.getItem('tclab') != '') $('#timer_controls>label').css('font-size', localStorage.getItem('tclab'));
 	if (localStorage.getItem('timer') != '') $('.timer').css('padding', localStorage.getItem('timer'));
@@ -46,6 +48,8 @@ function increase() {
 		fontSize = $('.data_input_field').css('font-size'); newSize = parseInt(fontSize); if (newSize == '20')	{$('.data_input_field').css('font-size', '22px'); localStorage.setItem('dinp', '22px');}
 		fontSize = $('tbody select').css('font-size'); newSize = parseInt(fontSize); if (newSize == '16')	{$('tbody select').css('font-size', '18px'); localStorage.setItem('tbodys', '18px');}
 		fontSize = $('tbody select option').css('font-size'); newSize = parseInt(fontSize); if (newSize == '16')	{$('tbody select option').css('font-size', '18px'); localStorage.setItem('tbodyso', '18px');}
+		fontSize = $('.switch_fac').css('font-size'); newSize = parseInt(fontSize); if (newSize == '16')	{$('.switch_fac').css('font-size', '18px'); localStorage.setItem('switchfac', '18px');}
+		fontSize = $('.switch_faco').css('font-size'); newSize = parseInt(fontSize); if (newSize == '16')	{$('.switch_fac option').css('font-size', '18px'); localStorage.setItem('switchfaco', '18px');}
 		fontSize = $('.glyphicon').css('font-size'); newSize = parseInt(fontSize); if (newSize == '20')	{$('.glyphicon').css('font-size', '22px'); localStorage.setItem('glyph', '22px');}
 		fontSize = $('#timer_controls>label').css('font-size'); newSize = parseInt(fontSize); if (newSize == '14')	{$('#timer_controls>label').css('font-size', '16px'); localStorage.setItem('tclab', '16px');}
 		fontSize = $('.timer').css('padding'); newSize = parseInt(fontSize); if (newSize == '10')	{$('.timer').css('padding', '12px'); localStorage.setItem('timer', '12px');}
@@ -64,6 +68,8 @@ function increase() {
 		fontSize = $('.data_input_field').css('font-size'); newSize = parseInt(fontSize); if (newSize == '22')	{$('.data_input_field').css('font-size', '24px'); localStorage.setItem('dinp', '24px');}
 		fontSize = $('tbody select').css('font-size'); newSize = parseInt(fontSize); if (newSize == '18')	{$('tbody select').css('font-size', '20px'); localStorage.setItem('tbodys', '20px');}
 		fontSize = $('tbody select option').css('font-size'); newSize = parseInt(fontSize); if (newSize == '18')	{$('tbody select option').css('font-size', '20px'); localStorage.setItem('tbodyso', '20px');}
+		fontSize = $('.switch_fac').css('font-size'); newSize = parseInt(fontSize); if (newSize == '18')	{$('.switch_fac').css('font-size', '20px'); localStorage.setItem('switchfac', '20px');}
+		fontSize = $('.switch_faco').css('font-size'); newSize = parseInt(fontSize); if (newSize == '18')	{$('.switch_fac option').css('font-size', '20px'); localStorage.setItem('switchfaco', '20px');}
 		fontSize = $('.glyphicon').css('font-size'); newSize = parseInt(fontSize); if (newSize == '22')	{$('.glyphicon').css('font-size', '24px'); localStorage.setItem('glyph', '24px');}
 		fontSize = $('#timer_controls>label').css('font-size'); newSize = parseInt(fontSize); if (newSize == '16')	{$('#timer_controls>label').css('font-size', '18px'); localStorage.setItem('tclab', '18px');}
 		fontSize = $('.timer').css('padding'); newSize = parseInt(fontSize); if (newSize == '12')	{$('.timer').css('padding', '14px'); localStorage.setItem('timer', '14px');}
@@ -82,6 +88,8 @@ function increase() {
 		fontSize = $('.data_input_field').css('font-size'); newSize = parseInt(fontSize); if (newSize == '24')	{$('.data_input_field').css('font-size', '26px'); localStorage.setItem('dinp', '26px');}
 		fontSize = $('tbody select').css('font-size'); newSize = parseInt(fontSize); if (newSize == '20')	{$('tbody select').css('font-size', '22px'); localStorage.setItem('tbodys', '22px');}
 		fontSize = $('tbody select option').css('font-size'); newSize = parseInt(fontSize); if (newSize == '20')	{$('tbody select option').css('font-size', '22px'); localStorage.setItem('tbodyso', '22px');}
+		fontSize = $('.switch_fac').css('font-size'); newSize = parseInt(fontSize); if (newSize == '20')	{$('.switch_fac').css('font-size', '22px'); localStorage.setItem('switchfac', '22px');}
+		fontSize = $('.switch_faco').css('font-size'); newSize = parseInt(fontSize); if (newSize == '20')	{$('.switch_fac option').css('font-size', '22px'); localStorage.setItem('switchfaco', '22px');}
 		fontSize = $('.glyphicon').css('font-size'); newSize = parseInt(fontSize); if (newSize == '24')	{$('.glyphicon').css('font-size', '26px'); localStorage.setItem('glyph', '26px');}
 		fontSize = $('#timer_controls>label').css('font-size'); newSize = parseInt(fontSize); if (newSize == '18')	{$('#timer_controls>label').css('font-size', '20px'); localStorage.setItem('tclab', '20px');}
 		fontSize = $('.timer').css('padding'); newSize = parseInt(fontSize); if (newSize == '14')	{$('.timer').css('padding', '16px'); localStorage.setItem('timer', '16px');}
@@ -111,6 +119,8 @@ function decrease() {
 		fontSize = $('.data_input_field').css('font-size'); newSize = parseInt(fontSize); if (newSize == '26')	{$('.data_input_field').css('font-size', '24px'); localStorage.setItem('dinp', '24px');}
 		fontSize = $('tbody select').css('font-size'); newSize = parseInt(fontSize); if (newSize == '22')	{$('tbody select').css('font-size', '20px'); localStorage.setItem('tbodys', '20px');}
 		fontSize = $('tbody select option').css('font-size'); newSize = parseInt(fontSize); if (newSize == '22')	{$('tbody select option').css('font-size', '20px'); localStorage.setItem('tbodyso', '20px');}
+		fontSize = $('.switch_fac').css('font-size'); newSize = parseInt(fontSize); if (newSize == '22')	{$('.switch_fac').css('font-size', '20px'); localStorage.setItem('switchfac', '20px');}
+		fontSize = $('.switch_faco').css('font-size'); newSize = parseInt(fontSize); if (newSize == '22')	{$('.switch_fac option').css('font-size', '20px'); localStorage.setItem('switchfaco', '20px');}
 		fontSize = $('.glyphicon').css('font-size'); newSize = parseInt(fontSize); if (newSize == '26')	{$('.glyphicon').css('font-size', '24px'); localStorage.setItem('glyph', '24px');}
 		fontSize = $('#timer_controls>label').css('font-size'); newSize = parseInt(fontSize); if (newSize == '20')	{$('#timer_controls>label').css('font-size', '18px'); localStorage.setItem('tclab', '18px');}
 		fontSize = $('.timer').css('padding'); newSize = parseInt(fontSize); if (newSize == '16')	{$('.timer').css('padding', '14px'); localStorage.setItem('timer', '14px');}
@@ -127,6 +137,8 @@ function decrease() {
 		fontSize = $('.designation').css('font-size'); newSize = parseInt(fontSize); if (newSize == '26')	{$('.designation').css('font-size', '24px'); localStorage.setItem('des', '24px');}
 		fontSize = $('.designation b').css('font-size'); newSize = parseInt(fontSize); if (newSize == '26')	{$('.designation b').css('font-size', '24px'); localStorage.setItem('des', '24px');}
 		fontSize = $('.data_input_field').css('font-size'); newSize = parseInt(fontSize); if (newSize == '24')	{$('.data_input_field').css('font-size', '22px'); localStorage.setItem('dinp', '22px');}
+		fontSize = $('.switch_fac').css('font-size'); newSize = parseInt(fontSize); if (newSize == '20')	{$('.switch_fac').css('font-size', '18px'); localStorage.setItem('switchfac', '18px');}
+		fontSize = $('.switch_faco').css('font-size'); newSize = parseInt(fontSize); if (newSize == '20')	{$('.switch_fac option').css('font-size', '18px'); localStorage.setItem('switchfaco', '18px');}
 		fontSize = $('tbody select').css('font-size'); newSize = parseInt(fontSize); if (newSize == '20')	{$('tbody select').css('font-size', '18px'); localStorage.setItem('tbodys', '18px');}
 		fontSize = $('tbody select option').css('font-size'); newSize = parseInt(fontSize); if (newSize == '20')	{$('tbody select option').css('font-size', '18px'); localStorage.setItem('tbodyso', '18px');}
 		fontSize = $('.glyphicon').css('font-size'); newSize = parseInt(fontSize); if (newSize == '24')	{$('.glyphicon').css('font-size', '22px'); localStorage.setItem('glyph', '22px');}
@@ -147,6 +159,8 @@ function decrease() {
 		fontSize = $('.data_input_field').css('font-size'); newSize = parseInt(fontSize); if (newSize == '22')	{$('.data_input_field').css('font-size', '20px'); localStorage.setItem('dinp', '20px');}
 		fontSize = $('tbody select').css('font-size'); newSize = parseInt(fontSize); if (newSize == '18')	{$('tbody select').css('font-size', '16px'); localStorage.setItem('tbodys', '16px');}
 		fontSize = $('tbody select option').css('font-size'); newSize = parseInt(fontSize); if (newSize == '18')	{$('tbody select option').css('font-size', '16px'); localStorage.setItem('tbodyso', '16px');}
+		fontSize = $('.switch_fac').css('font-size'); newSize = parseInt(fontSize); if (newSize == '18')	{$('.switch_fac').css('font-size', '16px'); localStorage.setItem('switchfac', '16px');}
+		fontSize = $('.switch_faco').css('font-size'); newSize = parseInt(fontSize); if (newSize == '18')	{$('.switch_fac option').css('font-size', '16px'); localStorage.setItem('switchfaco', '16px');}
 		fontSize = $('.glyphicon').css('font-size'); newSize = parseInt(fontSize); if (newSize == '22')	{$('.glyphicon').css('font-size', '20px'); localStorage.setItem('glyph', '20px');}
 		fontSize = $('#timer_controls>label').css('font-size'); newSize = parseInt(fontSize); if (newSize == '16')	{$('#timer_controls>label').css('font-size', '14px'); localStorage.setItem('tclab', '14px');}
 		fontSize = $('.timer').css('padding'); newSize = parseInt(fontSize); if (newSize == '12')	{$('.timer').css('padding', '10px'); localStorage.setItem('timer', '10px');}

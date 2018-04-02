@@ -16,13 +16,11 @@
 	<script src="../js/tip.js"></script>
 	<script src="../js/slider.js"></script>
 	<script src="../js/themes.js"></script>
+	<script src="../js/zoom.js"></script>
 	<script src="../js/method/script.js"></script>
 	<script src="../js/method/checkAll.js"></script>
 	<script src="../js/method/checkRecords.js"></script>
 	<script src="../js/method/writeOn.js"></script>
-	<script src="../js/method/progressBar.js"></script>
-	<script src="../js/method/increaseFont.js"></script>
-	<script src="../js/method/decreaseFont.js"></script>
 	<script src="../js/restoreValues.js"></script>
 	<script src="../js/hotkeys.js"></script>
 	<script src="../js/keys.js"></script>
@@ -39,22 +37,22 @@
 					<div class="tab">
 						<div class="first_tab">
 							<div class="question_field">
+								<p class="designation">Дата обследования:</p>
+								<input type="date" onclick="valide();" class="data_input_field" id="date" required>
+							</div>
+							<div class="question_field">
 								<p class="designation">Факультет:</p>
 								<select class="switch_fac" id="fac">
-									<option class="fac_option" selected disabled>Выберите</option>
+									<option class="fac_option" selected disabled>Выберите факультет</option>
 									<option class="fac_option" value="Факультет социальной психологии">Факультет социальной психологии</option>
 									<option class="fac_option" value="Факультет бизнеса и управления">Факультет бизнеса и управления</option>
 									<option class="fac_option" value="Факультет современного танца">Факультет современного танца</option>
-									<option class="fac_option" value="Факультет конструирования и моделирования одежды">Факультет конструирования и моделирования одежды</option>
+									<option class="fac_option" value="Факультет конструирования и моделирования одежды">Факультет к. и моделирования одежды</option>
 									<option class="fac_option" value="Факультет компьютерных технологий">Факультет компьютерных технологий</option>
 									<option class="fac_option" value="Факультет телерадиожурналистики">Факультет телерадиожурналистики</option>
 									<option class="fac_option" value="Факультет юридический">Факультет юридический</option>
 									<option class="fac_option" value="-">Нет</option>
 								</select>
-							</div>
-							<div class="question_field">
-								<p class="designation">Дата обследования:</p>
-								<input type="date" onclick="valide();" class="data_input_field" id="date" required>
 							</div>
 							<div class="question_field">
 								<p class="designation">Ваш пол:</p>
@@ -143,11 +141,6 @@
 				</div>
 			</div>
 		</div>
-		<!--div class="col-md-12 progress progress-striped active text-center no-gutter">
-			<div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
-				<span class="progress-message"></span>
-			</div-->
-		</div>
 		<div class="row">
 			<div class="col-md-offset-1 col-md-3 text-center no-gutter">
 				<span class="switch_name">Настройки</span>
@@ -184,8 +177,8 @@
 					<tr>
 						<td>
 							<span class="table_name">Шрифт</span><br>
-							<button style="width: 48%; outline: none;" type="button" class="btn btn-default btn-md plus" onclick="toIncreaseFont();"><span class="glyphicon glyphicon-plus-sign"></span></button>
-							<button style="width: 48%; outline: none;" type="button" class="btn btn-default btn-md minus" onclick="toDecreaseFont();"><span class="glyphicon glyphicon-minus-sign"></span></button>
+							<button style="width: 48%; outline: none;" type="button" class="btn btn-default btn-md plus" onclick="increase();"><span class="glyphicon glyphicon-plus-sign"></span></button>
+							<button style="width: 48%; outline: none;" type="button" class="btn btn-default btn-md minus" onclick="decrease();"><span class="glyphicon glyphicon-minus-sign"></span></button>
 						</td>
 					</tr>
 				</tbody>
