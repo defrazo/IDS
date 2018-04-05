@@ -24,9 +24,9 @@ $(document).ready(function() {
 	
 	imt = height - weight;
 	cap = lung / weight;
-	console.log(cap);
-	points = 0;
+	var points = 0;
 	if (group == 'Основная') {
+
 		switch (true) {
 			case (pulse >= 90) : points = points + 1; break;
 			case ((pulse > 76) && (pulse < 90)) : points = points + 2; break;
@@ -46,8 +46,11 @@ $(document).ready(function() {
 		}
 
 		if (gender == 'Мужской') {
+
 			if (recovery == 'Бег') {
+
 				rec = ((parseInt(rec1) * 60) + parseInt(rec2)) / 60;
+
 				switch (true) {
 					case (rec > 12) : points = points + 1; break;
 					case ((rec >= 11.01) && (rec <= 12.00)) : points = points + 2; break;
@@ -58,7 +61,9 @@ $(document).ready(function() {
 					case (rec < 7.30) : points = points + 9; break;
 				} 
 			} else {
+
 				rec = ((parseInt(rec1) * 60) + parseInt(rec2)) / 60;
+
 				switch (true) {
 					case (rec > 3) : points = points + 1; break;
 					case ((rec >= 2.01) && (rec <= 3.00)) : points = points + 3; break;
@@ -68,6 +73,7 @@ $(document).ready(function() {
 			}
 
 			if (exercise == 'push') {
+
 				switch (true) {
 					case (exercval < 2) : points = points + 1; break;
 					case ((exercval >= 2) && (exercval <= 3)) : points = points + 2; break;
@@ -77,6 +83,7 @@ $(document).ready(function() {
 					case (exercval > 15) : points = points + 6; break;
 				}
 			} else {
+
 				switch (true) {
 					case (exercval < 4) : points = points + 1; break;
 					case ((exercval >= 4) && (exercval <= 9)) : points = points + 2; break;
@@ -96,8 +103,11 @@ $(document).ready(function() {
 				case (jump > 240) : points = points + 6; break;
 			}
 		} else {
+
 			if (recovery == 'Бег') {
+
 				rec = ((parseInt(rec1) * 60) + parseInt(rec2)) / 60;
+
 				switch (true) {
 					case (rec > 14) : points = points + 1; break;
 					case ((rec >= 13.01) && (rec <= 14.00)) : points = points + 2; break;
@@ -108,7 +118,9 @@ $(document).ready(function() {
 					case (rec < 10) : points = points + 9; break;
 				} 
 			} else {
+				
 				rec = ((parseInt(rec1) * 60) + parseInt(rec2)) / 60;
+
 				switch (true) {
 					case (rec > 3) : points = points + 1; break;
 					case ((rec >= 2.01) && (rec <= 3.00)) : points = points + 3; break;
@@ -141,9 +153,8 @@ $(document).ready(function() {
 			case ((cold >= 4) && (cold <= 5)) : points = points + 2; break;
 			case ((cold >= 2) && (cold <= 3)) : points = points + 3; break;
 		}
-		
-		
 	} else {
+		
 		switch (true) {
 			case (pulse >= 90) : points = points + 1; break;
 			case ((pulse > 76) && (pulse < 90)) : points = points + 2; break;
@@ -154,6 +165,7 @@ $(document).ready(function() {
 		}
 
 		if (gender == 'Мужской') {
+
 			switch (true) {
 				case ((sist > 140) && (dia > 90)) : points = points + 1; break;
 				case ((sist >= 131) && (sist <= 140) && (dia >= 81) && (dia <= 90)) : points = points + 2.5; break;
@@ -172,7 +184,9 @@ $(document).ready(function() {
 			}
 
 			if (recovery == 'Бег') {
+
 				rec = ((parseInt(rec1) * 60) + parseInt(rec2)) / 60;
+
 				switch (true) {
 					case (rec > 12) : points = points + 1; break;
 					case ((rec >= 11.01) && (rec <= 12.00)) : points = points + 2; break;
@@ -183,7 +197,9 @@ $(document).ready(function() {
 					case (rec < 7.30) : points = points + 9; break;
 				} 
 			} else {
+				
 				rec = ((parseInt(rec1) * 60) + parseInt(rec2)) / 60;
+
 				switch (true) {
 					case (rec > 3) : points = points + 1; break;
 					case ((rec >= 2.01) && (rec <= 3.00)) : points = points + 3; break;
@@ -193,6 +209,7 @@ $(document).ready(function() {
 			}
 
 			if (exercise == 'push') {
+
 				switch (true) {
 					case (exercval < 2) : points = points + 1; break;
 					case ((exercval >= 2) && (exercval <= 3)) : points = points + 2; break;
@@ -202,6 +219,7 @@ $(document).ready(function() {
 					case (exercval > 15) : points = points + 6; break;
 				}
 			} else {
+				
 				switch (true) {
 					case (exercval < 4) : points = points + 1; break;
 					case ((exercval >= 4) && (exercval <= 9)) : points = points + 2; break;
@@ -220,7 +238,8 @@ $(document).ready(function() {
 				case ((jump >= 230) && (jump <= 239)) : points = points + 5; break;
 				case (jump > 240) : points = points + 6; break;
 			}
-		} else {
+		} else { 
+			
 			switch (true) {
 				case ((sist > 80) && (dia > 50)) : points = points + 1; break;
 				case ((sist >= 80) && (sist <= 89) && (dia >= 50) && (dia <= 54)) : points = points + 2.5; break;
@@ -238,7 +257,9 @@ $(document).ready(function() {
 			}
 
 			if (recovery == 'Бег') {
+
 				rec = ((parseInt(rec1) * 60) + parseInt(rec2)) / 60;
+
 				switch (true) {
 					case (rec > 14) : points = points + 1; break;
 					case ((rec >= 13.01) && (rec <= 14.00)) : points = points + 2; break;
@@ -249,7 +270,9 @@ $(document).ready(function() {
 					case (rec < 10) : points = points + 9; break;
 				} 
 			} else {
+				
 				rec = ((parseInt(rec1) * 60) + parseInt(rec2)) / 60;
+
 				switch (true) {
 					case (rec > 3) : points = points + 1; break;
 					case ((rec >= 2.01) && (rec <= 3.00)) : points = points + 3; break;
@@ -293,8 +316,11 @@ $(document).ready(function() {
 			case (cold <= 1): points = points + 7.5; break;
 		}
 	}
-	var gr = localStorage.getItem('groupinp');
-	if (gr == 'Основная') {
+
+	var groupout = localStorage.getItem('groupinp');
+
+	if (groupout == 'Основная') {
+
 		avg = points / 6;
 
 		switch (true) {
@@ -306,7 +332,8 @@ $(document).ready(function() {
 			case (avg <= 1.9) : status = 'Очень низкий'; break;
 		} 
 	} else { 
-			avg = points / 10;
+		
+		avg = points / 8;
 
 		switch (true) {
 			case (avg >= 6.0) : status = 'Супервысокий'; break;
@@ -317,14 +344,13 @@ $(document).ready(function() {
 			case (avg <= 1.9) : status = 'Очень низкий'; break;
 		}
 	}
-	
 
 	$('#sname').append(sname);
 	$('#fname').append(fname);
 	$('#mname').append(mname);
 	$('#date').append(date);
 	$('#gender').append(gender);
-	$('#points').append(avg);
+	$('#points').append(avg.toFixed(2));
 	$('#status').append(status);
 	$('#group').append(group);
 	$('#fac').append(fac);

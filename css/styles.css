@@ -156,6 +156,15 @@ a .glyphicon-refresh:hover {
     color: #FFF;
     }
 
+a .glyphicon-info-sign {
+    font-size: 50px;
+    cursor: pointer;
+    }
+
+a .glyphicon-info-sign:hover {
+    color: #FFF;
+    }
+
 .z1 .tooltip {
     width: 350px !important;
 }

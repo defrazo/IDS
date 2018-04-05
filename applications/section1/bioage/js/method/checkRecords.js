@@ -2,7 +2,7 @@ $(document).ready(function() { //Проверка ввода фамилии
 	$('#sname').focusout(function() { //Проверяет значение поля при снятии фокуса с него
 		var sname = $('#sname').val();
 		
-		if (sname != 0)	{
+		if (sname != '')	{
 		
 			if (isValidSname(sname)) { //Убирает класс ошибки с поля ввода
 				$('#sname').css('border', '1px solid #0dd01a');
@@ -28,7 +28,7 @@ $(document).ready(function() { //Проверка ввода имени
 	$('#fname').focusout(function() {
 		var fname = $('#fname').val();
 		
-		if (fname != 0)	{
+		if (fname != '')	{
 			
 			if (isValidFname(fname)) {
 				$('#fname').css('border', '1px solid #0dd01a');
@@ -54,7 +54,7 @@ $(document).ready(function() { //Проверка ввода отчества
 	$('#mname').focusout(function() {
 		var mname = $('#mname').val();
 		
-		if (mname != 0)	{
+		if (mname != '')	{
 			
 			if (isValidMname(mname)) {
 				$('#mname').css('border', '1px solid #0dd01a');
@@ -81,9 +81,9 @@ $(document).ready(function() { //Проверка ввода возраста
 	$('#age').focusout(function() {
 		var age = $('#age').val();
 		
-		if (($(this).val() < 6) || ($(this).val() > 70)) $(this).val($(this).val().substr(0, 0));
+		if (($(this).val() < 6) || ($(this).val() > 75)) $(this).val($(this).val().substr(0, 0));
 
-		if (age != 0) {
+		if (age != '') {
 		
 			if (isValidAge(age)) {
 				$('#age').css('border', '1px solid #0dd01a');
@@ -120,9 +120,9 @@ $(document).ready(function() { //Проверка ввода веса
 	$('#weight').focusout(function() {
 		var weight = $('#weight').val();
 		
-		if (($(this).val() < 30) || ($(this).val() > 150)) $(this).val($(this).val().substr(0, 0));
+		if (($(this).val() < 30) || ($(this).val() > 200)) $(this).val($(this).val().substr(0, 0));
 
-		if (weight != 0) {
+		if (weight != '') {
 			
 			if (isValidWeight(weight)) {
 				$('#weight').css('border', '1px solid #0dd01a');
@@ -159,9 +159,9 @@ $(document).ready(function() { //Проверка ввода систоличе�
 	$('#sist').focusout(function() {
 		var sist = $('#sist').val();
 		
-		if (($(this).val() < 100) || ($(this).val() > 250)) $(this).val($(this).val().substr(0, 0));
+		if (($(this).val() < 60) || ($(this).val() > 200)) $(this).val($(this).val().substr(0, 0));
 		
-		if (sist != 0) {
+		if (sist != '') {
 			
 			if (isValidSist(sist)) {
 				$('#sist').css('border', '1px solid #0dd01a');
@@ -183,6 +183,11 @@ $(document).ready(function() { //Проверка ввода систоличе�
 });
 
 function isValidSist(valsist) {
+	if ($('#sist').val().length == 2) {
+		var pattern = new RegExp(/[0-9][0-9]/);
+		return pattern.test(valsist);
+	}
+
 	if ($('#sist').val().length == 3) {
 		var pattern = new RegExp(/[0-9][0-9][0-9]/);
 		return pattern.test(valsist);
@@ -193,9 +198,9 @@ $(document).ready(function() { //Проверка ввода диастолич�
 	$('#dia').focusout(function() {
 		var dia = $('#dia').val();
 		
-		if (($(this).val() < 50) || ($(this).val() > 99)) $(this).val($(this).val().substr(0, 0));
+		if (($(this).val() < 40) || ($(this).val() > 120)) $(this).val($(this).val().substr(0, 0));
 
-		if (dia != 0) {
+		if (dia != '') {
 			if (isValidDia(dia)) {
 				$('#dia').css('border', '1px solid #0dd01a');
 				localStorage.setItem('vDia', 1);
@@ -211,13 +216,18 @@ $(document).ready(function() { //Проверка ввода диастолич�
 	});
 	
 	$('#dia').keyup(function() {
-		if ($(this).val().length > 2) $(this).val($(this).val().substr(0, 2));         
+		if ($(this).val().length > 3) $(this).val($(this).val().substr(0, 3));         
 	});
 });
 
 function isValidDia(valdia) {
 	if ($('#dia').val().length == 2) {
 		var pattern = new RegExp(/[0-9][0-9]/);
+		return pattern.test(valdia);
+	}
+
+	if ($('#dia').val().length == 3) {
+		var pattern = new RegExp(/[0-9][0-9][0-9]/);
 		return pattern.test(valdia);
 	}
 }
@@ -228,7 +238,7 @@ $(document).ready(function() { //Проверка ввода задержки д
 		
 		if ($(this).val() > 300) $(this).val($(this).val().substr(0, 0));
 
-		if (inha != 0) {
+		if (inha != '') {
 			
 			if (isValidInha(inha)) {
 				$('#inha').css('border', '1px solid #0dd01a');
@@ -270,9 +280,9 @@ $(document).ready(function() { //Проверка ввода статическ�
 	$('#static').focusout(function() {
 		var static = $('#static').val();
 		
-		if ($(this).val() > 120) $(this).val($(this).val().substr(0, 0));
+		if ($(this).val() > 420) $(this).val($(this).val().substr(0, 0));
 
-		if (static != 0) {
+		if (static != '') {
 			
 			if (isValidStatic(static)) {
 				$('#static').css('border', '1px solid #0dd01a');	
@@ -301,6 +311,11 @@ function isValidStatic(valstatic) {
 
 	if ($('#static').val().length == 2) {
 		var pattern = new RegExp(/[0-9][0-9]/);
+		return pattern.test(valstatic);
+	}
+
+	if ($('#static').val().length == 3) {
+		var pattern = new RegExp(/[0-9][0-9][0-9]/);
 		return pattern.test(valstatic);
 	}
 }

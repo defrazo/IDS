@@ -42,7 +42,7 @@
 							</div>
 							<div class="question_field">
 								<p class="designation">Факультет:</p>
-								<select class="switch_fac" id="fac">
+								<select class="switch_fac" id="fac" onclick="valide();" required>
 									<option class="fac_option" selected disabled>Выберите факультет</option>
 									<option class="fac_option" value="Факультет социальной психологии">Факультет социальной психологии</option>
 									<option class="fac_option" value="Факультет бизнеса и управления">Факультет бизнеса и управления</option>
@@ -83,17 +83,17 @@
 							<p class="designation">Ваш вес: <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="right" title="Измеряется в легкой одежде, без обуви. Регистрируется с помощью медицинских весов."></p>
 							<input type="text" onkeydown="valide();" placeholder="кг" class="data_input_field" id="weight" required>
 						</div>
-						<div class="question_field">
+					</div>		
+					<div class="tab">
+						<div class="question_field nospec">
 							<p class="designation">Ваш рост: <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="right" title="Измеряется без обуви. Регистрируется с помощью медицинского ростометра."></p>
 							<input type="text" onkeydown="valide();" placeholder="см" class="data_input_field" id="height" required>
 						</div>
-					</div>		
-					<div class="tab">
-						<div class="question_field">
+						<div class="question_field spec">
 							<p class="designation">Ваше давление систолическое: <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="right" title="Измеряется по общепринятой методике при помощи аппарата Рива-Роччи: на правой руке в положении сидя трижды с интервалом 5 минут. Учитывается наименьшая величина."></p>
 							<input type="text" onkeydown="valide();" placeholder="мм рт. ст." class="data_input_field" id="sist" required>
 						</div>
-						<div class="question_field">
+						<div class="question_field spec">
 							<p class="designation">Ваше давление диастолическое: <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="right" title="Измеряется по общепринятой методике при помощи аппарата Рива-Роччи: на правой руке в положении сидя трижды с интервалом 5 минут. Учитывается наименьшая величина."></p>
 							<input type="text" onkeydown="valide();" placeholder="мм рт. ст." class="data_input_field" id="dia" required>
 						</div>
@@ -112,30 +112,44 @@
 						</div>
 					</div>
 					<div class="tab">
-						<div class="question_field">
-							<div class="question_field spec">
+						<div class="question_field spec">
 							<p class="designation">Стаж самостоятельных занятий: <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="right" title="более 2 раз в неделю по 30 минут."></p>
-							<input type="text" onkeydown="valide();" placeholder="см³" class="data_input_field" id="training" required>
+							<input type="text" onkeydown="valide();" placeholder="лет" class="data_input_field" id="training" required>
 						</div>
-							<label class="designation variant"><img src="../img/help.png" class="help-icon blink1" data-toggle="tooltip" data-placement="top" title="(Для подготовленных). Лучший результат в забеге на 2 километра."> Результат бега на 2 000 м: <input type="radio" onclick="valide();" name="recovery" id="recovery" value="Бег"></label>
-							<label class="designation variant"><input type="radio" onclick="valide();" name="recovery" value="ЧСС"> Время восстановления ЧСС: <img src="../img/help.png" class="help-icon blink2" data-toggle="tooltip" data-placement="top" title="(Для начинающих). Время восстановления пульса до состояния перед физической нагрузкой."></label>
-						<br>
+						<div class="question_field">
+							<p class="designation">Выберите один вариант:</p>
+						</div>
+						<div class="question_field">
+							<div class="col1">
+								<label class="designation variant"><img src="../img/help.png" class="help-icon blink1" data-toggle="tooltip" data-placement="top" title="(Для подготовленных). Лучший результат в забеге на 2 километра."> Результат бега на 2 000 м: <input type="radio" onclick="valide();" name="recovery" id="recovery" value="Бег"></label>
+							</div>
+							<div class="col2">
+								<label class="designation variant"><input type="radio" onclick="valide();" name="recovery" value="ЧСС"> Время восстановления ЧСС: <img src="../img/help.png" class="help-icon blink2" data-toggle="tooltip" data-placement="top" title="(Для начинающих). Время восстановления пульса до состояния перед физической нагрузкой."></label>
+							</div>
 							<input type="text" onkeydown="valide();" placeholder="минут" class="data_input_field_time" id="rec1" required>
 							<input type="text" onkeydown="valide();" placeholder="секунд" class="data_input_field_time" id="rec2" required>
 						</div>
+						<div class="question_field">
+							<div class="question_field pull">
+								<p class="designation">Выберите один вариант:</p>
+							</div>
+						</div>
 						<div class="question_field pull">
-							<label class="designation variant"><img src="../img/help.png" class="help-icon blink3" data-toggle="tooltip" data-placement="top" title="(Выберите один из двух вариантов). Подтягивания на перекладине осуществляются следующим образом: ухватитесь за турник верхним хватом, руки чуть шире ширины плеч. Повисните на перекладине. Далее подтянитесь, при этом постарайтесь коснуться верхней частью груди перекладины. Сделайте паузу на секунду в верхней точке амплитуды, а затем плавно вернитесь в стартовое положение."> Подтягивания на перекладине: <input type="radio" onclick="valide();" name="exercise" id="exercise" value="push"></label>
-							<label class="designation variant"><input type="radio" onclick="valide();" name="exercise" value="pull"> Сгибания рук в упоре лежа: <img src="../img/help.png" class="help-icon blink4" data-toggle="tooltip" data-placement="top" title="(Выберите один из двух вариантов). Сгибание и разгибание рук в упоре лежа выполняется из исходного положения: упор лежа на полу, руки на ширине плеч, кисти вперед, локти разведены не более чем на 45 градусов, плечи, туловище и ноги составляют прямую линию. Стопы упираются в пол без опоры. Засчитывается количество правильно выполненных сгибаний и разгибаний рук, фиксируемых счетом судьи. Сгибая руки, необходимо коснуться грудью пола (или контактной платформы высотой 5 см.), затем, разгибая руки, вернуться в исходное положение и, зафиксировав его на 1 с, продолжить выполнение испытания."></label>
-						<br>
-							<input type="text" onkeydown="valide();" placeholder="повторений" class="data_input_field" id="exercval" required>
+							<div class="col3">
+								<label class="designation variant"><img src="../img/help.png" class="help-icon blink3" data-toggle="tooltip" data-placement="top" title="(Выберите один из двух вариантов). Подтягивания на перекладине осуществляются следующим образом: ухватитесь за турник верхним хватом, руки чуть шире ширины плеч. Повисните на перекладине. Далее подтянитесь, при этом постарайтесь коснуться верхней частью груди перекладины. Сделайте паузу на секунду в верхней точке амплитуды, а затем плавно вернитесь в стартовое положение."> Подтягивания на перекладине: <input type="radio" onclick="valide();" name="exercise" id="exercise" value="push"></label>
+							</div>
+							<div class="col4">
+								<label class="designation variant"><input type="radio" onclick="valide();" name="exercise" value="pull"> Сгибания рук в упоре лежа: <img src="../img/help.png" class="help-icon blink4" data-toggle="tooltip" data-placement="top" title="(Выберите один из двух вариантов). Сгибание и разгибание рук в упоре лежа выполняется из исходного положения: упор лежа на полу, руки на ширине плеч, кисти вперед, локти разведены не более чем на 45 градусов, плечи, туловище и ноги составляют прямую линию. Стопы упираются в пол без опоры. Засчитывается количество правильно выполненных сгибаний и разгибаний рук, фиксируемых счетом судьи. Сгибая руки, необходимо коснуться грудью пола (или контактной платформы высотой 5 см.), затем, разгибая руки, вернуться в исходное положение и, зафиксировав его на 1 с, продолжить выполнение испытания."></label>
+							</div>
+							<input type="text" onkeydown="valide();" placeholder="количество раз" class="data_input_field" id="exercval" required>
 						</div>
 						<div class="question_field lift">
 							<p class="designation">Поднимание туловища из положения лежа: <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="right" title="Поднимание туловища из положения лежа на спине выполняется следующим образом: лежа на спине, на гимнастическом мате, руки за головой «в замок», лопатки касаются мата, ноги согнуты в коленях под прямым углом, ступни прижаты партнером к полу. Засчитывается количество правильно выполненных подниманий туловища."></p>
-							<input type="text" onkeydown="valide();" placeholder="повторений" class="data_input_field" id="lift" required>
+							<input type="text" onkeydown="valide();" placeholder="количество раз" class="data_input_field" id="lift" required>
 						</div>
 						<div class="question_field nospec">
 							<p class="designation">Прыжок в длину с места: <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="right" title="Прыжок осуществляется из исходного положения: ноги на ширине плеч, ступни параллельно, носки ног перед линией отталкивания. Одновременным толчком двух ног выполняется прыжок вперед. Мах руками допускается. Измерение производится по перпендикулярной прямой от места отталкивания любой ногой до ближайшего следа, оставленного любой частью тела участника. Предоставляются три попытки. В зачет идет лучший результат."></p>
-							<input type="text" onkeydown="valide();" placeholder="см" class="data_input_field" id="jump">
+							<input type="text" onkeydown="valide();" placeholder="см" class="data_input_field" id="jump" required>
 						</div>
 					</div>
 				</div>

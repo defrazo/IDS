@@ -2,7 +2,7 @@ $(document).ready(function() { //Проверка ввода фамилии
 	$('#sname').focusout(function() { //Проверяет значение поля при снятии фокуса с него
 		var sname = $('#sname').val();
 		
-		if (sname != 0)	{
+		if (sname != '')	{
 		
 			if (isValidSname(sname)) { //Убирает класс ошибки с поля ввода
 				$('#sname').css('border', '1px solid #0dd01a');
@@ -28,7 +28,7 @@ $(document).ready(function() { //Проверка ввода имени
 	$('#fname').focusout(function() {
 		var fname = $('#fname').val();
 		
-		if (fname != 0)	{
+		if (fname != '')	{
 			
 			if (isValidFname(fname)) {
 				$('#fname').css('border', '1px solid #0dd01a');
@@ -54,7 +54,7 @@ $(document).ready(function() { //Проверка ввода отчества
 	$('#mname').focusout(function() {
 		var mname = $('#mname').val();
 		
-		if (mname != 0)	{
+		if (mname != '')	{
 			
 			if (isValidMname(mname)) {
 				$('#mname').css('border', '1px solid #0dd01a');
@@ -77,17 +77,17 @@ function isValidMname(valmname) {
 }
 
 
-$(document).ready(function() { //Проверка ввода возраста
+$(document).ready(function() {
 	$('#cold').focusout(function() {
 		var cold = $('#cold').val();
 		
-		if (($(this).val() <= 0) || ($(this).val() > 10)) $(this).val($(this).val().substr(0, 0));
+		if ($(this).val() > 7) $(this).val($(this).val().substr(0, 0));
 
-		if (cold != 0) {
+		if (cold != '') {
 		
 			if (isValidCold(cold)) {
 				$('#cold').css('border', '1px solid #0dd01a');
-				localStorcold.setItem('vcold', 1);
+				localStorage.setItem('vcold', 1);
 			} else {
 				$('#cold').css('border', '1px solid #f00');
 				$(this).val($(this).val().substr(0, 0));
@@ -115,9 +115,9 @@ $(document).ready(function() {
 	$('#weight').focusout(function() {
 		var weight = $('#weight').val();
 		
-		if (($(this).val() < 30) || ($(this).val() > 150)) $(this).val($(this).val().substr(0, 0));
+		if (($(this).val() < 30) || ($(this).val() > 200)) $(this).val($(this).val().substr(0, 0));
 
-		if (weight != 0) {
+		if (weight != '') {
 			
 			if (isValidWeight(weight)) {
 				$('#weight').css('border', '1px solid #0dd01a');
@@ -154,9 +154,9 @@ $(document).ready(function() {
 	$('#height').focusout(function() {
 		var height = $('#height').val();
 		
-		if (($(this).val() < 120) || ($(this).val() > 230)) $(this).val($(this).val().substr(0, 0));
+		if (($(this).val() < 100) || ($(this).val() > 230)) $(this).val($(this).val().substr(0, 0));
 
-		if (height != 0) {
+		if (height != '') {
 			
 			if (isValidHeight(height)) {
 				$('#height').css('border', '1px solid #0dd01a');
@@ -188,9 +188,9 @@ $(document).ready(function() {
 	$('#pulse').focusout(function() {
 		var pulse = $('#pulse').val();
 		
-		if (($(this).val() < 30) || ($(this).val() > 150)) $(this).val($(this).val().substr(0, 0));
+		if (($(this).val() < 30) || ($(this).val() > 130)) $(this).val($(this).val().substr(0, 0));
 
-		if (pulse != 0) {
+		if (pulse != '') {
 			
 			if (isValidPulse(pulse)) {
 				$('#pulse').css('border', '1px solid #0dd01a');
@@ -227,9 +227,9 @@ $(document).ready(function() { //Проверка ввода систоличе�
 	$('#sist').focusout(function() {
 		var sist = $('#sist').val();
 		
-		if (($(this).val() < 100) || ($(this).val() > 250)) $(this).val($(this).val().substr(0, 0));
+		if (($(this).val() < 60) || ($(this).val() > 200)) $(this).val($(this).val().substr(0, 0));
 		
-		if (sist != 0) {
+		if (sist != '') {
 			
 			if (isValidSist(sist)) {
 				$('#sist').css('border', '1px solid #0dd01a');
@@ -251,19 +251,24 @@ $(document).ready(function() { //Проверка ввода систоличе�
 });
 
 function isValidSist(valsist) {
+	if ($('#sist').val().length == 2) {
+		var pattern = new RegExp(/[0-9][0-9]/);
+		return pattern.test(valsist);
+	}
+
 	if ($('#sist').val().length == 3) {
 		var pattern = new RegExp(/[0-9][0-9][0-9]/);
 		return pattern.test(valsist);
 	}
 }
 
-$(document).ready(function() { //Проверка ввода диастолического давления 
+$(document).ready(function() { 
 	$('#dia').focusout(function() {
 		var dia = $('#dia').val();
 		
-		if (($(this).val() < 50) || ($(this).val() > 99)) $(this).val($(this).val().substr(0, 0));
+		if (($(this).val() < 40) || ($(this).val() > 120)) $(this).val($(this).val().substr(0, 0));
 
-		if (dia != 0) {
+		if (dia != '') {
 			if (isValidDia(dia)) {
 				$('#dia').css('border', '1px solid #0dd01a');
 				localStorage.setItem('vDia', 1);
@@ -279,7 +284,7 @@ $(document).ready(function() { //Проверка ввода диастолич�
 	});
 	
 	$('#dia').keyup(function() {
-		if ($(this).val().length > 2) $(this).val($(this).val().substr(0, 2));         
+		if ($(this).val().length > 3) $(this).val($(this).val().substr(0, 3));         
 	});
 });
 
@@ -288,13 +293,18 @@ function isValidDia(valdia) {
 		var pattern = new RegExp(/[0-9][0-9]/);
 		return pattern.test(valdia);
 	}
+
+	if ($('#dia').val().length == 3) {
+		var pattern = new RegExp(/[0-9][0-9][0-9]/);
+		return pattern.test(valdia);
+	}
 }
 
-$(document).ready(function() { //Проверка ввода диастолического давления 
+$(document).ready(function() { 
 	$('#rec1').focusout(function() {
 		var rec1 = $('#rec1').val();
 		
-		if ($(this).val() >= 20) $(this).val($(this).val().substr(0, 0));
+		if ($(this).val() > 20) $(this).val($(this).val().substr(0, 0));
 
 		if (rec1 != '') {
 			if (isValidRec1(rec1)) {
@@ -328,11 +338,11 @@ function isValidRec1(valrec1) {
 	}
 }
 
-$(document).ready(function() { //Проверка ввода диастолического давления 
+$(document).ready(function() { 
 	$('#rec2').focusout(function() {
 		var rec2 = $('#rec2').val();
 		
-		if ($(this).val() >= 60) $(this).val($(this).val().substr(0, 0));
+		if ($(this).val() > 60) $(this).val($(this).val().substr(0, 0));
 
 		if (rec2 != '') {
 			if (isValidRec2(rec2)) {
@@ -366,13 +376,13 @@ function isValidRec2(valrec2) {
 	}
 }
 
-$(document).ready(function() { //Проверка ввода диастолического давления 
+$(document).ready(function() { 
 	$('#lung').focusout(function() {
 		var lung = $('#lung').val();
 		
-		if (($(this).val() >= 7000) || ($(this).val() <= 1500)) $(this).val($(this).val().substr(0, 0));
+		if (($(this).val() < 1000) || ($(this).val() > 8000)) $(this).val($(this).val().substr(0, 0));
 
-		if (lung != 0) {
+		if (lung != '') {
 			if (isValidLung(lung)) {
 				$('#lung').css('border', '1px solid #0dd01a');
 				localStorage.setItem('vlung', 1);
@@ -399,13 +409,13 @@ function isValidLung(vallung) {
 	}
 }
 
-$(document).ready(function() { //Проверка ввода диастолического давления 
+$(document).ready(function() { 
 	$('#training').focusout(function() {
 		var training = $('#training').val();
 		
-		if ($(this).val() >= 15) $(this).val($(this).val().substr(0, 0));
+		if ($(this).val() > 15) $(this).val($(this).val().substr(0, 0));
 
-		if (training != 0) {
+		if (training != '') {
 			if (isValidTraining(training)) {
 				$('#training').css('border', '1px solid #0dd01a');
 				localStorage.setItem('vtraining', 1);
@@ -437,13 +447,13 @@ function isValidTraining(valtraining) {
 	}
 }
 
-$(document).ready(function() { //Проверка ввода диастолического давления 
+$(document).ready(function() { 
 	$('#exercval').focusout(function() {
 		var exercval = $('#exercval').val();
 		
-		if ($(this).val() >= 300) $(this).val($(this).val().substr(0, 0));
+		if ($(this).val() > 300) $(this).val($(this).val().substr(0, 0));
 
-		if (exercval != 0) {
+		if (exercval != '') {
 			if (isValidExercval(exercval)) {
 				$('#exercval').css('border', '1px solid #0dd01a');
 				localStorage.setItem('vexercval', 1);
@@ -459,7 +469,7 @@ $(document).ready(function() { //Проверка ввода диастолич�
 	});
 	
 	$('#exercval').keyup(function() {
-		if ($(this).val().length > 2) $(this).val($(this).val().substr(0, 2));         
+		if ($(this).val().length > 3) $(this).val($(this).val().substr(0, 3));         
 	});
 });
 
@@ -480,13 +490,13 @@ function isValidExercval(valexercval) {
 	}
 }
 
-$(document).ready(function() { //Проверка ввода диастолического давления 
+$(document).ready(function() { 
 	$('#lift').focusout(function() {
 		var lift = $('#lift').val();
 		
-		if ($(this).val() >= 100) $(this).val($(this).val().substr(0, 0));
+		if ($(this).val() > 300) $(this).val($(this).val().substr(0, 0));
 
-		if (lift != 0) {
+		if (lift != '') {
 			if (isValidLift(lift)) {
 				$('#lift').css('border', '1px solid #0dd01a');
 				localStorage.setItem('vlift', 1);
@@ -502,7 +512,7 @@ $(document).ready(function() { //Проверка ввода диастолич�
 	});
 	
 	$('#lift').keyup(function() {
-		if ($(this).val().length > 2) $(this).val($(this).val().substr(0, 3));         
+		if ($(this).val().length > 3) $(this).val($(this).val().substr(0, 3));         
 	});
 });
 
@@ -516,15 +526,20 @@ function isValidLift(vallift) {
 		var pattern = new RegExp(/[0-9][0-9]/);
 		return pattern.test(vallift);
 	}
+
+	if ($('#lift').val().length == 3) {
+		var pattern = new RegExp(/[0-9][0-9][0-9]/);
+		return pattern.test(vallift);
+	}
 }
 
-$(document).ready(function() { //Проверка ввода диастолического давления 
+$(document).ready(function() { 
 	$('#jump').focusout(function() {
 		var jump = $('#jump').val();
 		
-		if ($(this).val() >= 100) $(this).val($(this).val().substr(0, 0));
+		if (($(this).val() < 50) || ($(this).val() > 350)) $(this).val($(this).val().substr(0, 0));
 
-		if (jump != 0) {
+		if (jump != '') {
 			if (isValidJump(jump)) {
 				$('#jump').css('border', '1px solid #0dd01a');
 				localStorage.setItem('vjump', 1);
@@ -545,6 +560,11 @@ $(document).ready(function() { //Проверка ввода диастолич�
 });
 
 function isValidJump(valjump) {
+	if ($('#jump').val().length == 2) {
+		var pattern = new RegExp(/[0-9][0-9]/);
+		return pattern.test(valjump);
+	}
+
 	if ($('#jump').val().length == 3) {
 		var pattern = new RegExp(/[0-9][0-9][0-9]/);
 		return pattern.test(valjump);
@@ -569,6 +589,7 @@ $(document).on('click focuson focusout mousemove', function() { //Подсвет
 	var lift = $('#lift').val();
 	var jump = $('#jump').val();
 	var lung = $('#lung').val();
+	var training = $('#training').val();
 		
 	if (isValidSname(sname)) $('#sname').css('border', '1px solid #0dd01a');	
 
@@ -599,4 +620,6 @@ $(document).on('click focuson focusout mousemove', function() { //Подсвет
 	if (isValidJump(jump)) $('#jump').css('border', '1px solid #0dd01a');
 
 	if (isValidLung(lung)) $('#lung').css('border', '1px solid #0dd01a');
+
+	if (isValidTraining(training)) $('#training').css('border', '1px solid #0dd01a');
 });
