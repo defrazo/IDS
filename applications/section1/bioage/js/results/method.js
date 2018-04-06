@@ -8,10 +8,10 @@ function method() { //Обработчик методики
 		inha = localStorage.getItem('inhainp'),
 		num = localStorage.getItem('num'),
 		static = localStorage.getItem('staticinp'),
-		dbage = Math.round(0.629 * cage + 18.56),
-		bage = Math.round(26.985 + 0.215 * sist - 0.149 * inha + 0.723 * num - 0.151 * static),
+		dbage = Math.round(0.629 * parseFloat(cage) + 18.56),
+		bage = Math.round(26.985 + 0.215 * parseFloat(sist) - 0.149 * parseFloat(inha) + 0.723 * parseFloat(num)- 0.151 * parseFloat(static)),
 		lag = bage - dbage,
-		index = Math.round(0.05 * cage + 0.093 * num - 1.327);
+		index = Math.round(0.05 * parseFloat(cage) + 0.093 * parseFloat(num) - 1.327);
 	} else {
 		var 
 		cage = localStorage.getItem('ageinp'),
@@ -21,10 +21,10 @@ function method() { //Обработчик методики
 		num = localStorage.getItem('num'),
 		static = localStorage.getItem('staticinp'),
 		pulse = sist - dia,
-		dbage = Math.round(0.581 * cage + 17.24),
-		bage = Math.round(-1.463 + 0.415 * pulse + 0.248 * weight + 0.694 * num - 0.14 * static),
+		dbage = Math.round(0.581 * parseFloat(cage) + 17.24),
+		bage = Math.round(-1.463 + 0.415 * parseFloat(pulse) + 0.248 * parseFloat(weight) + 0.694 * parseFloat(num)- 0.14 * parseFloat(static)),
 		lag = bage - dbage,
-		index = Math.round(0.011 * cage + 0.057 * num - 0.103);
+		index = Math.round(0.011 * parseFloat(cage) + 0.057 * parseFloat(num) - 0.103);
 	}
 
 	switch (true) {

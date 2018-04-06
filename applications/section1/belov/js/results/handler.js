@@ -1,29 +1,29 @@
 $(document).ready(function() {
-	sname = localStorage.getItem('snameinp');
-	fname = localStorage.getItem('fnameinp');
-	mname = localStorage.getItem('mnameinp');
-	date = localStorage.getItem('dateinp');
-	cold = localStorage.getItem('coldinp');
-	weight = localStorage.getItem('weightinp');
-	height = localStorage.getItem('heightinp');
-	pulse = localStorage.getItem('pulseinp');
-	sist = localStorage.getItem('sistinp');
-	dia = localStorage.getItem('diainp');
-	gender = localStorage.getItem('genderinp');
-	rec1 = localStorage.getItem('rec1inp');
-	rec2 = localStorage.getItem('rec2inp');
-	exercval = localStorage.getItem('exercvalinp');
-	lift = localStorage.getItem('liftinp');
-	jump = localStorage.getItem('jumpinp');
-	group = localStorage.getItem('groupinp');
-	recovery = localStorage.getItem('recoveryinp');
-	exercise = localStorage.getItem('exerciseinp');
-	lung = localStorage.getItem('lunginp');
-	training = localStorage.getItem('traininginp');
-	fac = localStorage.getItem('facinp');
+	sname = parseFloat(localStorage.getItem('snameinp'));
+	fname = parseFloat(localStorage.getItem('fnameinp'));
+	mname = parseFloat(localStorage.getItem('mnameinp'));
+	date = parseFloat(localStorage.getItem('dateinp'));
+	cold = parseFloat(localStorage.getItem('coldinp'));
+	weight = parseFloat(localStorage.getItem('weightinp'));
+	height = parseFloat(localStorage.getItem('heightinp'));
+	pulse = parseFloat(localStorage.getItem('pulseinp'));
+	sist = parseFloat(localStorage.getItem('sistinp'));
+	dia = parseFloat(localStorage.getItem('diainp'));
+	gender = parseFloat(localStorage.getItem('genderinp'));
+	rec1 = parseFloat(localStorage.getItem('rec1inp'));
+	rec2 = parseFloat(localStorage.getItem('rec2inp'));
+	exercval = parseFloat(localStorage.getItem('exercvalinp'));
+	lift = parseFloat(localStorage.getItem('liftinp'));
+	jump = parseFloat(localStorage.getItem('jumpinp'));
+	group = parseFloat(localStorage.getItem('groupinp'));
+	recovery = parseFloat(localStorage.getItem('recoveryinp'));
+	exercise = parseFloat(localStorage.getItem('exerciseinp'));
+	lung = parseFloat(localStorage.getItem('lunginp'));
+	training = parseFloat(localStorage.getItem('traininginp'));
+	fac = parseFloat(localStorage.getItem('facinp'));
 	
-	imt = height - weight;
-	cap = lung / weight;
+	imt = parseFloat(height) - parseFloat(weight);
+	cap = parseFloat(lung) / parseFloat(weight);
 	var points = 0;
 	if (group == 'Основная') {
 
@@ -49,7 +49,7 @@ $(document).ready(function() {
 
 			if (recovery == 'Бег') {
 
-				rec = ((parseInt(rec1) * 60) + parseInt(rec2)) / 60;
+				rec = ((parseFloat(rec1) * 60) + parseFloat(rec2)) / 60;
 
 				switch (true) {
 					case (rec > 12) : points = points + 1; break;
@@ -62,7 +62,7 @@ $(document).ready(function() {
 				} 
 			} else {
 
-				rec = ((parseInt(rec1) * 60) + parseInt(rec2)) / 60;
+				rec = ((parseFloat(rec1) * 60) + parseFloat(rec2)) / 60;
 
 				switch (true) {
 					case (rec > 3) : points = points + 1; break;
@@ -106,7 +106,7 @@ $(document).ready(function() {
 
 			if (recovery == 'Бег') {
 
-				rec = ((parseInt(rec1) * 60) + parseInt(rec2)) / 60;
+				rec = ((parseFloat(rec1) * 60) + parseFloat(rec2)) / 60;
 
 				switch (true) {
 					case (rec > 14) : points = points + 1; break;
@@ -119,7 +119,7 @@ $(document).ready(function() {
 				} 
 			} else {
 				
-				rec = ((parseInt(rec1) * 60) + parseInt(rec2)) / 60;
+				rec = ((parseFloat(rec1) * 60) + parseFloat(rec2)) / 60;
 
 				switch (true) {
 					case (rec > 3) : points = points + 1; break;
@@ -185,7 +185,7 @@ $(document).ready(function() {
 
 			if (recovery == 'Бег') {
 
-				rec = ((parseInt(rec1) * 60) + parseInt(rec2)) / 60;
+				rec = ((parseFloat(rec1) * 60) + parseFloat(rec2)) / 60;
 
 				switch (true) {
 					case (rec > 12) : points = points + 1; break;
@@ -198,7 +198,7 @@ $(document).ready(function() {
 				} 
 			} else {
 				
-				rec = ((parseInt(rec1) * 60) + parseInt(rec2)) / 60;
+				rec = ((parseFloat(rec1) * 60) + parseFloat(rec2)) / 60;
 
 				switch (true) {
 					case (rec > 3) : points = points + 1; break;
@@ -258,7 +258,7 @@ $(document).ready(function() {
 
 			if (recovery == 'Бег') {
 
-				rec = ((parseInt(rec1) * 60) + parseInt(rec2)) / 60;
+				rec = ((parseFloat(rec1) * 60) + parseFloat(rec2)) / 60;
 
 				switch (true) {
 					case (rec > 14) : points = points + 1; break;
@@ -271,7 +271,7 @@ $(document).ready(function() {
 				} 
 			} else {
 				
-				rec = ((parseInt(rec1) * 60) + parseInt(rec2)) / 60;
+				rec = ((parseFloat(rec1) * 60) + parseFloat(rec2)) / 60;
 
 				switch (true) {
 					case (rec > 3) : points = points + 1; break;

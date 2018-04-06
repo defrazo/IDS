@@ -37,6 +37,39 @@ $(document).ready(function() {
 		localStorage.setItem('theme', val);
 	}
 
+	if (val == 'green') {
+		$('body').css('background', 'radial-gradient(ellipse, #F3F9A7, #45B649)');
+		$('.header>h1').css({'color' : '#000000', 'text-shadow' : 'none'});
+		$('.header>h2').css({'color' : '#000000', 'text-shadow' : 'none'});
+		$('.name').css({'color' : '#000000', 'text-shadow' : 'none'});
+		$('.progress-bar').removeClass().addClass('progress-bar');
+		$('.switch_name').css({'color' : '#000000', 'text-shadow' : 'none'});
+		$('#timer_controls label').css('box-shadow', 'black 0px 0px 5px');
+		localStorage.setItem('theme', val);
+	}
+
+	if (val == 'lightblue') {
+		$('body').css('background', 'radial-gradient(ellipse, #E2E2E2, #1c92d2)');
+		$('.header>h1').css({'color' : '#000000', 'text-shadow' : 'none'});
+		$('.header>h2').css({'color' : '#000000', 'text-shadow' : 'none'});
+		$('.name').css({'color' : '#000000', 'text-shadow' : 'none'});
+		$('.progress-bar').removeClass().addClass('progress-bar');
+		$('.switch_name').css({'color' : '#000000', 'text-shadow' : 'none'});
+		$('#timer_controls label').css('box-shadow', 'black 0px 0px 5px');
+		localStorage.setItem('theme', val);
+	}
+
+	if (val == 'yellow') {
+		$('body').css('background', 'radial-gradient(ellipse, #DDE0E2, #CAC531)');
+		$('.header>h1').css({'color' : '#000000', 'text-shadow' : 'none'});
+		$('.header>h2').css({'color' : '#000000', 'text-shadow' : 'none'});
+		$('.name').css({'color' : '#000000', 'text-shadow' : 'none'});
+		$('.progress-bar').removeClass().addClass('progress-bar');
+		$('.switch_name').css({'color' : '#000000', 'text-shadow' : 'none'});
+		$('#timer_controls label').css('box-shadow', 'black 0px 0px 5px');
+		localStorage.setItem('theme', val);
+	}
+
 	if (val == 'black') {
 		$('body').css('background', 'radial-gradient(ellipse, #434343, #000000)');
 		$('.header>h1').css({'color' : '#FFFFFF', 'text-shadow' : 'none'});
@@ -82,6 +115,39 @@ $(document).ready(function() {
 			$('.progress-bar').removeClass().addClass('progress-bar');
 			$('.switch_name').css({'color' : '#FFFFFF', 'text-shadow' : '#000000FF 0 0 10px'});
 			$('#timer_controls label').css('box-shadow', 'none');
+			localStorage.setItem('theme', val);
+		}
+
+		if (val == 'lightblue') {
+			$('body').css('background', 'radial-gradient(ellipse, #E2E2E2, #1c92d2)');
+			$('.header>h1').css({'color' : '#000000', 'text-shadow' : 'none'});
+			$('.header>h2').css({'color' : '#000000', 'text-shadow' : 'none'});
+			$('.name').css({'color' : '#000000', 'text-shadow' : 'none'});
+			$('.progress-bar').removeClass().addClass('progress-bar');
+			$('.switch_name').css({'color' : '#000000', 'text-shadow' : 'none'});
+			$('#timer_controls label').css('box-shadow', 'black 0px 0px 5px');
+			localStorage.setItem('theme', val);
+		}
+
+		if (val == 'green') {
+			$('body').css('background', 'radial-gradient(ellipse, #F3F9A7, #45B649)');
+			$('.header>h1').css({'color' : '#000000', 'text-shadow' : 'none'});
+			$('.header>h2').css({'color' : '#000000', 'text-shadow' : 'none'});
+			$('.name').css({'color' : '#000000', 'text-shadow' : 'none'});
+			$('.progress-bar').removeClass().addClass('progress-bar');
+			$('.switch_name').css({'color' : '#000000', 'text-shadow' : 'none'});
+			$('#timer_controls label').css('box-shadow', 'black 0px 0px 5px');
+			localStorage.setItem('theme', val);
+		}
+
+		if (val == 'yellow') {
+			$('body').css('background', 'radial-gradient(ellipse, #F3F9A7, #CAC531)');
+			$('.header>h1').css({'color' : '#000000', 'text-shadow' : 'none'});
+			$('.header>h2').css({'color' : '#000000', 'text-shadow' : 'none'});
+			$('.name').css({'color' : '#000000', 'text-shadow' : 'none'});
+			$('.progress-bar').removeClass().addClass('progress-bar');
+			$('.switch_name').css({'color' : '#000000', 'text-shadow' : 'none'});
+			$('#timer_controls label').css('box-shadow', 'black 0px 0px 5px');
 			localStorage.setItem('theme', val);
 		}
 

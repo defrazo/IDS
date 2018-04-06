@@ -164,6 +164,16 @@ input[type=checkbox]:checked ~ .stopwatch_switch i {
     right: -6px;
     }
 
+.progress {
+    box-shadow: 0 0 3px #AAAAAA;
+    }
+    
+.progress-message {
+    font-size: 18px;
+    text-shadow: #000000 0 0 1px;
+    cursor: default;
+    }
+
 .no_click {
     pointer-events: none;
     }

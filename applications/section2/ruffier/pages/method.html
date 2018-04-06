@@ -21,8 +21,7 @@
 	<script src="../js/method/checkRecords.js"></script>
 	<script src="../js/method/writeOn.js"></script>
 	<script src="../js/method/progressBar.js"></script>
-	<script src="../js/method/increaseFont.js"></script>
-	<script src="../js/method/decreaseFont.js"></script>
+	<script src="../js/zoom.js"></script>
 	<script src="../js/restoreValues.js"></script>
 	<script src="../js/hotkeys.js"></script>
 	<script src="../js/keys.js"></script>
@@ -43,6 +42,20 @@
 								<input type="date" onclick="valide();" class="data_input_field" id="date" required>
 							</div>
 							<div class="question_field">
+								<p class="designation">Факультет:</p>
+								<select class="switch_fac" id="fac" onclick="valide();">
+									<option class="fac_option" selected disabled>Выберите факультет</option>
+									<option class="fac_option" value="Факультет социальной психологии">Факультет социальной психологии</option>
+									<option class="fac_option" value="Факультет бизнеса и управления">Факультет бизнеса и управления</option>
+									<option class="fac_option" value="Факультет современного танца">Факультет современного танца</option>
+									<option class="fac_option" value="Факультет конструирования и моделирования одежды">Факультет к. и моделирования одежды</option>
+									<option class="fac_option" value="Факультет компьютерных технологий">Факультет компьютерных технологий</option>
+									<option class="fac_option" value="Факультет телерадиожурналистики">Факультет телерадиожурналистики</option>
+									<option class="fac_option" value="Факультет юридический">Факультет юридический</option>
+									<option class="fac_option" value="-">Нет</option>
+								</select>
+							</div>
+							<div class="question_field">
 								<p class="designation">Ваш пол:</p>
 								<label class="variant"><input type="radio" onclick="valide();" name="gender" id="gender" value="Мужской" required> Мужской </label>
 								<label class="variant"><input type="radio" onclick="valide();" name="gender" value="Женский"> Женский </label>
@@ -52,29 +65,29 @@
 					<div class="tab">
 						<div class="question_field">
 							<p class="designation">Ваша фамилия:</p>
-							<input type="text" onkeydown="valide();" class="data_input_field" id="sname" required><span id="validSname"></span>
+							<input type="text" onkeydown="valide();" class="data_input_field" id="sname" required>
 						</div>
 						<div class="question_field">
 							<p class="designation">Ваше имя:</p>
-							<input type="text" onkeydown="valide();" class="data_input_field" id="fname" required><span id="validFname"></span>
+							<input type="text" onkeydown="valide();" class="data_input_field" id="fname" required>
 						</div>
 						<div class="question_field">
 							<p class="designation">Ваше отчество:</p>
-							<input type="text" onkeydown="valide();" class="data_input_field" id="mname" required><span id="validMname"></span>
+							<input type="text" onkeydown="valide();" class="data_input_field" id="mname" required>
 						</div>
 					</div>		
 					<div class="tab">
 						<div class="question_field">
 							<p class="designation">Результат 1: <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="right" title="Пульс за 15 сек в положении лежа"></p> 
-							<input type="text" onkeydown="valide();" placeholder="сек" class="data_input_field" id="result1" required><span id="validResult1"></span>
+							<input type="text" onkeydown="valide();" placeholder="сек" class="data_input_field" id="result1" required>
 						</div>
 						<div class="question_field">
 							<p class="designation">Результат 2: <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="right" title="Пульс за первые 15 сек после приседаний"></p>
-							<input type="text" onkeydown="valide();" placeholder="сек" class="data_input_field" id="result2" required><span id="validResult2"></span>
+							<input type="text" onkeydown="valide();" placeholder="сек" class="data_input_field" id="result2" required>
 						</div>
 						<div class="question_field">
 							<p class="designation">Результат 3: <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="right" title="Пульс за последние 15 сек первой минуты отдыха"></p>
-							<input type="text" onkeydown="valide();" placeholder="сек" class="data_input_field" id="result3" required><span id="validResult3"></span>
+							<input type="text" onkeydown="valide();" placeholder="сек" class="data_input_field" id="result3" required>
 						</div>
 					</div>
 				</div>
@@ -92,7 +105,7 @@
 				<label class="options_switch" for="options_button"><i></i></label>
 			</div>
 			<div class="col-md-offset-1 col-md-2 text-center no-gutter">
-					<a href="results.html" class="next_button" id="method_submit" onclick="localStorage.setItem('mval', 4); get_data();">Продолжить</a>
+					<a href="results.html" class="next_button" id="method_submit" onclick="get_data();">Продолжить</a>
 			</div>
 			<div class="col-md-offset-1 col-md-3 text-center no-gutter">
 				<span class="switch_name">Секундомер</span>
@@ -109,17 +122,20 @@
 							<select class="switch_theme">
 								<option class="theme_option" selected disabled>Выберите</option>
 								<option class="theme_option" value="white">Белая</option>
-								<option class="theme_option" value="blue">Синяя</option>
 								<option class="theme_option" value="grey">Серая</option>
-								<option class="theme_option" value="black">Черная</option>	
+								<option class="theme_option" value="blue">Синяя</option>
+								<option class="theme_option" value="black">Черная</option>
+								<option class="theme_option" value="yellow">Желтая</option>
+								<option class="theme_option" value="lightblue">Голубая</option>
+								<option class="theme_option" value="green">Зеленая</option>
 							</select>
 						</td>
 					</tr>
 					<tr>
 						<td>
 							<span class="table_name">Шрифт</span><br>
-							<button style="width: 48%; outline: none;" type="button" class="btn btn-default btn-md plus" onclick="toIncreaseFont();"><span class="glyphicon glyphicon-plus-sign"></span></button>
-							<button style="width: 48%; outline: none;" type="button" class="btn btn-default btn-md minus" onclick="toDecreaseFont();"><span class="glyphicon glyphicon-minus-sign"></span></button>
+							<button style="width: 48%; outline: none;" type="button" class="btn btn-default btn-md plus" onclick="increase();"><span class="glyphicon glyphicon-plus-sign"></span></button>
+							<button style="width: 48%; outline: none;" type="button" class="btn btn-default btn-md minus" onclick="decrease();"><span class="glyphicon glyphicon-minus-sign"></span></button>
 						</td>
 					</tr>
 				</tbody>

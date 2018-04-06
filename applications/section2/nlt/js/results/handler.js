@@ -1,39 +1,36 @@
 $(document).ready(function() {
-	sname = localStorage.getItem('snameinp');
-	fname = localStorage.getItem('fnameinp');
-	mname = localStorage.getItem('mnameinp');
-	date = localStorage.getItem('dateinp');
-	age = localStorage.getItem('ageinp');
-	weight = localStorage.getItem('weightinp');
-	height = localStorage.getItem('heightinp');
-	pulse = localStorage.getItem('pulseinp');
-	sist = localStorage.getItem('sistinp');
-	dia = localStorage.getItem('diainp');
-	gender = localStorage.getItem('genderinp');
+	sname = parseFloat(localStorage.getItem('snameinp'));
+	fname = parseFloat(localStorage.getItem('fnameinp'));
+	mname = parseFloat(localStorage.getItem('mnameinp'));
+	date = parseFloat(localStorage.getItem('dateinp'));
+	age = parseFloat(localStorage.getItem('ageinp'));
+	weight = parseFloat(localStorage.getItem('weightinp'));
+	height = parseFloat(localStorage.getItem('heightinp'));
+	pulse = parseFloat(localStorage.getItem('pulseinp'));
+	sist = parseFloat(localStorage.getItem('sistinp'));
+	dia = parseFloat(localStorage.getItem('diainp'));
+	gender = parseFloat(localStorage.getItem('genderinp'));
+	fac = parseFloat(localStorage.getItem('facinp'));
 	
-	ac = (0.011 * pulse + 0.014 * sist + 0.008 * dia + 0.014 * age + 0.009 * weight - (0.009 * height + 0.27)).toFixed(2);
+	adsrp = ((parseFloat(sist) - parseFloat(dia)) / 3) + parseFloat(dia);
+
+	ufc = (700 - 3 * parseFloat(pulse) - 2.5 * parseFloat(adsrp) - 2.7 * parseFloat(age) + 0.28 * parseFloat(weight)) / (350 - (2.6 * parseFloat(age)) + (0.21 * parseFloat(height)));
 
 	switch (true) {
-		case (ac <= 2.1) : 
-			status = 'Удовлетворительная адаптация'; 
-			group = 'Первая'; 
-			inspection = 'Углубленный врачебный осмотр только при наличии жалоб';
-			recommend = 'Оздоровительные мероприятия';
-		break;
-		case (ac >= 2.11) && (ac <= 3.2) : status = 'Напряжение механизмов адаптации'; group = 'Вторая'; break;
-		case (ac >= 3.21) && (ac <= 4.3) : status = 'Неудовлетворительная адаптация'; group = 'Третья'; break;
-		case (ac >= 4.31) : status = 'Срыв механизмов адаптации'; group = 'Четвертая'; break;
+		case (ufc < 0.375) : status = 'Низкий'; break;
+		case (ufc >= 0.376) && (ufc <= 0.525) : status = 'Ниже среднего'; break;
+		case (ufc >= 0.526) && (ufc <= 0.675) : status = 'Средний'; break;
+		case (ufc >= 0.676) && (ufc <= 0.825) : status = 'Выше срднего'; break;
+		case (ufc > 0.826) : status = 'Высокий'; break;
 	}
 
 	$('#sname').append(sname);
 	$('#fname').append(fname);
 	$('#mname').append(mname);
 	$('#date').append(date);
+	$('#points').append((ufc).toFixed(3));
 	$('#gender').append(gender);
+	$('#fac').append(fac);
 	$('#age').append(age).append(' лет');
-	$('#points').append(ac);
 	$('#status').append(status);
-	$('#group').append(group);
-	$('#inspection').append(inspection);
-	$('#recommend').append(recommend);
 });

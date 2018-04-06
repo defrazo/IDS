@@ -1,17 +1,18 @@
 $(document).ready(function() {
-	sname = localStorage.getItem('snameinp');
-	fname = localStorage.getItem('fnameinp');
-	mname = localStorage.getItem('mnameinp');
-	date = localStorage.getItem('dateinp');
-	age = localStorage.getItem('ageinp');
-	weight = localStorage.getItem('weightinp');
-	height = localStorage.getItem('heightinp');
-	pulse = localStorage.getItem('pulseinp');
-	sist = localStorage.getItem('sistinp');
-	dia = localStorage.getItem('diainp');
-	gender = localStorage.getItem('genderinp');
+	sname = parseFloat(localStorage.getItem('snameinp'));
+	fname = parseFloat(localStorage.getItem('fnameinp'));
+	mname = parseFloat(localStorage.getItem('mnameinp'));
+	date = parseFloat(localStorage.getItem('dateinp'));
+	age = parseFloat(localStorage.getItem('ageinp'));
+	weight = parseFloat(localStorage.getItem('weightinp'));
+	height = parseFloat(localStorage.getItem('heightinp'));
+	pulse = parseFloat(localStorage.getItem('pulseinp'));
+	sist = parseFloat(localStorage.getItem('sistinp'));
+	dia = parseFloat(localStorage.getItem('diainp'));
+	gender = parseFloat(localStorage.getItem('genderinp'));
+	fac = parseFloat(localStorage.getItem('facinp'));
 	
-	ac = (0.011 * pulse + 0.014 * sist + 0.008 * dia + 0.014 * age + 0.009 * weight - (0.009 * height + 0.27)).toFixed(2);
+	ac = (0.011 * parseFloat(pulse) + 0.014 * parseFloat(sist) + 0.008 * parseFloat(dia) + 0.014 * parseFloat(age) + 0.009 * parseFloat(weight) - (0.009 * parseFloat(height) + 0.27)).toFixed(2);
 
 	switch (true) {
 		case (ac <= 2.1) : 
@@ -30,6 +31,7 @@ $(document).ready(function() {
 	$('#mname').append(mname);
 	$('#date').append(date);
 	$('#gender').append(gender);
+	$('#fac').append(fac);
 	$('#age').append(age).append(' лет');
 	$('#points').append(ac);
 	$('#status').append(status);

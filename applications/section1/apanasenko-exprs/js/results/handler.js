@@ -1,28 +1,28 @@
 $(document).ready(function() {
-	sname = localStorage.getItem('snameinp');
-	fname = localStorage.getItem('fnameinp');
-	mname = localStorage.getItem('mnameinp');
-	date = localStorage.getItem('dateinp');
-	weight = localStorage.getItem('weightinp');
-	height = localStorage.getItem('heightinp');
-	pulse = localStorage.getItem('pulseinp');
-	sist = localStorage.getItem('sistinp');
-	gender = localStorage.getItem('genderinp');
-	rec1 = localStorage.getItem('rec1inp');
-	rec2 = localStorage.getItem('rec2inp');
-	lung = localStorage.getItem('lunginp');
-	dynam = localStorage.getItem('dynaminp');
-	fac = localStorage.getItem('facinp');
+	sname = parseFloat(localStorage.getItem('snameinp'));
+	fname = parseFloat(localStorage.getItem('fnameinp'));
+	mname = parseFloat(localStorage.getItem('mnameinp'));
+	date = parseFloat(localStorage.getItem('dateinp'));
+	weight = parseFloat(localStorage.getItem('weightinp'));
+	height = parseFloat(localStorage.getItem('heightinp'));
+	pulse = parseFloat(localStorage.getItem('pulseinp'));
+	sist = parseFloat(localStorage.getItem('sistinp'));
+	gender = parseFloat(localStorage.getItem('genderinp'));
+	rec1 = parseFloat(localStorage.getItem('rec1inp'));
+	rec2 = parseFloat(localStorage.getItem('rec2inp'));
+	lung = parseFloat(localStorage.getItem('lunginp'));
+	dynam = parseFloat(localStorage.getItem('dynaminp'));
+	fac = parseFloat(localStorage.getItem('facinp'));
 	
-	imt = parseInt(weight / Math.pow((height/100), 2));
+	imt = parseFloat(weight / Math.pow((height/100), 2));
 
-	lindex = parseInt(lung / weight);
+	lindex = parseFloat(lung / weight);
 
-	strindex = parseInt((dynam * 100) / weight);
+	strindex = parseFloat((dynam * 100) / weight);
 
-	robins = parseInt((pulse * sist) / 100);
+	robins = parseFloat((pulse * sist) / 100);
 
-	recovery = ((parseInt(rec1) * 60) + parseInt(rec2)) / 60;
+	recovery = ((parseFloat(rec1) * 60) + parseFloat(rec2)) / 60;
 
 	var points = 0;
 

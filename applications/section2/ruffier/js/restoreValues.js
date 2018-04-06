@@ -10,4 +10,5 @@ $(document).ready(function() { //Восстанавливает значения
 	if (localStorage.getItem('result1inp') != '')	$('#result1').val(localStorage.getItem('result1inp'));
 	if (localStorage.getItem('result2inp') != '')	$('#result2').val(localStorage.getItem('result2inp'));
 	if (localStorage.getItem('result3inp') != '')	$('#result3').val(localStorage.getItem('result3inp'));
+	if (localStorage.getItem('facinp') != '')	$('#fac').val(localStorage.getItem('facinp'));
 });

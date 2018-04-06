@@ -13,4 +13,5 @@ $(document).ready(function() { //Восстанавливает значения
 	if (localStorage.getItem('pulseinp') != '')	$('#pulse').val(localStorage.getItem('pulseinp'));
 	if (localStorage.getItem('sistinp') != '')	$('#sist').val(localStorage.getItem('sistinp'));
 	if (localStorage.getItem('diainp') != '')	$('#dia').val(localStorage.getItem('diainp'));
+	if (localStorage.getItem('facinp') != '')	$('#fac').val(localStorage.getItem('facinp'));
 });

@@ -1,26 +1,29 @@
 function get_data() { //Вносит заполненные данные из полей формы в localStorage
 	
 	var date = $('#date').val();
-	if (date != 0) localStorage.setItem('dateinp', date);
+	if (date != '') localStorage.setItem('dateinp', date);
 
 	var gender = $('input[name="gender"]:checked').val();
-	if (gender != 0) localStorage.setItem('genderinp', gender);
+	if (gender != '') localStorage.setItem('genderinp', gender);
 
 	var sname = $('#sname').val();
 	if (sname != '') localStorage.setItem('snameinp', sname);
 	
 	var fname = $('#fname').val();
-	if (fname != 0) localStorage.setItem('fnameinp', fname);
+	if (fname != '') localStorage.setItem('fnameinp', fname);
 
 	var mname = $('#mname').val();
-	if (mname != 0) localStorage.setItem('mnameinp', mname);
+	if (mname != '') localStorage.setItem('mnameinp', mname);
 
 	var result1 = $('#result1').val();
-	if (result1 != 0) localStorage.setItem('result1inp', result1);
+	if (result1 != '') localStorage.setItem('result1inp', result1);
 
 	var result2 = $('#result2').val();
-	if (result2 != 0) localStorage.setItem('result2inp', result2);
+	if (result2 != '') localStorage.setItem('result2inp', result2);
 
 	var result3 = $('#result3').val();
-	if (result3 != 0) localStorage.setItem('result3inp', result3);
+	if (result3 != '') localStorage.setItem('result3inp', result3);
+
+	var fac = $('#fac').val();
+	if (fac != '') localStorage.setItem('facinp', fac);
 };

@@ -13,11 +13,9 @@
 	<script src="../js/bootstrap.js"></script>
 	<script src="../js/tip.js"></script>
 	<script src="../js/themes.js"></script>
-	<script src="../js/results/method.js"></script>
 	<script src="../js/results/handler.js"></script>
 	<script src="../js/results/script.js"></script>
-	<script src="../js/results/increaseFont.js"></script>
-	<script src="../js/results/decreaseFont.js"></script>
+	<script src="../js/zoom.js"></script>
 	<script src="../js/hotkeys.js"></script>
 	<script src="../js/keys.js"></script>
 </head>
@@ -42,6 +40,10 @@
 			<tr>
 				<td>Отчество</td>
 				<td id="mname"></td>
+			</tr>
+			<tr>
+				<td>Факультет</td>
+				<td id="fac"></td>
 			</tr>
 			<tr>
 				<td>Дата обследования</td>
@@ -90,17 +92,20 @@
 							<select class="switch_theme">
 								<option class="theme_option" selected disabled>Выберите</option>
 								<option class="theme_option" value="white">Белая</option>
-								<option class="theme_option" value="blue">Синяя</option>
 								<option class="theme_option" value="grey">Серая</option>
-								<option class="theme_option" value="black">Черная</option>	
+								<option class="theme_option" value="blue">Синяя</option>
+								<option class="theme_option" value="black">Черная</option>
+								<option class="theme_option" value="yellow">Желтая</option>
+								<option class="theme_option" value="lightblue">Голубая</option>
+								<option class="theme_option" value="green">Зеленая</option>
 							</select>
 						</td>
 					</tr>
 					<tr>
 						<td>
 							<span class="table_name">Шрифт</span><br>
-							<button style="width: 48%; outline: none;" type="button" class="btn btn-default btn-md plus" onclick="toIncreaseFont();"><span class="glyphicon glyphicon-plus-sign"></span></button>
-							<button style="width: 48%; outline: none;" type="button" class="btn btn-default btn-md minus" onclick="toDecreaseFont();"><span class="glyphicon glyphicon-minus-sign"></span></button>
+							<button style="width: 48%; outline: none;" type="button" class="btn btn-default btn-md plus" onclick="increase();"><span class="glyphicon glyphicon-plus-sign"></span></button>
+							<button style="width: 48%; outline: none;" type="button" class="btn btn-default btn-md minus" onclick="decrease();"><span class="glyphicon glyphicon-minus-sign"></span></button>
 						</td>
 					</tr>
 				</tbody>
