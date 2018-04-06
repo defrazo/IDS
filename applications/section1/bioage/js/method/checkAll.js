@@ -1,4 +1,4 @@
-$(document).mousemove(function() { //Проверяет заполнение всех полей и выводит кнопку "Продолжить"
+$(document).on('ready mousemove change', function() { //Проверяет заполнение всех полей и выводит кнопку "Продолжить"
 
 	var 
 	v1 = $('#mname').val(), 
@@ -10,10 +10,11 @@ $(document).mousemove(function() { //Проверяет заполнение в�
 	v7 = $('#dia').val(),
 	v8 = $('#inha').val(),
 	v9 = $('#static').val(),
-	v10 = $('#gender').val(),
-	v11 = $('#date').val();
+	v10 = $('input[name="gender"]').is(':checked'),
+	v11 = $('#date').val(),
+	v12 = $('#fac').val();
 
-	if ((v1) && (v2) && (v3) && (v4) && (v5) && (v6) && (v7) && (v8) && (v9) && (v10) && (v11)) {
+	if ((v1) && (v2) && (v3) && (v4) && (v5) && (v6) && (v7) && (v8) && (v9) && (v10) && (v11) && (v12)) {
 		if ($('#method_submit').is(':hidden')) {
 			$('#method_submit').css('display', 'block');
 			$('#method_submit').removeClass('no_click'); //Активирует	
@@ -22,7 +23,7 @@ $(document).mousemove(function() { //Проверяет заполнение в�
 		if ($('#method_submit').is(':visible')) $('#method_submit').removeClass('no_click');
 	}
 
-	if ((!v1) || (!v2) || (!v3) || (!v4) || (!v5) || (!v6) || (!v7) || (!v8) || (!v9) || (!v10) || (!v11)) {
+	if ((!v1) || (!v2) || (!v3) || (!v4) || (!v5) || (!v6) || (!v7) || (!v8) || (!v9) || (!v10) || (!v11) || (!v12)) {
 		$('#method_submit').addClass('no_click');
 		if ($('#method_submit').is(':visible')) $('#method_submit').css('display', 'none');
 	}

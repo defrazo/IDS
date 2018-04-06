@@ -388,8 +388,6 @@ $(document).on('click focuson focusout mousemove', function() { //Подсвет
 	var height = $('#height').val();
 	var pulse = $('#pulse').val();
 	var sist = $('#sist').val();
-	var gender = $('#gender').val();
-	var date = $('#date').val();
 	var rec1 = $('#rec1').val();
 	var rec2 = $('#rec2').val();
 	var lung = $('#lung').val();

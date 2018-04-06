@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Результаты обследования (BIOAGE)</title>
+	<title>Результаты обследования (ADAPT)</title>
 	<link rel="stylesheet" href="../css/bootstrap.css" media="all">
 	<link rel="stylesheet" href="../css/page.css" media="all">
 	<link rel="stylesheet" href="../css/results.css" media="all">
@@ -16,8 +16,7 @@
 	<script src="../js/results/method.js"></script>
 	<script src="../js/results/handler.js"></script>
 	<script src="../js/results/script.js"></script>
-	<script src="../js/results/increaseFont.js"></script>
-	<script src="../js/results/decreaseFont.js"></script>
+	<script src="../js/zoom.js"></script>
 	<script src="../js/hotkeys.js"></script>
 	<script src="../js/keys.js"></script>
 </head>
@@ -25,8 +24,8 @@
 	<div class="container">
 		<div class="header text-center">
 			<h1 class="text-uppercase">Гуманитарный университет</h1>
-			<h2>Информационно-диагностическая система «SPECTRUM»</h2>
-			<h1>Результаты оценки биологического возраста</h1>
+			<h2>Информационно-диагностическая система самоуправления развитием личности и ее психофизической подготовленностью</h2>
+			<h1>Результаты оценки адаптационного потенциала</h1>
 		</div>
 		<table class="result_table text-center table table-bordered table-hover">
 			<col width="300" valign="top">
@@ -106,8 +105,8 @@
 					<tr>
 						<td>
 							<span class="table_name">Шрифт</span><br>
-							<button style="width: 48%; outline: none;" type="button" class="btn btn-default btn-md plus" onclick="toIncreaseFont();"><span class="glyphicon glyphicon-plus-sign"></span></button>
-							<button style="width: 48%; outline: none;" type="button" class="btn btn-default btn-md minus" onclick="toDecreaseFont();"><span class="glyphicon glyphicon-minus-sign"></span></button>
+							<button style="width: 48%; outline: none;" type="button" class="btn btn-default btn-md plus" onclick="increase();"><span class="glyphicon glyphicon-plus-sign"></span></button>
+							<button style="width: 48%; outline: none;" type="button" class="btn btn-default btn-md minus" onclick="decrease();"><span class="glyphicon glyphicon-minus-sign"></span></button>
 						</td>
 					</tr>
 				</tbody>
