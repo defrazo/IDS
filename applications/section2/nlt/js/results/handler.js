@@ -1,16 +1,16 @@
 $(document).ready(function() {
-	sname = parseFloat(localStorage.getItem('snameinp'));
-	fname = parseFloat(localStorage.getItem('fnameinp'));
-	mname = parseFloat(localStorage.getItem('mnameinp'));
-	date = parseFloat(localStorage.getItem('dateinp'));
+	sname = localStorage.getItem('snameinp');
+	fname = localStorage.getItem('fnameinp');
+	mname = localStorage.getItem('mnameinp');
+	date = localStorage.getItem('dateinp');
 	age = parseFloat(localStorage.getItem('ageinp'));
 	weight = parseFloat(localStorage.getItem('weightinp'));
 	height = parseFloat(localStorage.getItem('heightinp'));
 	pulse = parseFloat(localStorage.getItem('pulseinp'));
 	sist = parseFloat(localStorage.getItem('sistinp'));
 	dia = parseFloat(localStorage.getItem('diainp'));
-	gender = parseFloat(localStorage.getItem('genderinp'));
-	fac = parseFloat(localStorage.getItem('facinp'));
+	gender = localStorage.getItem('genderinp');
+	fac = localStorage.getItem('facinp');
 	
 	adsrp = ((parseFloat(sist) - parseFloat(dia)) / 3) + parseFloat(dia);
 
