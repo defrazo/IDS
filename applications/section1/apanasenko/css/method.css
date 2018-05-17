@@ -164,10 +164,6 @@ input[type=checkbox]:checked ~ .stopwatch_switch i {
     right: -6px;
     }
 
-.no_click {
-    pointer-events: none;
-    }
-
 .progress {
     box-shadow: 0 0 3px #AAAAAA;
     }
@@ -176,6 +172,10 @@ input[type=checkbox]:checked ~ .stopwatch_switch i {
     font-size: 18px;
     text-shadow: #000000 0 0 1px;
     cursor: default;
+    }
+
+.no_click {
+    pointer-events: none;
     }
 
 .switch_fac, .switch_fac option {

@@ -13,6 +13,8 @@ $(document).ready(function() { //Восстанавливает значения
 	if (localStorage.getItem('diainp') != '')	$('#dia').val(localStorage.getItem('diainp'));
 	if (localStorage.getItem('inhainp') != '')	$('#inha').val(localStorage.getItem('inhainp'));
 	if (localStorage.getItem('staticinp') != '')	$('#static').val(localStorage.getItem('staticinp'));
+	if (localStorage.getItem('facinp') != '')	$('#fac').val(localStorage.getItem('facinp'));
+
 
 
 	if (localStorage.getItem('headinp') != '') {

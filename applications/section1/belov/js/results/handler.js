@@ -1,26 +1,26 @@
 $(document).ready(function() {
-	sname = parseFloat(localStorage.getItem('snameinp'));
-	fname = parseFloat(localStorage.getItem('fnameinp'));
-	mname = parseFloat(localStorage.getItem('mnameinp'));
-	date = parseFloat(localStorage.getItem('dateinp'));
+	sname = localStorage.getItem('snameinp');
+	fname = localStorage.getItem('fnameinp');
+	mname = localStorage.getItem('mnameinp');
+	date = localStorage.getItem('dateinp');
 	cold = parseFloat(localStorage.getItem('coldinp'));
 	weight = parseFloat(localStorage.getItem('weightinp'));
 	height = parseFloat(localStorage.getItem('heightinp'));
 	pulse = parseFloat(localStorage.getItem('pulseinp'));
 	sist = parseFloat(localStorage.getItem('sistinp'));
 	dia = parseFloat(localStorage.getItem('diainp'));
-	gender = parseFloat(localStorage.getItem('genderinp'));
+	gender = localStorage.getItem('genderinp');
 	rec1 = parseFloat(localStorage.getItem('rec1inp'));
 	rec2 = parseFloat(localStorage.getItem('rec2inp'));
 	exercval = parseFloat(localStorage.getItem('exercvalinp'));
 	lift = parseFloat(localStorage.getItem('liftinp'));
 	jump = parseFloat(localStorage.getItem('jumpinp'));
-	group = parseFloat(localStorage.getItem('groupinp'));
-	recovery = parseFloat(localStorage.getItem('recoveryinp'));
-	exercise = parseFloat(localStorage.getItem('exerciseinp'));
+	group = localStorage.getItem('groupinp');
+	recovery = localStorage.getItem('recoveryinp');
+	exercise = localStorage.getItem('exerciseinp');
 	lung = parseFloat(localStorage.getItem('lunginp'));
 	training = parseFloat(localStorage.getItem('traininginp'));
-	fac = parseFloat(localStorage.getItem('facinp'));
+	fac = localStorage.getItem('facinp');
 	
 	imt = parseFloat(height) - parseFloat(weight);
 	cap = parseFloat(lung) / parseFloat(weight);

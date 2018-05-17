@@ -12,6 +12,7 @@ function method() { //Обработчик методики
 		bage = Math.round(26.985 + 0.215 * parseFloat(sist) - 0.149 * parseFloat(inha) + 0.723 * parseFloat(num)- 0.151 * parseFloat(static)),
 		lag = bage - dbage,
 		index = Math.round(0.05 * parseFloat(cage) + 0.093 * parseFloat(num) - 1.327);
+		console.log(bage);
 	} else {
 		var 
 		cage = localStorage.getItem('ageinp'),
@@ -35,6 +36,7 @@ function method() { //Обработчик методики
 		case (lag >= 9.0) : var category = 5, status = 'Очень плохое', arate = 'Резко ускоренный'; break;
 	}
 
+	console.log(localStorage.getItem('bageinp'));
 	localStorage.setItem('bageinp', bage);
 	localStorage.setItem('dbageinp', dbage);
 	localStorage.setItem('laginp', lag);
