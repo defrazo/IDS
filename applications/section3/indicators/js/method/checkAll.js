@@ -1,0 +1,32 @@
+$(document).on('ready mousemove change', function() { //Проверяет заполнение всех полей и выводит кнопку "Продолжить"
+
+	var 
+	v1 = $('#mname').val(), 
+	v2 = $('#fname').val(),
+	v3 = $('#sname').val(),
+	v4 = $('#age').val(),
+	v5 = $('#weight').val(),
+	v6 = $('#height').val(),
+	v7 = $('input[name="gender"]').is(':checked'),
+	v8 = $('#date').val(),
+	v9 = $('#fac').val();
+
+	if ((v1) && (v2) && (v3) && (v4) && (v5) && (v6) && (v7) && (v8) && (v9)) {
+		if ($('#method_submit').is(':hidden')) {
+			$('#method_submit').css('display', 'block');
+			$('#method_submit').removeClass('no_click'); //Активирует	
+		}
+
+		if ($('#method_submit').is(':visible')) $('#method_submit').removeClass('no_click');
+	}
+
+	if ((!v1) || (!v2) || (!v3) || (!v4) || (!v5) || (!v6) || (!v7) || (!v8) || (!v9)) {
+		$('#method_submit').addClass('no_click');
+		if ($('#method_submit').is(':visible')) $('#method_submit').css('display', 'none');
+	}
+});
+
+function valide() {	//Проверяет заполненность поля
+	$('#method_submit').addClass('no_click'); //Деактивирует
+	return false;
+};

@@ -30,7 +30,7 @@
 	<div class="container">
 		<div class="header text-center">
 			<h1 class="text-uppercase">Гуманитарный университет</h1>
-			<h2>Оценка уровня физического состояния (Е. А. Пирогова, 1985)</h2>
+			<h2>Оценка уровня физического развития</h2>
 		</div>
 		<div class="content col-md-12 text-center no-gutter">
 			<div class="main_box">
@@ -86,28 +86,49 @@
 					</div>		
 					<div class="tab">
 						<div class="question_field">
-							<p class="designation">Ваше давление систолическое: <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="right" title="Измеряется по общепринятой методике при помощи аппарата Рива-Роччи: на правой руке в положении сидя трижды с интервалом 5 минут. Учитывается наименьшая величина."></p>
-							<input type="text" onkeydown="valide();" placeholder="мм рт. ст." class="data_input_field" id="sist" required>
-						</div>
-						<div class="question_field">
-							<p class="designation">Ваше давление диастолическое: <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="right" title="Измеряется по общепринятой методике при помощи аппарата Рива-Роччи: на правой руке в положении сидя трижды с интервалом 5 минут. Учитывается наименьшая величина."></p>
-							<input type="text" onkeydown="valide();" placeholder="мм рт. ст." class="data_input_field" id="dia" required>
-						</div>
-						<div class="question_field">
-							<p class="designation">Ваш рост: <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="right" title="Измеряется без обуви. Регистрируется с помощью медицинского ростометра."></p>
+							<p class="designation">Ваш рост стоя: <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="right" title="Измеряется без обуви. Регистрируется с помощью медицинского ростометра."></p>
 							<input type="text" onkeydown="valide();" placeholder="см" class="data_input_field" id="height" required>
 						</div>
 						<div class="question_field">
-							<p class="designation">Ваш пульс: <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="right" title="Измеряется в легкой одежде, без обуви. Регистрируется с помощью медицинских весов."></p>
-							<input type="text" onkeydown="valide();" placeholder="уд/мин" class="data_input_field" id="pulse" required>
+							<p class="designation">Ваш рост сидя:</p>
+							<input type="text" onkeydown="valide();" placeholder="см" class="data_input_field" id="heightsit" required>
+						</div>
+						<div class="question_field">
+							<p class="designation">Рост вашей матери:</p>
+							<input type="text" onkeydown="valide();" placeholder="см" class="data_input_field" id="heightmother" required>
+						</div>
+						<div class="question_field">
+							<p class="designation">Рост вашего отца:</p>
+							<input type="text" onkeydown="valide();" placeholder="см" class="data_input_field" id="heightfather" required>
+						</div>
+						<div class="question_field spec">
+							<p class="designation">Жизненная емкость легких: <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="right" title="Измеряется спирометром."></p>
+							<input type="text" onkeydown="valide();" placeholder="см³" class="data_input_field" id="lung" required>
+						</div>
+					</div>
+					<div class="tab">
+						<div class="question_field">
+							<p class="designation">Сила кисти:</p>
+							<input type="text" onkeydown="valide();" placeholder="кг" class="data_input_field" id="dynam" required>
+						</div>
+						<div class="question_field">
+							<p class="designation">Объем грудной клетки:</p>
+							<input type="text" onkeydown="valide();" placeholder="см" class="data_input_field" id="chest" required>
+						</div>
+						<div class="question_field">
+							<p class="designation">Ширина плеч:</p>
+							<input type="text" onkeydown="valide();" placeholder="см" class="data_input_field" id="shoulders" required>
+						</div>
+						<div class="question_field">
+							<p class="designation">Обхват талии:</p>
+							<input type="text" onkeydown="valide();" placeholder="см" class="data_input_field" id="waist" required>
+						</div>
+						<div class="question_field">
+							<p class="designation">Длина ног:</p>
+							<input type="text" onkeydown="valide();" placeholder="см" class="data_input_field" id="legs" required>
 						</div>
 					</div>
 				</div>
-			</div>
-		</div>
-		<div class="col-md-12 progress progress-striped active text-center no-gutter">
-			<div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
-				<span class="progress-message"></span>
 			</div>
 		</div>
 		<div class="row">
