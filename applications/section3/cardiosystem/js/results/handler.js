@@ -3,171 +3,88 @@ $(document).ready(function() {
 	fname = localStorage.getItem('fnameinp');
 	mname = localStorage.getItem('mnameinp');
 	date = localStorage.getItem('dateinp');
-	age = localStorage.getItem('ageinp');
-	weight = localStorage.getItem('weightinp');
-	height = localStorage.getItem('heightinp');
-	heightsit = localStorage.getItem('heightsitinp');
-	heightmother = localStorage.getItem('heightmotherinp');
-	heightfather = localStorage.getItem('heightfatherinp');
-	lung = localStorage.getItem('lunginp');
-	dynam = localStorage.getItem('dynaminp');
-	chest = localStorage.getItem('chestinp');
-	waist = localStorage.getItem('waistinp');
-	shoulder = localStorage.getItem('shoulderinp');
-	shoulders = localStorage.getItem('shouldersinp');
-	legs = localStorage.getItem('legsinp');
+	sist = localStorage.getItem('sistinp');
+	dia = localStorage.getItem('diainp');
+	pulse = localStorage.getItem('pulseinp');
+	pulseop = localStorage.getItem('pulseopinp');
+	pulsep = localStorage.getItem('pulsepinp');
+	sistp = localStorage.getItem('sistpinp');
+	diap = localStorage.getItem('diapinp');
+	pulsebb = localStorage.getItem('pulsebbinp');
+	pulseba = localStorage.getItem('pulsebainp');
+	pulsebaa = localStorage.getItem('pulsebaainp');
 	gender = localStorage.getItem('genderinp');
 	fac = localStorage.getItem('facinp');
-	
-	if ((height != '') && (heightmother != '') && (heightfather != '')) {
-		switch (true) {
-			case (gender == 'Мужской') : var heightr = (parseFloat(heightmother) * 1.08 + parseFloat(heightfather)) / 2; break;
-			case (gender == 'Женский') : var heightr = (parseFloat(heightmother) + parseFloat(heightfather) * 0.93) / 2; break;
-		}
+
+	var adp = sist - dia;
+
+	kek = adp * pulse;
+
+	switch (true) {
+		case (kek <= 2600) : var kekstatus = '(Отличное состояние)'; break;
+		case ((kek >= 2601) && (kek <= 3000)) : var kekstatus = '(Нормальное состояние)'; break;
+		case (kek >= 3001) : var kekstatus = '(Утомление организма)'; break;
 	}
 
-	if ((weight != '') && (height != '')) {
-		
-		switch (true) {
-			case (height <= 165) : var tmt = height - 100; break;
-			case ((height >= 165.1) && (height <= 175)) : var tmt = height - 105; break;
-			case (height >= 165.1) : var tmt = height - 110; break;
-		}
+	endur = ((pulse * 10) / adp).toFixed();
 
-		if (weight > tmt) {
-			tmtpercent = tmt / 100;
-			tmtdiff = ((weight - tmt) / tmtpercent).toFixed();
+	switch (true) {
+		case (endur >= 17.01) : var endurstatus = '(Ослабленная деятельность ССС)'; break;
+		case ((endur >= 15) && (endur <= 17)) : var endurstatus = '(Нормальная деятельность ССС)'; break;
+		case (endur <= 14.99) : var endurstatus = '(Усиленная деятельность ССС)'; break;
+	}
 
-			switch (true) {
-				case (tmtdiff <= 10) : var adiposity = '(У вас ожирение I степени)'; break;
-				case ((tmtdiff >= 11) && (tmtdiff <= 29)) : var adiposity = '(У вас ожирение II степени)'; break;
-				case ((tmtdiff >= 30) && (tmtdiff <= 49)) : var adiposity = '(У вас ожирение III степени)'; break;
-				case ((tmtdiff >= 50) && (tmtdiff <= 99)): var adiposity = '(У вас ожирение IV степени)'; break;
-				case (tmtdiff >= 100) : var adiposity = '(У вас ожирение V степени)'; break;
-			}
-		} else var adiposity = '';
+	pdp = (pulse * 100 / sist).toFixed();
 
-		switch (true) {
-			case (gender == 'Мужской') : var pimt = height - 100 - (height - 150) / 4; break;
-			case (gender == 'Женский') : var pimt = height - 100 - (height - 150) / 5; break;
-		}
+	switch (true) {
+		case (pdp <= 75) : var pdpstatus = '(Выше среднего)'; break;
+		case ((pdp >= 76) && (pdp <= 89)) : var pdpstatus = '(Среднее состояние)'; break;
+		case (pdp >= 90) : var pdpstatus = '(Ниже среднего)'; break;
+	}
 
-		if (weight > pimt) {
-			pimtpercent = pimt / 100;
-			pimtdiff = ((weight - pimt) / pimtpercent).toFixed();
+	robin = (pulse * sist / 100).toFixed();
 
-			switch (true) {
-				case (pimtdiff <= 10) : var adiposit = '(У вас ожирение I степени)'; break;
-				case ((pimtdiff >= 11) && (pimtdiff <= 29)) : var adiposit = '(У вас ожирение II степени)'; break;
-				case ((pimtdiff >= 30) && (pimtdiff <= 49)) : var adiposit = '(У вас ожирение III степени)'; break;
-				case ((pimtdiff >= 50) && (pimtdiff <= 99)): var adiposit = '(У вас ожирение IV степени)'; break;
-				case (pimtdiff >= 100) : var adiposit = '(У вас ожирение V степени)'; break;
-			}
-		}  else var adiposit = '';
+	switch (true) {
+		case (robin <= 75) : var robinstatus = '(Выше среднего)'; break;
+		case ((robin >= 76) && (robin <= 89)) : var robinstatus = '(Среднее состояние)'; break;
+		case (robin >= 90) : var robinstatus = '(Ниже среднего)'; break;
+	}
 
-		if ((weight != '') && (height != '')) {
-			var obese = weight / (height / 100);
-		
-			switch (true) {
-				case (obese <= 18) : var obesestatus = '(Отличное состояние)'; break;
-				case ((obese >= 19) && (obese <= 24)) : var obesestatus = '(Нормальное состояние)'; break;
-				case ((obese >= 25) && (obese <= 27)) : var obesestatus = '(Повышенная тучность)'; break;
-				case (obese >= 28) : var obesestatus = '(Ожирение организма)'; break;
-			}
+	onestage = Math.abs((pulse - pulseop)).toFixed();
+	onestagepercent = ((pulse / 100) * onestage).toFixed(1);
 
-			if ((weight > tmt) || (weight > pimt)) {
-				var quetelet = (weight / ((height / 100) * (height / 100))).toFixed();
+	switch (true) {
+		case (onestagepercent <= 20) : var onestagestatus = 'Отлично'; break;
+		case ((onestagepercent >= 21) && (onestagepercent <= 40)) : var onestagestatus = 'Хорошо'; break;
+		case ((onestagepercent >= 41) && (onestagepercent <= 65)) : var onestagestatus = 'Удовлетворительно'; break;
+		case ((onestagepercent >= 66) && (onestagepercent <= 75)) : var onestagestatus = 'Плохо'; break;
+		case (onestagepercent >= 76) : var onestagestatus = 'Очень плохо'; break;
+	}
 
-				switch (true) {
-					case (gender == 'Мужской') :
-						switch (true) {
-							case (quetelet <= 25) : var queteletstatus = '(Норма)'; break;
-							case ((quetelet >= 25.01) && (quetelet <= 29.9)) : var queteletstatus = '(Избыточная масса)'; break;
-							case ((quetelet >= 30.01) && (quetelet <= 39)) : var queteletstatus = '(Ожирение)'; break;
-							case (quetelet >= 40) : var queteletstatus = '(Значительное ожирение)'; break;
-						}
-					break;
-					case (gender == 'Женский') :
-						switch (true) {
-							case (quetelet <= 24) : var queteletstatus = '(Норма)'; break;
-							case ((quetelet >= 24.01) && (quetelet <= 29.9)) : var queteletstatus = '(Избыточная масса)'; break;
-							case ((quetelet >= 30.01) && (quetelet <= 39)) : var queteletstatus = '(Ожирение)'; break;
-							case (quetelet >= 40) : var queteletstatus = '(Значительное ожирение)'; break;
-						}
-					break;
-				}
-			} else {
-				var quetelet = (weight * 1000) / height;
+	adpp = sistp - diap;
+	bobs = ((adpp - adp) / (pulsep - pulse)).toFixed(3);
 
-				switch (true) {
-					case (quetelet <= 299) : var queteletstatus = '(Истощение)'; break;
-					case ((quetelet >= 300) && (quetelet <= 319)) : var queteletstatus = '(Очень плохо)'; break;
-					case ((quetelet >= 320) && (quetelet <= 359)) : var queteletstatus = '(Плохо)'; break;
-					case ((quetelet >= 360) && (quetelet <= 389)) : var queteletstatus = '(Средне)'; break;
-					case ((quetelet >= 390) && (quetelet <= 400)) : var queteletstatus = '(Идеально)'; break;
-					case ((quetelet >= 401) && (quetelet <= 415)) : var queteletstatus = '(Хорошо)'; break;
-					case ((quetelet >= 416) && (quetelet <= 450)) : var queteletstatus = '(Излишний вес)'; break;
-					case ((quetelet >= 450) && (quetelet <= 540)) : var queteletstatus = '(Чрезмерный вес)'; break;
-					case (quetelet >= 540) : var queteletstatus = '(Ожирение)'; break;
-				}
-			}
-		}
+	belg = ((parseInt(pulsebb) + parseInt(pulseba) + parseInt(pulsebaa) - 33) / 10).toFixed();
 
-		if ((lung != '') && (weight != '')) var lindex = (lung / weight).toFixed();
-
-		if ((dynam != '') && (weight != '')) var strindex = (dynam / weight).toFixed(2);
-
-		if ((height != '') && (heightsit != '')) var ipb = (((height - heightsit) / heightsit) * 100).toFixed();
-
-		if ((chest != '') && (height != '')) {
-			var pgt = ((chest / height) * 100).toFixed();
-
-			var erris = (chest - (0.5 * height)).toFixed();
-		}
-
-		if ((shoulders != '') && (height != '')) var propindex = ((shoulders / height) * 100).toFixed();
-
-		if ((height != '') && (weight != '') && (chest = '')) {
-			var ipin = (parseFloat(height) - (parseFloat(weight) + parseFloat(chest))).toFixed();
-
-			switch (true) {
-				case (ipin <= 10) : var ipinstatus = '(Крепкое телосложение)'; break;
-				case ((ipin >= 11) && (ipin <= 20)) : var ipinstatus = '(Хорошее телосложение)'; break;
-				case ((ipin >= 21) && (ipin <= 25)) : var ipinstatus = '(Среднее телосложение)'; break;
-				case ((ipin >= 26) && (ipin <= 35)) : var ipinstatus = '(Слабое телосложение)'; break;
-				case (ipin >= 36) : var ipinstatus = '(Очень слабое телосложение)'; break;
-			}
-		}
-
-		if ((legs != '') && (heightsit != '')) {
-			var iskell = ((legs / heightsit) * 100).toFixed();
-
-			switch (true) {
-				case (iskell <= 84.9) : var iskellstatus = '(Короткие ноги)'; break;
-				case ((iskell >= 85) && (iskell <= 89)) : var iskellstatus = '(Средние ноги)'; break;
-				case (iskell >= 90) : var iskellstatus = '(Длинные ноги)'; break;
-			}
-		}
+	switch (true) {
+		case (belg <= 0.3) : var belgstatus = 'Отлично'; break;
+		case ((belg >= 0.31) && (belg <= 0.6)) : var belgstatus = 'Хорошо'; break;
+		case ((belg >= 0.61) && (belg <= 0.9)) : var belgstatus = 'Удовлетворительно'; break;
+		case ((belg >= 0.91) && (belg <= 1.2)) : var belgstatus = 'Плохо'; break;
+		case (belg >= 1.21) : var belgstatus = 'Очень плохо'; break;
 	}
 
 	$('#sname').append(sname);
 	$('#fname').append(fname);
 	$('#mname').append(mname);
 	$('#date').append(date);
-	$('#heightr').append((heightr).toFixed()).append(' см');
-	$('#tmt').append(tmt).append(' кг. '+ adiposity);
-	$('#pimt').append(pimt).append(' кг. '+ adiposit);
-	$('#obese').append(obese).append('. '+ obesestatus);
-	$('#quetelet').append(quetelet).append('. '+ queteletstatus);
-	$('#lindex').append(lindex);
-	$('#strindex').append(strindex);
-	$('#ipb').append(ipb).append('%');
-	$('#pgt').append(pgt).append('%');
-	$('#propindex').append(propindex).append('%');
-	$('#erris').append(erris);
-	$('#ipin').append(ipin).append('. '+ ipinstatus);
-	$('#iskell').append(iskell).append('%').append(' '+ iskellstatus);
+	$('#kek').append(kek).append(' '+ kekstatus);
+	$('#endur').append(endur).append(' '+ endurstatus);
+	$('#pdp').append(pdp).append(' '+ pdpstatus);
+	$('#robin').append(robin).append(' '+ robinstatus);
+	$('#onestage').append(onestagestatus);
+	$('#bobs').append(bobs);
+	$('#belg').append(belgstatus);
 	$('#gender').append(gender);
 	$('#fac').append(fac);
-	$('#age').append(age).append(' лет');
 });

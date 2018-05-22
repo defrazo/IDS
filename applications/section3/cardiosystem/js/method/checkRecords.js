@@ -76,451 +76,391 @@ function isValidMname(valmname) {
 	return pattern.test(valmname);
 }
 
-
-$(document).ready(function() { //Проверка ввода возраста
-	$('#age').focusout(function() {
-		var age = $('#age').val();
+$(document).ready(function() {
+	$('#pulse').focusout(function() {
+		var pulse = $('#pulse').val();
 		
-		if (($(this).val() < 6) || ($(this).val() > 75)) $(this).val($(this).val().substr(0, 0));
+		if (($(this).val() < 30) || ($(this).val() > 130)) $(this).val($(this).val().substr(0, 0));
 
-		if (age != '') {
-		
-			if (isValidAge(age)) {
-				$('#age').css('border', '1px solid #0dd01a');
-				localStorage.setItem('vAge', 1);
+		if (pulse != '') {
+			
+			if (isValidPulse(pulse)) {
+				$('#pulse').css('border', '1px solid #0dd01a');
+				localStorage.setItem('vpulse', 1);
 			} else {
-				$('#age').css('border', '1px solid #f00');
+				$('#pulse').css('border', '1px solid #f00');
 				$(this).val($(this).val().substr(0, 0));
 			}
 		}
 		
-		$('#age').keyup(function() {
+		$('#pulse').keyup(function() {
 			$(this).val($(this).val().trim());
 		});
 	});
 	
-	$('#age').keyup(function() {
-		if ($(this).val().length > 2) $(this).val($(this).val().substr(0, 2));
+	$('#pulse').keyup(function() {
+		if ($(this).val().length > 3) $(this).val($(this).val().substr(0, 3));          
 	});
 });
 
-function isValidAge(valage) {
-	if ($('#age').val().length == 1) { //Проверяет при длине значения = 1
-		var pattern = new RegExp(/[0-9]/);
-		return pattern.test(valage);
-	} 
-
-	if ($('#age').val().length == 2) { //Проверяет при длине значения = 2
+function isValidPulse(valpulse) {
+	if ($('#pulse').val().length == 2) {
 		var pattern = new RegExp(/[0-9][0-9]/);
-		return pattern.test(valage);
-	}
-}
-
-$(document).ready(function() { //Проверка ввода веса 
-	$('#weight').focusout(function() {
-		var weight = $('#weight').val();
-		
-		if (($(this).val() < 30) || ($(this).val() > 200)) $(this).val($(this).val().substr(0, 0));
-
-		if (weight != '') {
-			
-			if (isValidWeight(weight)) {
-				$('#weight').css('border', '1px solid #0dd01a');
-				localStorage.setItem('vWeight', 1);
-			} else {
-				$('#weight').css('border', '1px solid #f00');
-				$(this).val($(this).val().substr(0, 0));
-			}
-		}
-		
-		$('#weight').keyup(function() {
-			$(this).val($(this).val().trim());
-		});
-	});
-	
-	$('#weight').keyup(function() {
-		if ($(this).val().length > 3) $(this).val($(this).val().substr(0, 3));          
-	});
-});
-
-function isValidWeight(valweight) {
-	if ($('#weight').val().length == 2) {
-		var pattern = new RegExp(/[0-9][0-9]/);
-		return pattern.test(valweight);
+		return pattern.test(valpulse);
 	}
 
-	if ($('#weight').val().length == 3) {
+	if ($('#pulse').val().length == 3) {
 		var pattern = new RegExp(/[0-9][0-9][0-9]/);
-		return pattern.test(valweight);
-	}
-}
-
-$(document).ready(function() { //Проверка ввода веса 
-	$('#height').focusout(function() {
-		var height = $('#height').val();
-		
-		if (($(this).val() < 100) || ($(this).val() > 230)) $(this).val($(this).val().substr(0, 0));
-
-		if (height != '') {
-			
-			if (isValidHeight(height)) {
-				$('#height').css('border', '1px solid #0dd01a');
-				localStorage.setItem('vheight', 1);
-			} else {
-				$('#height').css('border', '1px solid #f00');
-				$(this).val($(this).val().substr(0, 0));
-			}
-		}
-		
-		$('#height').keyup(function() {
-			$(this).val($(this).val().trim());
-		});
-	});
-	
-	$('#height').keyup(function() {
-		if ($(this).val().length > 3) $(this).val($(this).val().substr(0, 3));          
-	});
-});
-
-function isValidHeight(valheight) {
-	if ($('#height').val().length == 3) {
-		var pattern = new RegExp(/[0-9][0-9][0-9]/);
-		return pattern.test(valheight);
-	}
-}
-
-$(document).ready(function() { //Проверка ввода веса 
-	$('#heightsit').focusout(function() {
-		var heightsit = $('#heightsit').val();
-		
-		if (($(this).val() < 100) || ($(this).val() > 230)) $(this).val($(this).val().substr(0, 0));
-
-		if (heightsit != '') {
-			
-			if (isValidHeightsit(heightsit)) {
-				$('#heightsit').css('border', '1px solid #0dd01a');
-				localStorage.setItem('vheightsit', 1);
-			} else {
-				$('#heightsit').css('border', '1px solid #f00');
-				$(this).val($(this).val().substr(0, 0));
-			}
-		}
-		
-		$('#heightsit').keyup(function() {
-			$(this).val($(this).val().trim());
-		});
-	});
-	
-	$('#heightsit').keyup(function() {
-		if ($(this).val().length > 3) $(this).val($(this).val().substr(0, 3));          
-	});
-});
-
-function isValidHeightsit(valheightsit) {
-	if ($('#heightsit').val().length == 3) {
-		var pattern = new RegExp(/[0-9][0-9][0-9]/);
-		return pattern.test(valheightsit);
-	}
-}
-
-$(document).ready(function() { //Проверка ввода веса 
-	$('#heightmother').focusout(function() {
-		var heightmother = $('#heightmother').val();
-		
-		if (($(this).val() < 100) || ($(this).val() > 230)) $(this).val($(this).val().substr(0, 0));
-
-		if (heightmother != '') {
-			
-			if (isValidHeightmother(heightmother)) {
-				$('#heightmother').css('border', '1px solid #0dd01a');
-				localStorage.setItem('vheightmother', 1);
-			} else {
-				$('#heightmother').css('border', '1px solid #f00');
-				$(this).val($(this).val().substr(0, 0));
-			}
-		}
-		
-		$('#heightmother').keyup(function() {
-			$(this).val($(this).val().trim());
-		});
-	});
-	
-	$('#heightmother').keyup(function() {
-		if ($(this).val().length > 3) $(this).val($(this).val().substr(0, 3));          
-	});
-});
-
-function isValidHeightmother(valheightmother) {
-	if ($('#heightmother').val().length == 3) {
-		var pattern = new RegExp(/[0-9][0-9][0-9]/);
-		return pattern.test(valheightmother);
-	}
-}
-
-$(document).ready(function() { //Проверка ввода веса 
-	$('#heightfather').focusout(function() {
-		var heightfather = $('#heightfather').val();
-		
-		if (($(this).val() < 100) || ($(this).val() > 230)) $(this).val($(this).val().substr(0, 0));
-
-		if (heightfather != '') {
-			
-			if (isValidHeightfather(heightfather)) {
-				$('#heightfather').css('border', '1px solid #0dd01a');
-				localStorage.setItem('vheightfather', 1);
-			} else {
-				$('#heightfather').css('border', '1px solid #f00');
-				$(this).val($(this).val().substr(0, 0));
-			}
-		}
-		
-		$('#heightfather').keyup(function() {
-			$(this).val($(this).val().trim());
-		});
-	});
-	
-	$('#heightfather').keyup(function() {
-		if ($(this).val().length > 3) $(this).val($(this).val().substr(0, 3));          
-	});
-});
-
-function isValidHeightfather(valheightfather) {
-	if ($('#heightfather').val().length == 3) {
-		var pattern = new RegExp(/[0-9][0-9][0-9]/);
-		return pattern.test(valheightfather);
-	}
-}
-
-$(document).ready(function() { 
-	$('#lung').focusout(function() {
-		var lung = $('#lung').val();
-		
-		if (($(this).val() < 1000) || ($(this).val() > 8000)) $(this).val($(this).val().substr(0, 0));
-
-		if (lung != '') {
-			if (isValidLung(lung)) {
-				$('#lung').css('border', '1px solid #0dd01a');
-				localStorage.setItem('vlung', 1);
-			} else {
-				$('#lung').css('border', '1px solid #f00');
-				$(this).val($(this).val().substr(0, 0));
-			}
-		}
-		
-		$('#lung').keyup(function() {
-			$(this).val($(this).val().trim());
-		});
-	});
-	
-	$('#lung').keyup(function() {
-		if ($(this).val().length > 4) $(this).val($(this).val().substr(0, 4));         
-	});
-});
-
-function isValidLung(vallung) {
-	if ($('#lung').val().length == 4) {
-		var pattern = new RegExp(/[0-9][0-9][0-9][0-9]/);
-		return pattern.test(vallung);
+		return pattern.test(valpulse);
 	}
 }
 
 $(document).ready(function() { //Проверка ввода систолического давления  
-	$('#dynam').focusout(function() {
-		var dynam = $('#dynam').val();
+	$('#sist').focusout(function() {
+		var sist = $('#sist').val();
 		
-		if (($(this).val() < 8) || ($(this).val() > 80)) $(this).val($(this).val().substr(0, 0));
+		if (($(this).val() < 60) || ($(this).val() > 200)) $(this).val($(this).val().substr(0, 0));
 		
-		if (dynam != '') {
+		if (sist != '') {
 			
-			if (isValidDynam(dynam)) {
-				$('#dynam').css('border', '1px solid #0dd01a');
-				localStorage.setItem('vdynam', 1);
+			if (isValidSist(sist)) {
+				$('#sist').css('border', '1px solid #0dd01a');
+				localStorage.setItem('vSist', 1);
 			} else {
-				$('#dynam').css('border', '1px solid #f00');
+				$('#sist').css('border', '1px solid #f00');
 				$(this).val($(this).val().substr(0, 0));
 			}
 		}
 		
-		$('#dynam').keyup(function() {
+		$('#sist').keyup(function() {
 			$(this).val($(this).val().trim());
 		});
 	});  
 	
-	$('#dynam').keyup(function() {
+	$('#sist').keyup(function() {
 		if ($(this).val().length > 3) $(this).val($(this).val().substr(0, 3));       
 	});
 });
 
-function isValidDynam(valdynam) {
-	if ($('#dynam').val().length == 1) {
-		var pattern = new RegExp(/[0-9]/);
-		return pattern.test(valdynam);
-	}
-
-	if ($('#dynam').val().length == 2) {
+function isValidSist(valsist) {
+	if ($('#sist').val().length == 2) {
 		var pattern = new RegExp(/[0-9][0-9]/);
-		return pattern.test(valdynam);
+		return pattern.test(valsist);
 	}
 
-	if ($('#dynam').val().length == 3) {
+	if ($('#sist').val().length == 3) {
 		var pattern = new RegExp(/[0-9][0-9][0-9]/);
-		return pattern.test(valdynam);
+		return pattern.test(valsist);
 	}
 }
 
-$(document).ready(function() { //Проверка ввода веса 
-	$('#chest').focusout(function() {
-		var chest = $('#chest').val();
+$(document).ready(function() { //Проверка ввода диастолического давления 
+	$('#dia').focusout(function() {
+		var dia = $('#dia').val();
 		
-		if (($(this).val() < 50) || ($(this).val() > 230)) $(this).val($(this).val().substr(0, 0));
+		if (($(this).val() < 40) || ($(this).val() > 120)) $(this).val($(this).val().substr(0, 0));
 
-		if (chest != '') {
-			
-			if (isValidChest(chest)) {
-				$('#chest').css('border', '1px solid #0dd01a');
-				localStorage.setItem('vchest', 1);
+		if (dia != '') {
+			if (isValidDia(dia)) {
+				$('#dia').css('border', '1px solid #0dd01a');
+				localStorage.setItem('vDia', 1);
 			} else {
-				$('#chest').css('border', '1px solid #f00');
+				$('#dia').css('border', '1px solid #f00');
 				$(this).val($(this).val().substr(0, 0));
 			}
 		}
 		
-		$('#chest').keyup(function() {
+		$('#dia').keyup(function() {
 			$(this).val($(this).val().trim());
 		});
 	});
 	
-	$('#chest').keyup(function() {
-		if ($(this).val().length > 3) $(this).val($(this).val().substr(0, 3));          
+	$('#dia').keyup(function() {
+		if ($(this).val().length > 3) $(this).val($(this).val().substr(0, 3));         
 	});
 });
 
-function isValidChest(valchest) {
-	if ($('#chest').val().length == 2) {
+function isValidDia(valdia) {
+	if ($('#dia').val().length == 2) {
 		var pattern = new RegExp(/[0-9][0-9]/);
-		return pattern.test(valchest);
+		return pattern.test(valdia);
 	}
 
-	if ($('#chest').val().length == 3) {
+	if ($('#dia').val().length == 3) {
 		var pattern = new RegExp(/[0-9][0-9][0-9]/);
-		return pattern.test(valchest);
+		return pattern.test(valdia);
 	}
 }
 
-$(document).ready(function() { //Проверка ввода веса 
-	$('#shoulders').focusout(function() {
-		var shoulders = $('#shoulders').val();
+$(document).ready(function() {
+	$('#pulseop').focusout(function() {
+		var pulseop = $('#pulseop').val();
 		
-		if (($(this).val() < 50) || ($(this).val() > 230)) $(this).val($(this).val().substr(0, 0));
+		if (($(this).val() < 30) || ($(this).val() > 130)) $(this).val($(this).val().substr(0, 0));
 
-		if (shoulders != '') {
+		if (pulseop != '') {
 			
-			if (isValidShoulders(shoulders)) {
-				$('#shoulders').css('border', '1px solid #0dd01a');
-				localStorage.setItem('vshoulders', 1);
+			if (isValidPulseop(pulseop)) {
+				$('#pulseop').css('border', '1px solid #0dd01a');
+				localStorage.setItem('vpulseop', 1);
 			} else {
-				$('#shoulders').css('border', '1px solid #f00');
+				$('#pulseop').css('border', '1px solid #f00');
 				$(this).val($(this).val().substr(0, 0));
 			}
 		}
 		
-		$('#shoulders').keyup(function() {
+		$('#pulseop').keyup(function() {
 			$(this).val($(this).val().trim());
 		});
 	});
 	
-	$('#shoulders').keyup(function() {
+	$('#pulseop').keyup(function() {
 		if ($(this).val().length > 3) $(this).val($(this).val().substr(0, 3));          
 	});
 });
 
-function isValidShoulders(valshoulders) {
-	if ($('#shoulders').val().length == 2) {
+function isValidPulseop(valpulseop) {
+	if ($('#pulseop').val().length == 2) {
 		var pattern = new RegExp(/[0-9][0-9]/);
-		return pattern.test(valshoulders);
+		return pattern.test(valpulseop);
 	}
 
-	if ($('#shoulders').val().length == 3) {
+	if ($('#pulseop').val().length == 3) {
 		var pattern = new RegExp(/[0-9][0-9][0-9]/);
-		return pattern.test(valshoulders);
+		return pattern.test(valpulseop);
 	}
 }
 
-$(document).ready(function() { //Проверка ввода веса 
-	$('#waist').focusout(function() {
-		var waist = $('#waist').val();
+$(document).ready(function() {
+	$('#pulsep').focusout(function() {
+		var pulsep = $('#pulsep').val();
 		
-		if (($(this).val() < 50) || ($(this).val() > 230)) $(this).val($(this).val().substr(0, 0));
+		if (($(this).val() < 30) || ($(this).val() > 130)) $(this).val($(this).val().substr(0, 0));
 
-		if (waist != '') {
+		if (pulsep != '') {
 			
-			if (isValidWaist(waist)) {
-				$('#waist').css('border', '1px solid #0dd01a');
-				localStorage.setItem('vwaist', 1);
+			if (isValidPulsep(pulsep)) {
+				$('#pulsep').css('border', '1px solid #0dd01a');
+				localStorage.setItem('vpulsep', 1);
 			} else {
-				$('#waist').css('border', '1px solid #f00');
+				$('#pulsep').css('border', '1px solid #f00');
 				$(this).val($(this).val().substr(0, 0));
 			}
 		}
 		
-		$('#waist').keyup(function() {
+		$('#pulsep').keyup(function() {
 			$(this).val($(this).val().trim());
 		});
 	});
 	
-	$('#waist').keyup(function() {
+	$('#pulsep').keyup(function() {
 		if ($(this).val().length > 3) $(this).val($(this).val().substr(0, 3));          
 	});
 });
 
-function isValidWaist(valwaist) {
-	if ($('#waist').val().length == 2) {
+function isValidPulsep(valpulsep) {
+	if ($('#pulsep').val().length == 2) {
 		var pattern = new RegExp(/[0-9][0-9]/);
-		return pattern.test(valwaist);
+		return pattern.test(valpulsep);
 	}
 
-	if ($('#waist').val().length == 3) {
+	if ($('#pulsep').val().length == 3) {
 		var pattern = new RegExp(/[0-9][0-9][0-9]/);
-		return pattern.test(valwaist);
+		return pattern.test(valpulsep);
 	}
 }
 
-$(document).ready(function() { //Проверка ввода веса 
-	$('#legs').focusout(function() {
-		var legs = $('#legs').val();
+$(document).ready(function() {
+	$('#pulsebb').focusout(function() {
+		var pulsebb = $('#pulsebb').val();
 		
-		if (($(this).val() < 50) || ($(this).val() > 230)) $(this).val($(this).val().substr(0, 0));
+		if (($(this).val() < 1) || ($(this).val() > 130)) $(this).val($(this).val().substr(0, 0));
 
-		if (legs != '') {
+		if (pulsebb != '') {
 			
-			if (isValidLegs(legs)) {
-				$('#legs').css('border', '1px solid #0dd01a');
-				localStorage.setItem('vlegs', 1);
+			if (isValidPulsebb(pulsebb)) {
+				$('#pulsebb').css('border', '1px solid #0dd01a');
+				localStorage.setItem('vpulsebb', 1);
 			} else {
-				$('#legs').css('border', '1px solid #f00');
+				$('#pulsebb').css('border', '1px solid #f00');
 				$(this).val($(this).val().substr(0, 0));
 			}
 		}
 		
-		$('#legs').keyup(function() {
+		$('#pulsebb').keyup(function() {
 			$(this).val($(this).val().trim());
 		});
 	});
 	
-	$('#legs').keyup(function() {
+	$('#pulsebb').keyup(function() {
 		if ($(this).val().length > 3) $(this).val($(this).val().substr(0, 3));          
 	});
 });
 
-function isValidLegs(vallegs) {
-	if ($('#legs').val().length == 2) {
+function isValidPulsebb(valpulsebb) {
+	if ($('#pulsebb').val().length == 2) {
 		var pattern = new RegExp(/[0-9][0-9]/);
-		return pattern.test(vallegs);
+		return pattern.test(valpulsebb);
 	}
 
-	if ($('#legs').val().length == 3) {
+	if ($('#pulsebb').val().length == 3) {
 		var pattern = new RegExp(/[0-9][0-9][0-9]/);
-		return pattern.test(vallegs);
+		return pattern.test(valpulsebb);
+	}
+}
+
+$(document).ready(function() {
+	$('#pulseba').focusout(function() {
+		var pulseba = $('#pulseba').val();
+		
+		if (($(this).val() < 1) || ($(this).val() > 130)) $(this).val($(this).val().substr(0, 0));
+
+		if (pulseba != '') {
+			
+			if (isValidPulseba(pulseba)) {
+				$('#pulseba').css('border', '1px solid #0dd01a');
+				localStorage.setItem('vpulseba', 1);
+			} else {
+				$('#pulseba').css('border', '1px solid #f00');
+				$(this).val($(this).val().substr(0, 0));
+			}
+		}
+		
+		$('#pulseba').keyup(function() {
+			$(this).val($(this).val().trim());
+		});
+	});
+	
+	$('#pulseba').keyup(function() {
+		if ($(this).val().length > 3) $(this).val($(this).val().substr(0, 3));          
+	});
+});
+
+function isValidPulseba(valpulseba) {
+	if ($('#pulseba').val().length == 2) {
+		var pattern = new RegExp(/[0-9][0-9]/);
+		return pattern.test(valpulseba);
+	}
+
+	if ($('#pulseba').val().length == 3) {
+		var pattern = new RegExp(/[0-9][0-9][0-9]/);
+		return pattern.test(valpulseba);
+	}
+}
+
+$(document).ready(function() {
+	$('#pulsebaa').focusout(function() {
+		var pulsebaa = $('#pulsebaa').val();
+		
+		if (($(this).val() < 1) || ($(this).val() > 130)) $(this).val($(this).val().substr(0, 0));
+
+		if (pulsebaa != '') {
+			
+			if (isValidPulsebaa(pulsebaa)) {
+				$('#pulsebaa').css('border', '1px solid #0dd01a');
+				localStorage.setItem('vpulsebaa', 1);
+			} else {
+				$('#pulsebaa').css('border', '1px solid #f00');
+				$(this).val($(this).val().substr(0, 0));
+			}
+		}
+		
+		$('#pulsebaa').keyup(function() {
+			$(this).val($(this).val().trim());
+		});
+	});
+	
+	$('#pulsebaa').keyup(function() {
+		if ($(this).val().length > 3) $(this).val($(this).val().substr(0, 3));          
+	});
+});
+
+function isValidPulsebaa(valpulsebaa) {
+	if ($('#pulsebaa').val().length == 2) {
+		var pattern = new RegExp(/[0-9][0-9]/);
+		return pattern.test(valpulsebaa);
+	}
+
+	if ($('#pulsebaa').val().length == 3) {
+		var pattern = new RegExp(/[0-9][0-9][0-9]/);
+		return pattern.test(valpulsebaa);
+	}
+}
+
+$(document).ready(function() { //Проверка ввода систолического давления  
+	$('#sistp').focusout(function() {
+		var sistp = $('#sistp').val();
+		
+		if (($(this).val() < 60) || ($(this).val() > 200)) $(this).val($(this).val().substr(0, 0));
+		
+		if (sistp != '') {
+			
+			if (isValidSistp(sistp)) {
+				$('#sistp').css('border', '1px solid #0dd01a');
+				localStorage.setItem('vSistp', 1);
+			} else {
+				$('#sistp').css('border', '1px solid #f00');
+				$(this).val($(this).val().substr(0, 0));
+			}
+		}
+		
+		$('#sistp').keyup(function() {
+			$(this).val($(this).val().trim());
+		});
+	});  
+	
+	$('#sistp').keyup(function() {
+		if ($(this).val().length > 3) $(this).val($(this).val().substr(0, 3));       
+	});
+});
+
+function isValidSistp(valsistp) {
+	if ($('#sistp').val().length == 2) {
+		var pattern = new RegExp(/[0-9][0-9]/);
+		return pattern.test(valsistp);
+	}
+
+	if ($('#sistp').val().length == 3) {
+		var pattern = new RegExp(/[0-9][0-9][0-9]/);
+		return pattern.test(valsistp);
+	}
+}
+
+$(document).ready(function() { //Проверка ввода диастолического давления 
+	$('#diap').focusout(function() {
+		var diap = $('#diap').val();
+		
+		if (($(this).val() < 40) || ($(this).val() > 120)) $(this).val($(this).val().substr(0, 0));
+
+		if (diap != '') {
+			if (isValidDiap(diap)) {
+				$('#diap').css('border', '1px solid #0dd01a');
+				localStorage.setItem('vDiap', 1);
+			} else {
+				$('#diap').css('border', '1px solid #f00');
+				$(this).val($(this).val().substr(0, 0));
+			}
+		}
+		
+		$('#diap').keyup(function() {
+			$(this).val($(this).val().trim());
+		});
+	});
+	
+	$('#diap').keyup(function() {
+		if ($(this).val().length > 3) $(this).val($(this).val().substr(0, 3));         
+	});
+});
+
+function isValidDiap(valdiap) {
+	if ($('#diap').val().length == 2) {
+		var pattern = new RegExp(/[0-9][0-9]/);
+		return pattern.test(valdiap);
+	}
+
+	if ($('#diap').val().length == 3) {
+		var pattern = new RegExp(/[0-9][0-9][0-9]/);
+		return pattern.test(valdiap);
 	}
 }
 
@@ -528,18 +468,16 @@ $(document).on('click focuson focusout mousemove', function() { //Подсвет
 	var mname = $('#mname').val();
 	var fname = $('#fname').val();
 	var sname = $('#sname').val();
-	var age = $('#age').val();
-	var weight = $('#weight').val();
-	var height = $('#height').val();
-	var heightsit = $('#heightsit').val();
-	var heightmother = $('#heightmother').val();
-	var heightfather = $('#heightfather').val();
-	var lung = $('#lung').val();
-	var dynam = $('#dynam').val();
-	var chest = $('#chest').val();
-	var waist = $('#waist').val();
-	var legs = $('#legs').val();
-	var shoulders = $('#shoulders').val();
+	var sist = $('#sist').val();
+	var dia = $('#dia').val();
+	var pulse = $('#pulse').val();
+	var pulsep = $('#pulsep').val();
+	var pulseop = $('#pulseop').val();
+	var pulsebb = $('#pulsebb').val();
+	var pulseba = $('#pulseba').val();
+	var pulsebaa = $('#pulsebaa').val();
+	var sistp = $('#sistp').val();
+	var diap = $('#diap').val();
 		
 	if (isValidSname(sname)) $('#sname').css('border', '1px solid #0dd01a');	
 
@@ -547,27 +485,24 @@ $(document).on('click focuson focusout mousemove', function() { //Подсвет
 
 	if (isValidMname(mname)) $('#mname').css('border', '1px solid #0dd01a');
 
-	if (isValidAge(age)) $('#age').css('border', '1px solid #0dd01a');	
+	if (isValidSist(sist)) $('#sist').css('border', '1px solid #0dd01a');
 
-	if (isValidWeight(weight)) $('#weight').css('border', '1px solid #0dd01a');
+	if (isValidDia(dia)) $('#dia').css('border', '1px solid #0dd01a');
 
-	if (isValidHeight(height)) $('#height').css('border', '1px solid #0dd01a');	
+	if (isValidPulse(pulse)) $('#pulse').css('border', '1px solid #0dd01a');
 
-	if (isValidHeightsit(heightsit)) $('#heightsit').css('border', '1px solid #0dd01a');
+	if (isValidPulseop(pulseop)) $('#pulseop').css('border', '1px solid #0dd01a');
 
-	if (isValidHeightmother(heightmother)) $('#heightmother').css('border', '1px solid #0dd01a');		
+	if (isValidPulsep(pulsep)) $('#pulsep').css('border', '1px solid #0dd01a');
 
-	if (isValidHeightfather(heightfather)) $('#heightfather').css('border', '1px solid #0dd01a');
+	if (isValidSistp(sistp)) $('#sistp').css('border', '1px solid #0dd01a');
 
-	if (isValidLung(lung)) $('#lung').css('border', '1px solid #0dd01a');
+	if (isValidDiap(diap)) $('#diap').css('border', '1px solid #0dd01a');
 
-	if (isValidDynam(dynam)) $('#dynam').css('border', '1px solid #0dd01a');
+	if (isValidPulsebb(pulsebb)) $('#pulsebb').css('border', '1px solid #0dd01a');
 
-	if (isValidChest(chest)) $('#chest').css('border', '1px solid #0dd01a');
+	if (isValidPulseba(pulseba)) $('#pulseba').css('border', '1px solid #0dd01a');
 
-	if (isValidWaist(waist)) $('#waist').css('border', '1px solid #0dd01a');
-	
-	if (isValidShoulders(shoulders)) $('#shoulders').css('border', '1px solid #0dd01a');
-
-	if (isValidLegs(legs)) $('#legs').css('border', '1px solid #0dd01a');					
+	if (isValidPulsebaa(pulsebaa)) $('#pulsebaa').css('border', '1px solid #0dd01a');
+				
 });

@@ -75,14 +75,6 @@
 							<p class="designation">Ваше отчество:</p>
 								<input type="text" onkeydown="valide();" class="data_input_field" id="mname" required>
 						</div>
-						<div class="question_field">
-							<p class="designation">Ваш возраст: <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="right" title="Количество полных прожитых лет."></p> 
-								<input type="text" onkeydown="valide();" placeholder="лет" class="data_input_field" id="age" required>
-						</div>
-						<div class="question_field">
-							<p class="designation">Ваш вес: <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="right" title="Измеряется в легкой одежде, без обуви. Регистрируется с помощью медицинских весов."></p>
-							<input type="text" onkeydown="valide();" placeholder="кг" class="data_input_field" id="weight" required>
-						</div>
 						<div class="question_field spec">
 							<p class="designation">Ваше давление систолическое: <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="right" title="Измеряется по общепринятой методике при помощи аппарата Рива-Роччи: на правой руке в положении сидя трижды с интервалом 5 минут. Учитывается наименьшая величина."></p>
 							<input type="text" onkeydown="valide();" placeholder="мм рт. ст." class="data_input_field" id="sist" required>
@@ -98,47 +90,36 @@
 						</div>
 					</div>		
 					<div class="tab">
+						<h2>Одномоментная функциональная проба с приседанием</h2>
 						<div class="question_field">
-							<p class="designation">Ваш рост стоя: <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="right" title="Измеряется без обуви. Регистрируется с помощью медицинского ростометра."></p>
-							<input type="text" onkeydown="valide();" placeholder="см" class="data_input_field" id="height" required>
+							<p class="designation">Ваш пульс после нагрузки: <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="right" title="Измеряется в легкой одежде, без обуви. Регистрируется с помощью медицинских весов."></p>
+							<input type="text" onkeydown="valide();" placeholder="уд/мин" class="data_input_field" id="pulseop" required>
 						</div>
+						<h2>Проба с приседанием</h2>
 						<div class="question_field">
-							<p class="designation">Ваш рост сидя:</p>
-							<input type="text" onkeydown="valide();" placeholder="см" class="data_input_field" id="heightsit" required>
-						</div>
-						<div class="question_field">
-							<p class="designation">Рост вашей матери:</p>
-							<input type="text" onkeydown="valide();" placeholder="см" class="data_input_field" id="heightmother" required>
-						</div>
-						<div class="question_field">
-							<p class="designation">Рост вашего отца:</p>
-							<input type="text" onkeydown="valide();" placeholder="см" class="data_input_field" id="heightfather" required>
+							<p class="designation">Ваш пульс после нагрузки: <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="right" title="Измеряется в легкой одежде, без обуви. Регистрируется с помощью медицинских весов."></p>
+							<input type="text" onkeydown="valide();" placeholder="уд/мин" class="data_input_field" id="pulsep" required>
 						</div>
 						<div class="question_field spec">
-							<p class="designation">Жизненная емкость легких: <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="right" title="Измеряется спирометром."></p>
-							<input type="text" onkeydown="valide();" placeholder="см³" class="data_input_field" id="lung" required>
+							<p class="designation">Ваше давление систолическое после нагрузки: <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="right" title="Измеряется по общепринятой методике при помощи аппарата Рива-Роччи: на правой руке в положении сидя трижды с интервалом 5 минут. Учитывается наименьшая величина."></p>
+							<input type="text" onkeydown="valide();" placeholder="мм рт. ст." class="data_input_field" id="sistp" required>
 						</div>
-					</div>
-					<div class="tab">
-						<div class="question_field">
-							<p class="designation">Сила кисти:</p>
-							<input type="text" onkeydown="valide();" placeholder="кг" class="data_input_field" id="dynam" required>
+						<div class="question_field spec">
+							<p class="designation">Ваше давление диастолическое после нагрузки: <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="right" title="Измеряется по общепринятой методике при помощи аппарата Рива-Роччи: на правой руке в положении сидя трижды с интервалом 5 минут. Учитывается наименьшая величина."></p>
+							<input type="text" onkeydown="valide();" placeholder="мм рт. ст." class="data_input_field" id="diap" required>
 						</div>
+						<h2>Бельгийский тест</h2>
 						<div class="question_field">
-							<p class="designation">Объем грудной клетки:</p>
-							<input type="text" onkeydown="valide();" placeholder="см" class="data_input_field" id="chest" required>
-						</div>
-						<div class="question_field">
-							<p class="designation">Ширина плеч:</p>
-							<input type="text" onkeydown="valide();" placeholder="см" class="data_input_field" id="shoulders" required>
+							<p class="designation">Ваш пульс перед нагрузкой: <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="right" title="Измеряется в легкой одежде, без обуви. Регистрируется с помощью медицинских весов."></p>
+							<input type="text" onkeydown="valide();" placeholder="уд/мин" class="data_input_field" id="pulsebb" required>
 						</div>
 						<div class="question_field">
-							<p class="designation">Обхват талии:</p>
-							<input type="text" onkeydown="valide();" placeholder="см" class="data_input_field" id="waist" required>
+							<p class="designation">Ваш пульс после нагрузки: <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="right" title="Измеряется в легкой одежде, без обуви. Регистрируется с помощью медицинских весов."></p>
+							<input type="text" onkeydown="valide();" placeholder="уд/мин" class="data_input_field" id="pulseba" required>
 						</div>
 						<div class="question_field">
-							<p class="designation">Длина ног:</p>
-							<input type="text" onkeydown="valide();" placeholder="см" class="data_input_field" id="legs" required>
+							<p class="designation">Ваш пульс через 1 минуту после нагрузки: <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="right" title="Измеряется в легкой одежде, без обуви. Регистрируется с помощью медицинских весов."></p>
+							<input type="text" onkeydown="valide();" placeholder="уд/мин" class="data_input_field" id="pulsebaa" required>
 						</div>
 					</div>
 				</div>

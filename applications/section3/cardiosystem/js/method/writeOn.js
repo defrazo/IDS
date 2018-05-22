@@ -15,41 +15,35 @@ function get_data() { //Вносит заполненные данные из п
 	var mname = $('#mname').val();
 	if (mname != '') localStorage.setItem('mnameinp', mname);
 
-	var age = $('#age').val();
-	if (age != '') localStorage.setItem('ageinp', age);
+	var sist = $('#sist').val();
+	if (sist != '') localStorage.setItem('sistinp', sist);
 
-	var weight = $('#weight').val();
-	if (weight != '') localStorage.setItem('weightinp', weight);
+	var dia = $('#dia').val();
+	if (dia != '') localStorage.setItem('diainp', dia);
 
-	var height = $('#height').val();
-	if (height != '') localStorage.setItem('heightinp', height);
+	var pulse = $('#pulse').val();
+	if (pulse != '') localStorage.setItem('pulseinp', pulse);
 
-	var heightsit = $('#heightsit').val();
-	if (heightsit != '') localStorage.setItem('heightsitinp', heightsit);
+	var pulseop = $('#pulseop').val();
+	if (pulseop != '') localStorage.setItem('pulseopinp', pulseop);
 
-	var heightmother = $('#heightmother').val();
-	if (heightmother != '') localStorage.setItem('heightmotherinp', heightmother);
+	var sistp = $('#sistp').val();
+	if (sistp != '') localStorage.setItem('sistpinp', sistp);
 
-	var heightfather = $('#heightfather').val();
-	if (heightfather != '') localStorage.setItem('heightfatherinp', heightfather);
+	var diap = $('#diap').val();
+	if (diap != '') localStorage.setItem('diapinp', diap);
 
-	var dynam = $('#dynam').val();
-	if (dynam != '') localStorage.setItem('dynaminp', dynam);
+	var pulsep = $('#pulsep').val();
+	if (pulsep != '') localStorage.setItem('pulsepinp', pulsep);
 
-	var chest = $('#chest').val();
-	if (chest != '') localStorage.setItem('chestinp', chest);
+	var pulsebb = $('#pulsebb').val();
+	if (pulsebb != '') localStorage.setItem('pulsebbinp', pulsebb);
 
-	var lung = $('#lung').val();
-	if (lung != '') localStorage.setItem('lunginp', lung);
+	var pulseba = $('#pulseba').val();
+	if (pulseba != '') localStorage.setItem('pulsebainp', pulseba);
 
-	var waist = $('#waist').val();
-	if (waist != '') localStorage.setItem('waistinp', waist);
-
-	var legs = $('#legs').val();
-	if (legs != '') localStorage.setItem('legsinp', legs);
-
-	var shoulders = $('#shoulders').val();
-	if (shoulders != '') localStorage.setItem('shouldersinp', shoulders);
+	var pulsebaa = $('#pulsebaa').val();
+	if (pulsebaa != '') localStorage.setItem('pulsebaainp', pulsebaa);
 
 	var fac = $('#fac').val();
 	if (fac != '') localStorage.setItem('facinp', fac);
