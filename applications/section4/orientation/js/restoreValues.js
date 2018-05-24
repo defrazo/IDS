@@ -9,8 +9,6 @@ $(document).ready(function() { //Восстанавливает значения
 	if (localStorage.getItem('mnameinp') != '')	$('#mname').val(localStorage.getItem('mnameinp'));
 	if (localStorage.getItem('facinp') != '')	$('#fac').val(localStorage.getItem('facinp'));
 	if (localStorage.getItem('h11inp') != '') $('#h11').val(localStorage.getItem('h11inp'));
-	
-	if (localStorage.getItem('h11inp') != '') $('#h11').val(localStorage.getItem('h11inp'));
 	if (localStorage.getItem('h12inp') != '') $('#h12').val(localStorage.getItem('h12inp'));
 	if (localStorage.getItem('h13inp') != '') $('#h13').val(localStorage.getItem('h13inp'));
 	if (localStorage.getItem('h14inp') != '') $('#h14').val(localStorage.getItem('h14inp'));
