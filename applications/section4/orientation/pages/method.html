@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html onselectstart="return false;" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Сбор данных</title>
+	<link rel="stylesheet" href="../css/bootstrap.css" media="all">
+	<link rel="stylesheet" href="../css/page.css" media="all">
+	<link rel="stylesheet" href="../css/method.css" media="all">
+	<link rel="stylesheet" href="../css/slider.css" media="all">
+	<link rel="stylesheet" href="../css/stopwatch.css" media="all">
+	<link rel="stylesheet" href="../css/options.css" media="all">
+	<script src="../js/jquery-3.js"></script>
+	<script src="../js/jquery-1.js"></script>
+	<script src="../js/bootstrap.js"></script>
+	<script src="../js/tip.js"></script>
+	<script src="../js/zoom.js"></script>
+	<script src="../js/slider.js"></script>
+	<script src="../js/themes.js"></script>
+	<script src="../js/method/script.js"></script>
+	<script src="../js/method/checkAll.js"></script>
+	<script src="../js/method/checkRecords.js"></script>
+	<script src="../js/method/writeOn.js"></script>
+	<script src="../js/method/progressBar.js"></script>
+	<script src="../js/restoreValues.js"></script>
+	<script src="../js/hotkeys.js"></script>
+	<script src="../js/keys.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="header text-center">
+			<h1 class="text-uppercase">Гуманитарный университет</h1>
+			<h2>Определение типа суточного биоритма по методике С. И. Степановой</h2>
+		</div>
+		<div class="content col-md-12 text-center no-gutter">
+			<div class="main_box">
+				<div class="tabs">
+					<div class="tab">
+						<div class="first_tab">
+							<div class="question_field">
+								<p class="designation">Дата обследования:</p>
+								<input type="date" onclick="valide();" class="data_input_field" id="date" required>
+							</div>
+							<div class="question_field">
+								<p class="designation">Факультет:</p>
+								<select class="switch_fac" id="fac">
+									<option class="fac_option" selected disabled>Выберите факультет</option>
+									<option class="fac_option" value="Факультет социальной психологии">Факультет социальной психологии</option>
+									<option class="fac_option" value="Факультет бизнеса и управления">Факультет бизнеса и управления</option>
+									<option class="fac_option" value="Факультет современного танца">Факультет современного танца</option>
+									<option class="fac_option" value="Факультет конструирования и моделирования одежды">Факультет к. и моделирования одежды</option>
+									<option class="fac_option" value="Факультет компьютерных технологий">Факультет компьютерных технологий</option>
+									<option class="fac_option" value="Факультет телерадиожурналистики">Факультет телерадиожурналистики</option>
+									<option class="fac_option" value="Факультет юридический">Факультет юридический</option>
+									<option class="fac_option" value="-">Нет</option>
+								</select>
+							</div>
+							<div class="question_field">
+								<p class="designation">Ваш пол:</p>
+								<label class="variant"><input type="radio" onclick="valide();" name="gender" id="gender" value="Мужской" required> Мужской </label>
+								<label class="variant"><input type="radio" onclick="valide();" name="gender" value="Женский"> Женский </label>
+							</div>
+						</div>
+					</div>
+					<div class="tab">
+						<div class="question_field">
+							<p class="designation">Ваша фамилия:</p>
+							<input type="text" onkeydown="valide();" class="data_input_field" id="sname" required>
+						</div>
+						<div class="question_field">
+							<p class="designation">Ваше имя:</p>
+							<input type="text" onkeydown="valide();" class="data_input_field" id="fname" required>
+						</div>
+						<div class="question_field">
+							<p class="designation">Ваше отчество:</p>
+							<input type="text" onkeydown="valide();" class="data_input_field" id="mname" required>
+						</div>
+					</div>		
+					<div class="tab">
+						<div class="question_field">
+							<h2>Ценностные ориентации</h2>
+							<table class="table table-bordered table-hover text-center">
+								<tr>
+									<td>Ценностные ориентации</td>
+									<td width="100">Степень важности</td>
+									<td width="100">Степень овладения</td>
+									<td>Факторы "ускорители" <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="top" title="Факторы способствующие овладению."></td>
+									<td>Факторы "тормоза" <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="top" title="Факторы препятствующие овладению."></td>
+								</tr>
+								<tr>
+									<td>Активная деятельная жизнь <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="top" title="Полнота и эмоциональная насыщенность жизни."></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h11" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h12" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h13" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h14" required></td>
+								</tr>
+								<tr>
+									<td>Жизненная мудрость <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="top" title="Зрелость суждений, безошибочность здравого смысла."></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h21" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h22" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h23" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h24" required></td>
+								</tr>
+								<tr>
+									<td>Здоровье <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="top" title="Физическое и психологическое."></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h31" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h32" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h33" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h34" required></td>
+								</tr>
+								<tr>
+									<td>Интересная работа</td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h41" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h42" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h43" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h44" required></td>
+								</tr>
+								<tr>
+									<td>Наслаждение красотой природы и искусства</td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h51" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h52" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h53" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h54" required></td>
+								</tr>
+								<tr>
+									<td>Любовь <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="top" title="Духовная и физическая близость с самым дорогим человеком, а также любовь ко всему живому."></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h61" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h62" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h63" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h64" required></td>
+								</tr>
+								<tr>
+									<td>Материальное благополучие <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="top" title="Материальный комфорт, отсутствие затруднений."></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h71" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h72" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h73" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h74" required></td>
+								</tr>
+								<tr>
+									<td>Дружба и взаимопомощь <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="top" title="Наличие надежных верных друзей."></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h81" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h82" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h83" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h84" required></td>
+								</tr>
+								<tr>
+									<td>Общественное признание <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="top" title="Уважение окружающих, высокий статус, престиж."></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h91" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h92" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h93" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h94" required></td>
+								</tr>
+								<tr>
+									<td>Познание истины <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="top" title="Образование, повышение культурного и интеллектуального уровней."></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h101" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h102" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h103" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h104" required></td>
+								</tr>
+								<tr>
+									<td>Самореализация <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="top" title="Наиболее полное использование своих возможностей, сил и способностей."></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h111" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h112" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h113" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h114" required></td>
+								</tr>
+								<tr>
+									<td>Самосовершенствование <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="top" title="Работа над собой, физическое и духовное развитие."></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h121" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h122" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h123" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h124" required></td>
+								</tr>
+								<tr>
+									<td>Удовольствия и развлечения <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="top" title="Приятное, легкое времяпрепровождение, отсутствуие обязанностей."></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h131" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h132" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h133" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h134" required></td>
+								</tr>
+								<tr>
+									<td>Свобода <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="top" title="Самостоятельность, независимость в суждениях и поступках."></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h141" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h142" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h143" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h144" required></td>
+								</tr>
+								<tr>
+									<td>Семейное благополучие <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="top" title="Счастливая дружная полная семья."></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h151" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h152" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h153" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h154" required></td>
+								</tr>
+								<tr>
+									<td>Воспитание детей <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="top" title="Как великая цель продолжения рода человеческого."></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h161" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h162" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h163" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h164" required></td>
+								</tr>
+								<tr>
+									<td>Делать добро <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="top" title="Счастье, развитие, благополучие других людей, народа, человечества."></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h171" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h172" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h173" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h174" required></td>
+								</tr>
+								<tr>
+									<td>Творчество <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="top" title="Создание нового в различных областях человеческой деятельности."></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h181" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h182" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h183" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h184" required></td>
+								</tr>
+								<tr>
+									<td>Душевный комфорт <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="top" title="Уверенность в себе, внутренняя гармония, свобода от внутренних противоречий, сомнений."></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h191" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h192" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h193" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h194" required></td>
+								</tr>
+								<tr>
+									<td>Власть <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="top" title="Лидерство, влияние на людей, организация их деятельности, воздействие на их мысли и чувства."></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h201" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h202" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h203" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h204" required></td>
+								</tr>
+
+								<tr>
+									<td>Аккуратность <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="top" title="Чистоплотность, поддержание порядка в делах и вещах."></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h211" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h212" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h213" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h214" required></td>
+								</tr>
+								<tr>
+									<td>Воспитанность <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="top" title="Тактичность, хорошие манеры."></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h221" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h222" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h223" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h224" required></td>
+								</tr>
+								<tr>
+									<td>Высокие притязания <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="top" title="Высокий уровень требований к себе и окружающим."></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h231" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h232" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h233" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h234" required></td>
+								</tr>
+								<tr>
+									<td>Жизнерадостность <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="top" title="Оптимизм, чувство юмора."></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h241" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h242" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h243" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h244" required></td>
+								</tr>
+								<tr>
+									<td>Дисциплинированность <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="top" title="Соблюдение законов, норм и правил."></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h251" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h252" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h253" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h254" required></td>
+								</tr>
+								<tr>
+									<td>Независимость <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="top" title="самостоятельность мышления и поступков."></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h261" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h262" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h263" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h264" required></td>
+								</tr>
+								<tr>
+									<td>Жизненная мудрость <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="top" title="Зрелость суждений, безошибочность здравого смысла."></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h271" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h272" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h273" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h274" required></td>
+								</tr>
+								<tr>
+									<td>Принципиальность <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="top" title="Непримеримость ко лжи, недостаткам, слабостям."></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h281" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h282" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h283" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h284" required></td>
+								</tr>
+								<tr>
+									<td>Образование и самообразование <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="top" title="Повышение уровня компетенции и общей культуры."></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h291" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h292" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h293" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h294" required></td>
+								</tr>
+								<tr>
+									<td>Ответственность <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="top" title="Чувство долга, умение держать слово, хранить секреты."></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h301" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h302" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h303" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h304" required></td>
+								</tr>
+								<tr>
+									<td>Рационализм <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="top" title="Умение здраво и логично мыслить, принимать обдуманные рациональные решения."></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h311" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h312" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h313" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h314" required></td>
+								</tr>
+								<tr>
+									<td>Самоконтроль <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="top" title="Сдержанность, самодисциплина."></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h321" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h322" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h323" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h324" required></td>
+								</tr>
+								<tr>
+									<td>Смелость <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="top" title="Отсутствие страха в экстримальных ситуациях, твердое отстаивание своего мнения, принципов."></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h331" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h332" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h333" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h334" required></td>
+								</tr>
+								<tr>
+									<td>Твердая воля <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="top" title="Умение настоять на своем, не отступать перед трудностями, опасностями."></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h341" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h342" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h343" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h344" required></td>
+								</tr>
+								<tr>
+									<td>Терпимость <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="top" title="Ко взглядам и высказываниям других, умение прощать другим слабости, ошибки, заблуждения."></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h351" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h352" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h353" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h354" required></td>
+								</tr>
+								<tr>
+									<td>Широта взглядов <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="top" title="Умение понять точку зрения, уважать иные вкусы, привычки, обычаи."></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h361" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h362" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h363" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h364" required></td>
+								</tr>
+								<tr>
+									<td>Честность <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="top" title="Правдивость, искренность, нетерпимость лжи."></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h371" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h372" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h373" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h374" required></td>
+								</tr>
+								<tr>
+									<td>Трудолюбие <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="top" title="Продуктивность деятельности, неподвластность лени."></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h381" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h382" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h383" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h384" required></td>
+								</tr>
+								<tr>
+									<td>Чуткость <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="top" title="Способность сочувствовать, понимать, сопереживать, заботиться."></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h391" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h392" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h393" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h394" required></td>
+								</tr>
+								<tr>
+									<td>Интеллектуальность <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="top" title="Ум, эффективное принятие решений, умение прогнозировать."></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h401" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h402" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h403" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h404" required></td>
+								</tr>
+								<tr>
+									<td>Интеллигентность <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="top" title="Высокий уровень духовного развития."></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h411" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_t" id="h412" placeholder="%" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h413" required></td>
+									<td><input type="text" onkeydown="valide();" class="data_input_field_f" id="h414" required></td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-12 progress progress-striped active text-center no-gutter">
+			<div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+				<span class="progress-message"></span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-offset-1 col-md-3 text-center no-gutter">
+				<span class="switch_name">Настройки</span>
+				<input type="checkbox" id="options_button" />
+				<label class="options_switch" for="options_button"><i></i></label>
+			</div>
+			<div class="col-md-offset-1 col-md-2 text-center no-gutter">
+					<a href="results.html" class="next_button" id="method_submit" onclick="localStorage.setItem('mval', 4); get_data();">Продолжить</a>
+			</div>
+			<div class="col-md-offset-1 col-md-3 text-center no-gutter">
+				<span class="switch_name">Секундомер</span>
+				<input type="checkbox" id="stopwatch_button" />
+				<label class="stopwatch_switch" for="stopwatch_button"><i></i></label>
+			</div>
+		</div>
+		<div class="options_container col-md-offset-1 col-md-3">
+			<table class="options_table">
+				<tbody>
+					<tr>
+						<td>
+							<span class="table_name">Тема</span>
+							<select class="switch_theme">
+								<option class="theme_option" selected disabled>Выберите</option>
+								<option class="theme_option" value="white">Белая</option>
+								<option class="theme_option" value="grey">Серая</option>
+								<option class="theme_option" value="blue">Синяя</option>
+								<option class="theme_option" value="black">Черная</option>
+								<option class="theme_option" value="yellow">Желтая</option>
+								<option class="theme_option" value="lightblue">Голубая</option>
+								<option class="theme_option" value="green">Зеленая</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span class="table_name">Шрифт</span><br>
+							<button style="width: 48%; outline: none;" type="button" class="btn btn-default btn-md plus" onclick="increase();"><span class="glyphicon glyphicon-plus-sign"></span></button>
+							<button style="width: 48%; outline: none;" type="button" class="btn btn-default btn-md minus" onclick="decrease();"><span class="glyphicon glyphicon-minus-sign"></span></button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="stopwatch_container col-md-offset-4 col-md-4">
+			<input id="start" name="controls" type="radio" />
+			<input id="stop" name="controls" type="radio" />
+			<input id="reset" name="controls" type="radio" />
+			<div class="timer">
+				<div class="cell">
+					<div class="numbers tenminute movesix">0 1 2 3 4 5 6</div>
+				</div>
+				<div class="cell">
+					<div class="numbers minute moveten">0 1 2 3 4 5 6 7 8 9</div>
+				</div>
+				<div class="cell divider">
+					<div class="numbers">:</div>
+				</div>
+				<div class="cell">
+					<div class="numbers tensecond movesix">0 1 2 3 4 5 6</div>
+				</div>
+				<div class="cell">
+					<div class="numbers second moveten">0 1 2 3 4 5 6 7 8 9</div>
+				</div>
+				<div class="cell divider">
+					<div class="numbers">:</div>
+				</div>
+				<div class="cell">
+					<div class="numbers milisecond moveten">0 1 2 3 4 5 6 7 8 9</div>
+				</div>
+				<div class="cell">
+					<div class="numbers tenmilisecond moveten">0 1 2 3 4 5 6 7 8 9</div>
+				</div>
+			</div>
+			<div id="timer_controls">
+				<label for="start">Старт</label>
+				<label for="stop">Стоп</label>
+				<label for="reset">Сброс</label>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
