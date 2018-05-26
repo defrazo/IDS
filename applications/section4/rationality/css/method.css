@@ -1,0 +1,189 @@
+.content {
+    margin-bottom: 3em;
+    }
+
+.main_box {
+    background: url(../img/bg/bg_mainbox.png);
+    box-shadow: 0 0 3px #AAAAAA;
+    border-radius: 10px;
+    background-color: none;
+    }
+
+.variant {
+    font-family: "Exo2";
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    }
+
+.first_tab {
+    padding: 7.5em 0;
+    }
+
+.question_field {
+    padding-top: 0.5em;
+    }
+
+.progress {
+    box-shadow: 0 0 3px #AAAAAA;
+    }
+
+.designation, .designation b {
+    font-family: "Exo2";
+    color: black;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 0;
+    cursor: default;
+    }
+
+.data_input_field {
+    font-family: "Exo2";
+    border: 1px solid #aaa;
+    box-shadow: 0px 0px 3px #ccc, 0 10px 15px #eee inset;
+    border-radius: 5px;
+    margin-top: 0.5em;
+    font-size: 20px;
+    padding: 1px 5px;
+    text-align: center;
+    }
+
+.progress-message {
+	font-size: 18px;
+    text-shadow: #000000 0 0 1px;
+    cursor: default;
+    }
+
+.stopwatch_switch {
+    width: 90px;
+    height: 30px;
+    display: inline-block;
+    position: relative;
+    border-radius: 14px;
+    background-clip: padding-box;
+    background: -webkit-linear-gradient(top, rgba(138,138,138,1) 0%, rgba(140,140,140,1) 14%, rgba(159,159,159,1) 72%, rgba(164,164,164,1) 100%);
+    box-shadow: inset 0 2px 5px 0 rgba(0, 0, 0, 0.1), inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
+    line-height: 30px;
+    font-style: normal;
+    color: #fff;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.1);
+    font-weight: bold;
+    -webkit-box-reflect: below 0px
+        -webkit-gradient(linear, left top, left bottom,
+        color-stop(0.5, transparent),
+        to(rgba(255, 255, 255, 0.3)));
+    transition: all 1s ease-in;
+    cursor: pointer;
+    }
+
+.stopwatch_switch.attention:hover {
+    background: rgb(238,159,7);
+    background: -moz-linear-gradient(top,  rgba(238,159,7,1) 0%, rgba(240,171,8,1) 45%, rgba(243,182,15,1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(238,159,7,1)), color-stop(45%,rgba(240,171,8,1)), color-stop(100%,rgba(243,182,15,1)));
+    background: -webkit-linear-gradient(top,  rgba(238,159,7,1) 0%,rgba(240,171,8,1) 45%,rgba(243,182,15,1) 100%);
+    background: -o-linear-gradient(top,  rgba(238,159,7,1) 0%,rgba(240,171,8,1) 45%,rgba(243,182,15,1) 100%);
+    background: -ms-linear-gradient(top,  rgba(238,159,7,1) 0%,rgba(240,171,8,1) 45%,rgba(243,182,15,1) 100%);
+    background: linear-gradient(to bottom,  rgba(238,159,7,1) 0%,rgba(240,171,8,1) 45%,rgba(243,182,15,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ee9f07', endColorstr='#f3b60f',GradientType=0 );
+    }
+
+.stopwatch_switch.attention:hover:before {
+    content: "☢"; /* &#9762; */
+    font-size: 22px
+    }
+
+input[type=checkbox]:checked ~ .stopwatch_switch.attention:hover:before {
+    content: "on";
+    font-size: 14px
+    }
+
+.stopwatch_switch i {
+    position: absolute;
+    top: -4px;
+    right:60px;
+    width: 36px;
+    height: 36px;
+    display: block;
+    border-radius: 36px;
+    background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(252,252,252,1) 11%, rgba(228,228,228,1) 50%, rgba(221,221,221,1) 53%, rgba(205,205,205,1) 97%, rgba(191,191,191,1) 100%);
+    box-shadow: inset 0 -3px 3px 0 rgba(0, 0, 0, 0.1), inset 0 -1px 1px 0 rgba(255, 255, 255, 0.4), 0 2px 0 0 rgba(0, 0, 0, 0.2);
+    transition: all 200ms ease;
+    }
+
+.stopwatch_switch i:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 18px;
+    height: 18px;
+    margin: -9px 0 0 -9px;
+    border-radius: 18px;
+    background: -webkit-linear-gradient(top, rgba(239,239,239,1) 0%, rgba(225,225,225,1) 6%, rgba(225,225,225,1) 24%, rgba(229,229,229,1) 94%, rgba(242,242,242,1) 100%);
+    box-shadow: inset 0 1px 0 0 rgba(0, 0, 0, 0.1);
+    }
+
+.stopwatch_switch:hover i {
+    box-shadow: inset 0 -3px 3px 0 rgba(0, 0, 0, 0.1), inset 0 -1px 1px 0 rgba(255, 255, 255, 0.4), 0 2px 0 0 rgba(0, 0, 0, 0.3);
+    }
+
+.stopwatch_switch:active i:before {
+    box-shadow: inset 0 1px 0 0 rgba(0, 0, 0, 0.3);
+    }
+
+.stopwatch_switch:before {
+    content: "off";
+    margin-left: 30px;
+    text-transform: uppercase;
+    transition: all 200ms ease;
+    }
+    
+#stopwatch_button, .stopwatch_container, #method_submit {
+    display: none;
+    }
+
+input[type=checkbox]:checked ~ .stopwatch_switch:before {
+    content: "on";
+    text-transform: uppercase;
+    margin-right: 30px;
+    margin-left: 0;
+    }
+
+input[type=checkbox]:checked ~ .stopwatch_switch{
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(141,173,51,1) 0%, rgba(146,178,55,1) 24%, rgba(157,187,64,1) 55%, rgba(166,194,78,1) 100%);
+    }
+
+input[type=checkbox]:checked ~ .stopwatch_switch i {
+    right: -6px;
+    }
+
+.no_click {
+    pointer-events: none;
+    }
+
+.switch_fac, .switch_fac option {
+    padding: 5px 0 5px 10px;
+    border: none;
+    cursor: pointer;
+    background-color: white;
+    box-shadow: 0 0 3px #aaa;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    width: 30%;
+    text-align-last: center;
+    }
+
+.switch_fac:hover select {
+    border: none;
+    background-color: transparent;
+    box-shadow: 0 0 3px #aaa;
+    border-radius: 5px;
+    width: 30%;
+    text-align-last: center;
+    }
+
+h2 {
+    padding-top: 15px;
+}
