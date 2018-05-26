@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html onselectstart="return false;" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Сбор данных</title>
+	<link rel="stylesheet" href="../css/bootstrap.css" media="all">
+	<link rel="stylesheet" href="../css/page.css" media="all">
+	<link rel="stylesheet" href="../css/method.css" media="all">
+	<link rel="stylesheet" href="../css/slider.css" media="all">
+	<link rel="stylesheet" href="../css/stopwatch.css" media="all">
+	<link rel="stylesheet" href="../css/options.css" media="all">
+	<script src="../js/jquery-3.js"></script>
+	<script src="../js/jquery-1.js"></script>
+	<script src="../js/bootstrap.js"></script>
+	<script src="../js/tip.js"></script>
+	<script src="../js/zoom.js"></script>
+	<script src="../js/slider.js"></script>
+	<script src="../js/themes.js"></script>
+	<script src="../js/method/script.js"></script>
+	<script src="../js/method/checkAll.js"></script>
+	<script src="../js/method/checkRecords.js"></script>
+	<script src="../js/method/writeOn.js"></script>
+	<script src="../js/method/progressBar.js"></script>
+	<script src="../js/restoreValues.js"></script>
+	<script src="../js/hotkeys.js"></script>
+	<script src="../js/keys.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="header text-center">
+			<h1 class="text-uppercase">Гуманитарный университет</h1>
+			<h2>Определение продолжительнности жизни</h2>
+		</div>
+		<div class="content col-md-12 text-center no-gutter">
+			<div class="main_box">
+				<div class="tabs">
+					<div class="tab">
+						<div class="first_tab">
+							<div class="question_field">
+								<p class="designation">Дата обследования:</p>
+								<input type="date" onclick="valide();" class="data_input_field" id="date" required>
+							</div>
+							<div class="question_field">
+								<p class="designation">Факультет:</p>
+								<select class="switch_fac" id="fac">
+									<option class="fac_option" selected disabled>Выберите факультет</option>
+									<option class="fac_option" value="Факультет социальной психологии">Факультет социальной психологии</option>
+									<option class="fac_option" value="Факультет бизнеса и управления">Факультет бизнеса и управления</option>
+									<option class="fac_option" value="Факультет современного танца">Факультет современного танца</option>
+									<option class="fac_option" value="Факультет конструирования и моделирования одежды">Факультет к. и моделирования одежды</option>
+									<option class="fac_option" value="Факультет компьютерных технологий">Факультет компьютерных технологий</option>
+									<option class="fac_option" value="Факультет телерадиожурналистики">Факультет телерадиожурналистики</option>
+									<option class="fac_option" value="Факультет юридический">Факультет юридический</option>
+									<option class="fac_option" value="-">Нет</option>
+								</select>
+							</div>
+							<div class="question_field">
+								<p class="designation">Ваш пол:</p>
+								<label class="variant"><input type="radio" onclick="valide();" name="gender" id="gender" value="Мужской" required> Мужской </label>
+								<label class="variant"><input type="radio" onclick="valide();" name="gender" value="Женский"> Женский </label>
+							</div>
+						</div>
+					</div>
+					<div class="tab">
+						<div class="question_field">
+							<p class="designation">Ваша фамилия:</p>
+							<input type="text" onkeydown="valide();" class="data_input_field" id="sname" required>
+						</div>
+						<div class="question_field">
+							<p class="designation">Ваше имя:</p>
+							<input type="text" onkeydown="valide();" class="data_input_field" id="fname" required>
+						</div>
+						<div class="question_field">
+							<p class="designation">Ваше отчество:</p>
+							<input type="text" onkeydown="valide();" class="data_input_field" id="mname" required>
+						</div>
+					</div>		
+					<div class="tab">
+						<div class="question_field">
+							<p class="designation"><b id="d1">Если утром вам надо встать пораньше, вы:</b></p>
+							<label class="variant"><input type="radio" name="y1" id="y1" value="30" required> Заводите будильник</label>
+							<label class="variant"><input type="radio" name="y1" value="20"> Доверяете внутреннему голосу</label>
+							<label class="variant"><input type="radio" name="y1" value="0"> Полагаетесь на случай</label>
+						</div>
+						<div class="question_field">
+							<p class="designation"><b id="d2">Проснувшись утром, вы:</b></p>
+							<label class="variant"><input type="radio" name="y2" id="y2" value="30" required> Встаете неспеша, делаете легкую гимнастику и только потом начинаете собираться на работу</label>
+							<br><label class="variant"><input type="radio" name="y2" value="0"> Увидев, что у вас в запасе еще несколько минут, продолжаете нежиться под одеялом</label>
+							<br><label class="variant"><input type="radio" name="y2" value="10"> Сразу вскакиваете с постели и принимаетесь  за дела</label>
+						</div>
+						<div class="question_field">
+							<p class="designation"><b id="d3">Из чего состоит ваш обычный завтрак:</b></p>
+							<label class="variant"><input type="radio" name="y3" id="y3" value="0" required> Вы вообще не завтракаете дома и предпочитаете более плотный завтрак часов в десять</label>
+							<br><label class="variant"><input type="radio" name="y3" value="30"> Из мясного блюда и кофе или чая</label>
+							<br><label class="variant"><input type="radio" name="y3" value="20"> Из кофе или чая с бутербродами</label>
+						</div>
+						<div class="question_field">
+							<p class="designation"><b id="d4">Какой вариант распорядка дня вы бы предпочли:</b></p>
+							<label class="variant"><input type="radio" name="y4" id="y4" value="0" required> Необходимость точного прихода на работу в одно и то же время</label>
+							<br><label class="variant"><input type="radio" name="y4" value="30"> Приход в диапазоне 30 минут</label>
+							<br><label class="variant"><input type="radio" name="y4" value="20"> Гибкий график</label>
+						</div>
+						<div class="question_field">
+							<p class="designation"><b id="d5">Вы предпочли бы, чтобы продолжительность обеденного перерыва давала возможность:</b></p>
+							<label class="variant"><input type="radio" name="y5" id="y5" value="10" required> Поесть не торопясь и еще спокойно выпить чашку кофе</label>
+							<br><label class="variant"><input type="radio" name="y5" value="30"> Поесть не торопясь и еще немного отдохнуть</label>
+							<br><label class="variant"><input type="radio" name="y5" value="0"> Успеть поесть в столовой</label>
+						</div>
+					</div>
+					<div class="tab">
+						<div class="question_field">
+							<p class="designation"><b id="d6">Сколь часто в суете служебных дел  и обязанностей у вас выдается возможность немного пошутить и посмеяться с коллегами:</b></p>
+							<label class="variant"><input type="radio" name="y6" id="y6" value="30" required> Каждый день</label>
+							<label class="variant"><input type="radio" name="y6" value="20"> Иногда</label>
+							<label class="variant"><input type="radio" name="y6" value="0"> Редко</label>
+						</div>
+						<div class="question_field">
+							<p class="designation"><b id="d7">Если на работе вы оказываетесь вовлеченным в конфликтную ситуацию, как вы пытаетесь разрешить ее:</b></p>
+							<label class="variant"><input type="radio" name="y7" id="y7" value="0" required> Долгими дискуссиями, в которых упорно отстаиваете свою позицию</label>
+							<br><label class="variant"><input type="radio" name="y7" value="30"> Ясным изложением своей позиции и отказом от дальнейших споров</label>
+							<br><label class="variant"><input type="radio" name="y7" value="0.1"> Флегматичным отстранением от споров</label>
+						</div>
+						<div class="question_field">
+							<p class="designation"><b id="d8">Надолго ли вы обычно задерживаетесь после окончания рабочего дня:</b></p>
+							<label class="variant"><input type="radio" name="y8" id="y8" value="30" required> Не более чем на 20 минут</label>
+							<label class="variant"><input type="radio" name="y8" value="10"> До 1 часа</label>
+							<label class="variant"><input type="radio" name="y8" value="0"> Более 1 часа</label>
+						</div>
+						<div class="question_field">
+							<p class="designation"><b id="d9">Чему вы обычно посвящаете свое свободное время:</b></p>
+							<label class="variant"><input type="radio" name="y9" id="y9" value="10" required> Встречам с друзьями, общественной работе</label>
+							<label class="variant"><input type="radio" name="y9" value="30"> Домашними делами</label>
+							<label class="variant"><input type="radio" name="y9" value="20"> Хобби</label>
+						</div>
+						<div class="question_field">
+							<p class="designation"><b id="d10">Что означает для вас встреча с друзьями и прием гостей:</b></p>
+							<label class="variant"><input type="radio" name="y10" id="y10" value="30" required> Возможность встряхнуться и отвлечься от забот</label>
+							<label class="variant"><input type="radio" name="y10" value="0"> Потерю времени и денег</label>
+							<label class="variant"><input type="radio" name="y10" value="0.1"> Неизбежное зло</label>
+						</div>
+					</div>
+					<div class="tab">
+						<div class="question_field">
+							<p class="designation"><b id="d11">Когда вы ложитесь спать:</b></p>
+							<label class="variant"><input type="radio" name="y11" id="y11" value="30" required> Всегда примерно в одно и то же время</label>
+							<label class="variant"><input type="radio" name="y11" value="0"> По настроению</label>
+							<label class="variant"><input type="radio" name="y11" value="0.1"> По окончании всех дел</label>
+						</div>
+						<div class="question_field">
+							<p class="designation"><b id="d12">Как вы используете свой отпуск:</b></p>
+							<label class="variant"><input type="radio" name="y12" id="y12" value="20" required> Весь сразу</label>
+							<label class="variant"><input type="radio" name="y12" value="30"> Часть летом, а часть зимой</label>
+							<label class="variant"><input type="radio" name="y12" value="0"> По два-три дня, когда у вас накапливается много домашних дел</label>
+						</div>
+						<div class="question_field">
+							<p class="designation"><b id="d13">Какое место занимает спорт в вашей жизни:</b></p>
+							<label class="variant"><input type="radio" name="y13" id="y13" value="0" required> Находите повседневную рабочую и домашнюю физиологическую нагрузку вполне достаточной</label>
+							<br><label class="variant"><input type="radio" name="y13" value="30"> Делаете зарядку на свежем воздухе</label>
+							<br><label class="variant"><input type="radio" name="y13" value="0.1"> Ограничиваетесь ролью болельщика</label>
+						</div>
+						<div class="question_field">
+							<p class="designation"><b id="d14">За последние 14 дней вы хотя бы раз:</b></p>
+							<label class="variant"><input type="radio" name="y14" id="y14" value="30." required> Танцевали</label>
+							<label class="variant"><input type="radio" name="y14" value="30.1"> Занимались физическим трудом или спортом</label>
+							<label class="variant"><input type="radio" name="y14" value="30.2"> Прошли пешком не менее 4 км</label>
+						</div>
+						<div class="question_field">
+							<p class="designation"><b id="d15">Как вы проводите летний отпуск:</b></p>
+							<label class="variant"><input type="radio" name="y15" id="y15" value="0" required> Пассивно отдыхаете</label>
+							<label class="variant"><input type="radio" name="y15" value="20"> Физически трудитесь, например, в саду</label>
+							<label class="variant"><input type="radio" name="y15" value="30"> Гуляете и занимаетесь спортом</label>
+						</div>
+						<div class="question_field">
+							<p class="designation"><b id="d16">Ваше честолюбие проявляется в том, что вы:</b></p>
+							<label class="variant"><input type="radio" name="y16" id="y16" value="10" required> Намекаете окружающим на вашу истинную ценность, ведя себя соответветствующим образом</label>
+							<br><label class="variant"><input type="radio" name="y16" value="30"> Надеетесь, что ваше усердие принесет свои плоды</label>
+							<br><label class="variant"><input type="radio" name="y16" value="0"> Любой ценой стремитесь достичь своего</label>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-12 progress progress-striped active text-center no-gutter">
+			<div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+				<span class="progress-message"></span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-offset-1 col-md-3 text-center no-gutter">
+				<span class="switch_name">Настройки</span>
+				<input type="checkbox" id="options_button" />
+				<label class="options_switch" for="options_button"><i></i></label>
+			</div>
+			<div class="col-md-offset-1 col-md-2 text-center no-gutter">
+					<a href="results.html" class="next_button" id="method_submit" onclick="localStorage.setItem('mval', 4); get_data();">Продолжить</a>
+			</div>
+			<div class="col-md-offset-1 col-md-3 text-center no-gutter">
+				<span class="switch_name">Секундомер</span>
+				<input type="checkbox" id="stopwatch_button" />
+				<label class="stopwatch_switch" for="stopwatch_button"><i></i></label>
+			</div>
+		</div>
+		<div class="options_container col-md-offset-1 col-md-3">
+			<table class="options_table">
+				<tbody>
+					<tr>
+						<td>
+							<span class="table_name">Тема</span>
+							<select class="switch_theme">
+								<option class="theme_option" selected disabled>Выберите</option>
+								<option class="theme_option" value="white">Белая</option>
+								<option class="theme_option" value="grey">Серая</option>
+								<option class="theme_option" value="blue">Синяя</option>
+								<option class="theme_option" value="black">Черная</option>
+								<option class="theme_option" value="yellow">Желтая</option>
+								<option class="theme_option" value="lightblue">Голубая</option>
+								<option class="theme_option" value="green">Зеленая</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span class="table_name">Шрифт</span><br>
+							<button style="width: 48%; outline: none;" type="button" class="btn btn-default btn-md plus" onclick="increase();"><span class="glyphicon glyphicon-plus-sign"></span></button>
+							<button style="width: 48%; outline: none;" type="button" class="btn btn-default btn-md minus" onclick="decrease();"><span class="glyphicon glyphicon-minus-sign"></span></button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="stopwatch_container col-md-offset-4 col-md-4">
+			<input id="start" name="controls" type="radio" />
+			<input id="stop" name="controls" type="radio" />
+			<input id="reset" name="controls" type="radio" />
+			<div class="timer">
+				<div class="cell">
+					<div class="numbers tenminute movesix">0 1 2 3 4 5 6</div>
+				</div>
+				<div class="cell">
+					<div class="numbers minute moveten">0 1 2 3 4 5 6 7 8 9</div>
+				</div>
+				<div class="cell divider">
+					<div class="numbers">:</div>
+				</div>
+				<div class="cell">
+					<div class="numbers tensecond movesix">0 1 2 3 4 5 6</div>
+				</div>
+				<div class="cell">
+					<div class="numbers second moveten">0 1 2 3 4 5 6 7 8 9</div>
+				</div>
+				<div class="cell divider">
+					<div class="numbers">:</div>
+				</div>
+				<div class="cell">
+					<div class="numbers milisecond moveten">0 1 2 3 4 5 6 7 8 9</div>
+				</div>
+				<div class="cell">
+					<div class="numbers tenmilisecond moveten">0 1 2 3 4 5 6 7 8 9</div>
+				</div>
+			</div>
+			<div id="timer_controls">
+				<label for="start">Старт</label>
+				<label for="stop">Стоп</label>
+				<label for="reset">Сброс</label>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
