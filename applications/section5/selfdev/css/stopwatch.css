@@ -1,0 +1,163 @@
+.stopwatch_value {
+    border: 1px solid #aaa;
+    box-shadow: 0px 0px 3px #ccc, 0 10px 15px #eee inset;
+    box-shadow:0 1px 0 rgba(255, 255, 255, .5) inset, 0 -1px 0 rgba(255, 255, 255, .1) inset, 0 4px 0 #ae1d1d, 0 4px 2px rgba(0, 0, 0, .5), 0px 0px 3px #ccc, 0 10px 15px #eee inset;;
+    height: 30px;
+    width: 150px;
+    text-align: center;
+    border-radius: 5px;
+    -moz-transition: padding .25s;
+    -webkit-transition: padding .25s;
+    -o-transition: padding .25s;
+    transition: padding .25s;
+    font-family: "Exo2";
+    font-size: 16px;
+    }
+
+.stopwatch_container {
+    padding: 1em;
+    text-align: center;
+    }
+
+.timer {
+    padding: 10px;
+    background: linear-gradient(to top, #ffffff, #d3d3d3);
+    overflow: hidden;
+    display: inline-block;
+    border: 7px solid #f5f5f5;
+    border-radius: 5px;
+    position: relative;
+    box-shadow: 
+        inset 0 -2px 10px 1px rgba(0, 0, 0, 0.75), 
+        0 5px 20px -10px rgba(0, 0, 0, 1);
+    }
+
+.cell { /*Нужно выводить только одну цифру. Следовательно высота = высоте строки .numbers
+    и ширина = ширине .numbers*/
+    width: 0.60em;
+    height: 40px;
+    font-size: 50px;
+    overflow: hidden;
+    position: relative;
+    float: left;
+    }
+
+.numbers {
+    width: 0.6em;
+    line-height: 40px;
+    font-family: digital, arial, verdana;
+    text-align: center;
+    color: #272323;
+    font-size: 36px;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: default;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 1); /*Свечение текста*/
+    }
+
+/* Стили для элементов управления*/
+#timer_controls {
+    margin-top: -5px;
+    }
+
+#timer_controls label {
+    cursor: pointer;
+    padding: 5px 10px;
+    background: #efefef;
+    font-family: arial, verdana, tahoma;
+    font-size: 14px;
+    border-radius: 0 0 10px 10px;
+    }
+
+input[name="controls"] {
+    display: none;
+    }
+
+/* Код элементов управления */
+#stop:checked~.timer .numbers {
+    animation-play-state: paused;
+    }
+
+#start:checked~.timer .numbers {
+    animation-play-state: running;
+    }
+
+#reset:checked~.timer .numbers {
+    animation: none;
+    }
+
+.moveten {
+    animation: moveten 1s steps(10, end) infinite; /*Для улучшения внешнего вида настраиваем шаги смены цифр.
+    10 цифр = 10 шагов*/
+    animation-play-state: paused; /*По умолчанию анимация остановлена*/
+    }
+
+.movesix {
+    animation: movesix 1s steps(6, end) infinite;
+    animation-play-state: paused;
+    }
+
+/*Синхронизация скорости анимации со временем */
+.second { /*одна секунда на цифру. 10 цифр. Следовательно 10 секунд*/
+    animation-duration: 10s;
+    }
+
+.tensecond { /*60 раз .second*/
+    animation-duration: 60s;
+    }
+
+.milisecond { /*1/10 от .second*/
+    animation-duration: 1s;
+    }
+
+.tenmilisecond {
+    animation-duration: 0.1s;
+    }
+
+.hundredmilisecond {
+    animation-duration: 0.01s;
+    }
+
+.minute { /*60 раз .second*/
+    animation-duration: 600s;
+    }
+
+.tenminute { /*60 раз .minute*/
+    animation-duration: 3600s;
+}
+
+.hour { /*60 раз .minute*/
+    animation-duration: 36000s;
+    }
+
+.tenhour { /*10 раз .hour*/
+    animation-duration: 360000s;
+    }
+
+/* Анимация */
+@keyframes moveten { /* Высота = 40 .digits = 10. Следовательно -400 для полного перемещения на верх*/
+    0% {
+        top: 0;
+        }
+
+    100% {
+        top: -400px;
+        } 
+    }
+
+@keyframes movesix { /* Высота = 40 .digits = 6. Следовательно -240 для полного пермещения наверх*/
+    0% {
+        top: 0;
+        }
+
+    100% {
+        top: -240px;
+        }
+    }
+
+@font-face { /* Интересный фон для цифр*/
+    font-family: 'digital';
+    src: url(../fonts/DS-DIGI.TTF);    
+    }
