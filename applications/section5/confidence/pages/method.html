@@ -43,7 +43,7 @@
 							</div>
 							<div class="question_field">
 								<p class="designation">Факультет:</p>
-								<select class="switch_fac" id="fac">
+								<select class="switch_fac" id="fac" required>
 									<option class="fac_option" selected disabled>Выберите факультет</option>
 									<option class="fac_option" value="Факультет социальной психологии">Факультет социальной психологии</option>
 									<option class="fac_option" value="Факультет бизнеса и управления">Факультет бизнеса и управления</option>
@@ -168,7 +168,7 @@
 						<div class="question_field">
 							<p class="designation"><b id="d13">Если кто-то просит меня об услуге, которую мне неудобно выполнять, я скажу ему об этом.</b></p>
 							<label class="variant"><input type="radio" name="z13" id="z13" value="4" required> Всегда</label>
-							<label class="variant"><input type="radio" name="z13" value="1" required> Часто</label>
+							<label class="variant"><input type="radio" name="z13" value="1"> Часто</label>
 							<label class="variant"><input type="radio" name="z13" value="2"> Иногда</label>
 							<label class="variant"><input type="radio" name="z13" value="1"> Никогда</label>
 						</div>
@@ -219,8 +219,8 @@
 						<div class="question_field">
 							<p class="designation"><b id="d20">Если в ресторане мне подали плохо приготовленную пищу или не то, что я заказал, я попрошу официанта исправить положение.</b></p>
 							<label class="variant"><input type="radio" name="z20" id="z20" value="4" required> Всегда</label>
-							<label class="variant"><input type="radio" name="z20" value="1" required> Часто</label>
-							<label class="variant"><input type="radio" name="z20" value="4" required> Нет</label>
+							<label class="variant"><input type="radio" name="z20" value="1"> Часто</label>
+							<label class="variant"><input type="radio" name="z20" value="4"> Нет</label>
 							<label class="variant"><input type="radio" name="z20" value="1"> Никогда</label>
 						</div>
 						<div class="question_field">
@@ -253,7 +253,7 @@
 				<label class="options_switch" for="options_button"><i></i></label>
 			</div>
 			<div class="col-md-offset-1 col-md-2 text-center no-gutter">
-					<a href="results.html" class="next_button" id="method_submit" onclick="localStorage.setItem('mval', 4); get_data();">Продолжить</a>
+					<a href="results.html" class="next_button" id="method_submit" onclick="get_data();">Продолжить</a>
 			</div>
 			<div class="col-md-offset-1 col-md-3 text-center no-gutter">
 				<span class="switch_name">Секундомер</span>
