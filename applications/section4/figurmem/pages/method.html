@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html onselectstart="return false;" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Сбор данных</title>
+	<link rel="stylesheet" href="../css/bootstrap.css" media="all">
+	<link rel="stylesheet" href="../css/page.css" media="all">
+	<link rel="stylesheet" href="../css/method.css" media="all">
+	<link rel="stylesheet" href="../css/slider.css" media="all">
+	<link rel="stylesheet" href="../css/stopwatch.css" media="all">
+	<link rel="stylesheet" href="../css/options.css" media="all">
+	<link rel="stylesheet" href="../css/imageselect.css" media="all">
+	<script src="../js/jquery-3.js"></script>
+	<script src="../js/jquery-1.js"></script>
+	<script src="../js/bootstrap.js"></script>
+	<script src="../js/tip.js"></script>
+	<script src="../js/zoom.js"></script>
+	<script src="../js/slider.js"></script>
+	<script src="../js/themes.js"></script>
+	<script src="../js/imageselect.js"></script>
+	<script src="../js/jquery.runner.js"></script>
+	<script src="../js/method/script.js"></script>
+	<script src="../js/method/checkAll.js"></script>
+	<script src="../js/method/checkRecords.js"></script>
+	<script src="../js/method/writeOn.js"></script>
+	<script src="../js/method/progressBar.js"></script>
+	<script src="../js/restoreValues.js"></script>
+	<script src="../js/hotkeys.js"></script>
+	<script src="../js/keys.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="header text-center">
+			<h1 class="text-uppercase">Гуманитарный университет</h1>
+			<h2>Определение типа суточного биоритма по методике С. И. Степановой</h2>
+		</div>
+		<div class="content col-md-12 text-center no-gutter">
+			<div class="main_box">
+				<div class="tabs">
+					<div class="tab">
+						<div class="first_tab">
+							<div class="question_field">
+								<p class="designation">Дата обследования:</p>
+								<input type="date" onclick="valide();" class="data_input_field" id="date" required>
+							</div>
+							<div class="question_field">
+								<p class="designation">Факультет:</p>
+								<select class="switch_fac" id="fac" required>
+									<option class="fac_option" selected disabled>Выберите факультет</option>
+									<option class="fac_option" value="Факультет социальной психологии">Факультет социальной психологии</option>
+									<option class="fac_option" value="Факультет бизнеса и управления">Факультет бизнеса и управления</option>
+									<option class="fac_option" value="Факультет современного танца">Факультет современного танца</option>
+									<option class="fac_option" value="Факультет конструирования и моделирования одежды">Факультет к. и моделирования одежды</option>
+									<option class="fac_option" value="Факультет компьютерных технологий">Факультет компьютерных технологий</option>
+									<option class="fac_option" value="Факультет телерадиожурналистики">Факультет телерадиожурналистики</option>
+									<option class="fac_option" value="Факультет юридический">Факультет юридический</option>
+									<option class="fac_option" value="-">Нет</option>
+								</select>
+							</div>
+							<div class="question_field">
+								<p class="designation">Ваш пол:</p>
+								<label class="variant"><input type="radio" onclick="valide();" name="gender" id="gender" value="Мужской" required> Мужской </label>
+								<label class="variant"><input type="radio" onclick="valide();" name="gender" value="Женский"> Женский </label>
+							</div>
+						</div>
+					</div>
+					<div class="tab">
+						<div class="question_field">
+							<p class="designation">Ваша фамилия:</p>
+							<input type="text" onkeydown="valide();" class="data_input_field" id="sname" required>
+						</div>
+						<div class="question_field">
+							<p class="designation">Ваше имя:</p>
+							<input type="text" onkeydown="valide();" class="data_input_field" id="fname" required>
+						</div>
+						<div class="question_field">
+							<p class="designation">Ваше отчество:</p>
+							<input type="text" onkeydown="valide();" class="data_input_field" id="mname" required>
+						</div>
+					</div>		
+					<div class="tab" align="center" style="padding-top: 30px;">
+						<h2 class="s1">Для начала показа таблицы нажмите на кнопку "Старт"</h2>
+						<p class="designation s1" style="padding: 0 90px 20px;">Обратите внимание, что таблица будет показана на 20 секунд. Программа сообщит вам об истечении времени заполнения за 3 секунды до смены таблицы посредством подсветки (пример сигнала изображен на кнопке "СТАРТ")</p>
+						<button id="btnstart" class="btn btn-primary btn-lg blink s1">СТАРТ</button>
+						<input type="text" id="timer" name="timer" value="" readyonly="true"/>
+						<table id="table1" class="shulte table table-bordered table-hover text-center">
+							<tr>
+								<td id="tbl1" align="center"><img src="../img/7.png" class="img-responsive"></td>
+								<td id="tbl2" align="center"><img src="../img/5.png" class="img-responsive"></td>
+								<td id="tbl3" align="center"><img src="../img/3.png" class="img-responsive"></td>
+								<td id="tbl4" align="center"><img src="../img/9.png" class="img-responsive"></td>
+							</tr>
+							<tr>
+								<td id="tbl5" align="center"><img src="../img/2.png" class="img-responsive"></td>
+								<td id="tbl6" align="center"><img src="../img/6.png" class="img-responsive"></td>
+								<td id="tbl7" align="center"><img src="../img/1.png" class="img-responsive"></td>
+								<td id="tbl8" align="center"><img src="../img/8.png" class="img-responsive"></td>
+							</tr>
+							<tr>
+								<td id="tbl9" align="center"><img src="../img/4.png" class="img-responsive"></td>
+								<td id="tbl10" align="center"><img src="../img/16.png" class="img-responsive"></td>
+								<td id="tbl11" align="center"><img src="../img/11.png" class="img-responsive"></td>
+								<td id="tbl12" align="center"><img src="../img/15.png" class="img-responsive"></td>
+							</tr>
+							<tr>
+								<td id="tbl13" align="center"><img src="../img/13.png" class="img-responsive"></td>
+								<td id="tbl14" align="center"><img src="../img/14.png" class="img-responsive"></td>
+								<td id="tbl15" align="center"><img src="../img/12.png" class="img-responsive"></td>
+								<td id="tbl16" align="center"><img src="../img/10.png" class="img-responsive"></td>
+							</tr>
+						</table>
+						<table id="table1c" class="shulte table table-bordered table-hover text-center">
+							<col width="175" valign="middle">
+							<col width="175" valign="middle">
+							<col width="175" valign="middle">
+							<col width="175" valign="middle">
+							<tr>
+								<td id="tbl1c" align="center">
+									<select class="imgs" id="u1" name="img1" required>
+										<option class="imgop" selected disabled>../img/default.png</option>
+										<option class="imgop" value="1">../img/1.png</option>
+										<option class="imgop" value="2">../img/2.png</option>
+										<option class="imgop" value="3">../img/3.png</option>
+										<option class="imgop" value="4">../img/4.png</option>
+										<option class="imgop" value="5">../img/5.png</option>
+										<option class="imgop" value="6">../img/6.png</option>
+										<option class="imgop" value="7">../img/7.png</option>
+										<option class="imgop" value="8">../img/8.png</option>
+										<option class="imgop" value="9">../img/9.png</option>
+										<option class="imgop" value="10">../img/10.png</option>
+										<option class="imgop" value="11">../img/11.png</option>
+										<option class="imgop" value="12">../img/12.png</option>
+										<option class="imgop" value="13">../img/13.png</option>
+										<option class="imgop" value="14">../img/14.png</option>
+										<option class="imgop" value="15">../img/15.png</option>
+										<option class="imgop" value="16">../img/16.png</option>
+									</select>
+								</td>
+								<td id="tbl2c" align="center">
+									<select class="imgs" id="u2" name="img2" required>
+										<option class="imgop" selected disabled>../img/default.png</option>
+										<option class="imgop" value="1">../img/1.png</option>
+										<option class="imgop" value="2">../img/2.png</option>
+										<option class="imgop" value="3">../img/3.png</option>
+										<option class="imgop" value="4">../img/4.png</option>
+										<option class="imgop" value="5">../img/5.png</option>
+										<option class="imgop" value="6">../img/6.png</option>
+										<option class="imgop" value="7">../img/7.png</option>
+										<option class="imgop" value="8">../img/8.png</option>
+										<option class="imgop" value="9">../img/9.png</option>
+										<option class="imgop" value="10">../img/10.png</option>
+										<option class="imgop" value="11">../img/11.png</option>
+										<option class="imgop" value="12">../img/12.png</option>
+										<option class="imgop" value="13">../img/13.png</option>
+										<option class="imgop" value="14">../img/14.png</option>
+										<option class="imgop" value="15">../img/15.png</option>
+										<option class="imgop" value="16">../img/16.png</option>
+									</select>
+								</td>
+								<td id="tbl3c" align="center">
+									<select class="imgs" id="u3" name="img3" required>
+										<option class="imgop" selected disabled>../img/default.png</option>
+										<option class="imgop" value="1">../img/1.png</option>
+										<option class="imgop" value="2">../img/2.png</option>
+										<option class="imgop" value="3">../img/3.png</option>
+										<option class="imgop" value="4">../img/4.png</option>
+										<option class="imgop" value="5">../img/5.png</option>
+										<option class="imgop" value="6">../img/6.png</option>
+										<option class="imgop" value="7">../img/7.png</option>
+										<option class="imgop" value="8">../img/8.png</option>
+										<option class="imgop" value="9">../img/9.png</option>
+										<option class="imgop" value="10">../img/10.png</option>
+										<option class="imgop" value="11">../img/11.png</option>
+										<option class="imgop" value="12">../img/12.png</option>
+										<option class="imgop" value="13">../img/13.png</option>
+										<option class="imgop" value="14">../img/14.png</option>
+										<option class="imgop" value="15">../img/15.png</option>
+										<option class="imgop" value="16">../img/16.png</option>
+									</select>
+								</td>
+								<td id="tbl4c" align="center">
+									<select class="imgs" id="u4" name="img4" required>
+										<option class="imgop" selected disabled>../img/default.png</option>
+										<option class="imgop" value="1">../img/1.png</option>
+										<option class="imgop" value="2">../img/2.png</option>
+										<option class="imgop" value="3">../img/3.png</option>
+										<option class="imgop" value="4">../img/4.png</option>
+										<option class="imgop" value="5">../img/5.png</option>
+										<option class="imgop" value="6">../img/6.png</option>
+										<option class="imgop" value="7">../img/7.png</option>
+										<option class="imgop" value="8">../img/8.png</option>
+										<option class="imgop" value="9">../img/9.png</option>
+										<option class="imgop" value="10">../img/10.png</option>
+										<option class="imgop" value="11">../img/11.png</option>
+										<option class="imgop" value="12">../img/12.png</option>
+										<option class="imgop" value="13">../img/13.png</option>
+										<option class="imgop" value="14">../img/14.png</option>
+										<option class="imgop" value="15">../img/15.png</option>
+										<option class="imgop" value="16">../img/16.png</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td id="tbl5c" align="center">
+									<select class="imgs" id="u5" name="img5" required>
+										<option class="imgop" selected disabled>../img/default.png</option>
+										<option class="imgop" value="1">../img/1.png</option>
+										<option class="imgop" value="2">../img/2.png</option>
+										<option class="imgop" value="3">../img/3.png</option>
+										<option class="imgop" value="4">../img/4.png</option>
+										<option class="imgop" value="5">../img/5.png</option>
+										<option class="imgop" value="6">../img/6.png</option>
+										<option class="imgop" value="7">../img/7.png</option>
+										<option class="imgop" value="8">../img/8.png</option>
+										<option class="imgop" value="9">../img/9.png</option>
+										<option class="imgop" value="10">../img/10.png</option>
+										<option class="imgop" value="11">../img/11.png</option>
+										<option class="imgop" value="12">../img/12.png</option>
+										<option class="imgop" value="13">../img/13.png</option>
+										<option class="imgop" value="14">../img/14.png</option>
+										<option class="imgop" value="15">../img/15.png</option>
+										<option class="imgop" value="16">../img/16.png</option>
+									</select>
+								</td>
+								<td id="tbl6c" align="center">
+									<select class="imgs" id="u6" name="img6" required>
+										<option class="imgop" selected disabled>../img/default.png</option>
+										<option class="imgop" value="1">../img/1.png</option>
+										<option class="imgop" value="2">../img/2.png</option>
+										<option class="imgop" value="3">../img/3.png</option>
+										<option class="imgop" value="4">../img/4.png</option>
+										<option class="imgop" value="5">../img/5.png</option>
+										<option class="imgop" value="6">../img/6.png</option>
+										<option class="imgop" value="7">../img/7.png</option>
+										<option class="imgop" value="8">../img/8.png</option>
+										<option class="imgop" value="9">../img/9.png</option>
+										<option class="imgop" value="10">../img/10.png</option>
+										<option class="imgop" value="11">../img/11.png</option>
+										<option class="imgop" value="12">../img/12.png</option>
+										<option class="imgop" value="13">../img/13.png</option>
+										<option class="imgop" value="14">../img/14.png</option>
+										<option class="imgop" value="15">../img/15.png</option>
+										<option class="imgop" value="16">../img/16.png</option>
+									</select>
+								</td>
+								<td id="tbl7c" align="center">
+									<select class="imgs" id="u7" name="img7" required>
+										<option class="imgop" selected disabled>../img/default.png</option>
+										<option class="imgop" value="1">../img/1.png</option>
+										<option class="imgop" value="2">../img/2.png</option>
+										<option class="imgop" value="3">../img/3.png</option>
+										<option class="imgop" value="4">../img/4.png</option>
+										<option class="imgop" value="5">../img/5.png</option>
+										<option class="imgop" value="6">../img/6.png</option>
+										<option class="imgop" value="7">../img/7.png</option>
+										<option class="imgop" value="8">../img/8.png</option>
+										<option class="imgop" value="9">../img/9.png</option>
+										<option class="imgop" value="10">../img/10.png</option>
+										<option class="imgop" value="11">../img/11.png</option>
+										<option class="imgop" value="12">../img/12.png</option>
+										<option class="imgop" value="13">../img/13.png</option>
+										<option class="imgop" value="14">../img/14.png</option>
+										<option class="imgop" value="15">../img/15.png</option>
+										<option class="imgop" value="16">../img/16.png</option>
+									</select>
+								</td>
+								<td id="tbl8c" align="center">
+									<select class="imgs" id="u8" name="img8" required>
+										<option class="imgop" selected disabled>../img/default.png</option>
+										<option class="imgop" value="1">../img/1.png</option>
+										<option class="imgop" value="2">../img/2.png</option>
+										<option class="imgop" value="3">../img/3.png</option>
+										<option class="imgop" value="4">../img/4.png</option>
+										<option class="imgop" value="5">../img/5.png</option>
+										<option class="imgop" value="6">../img/6.png</option>
+										<option class="imgop" value="7">../img/7.png</option>
+										<option class="imgop" value="8">../img/8.png</option>
+										<option class="imgop" value="9">../img/9.png</option>
+										<option class="imgop" value="10">../img/10.png</option>
+										<option class="imgop" value="11">../img/11.png</option>
+										<option class="imgop" value="12">../img/12.png</option>
+										<option class="imgop" value="13">../img/13.png</option>
+										<option class="imgop" value="14">../img/14.png</option>
+										<option class="imgop" value="15">../img/15.png</option>
+										<option class="imgop" value="16">../img/16.png</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td id="tbl9c" align="center">
+									<select class="imgs" id="u9" name="img9" required>
+										<option class="imgop" selected disabled>../img/default.png</option>
+										<option class="imgop" value="1">../img/1.png</option>
+										<option class="imgop" value="2">../img/2.png</option>
+										<option class="imgop" value="3">../img/3.png</option>
+										<option class="imgop" value="4">../img/4.png</option>
+										<option class="imgop" value="5">../img/5.png</option>
+										<option class="imgop" value="6">../img/6.png</option>
+										<option class="imgop" value="7">../img/7.png</option>
+										<option class="imgop" value="8">../img/8.png</option>
+										<option class="imgop" value="9">../img/9.png</option>
+										<option class="imgop" value="10">../img/10.png</option>
+										<option class="imgop" value="11">../img/11.png</option>
+										<option class="imgop" value="12">../img/12.png</option>
+										<option class="imgop" value="13">../img/13.png</option>
+										<option class="imgop" value="14">../img/14.png</option>
+										<option class="imgop" value="15">../img/15.png</option>
+										<option class="imgop" value="16">../img/16.png</option>
+									</select>
+								</td>
+								<td id="tbl10c" align="center">
+									<select class="imgs" id="u10" name="img10" required>
+										<option class="imgop" selected disabled>../img/default.png</option>
+										<option class="imgop" value="1">../img/1.png</option>
+										<option class="imgop" value="2">../img/2.png</option>
+										<option class="imgop" value="3">../img/3.png</option>
+										<option class="imgop" value="4">../img/4.png</option>
+										<option class="imgop" value="5">../img/5.png</option>
+										<option class="imgop" value="6">../img/6.png</option>
+										<option class="imgop" value="7">../img/7.png</option>
+										<option class="imgop" value="8">../img/8.png</option>
+										<option class="imgop" value="9">../img/9.png</option>
+										<option class="imgop" value="10">../img/10.png</option>
+										<option class="imgop" value="11">../img/11.png</option>
+										<option class="imgop" value="12">../img/12.png</option>
+										<option class="imgop" value="13">../img/13.png</option>
+										<option class="imgop" value="14">../img/14.png</option>
+										<option class="imgop" value="15">../img/15.png</option>
+										<option class="imgop" value="16">../img/16.png</option>
+									</select>
+								</td>
+								<td id="tbl11c" align="center">
+									<select class="imgs" id="u11" name="img11" required>
+										<option class="imgop" selected disabled>../img/default.png</option>
+										<option class="imgop" value="1">../img/1.png</option>
+										<option class="imgop" value="2">../img/2.png</option>
+										<option class="imgop" value="3">../img/3.png</option>
+										<option class="imgop" value="4">../img/4.png</option>
+										<option class="imgop" value="5">../img/5.png</option>
+										<option class="imgop" value="6">../img/6.png</option>
+										<option class="imgop" value="7">../img/7.png</option>
+										<option class="imgop" value="8">../img/8.png</option>
+										<option class="imgop" value="9">../img/9.png</option>
+										<option class="imgop" value="10">../img/10.png</option>
+										<option class="imgop" value="11">../img/11.png</option>
+										<option class="imgop" value="12">../img/12.png</option>
+										<option class="imgop" value="13">../img/13.png</option>
+										<option class="imgop" value="14">../img/14.png</option>
+										<option class="imgop" value="15">../img/15.png</option>
+										<option class="imgop" value="16">../img/16.png</option>
+									</select>
+								</td>
+								<td id="tbl12c" align="center">
+									<select class="imgs" id="u12" name="img12" required>
+										<option class="imgop" selected disabled>../img/default.png</option>
+										<option class="imgop" value="1">../img/1.png</option>
+										<option class="imgop" value="2">../img/2.png</option>
+										<option class="imgop" value="3">../img/3.png</option>
+										<option class="imgop" value="4">../img/4.png</option>
+										<option class="imgop" value="5">../img/5.png</option>
+										<option class="imgop" value="6">../img/6.png</option>
+										<option class="imgop" value="7">../img/7.png</option>
+										<option class="imgop" value="8">../img/8.png</option>
+										<option class="imgop" value="9">../img/9.png</option>
+										<option class="imgop" value="10">../img/10.png</option>
+										<option class="imgop" value="11">../img/11.png</option>
+										<option class="imgop" value="12">../img/12.png</option>
+										<option class="imgop" value="13">../img/13.png</option>
+										<option class="imgop" value="14">../img/14.png</option>
+										<option class="imgop" value="15">../img/15.png</option>
+										<option class="imgop" value="16">../img/16.png</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td id="tbl9c" align="center">
+									<select class="imgs" id="u13" name="img13" required>
+										<option class="imgop" selected disabled>../img/default.png</option>
+										<option class="imgop" value="1">../img/1.png</option>
+										<option class="imgop" value="2">../img/2.png</option>
+										<option class="imgop" value="3">../img/3.png</option>
+										<option class="imgop" value="4">../img/4.png</option>
+										<option class="imgop" value="5">../img/5.png</option>
+										<option class="imgop" value="6">../img/6.png</option>
+										<option class="imgop" value="7">../img/7.png</option>
+										<option class="imgop" value="8">../img/8.png</option>
+										<option class="imgop" value="9">../img/9.png</option>
+										<option class="imgop" value="10">../img/10.png</option>
+										<option class="imgop" value="11">../img/11.png</option>
+										<option class="imgop" value="12">../img/12.png</option>
+										<option class="imgop" value="13">../img/13.png</option>
+										<option class="imgop" value="14">../img/14.png</option>
+										<option class="imgop" value="15">../img/15.png</option>
+										<option class="imgop" value="16">../img/16.png</option>
+									</select>
+								</td>
+								<td id="tbl10c" align="center">
+									<select class="imgs" id="u14" name="img14" required>
+										<option class="imgop" selected disabled>../img/default.png</option>
+										<option class="imgop" value="1">../img/1.png</option>
+										<option class="imgop" value="2">../img/2.png</option>
+										<option class="imgop" value="3">../img/3.png</option>
+										<option class="imgop" value="4">../img/4.png</option>
+										<option class="imgop" value="5">../img/5.png</option>
+										<option class="imgop" value="6">../img/6.png</option>
+										<option class="imgop" value="7">../img/7.png</option>
+										<option class="imgop" value="8">../img/8.png</option>
+										<option class="imgop" value="9">../img/9.png</option>
+										<option class="imgop" value="10">../img/10.png</option>
+										<option class="imgop" value="11">../img/11.png</option>
+										<option class="imgop" value="12">../img/12.png</option>
+										<option class="imgop" value="13">../img/13.png</option>
+										<option class="imgop" value="14">../img/14.png</option>
+										<option class="imgop" value="15">../img/15.png</option>
+										<option class="imgop" value="16">../img/16.png</option>
+									</select>
+								</td>
+								<td id="tbl11c" align="center">
+									<select class="imgs" id="u15" name="img15" required>
+										<option class="imgop" selected disabled>../img/default.png</option>
+										<option class="imgop" value="1">../img/1.png</option>
+										<option class="imgop" value="2">../img/2.png</option>
+										<option class="imgop" value="3">../img/3.png</option>
+										<option class="imgop" value="4">../img/4.png</option>
+										<option class="imgop" value="5">../img/5.png</option>
+										<option class="imgop" value="6">../img/6.png</option>
+										<option class="imgop" value="7">../img/7.png</option>
+										<option class="imgop" value="8">../img/8.png</option>
+										<option class="imgop" value="9">../img/9.png</option>
+										<option class="imgop" value="10">../img/10.png</option>
+										<option class="imgop" value="11">../img/11.png</option>
+										<option class="imgop" value="12">../img/12.png</option>
+										<option class="imgop" value="13">../img/13.png</option>
+										<option class="imgop" value="14">../img/14.png</option>
+										<option class="imgop" value="15">../img/15.png</option>
+										<option class="imgop" value="16">../img/16.png</option>
+									</select>
+								</td>
+								<td id="tbl12c" align="center">
+									<select class="imgs" id="u16" name="img16" required>
+										<option class="imgop" selected disabled>../img/default.png</option>
+										<option class="imgop" value="1">../img/1.png</option>
+										<option class="imgop" value="2">../img/2.png</option>
+										<option class="imgop" value="3">../img/3.png</option>
+										<option class="imgop" value="4">../img/4.png</option>
+										<option class="imgop" value="5">../img/5.png</option>
+										<option class="imgop" value="6">../img/6.png</option>
+										<option class="imgop" value="7">../img/7.png</option>
+										<option class="imgop" value="8">../img/8.png</option>
+										<option class="imgop" value="9">../img/9.png</option>
+										<option class="imgop" value="10">../img/10.png</option>
+										<option class="imgop" value="11">../img/11.png</option>
+										<option class="imgop" value="12">../img/12.png</option>
+										<option class="imgop" value="13">../img/13.png</option>
+										<option class="imgop" value="14">../img/14.png</option>
+										<option class="imgop" value="15">../img/15.png</option>
+										<option class="imgop" value="16">../img/16.png</option>
+									</select>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-12 progress progress-striped active text-center no-gutter">
+			<div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+				<span class="progress-message"></span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-offset-1 col-md-3 text-center no-gutter">
+				<span class="switch_name">Настройки</span>
+				<input type="checkbox" id="options_button" />
+				<label class="options_switch" for="options_button"><i></i></label>
+			</div>
+			<div class="col-md-offset-1 col-md-2 text-center no-gutter">
+					<a href="results.html" class="next_button" id="method_submit" onclick="get_data();">Продолжить</a>
+			</div>
+			<div class="col-md-offset-1 col-md-3 text-center no-gutter">
+				<span class="switch_name">Секундомер</span>
+				<input type="checkbox" id="stopwatch_button" />
+				<label class="stopwatch_switch" for="stopwatch_button"><i></i></label>
+			</div>
+		</div>
+		<div class="options_container col-md-offset-1 col-md-3">
+			<table class="options_table">
+				<tbody>
+					<tr>
+						<td>
+							<span class="table_name">Тема</span>
+							<select class="switch_theme">
+								<option class="theme_option" selected disabled>Выберите</option>
+								<option class="theme_option" value="white">Белая</option>
+								<option class="theme_option" value="grey">Серая</option>
+								<option class="theme_option" value="blue">Синяя</option>
+								<option class="theme_option" value="black">Черная</option>
+								<option class="theme_option" value="yellow">Желтая</option>
+								<option class="theme_option" value="lightblue">Голубая</option>
+								<option class="theme_option" value="green">Зеленая</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span class="table_name">Шрифт</span><br>
+							<button style="width: 48%; outline: none;" type="button" class="btn btn-default btn-md plus" onclick="increase();"><span class="glyphicon glyphicon-plus-sign"></span></button>
+							<button style="width: 48%; outline: none;" type="button" class="btn btn-default btn-md minus" onclick="decrease();"><span class="glyphicon glyphicon-minus-sign"></span></button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="stopwatch_container col-md-offset-4 col-md-4">
+			<input id="start" name="controls" type="radio" />
+			<input id="stop" name="controls" type="radio" />
+			<input id="reset" name="controls" type="radio" />
+			<div class="timer">
+				<div class="cell">
+					<div class="numbers tenminute movesix">0 1 2 3 4 5 6</div>
+				</div>
+				<div class="cell">
+					<div class="numbers minute moveten">0 1 2 3 4 5 6 7 8 9</div>
+				</div>
+				<div class="cell divider">
+					<div class="numbers">:</div>
+				</div>
+				<div class="cell">
+					<div class="numbers tensecond movesix">0 1 2 3 4 5 6</div>
+				</div>
+				<div class="cell">
+					<div class="numbers second moveten">0 1 2 3 4 5 6 7 8 9</div>
+				</div>
+				<div class="cell divider">
+					<div class="numbers">:</div>
+				</div>
+				<div class="cell">
+					<div class="numbers milisecond moveten">0 1 2 3 4 5 6 7 8 9</div>
+				</div>
+				<div class="cell">
+					<div class="numbers tenmilisecond moveten">0 1 2 3 4 5 6 7 8 9</div>
+				</div>
+			</div>
+			<div id="timer_controls">
+				<label for="start">Старт</label>
+				<label for="stop">Стоп</label>
+				<label for="reset">Сброс</label>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
