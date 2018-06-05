@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html onselectstart="return false;" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Сбор данных</title>
+	<link rel="stylesheet" href="../css/bootstrap.css" media="all">
+	<link rel="stylesheet" href="../css/page.css" media="all">
+	<link rel="stylesheet" href="../css/method.css" media="all">
+	<link rel="stylesheet" href="../css/slider.css" media="all">
+	<link rel="stylesheet" href="../css/stopwatch.css" media="all">
+	<link rel="stylesheet" href="../css/options.css" media="all">
+	<script src="../js/jquery-3.js"></script>
+	<script src="../js/jquery-1.js"></script>
+	<script src="../js/bootstrap.js"></script>
+	<script src="../js/script.js"></script>
+	<script src="../js/zoom.js"></script>
+	<script src="../js/slider.js"></script>
+	<script src="../js/themes.js"></script>
+	<script src="../js/hotkeys.js"></script>
+	<script src="../js/keys.js"></script>
+	<script src="../js/restoreValues.js"></script>
+	<script src="../js/method/checkAll.js"></script>
+	<script src="../js/method/checkRecords.js"></script>
+	<script src="../js/method/writeOn.js"></script>
+	<script src="../js/method/progressBar.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="header text-center">
+			<h1 class="text-uppercase">Гуманитарный университет</h1>
+			<h2>Определение вероятной продолжительнности жизни по методике Аллена-Линди</h2>
+		</div>
+		<div class="content col-md-12 text-center no-gutter">
+			<div class="main_box">
+				<div class="tabs">
+					<div class="tab">
+						<div class="first_tab">
+							<div class="question_field">
+								<p class="designation">Дата обследования:</p>
+								<input type="date" onclick="valide();" class="data_input_field" id="date" required>
+							</div>
+							<div class="question_field">
+								<p class="designation">Факультет:</p>
+								<select class="switch_fac" id="fac" required>
+									<option class="fac_option" selected disabled>Выберите факультет</option>
+									<option class="fac_option" value="Факультет социальной психологии">Факультет социальной психологии</option>
+									<option class="fac_option" value="Факультет бизнеса и управления">Факультет бизнеса и управления</option>
+									<option class="fac_option" value="Факультет современного танца">Факультет современного танца</option>
+									<option class="fac_option" value="Факультет конструирования и моделирования одежды">Факультет к. и моделирования одежды</option>
+									<option class="fac_option" value="Факультет компьютерных технологий">Факультет компьютерных технологий</option>
+									<option class="fac_option" value="Факультет телерадиожурналистики">Факультет телерадиожурналистики</option>
+									<option class="fac_option" value="Факультет юридический">Факультет юридический</option>
+									<option class="fac_option" value="-">Нет</option>
+								</select>
+							</div>
+							<div class="question_field">
+								<p class="designation">Ваш пол:</p>
+								<label class="variant"><input type="radio" onclick="valide();" name="gender" id="gender" value="Мужской" required> Мужской </label>
+								<label class="variant"><input type="radio" onclick="valide();" name="gender" value="Женский"> Женский </label>
+							</div>
+						</div>
+					</div>
+					<div class="tab">
+						<div class="question_field">
+							<p class="designation">Ваша фамилия:</p>
+							<input type="text" onkeydown="valide();" class="data_input_field" id="sname" required>
+						</div>
+						<div class="question_field">
+							<p class="designation">Ваше имя:</p>
+							<input type="text" onkeydown="valide();" class="data_input_field" id="fname" required>
+						</div>
+						<div class="question_field">
+							<p class="designation">Ваше отчество:</p>
+							<input type="text" onkeydown="valide();" class="data_input_field" id="mname" required>
+						</div>
+						<div class="question_field">
+							<p class="designation">Ваш возраст: <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="right" title="Количество полных прожитых лет."></p>
+							<input type="text" onkeydown="valide();" placeholder="лет" class="data_input_field" id="age" required>
+						</div>
+						<div class="question_field">
+							<p class="designation">Ваш вес: <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="right" title="Измеряется в легкой одежде, без обуви. Регистрируется с помощью медицинских весов."></p>
+							<input type="text" onkeydown="valide();" placeholder="кг" class="data_input_field" id="weight" required>
+						</div>
+						<div class="question_field">
+							<p class="designation">Ваш рост: <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="right" title="Измеряется без обуви. Регистрируется с помощью медицинского ростометра."></p>
+							<input type="text" onkeydown="valide();" placeholder="см" class="data_input_field" id="height" required>
+						</div>
+					</div>		
+					<div class="tab">
+						<div class="question_field">
+							<p class="designation"><b id="d1">Все родители ваших родителей дожили до 80 лет?</b></p>
+							<label class="variant"><input type="radio" name="c1" id="c1" value="6" required> Да</label>
+							<label class="variant"><input type="radio" name="c1" value="0"> Нет</label>
+						</div>
+						<div class="question_field">
+							<p class="designation"><b id="d2">Кто-то из ваших родителей скончался от инфаркта или инсульта в возрасте до 50 лет?</b></p>
+							<label class="variant"><input type="radio" name="c2" id="c2" value="-4" required> Да</label>
+							<label class="variant"><input type="radio" name="c2" value="0"> Нет</label>
+						</div>
+						<div class="question_field">
+							<p class="designation"><b id="d3">Кто-то из родителей, братьев или сестер в возрасте до 50 лет страдал или страдает от болезней сердца, рака или диабета?</b></p>
+							<label class="variant"><input type="radio" name="c3" id="c3" value="-3" required> Да</label>
+							<label class="variant"><input type="radio" name="c3" value="0"> Нет</label>
+						</div>
+						<div class="question_field">
+							<p class="designation"><b id="d4">Вы живете в городе с населением свыше 2 млн. человек?</b></p>
+							<label class="variant"><input type="radio" name="c4" id="c4" value="-2" required> Да</label>
+							<label class="variant"><input type="radio" name="c4" value="0"> Нет</label>
+						</div>
+						<div class="question_field">
+							<p class="designation"><b id="d5">Вы живете в населенном пункте с населением менее 10 тыс. жителей?</b></p>
+							<label class="variant"><input type="radio" name="c5" id="c5" value="2" required> Да</label>
+							<label class="variant"><input type="radio" name="c5" value="0"> Нет</label>
+						</div>
+					</div>
+					<div class="tab">
+						<div class="question_field">
+							<p class="designation"><b id="d6">У вас высшее образование?</b></p>
+							<label class="variant"><input type="radio" name="c6" id="c6" value="1" required> Да</label>
+							<label class="variant"><input type="radio" name="c6" value="0"> Нет</label>
+						</div>
+						<div class="question_field">
+							<p class="designation"><b id="d7">У вас ученая степень?</b></p>
+							<label class="variant"><input type="radio" name="c7" id="c7" value="2" required> Да</label>
+							<label class="variant"><input type="radio" name="c7" value="0"> Нет</label>
+						</div>
+						<div class="question_field">
+							<p class="designation"><b id="d8">Вы в пенсионном возрасте, но продолжаете работать?</b></p>
+							<label class="variant"><input type="radio" name="c8" id="c8" value="3" required> Да</label>
+							<label class="variant"><input type="radio" name="c8" value="0"> Нет</label>
+						</div>
+						<div class="question_field">
+							<p class="designation"><b id="d9">Вы женаты (замужем)?</b></p>
+							<label class="variant"><input type="radio" name="c9" id="c9" value="5" required> Да</label>
+							<label class="variant"><input type="radio" name="c9" value="0"> Нет</label>
+						</div>
+						<div class="question_field">
+							<p class="designation"><b id="d10">Вы холосты?</b></p>
+							<label class="variant"><input type="radio" name="c10" id="c10" value="-1" required> Да</label>
+							<label class="variant"><input type="radio" name="c10" value="0"> Нет</label>
+						</div>
+					</div>
+					<div class="tab">
+						<div class="question_field">
+							<p class="designation"><b id="d11">У вас сидячая работа?</b></p>
+							<label class="variant"><input type="radio" name="c11" id="c11" value="-3" required> Да</label>
+							<label class="variant"><input type="radio" name="c11" value="0"> Нет</label>
+						</div>
+						<div class="question_field">
+							<p class="designation"><b id="d12">Ваша работа требует постоянных и значительных физических усилий?</b></p>
+							<label class="variant"><input type="radio" name="c12" id="c12" value="3" required> Да</label>
+							<label class="variant"><input type="radio" name="c12" value="0"> Нет</label>
+						</div>
+						<div class="question_field">
+							<p class="designation"><b id="d13">Вы занимаетесь спортом не менее 30 минут в день (бег, плавание, теннис и т.п.)</b></p>
+							<label class="variant"><input type="radio" name="c13" id="c13" value="4" required> 5 раз в неделю</label>
+							<label class="variant"><input type="radio" name="c13" value="2"> 2-3 раза в неделю</label>
+							<label class="variant"><input type="radio" name="c13" value="0"> Нет</label>
+						</div>
+						<div class="question_field">
+							<p class="designation"><b id="d14">Вы спите больше 10 часов в сутки?</b></p>
+							<label class="variant"><input type="radio" name="c14" id="c14" value="-4" required> Да</label>
+							<label class="variant"><input type="radio" name="c14" value="0"> Нет</label>
+						</div>
+						<div class="question_field">
+							<p class="designation"><b id="d15">Вы легко возбудимы, раздражительны?</b></p>
+							<label class="variant"><input type="radio" name="c15" id="c15" value="-3" required> Да</label>
+							<label class="variant"><input type="radio" name="c15" value="0"> Нет</label>
+						</div>
+					</div>
+					<div class="tab">
+						<div class="question_field">
+							<p class="designation"><b id="d16">Вы спокойны, дружелюбны, веселы?</b></p>
+							<label class="variant"><input type="radio" name="c16" id="c16" value="3" required> Да</label>
+							<label class="variant"><input type="radio" name="c16" value="0"> Нет</label>
+						</div>
+						<div class="question_field">
+							<p class="designation"><b id="d17">Вы считаете себя счастливым человеком?</b></p>
+							<label class="variant"><input type="radio" name="c17" id="c17" value="1" required> Да</label>
+							<label class="variant"><input type="radio" name="c17" value="0"> Нет</label>
+						</div>
+						<div class="question_field">
+							<p class="designation"><b id="d18">Вы считаете себя неудачником?</b></p>
+							<label class="variant"><input type="radio" name="c18" id="c18" value="-2" required> Да</label>
+							<label class="variant"><input type="radio" name="c18" value="0"> Нет</label>
+						</div>
+						<div class="question_field">
+							<p class="designation"><b id="d19">Вы в спешке нарушаете правила уличного движения?</b></p>
+							<label class="variant"><input type="radio" name="c19" id="c19" value="-1" required> Да</label>
+							<label class="variant"><input type="radio" name="c19" value="0"> Нет</label>
+						</div>
+						<div class="question_field">
+							<p class="designation"><b id="d20">Вы выкуриваете в день:</b></p>
+							<label class="variant"><input type="radio" name="c20" id="c20" value="-8" required> 2 пачки</label>
+							<label class="variant"><input type="radio" name="c20" value="-6"> 1.5 пачки</label>
+							<label class="variant"><input type="radio" name="c20" value="-3"> 0.5-1 пачку</label>
+						</div>
+						<div class="question_field">
+							<p class="designation"><b id="d21">Вы выпиваете в день до 50 г алкоголя?</b></p>
+							<label class="variant"><input type="radio" name="c21" id="c21" value="-1" required> Да</label>
+							<label class="variant"><input type="radio" name="c21" value="0"> Нет</label>
+						</div>
+						<div class="question_field">
+							<p class="designation"><b id="d22">Вы раз в год проходите диспансеризацию?</b></p>
+							<label class="variant"><input type="radio" name="c22" id="c22" value="2" required> Да</label>
+							<label class="variant"><input type="radio" name="c22" value="0"> Нет</label>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-12 progress progress-striped active text-center no-gutter">
+			<div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+				<span class="progress-message"></span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-1">
+				<a href='../../../../section1.html' class="home" data-toggle="tooltip" data-placement="top" title="Меню раздела"><span class="glyphicon glyphicon-home"></span></a>
+			</div>
+			<div class="col-md-3 text-center no-gutter">
+				<span class="switch_name">Настройки</span>
+				<input type="checkbox" id="options_button" />
+				<label class="options_switch" for="options_button"><i></i></label>
+			</div>
+			<div class="col-md-offset-1 col-md-2 text-center no-gutter">
+					<a href="results.html" class="next_button" id="method_submit" onclick="get_data();">Продолжить</a>
+			</div>
+			<div class="col-md-offset-1 col-md-3 text-center no-gutter">
+				<span class="switch_name">Секундомер</span>
+				<input type="checkbox" id="stopwatch_button" />
+				<label class="stopwatch_switch" for="stopwatch_button"><i></i></label>
+			</div>
+		</div>
+		<div class="options_container col-md-offset-1 col-md-3">
+			<table class="options_table">
+				<tbody>
+					<tr>
+						<td>
+							<span class="table_name">Тема</span>
+							<select class="switch_theme">
+								<option class="theme_option" selected disabled>Выберите</option>
+								<option class="theme_option" value="white">Белая</option>
+								<option class="theme_option" value="grey">Серая</option>
+								<option class="theme_option" value="blue">Синяя</option>
+								<option class="theme_option" value="black">Черная</option>
+								<option class="theme_option" value="yellow">Желтая</option>
+								<option class="theme_option" value="lightblue">Голубая</option>
+								<option class="theme_option" value="green">Зеленая</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span class="table_name">Шрифт</span><br>
+							<button style="width: 48%; outline: none;" type="button" class="btn btn-default btn-md plus" onclick="increase();"><span class="glyphicon glyphicon-plus-sign"></span></button>
+							<button style="width: 48%; outline: none;" type="button" class="btn btn-default btn-md minus" onclick="decrease();"><span class="glyphicon glyphicon-minus-sign"></span></button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="stopwatch_container col-md-offset-4 col-md-4">
+			<input id="start" name="controls" type="radio" />
+			<input id="stop" name="controls" type="radio" />
+			<input id="reset" name="controls" type="radio" />
+			<div class="timer">
+				<div class="cell">
+					<div class="numbers tenminute movesix">0 1 2 3 4 5 6</div>
+				</div>
+				<div class="cell">
+					<div class="numbers minute moveten">0 1 2 3 4 5 6 7 8 9</div>
+				</div>
+				<div class="cell divider">
+					<div class="numbers">:</div>
+				</div>
+				<div class="cell">
+					<div class="numbers tensecond movesix">0 1 2 3 4 5 6</div>
+				</div>
+				<div class="cell">
+					<div class="numbers second moveten">0 1 2 3 4 5 6 7 8 9</div>
+				</div>
+				<div class="cell divider">
+					<div class="numbers">:</div>
+				</div>
+				<div class="cell">
+					<div class="numbers milisecond moveten">0 1 2 3 4 5 6 7 8 9</div>
+				</div>
+				<div class="cell">
+					<div class="numbers tenmilisecond moveten">0 1 2 3 4 5 6 7 8 9</div>
+				</div>
+			</div>
+			<div id="timer_controls">
+				<label for="start">Старт</label>
+				<label for="stop">Стоп</label>
+				<label for="reset">Сброс</label>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
