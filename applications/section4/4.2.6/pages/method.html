@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html onselectstart="return false;" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Сбор данных</title>
+	<link rel="stylesheet" href="../css/bootstrap.css" media="all">
+	<link rel="stylesheet" href="../css/page.css" media="all">
+	<link rel="stylesheet" href="../css/method.css" media="all">
+	<link rel="stylesheet" href="../css/slider.css" media="all">
+	<link rel="stylesheet" href="../css/stopwatch.css" media="all">
+	<link rel="stylesheet" href="../css/options.css" media="all">
+	<script src="../js/jquery-3.js"></script>
+	<script src="../js/jquery-1.js"></script>
+	<script src="../js/bootstrap.js"></script>
+	<script src="../js/script.js"></script>
+	<script src="../js/zoom.js"></script>
+	<script src="../js/slider.js"></script>
+	<script src="../js/themes.js"></script>
+	<script src="../js/hotkeys.js"></script>
+	<script src="../js/keys.js"></script>
+	<script src="../js/restoreValues.js"></script>
+	<script src="../js/method/checkAll.js"></script>
+	<script src="../js/method/checkRecords.js"></script>
+	<script src="../js/method/writeOn.js"></script>
+	<script src="../js/method/progressBar.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="header text-center">
+			<h1 class="text-uppercase">Гуманитарный университет</h1>
+			<h2>Диагностика уровня эмпатии (В. В. Бойко, 1996)</h2>
+		</div>
+		<div class="content col-md-12 text-center no-gutter">
+			<div class="main_box">
+				<div class="tabs">
+					<div class="tab">
+						<div class="first_tab">
+							<div class="question_field">
+								<p class="designation">Дата обследования:</p>
+								<input type="date" onclick="valide();" class="data_input_field" id="date" required>
+							</div>
+							<div class="question_field">
+								<p class="designation">Факультет:</p>
+								<select class="switch_fac" id="fac" required>
+									<option class="fac_option" selected disabled>Выберите факультет</option>
+									<option class="fac_option" value="Факультет социальной психологии">Факультет социальной психологии</option>
+									<option class="fac_option" value="Факультет бизнеса и управления">Факультет бизнеса и управления</option>
+									<option class="fac_option" value="Факультет современного танца">Факультет современного танца</option>
+									<option class="fac_option" value="Факультет конструирования и моделирования одежды">Факультет к. и моделирования одежды</option>
+									<option class="fac_option" value="Факультет компьютерных технологий">Факультет компьютерных технологий</option>
+									<option class="fac_option" value="Факультет телерадиожурналистики">Факультет телерадиожурналистики</option>
+									<option class="fac_option" value="Факультет юридический">Факультет юридический</option>
+									<option class="fac_option" value="-">Нет</option>
+								</select>
+							</div>
+							<div class="question_field">
+								<p class="designation">Ваш пол:</p>
+								<label class="variant"><input type="radio" onclick="valide();" name="gender" id="gender" value="Мужской" required> Мужской </label>
+								<label class="variant"><input type="radio" onclick="valide();" name="gender" value="Женский"> Женский </label>
+							</div>
+						</div>
+					</div>
+					<div class="tab">
+						<div class="question_field">
+							<p class="designation">Ваша фамилия:</p>
+							<input type="text" onkeydown="valide();" class="data_input_field" id="sname" required>
+						</div>
+						<div class="question_field">
+							<p class="designation">Ваше имя:</p>
+							<input type="text" onkeydown="valide();" class="data_input_field" id="fname" required>
+						</div>
+						<div class="question_field">
+							<p class="designation">Ваше отчество:</p>
+							<input type="text" onkeydown="valide();" class="data_input_field" id="mname" required>
+						</div>
+					</div>		
+					<div class="tab">
+						<div class="question_field">
+							<p class="designation"><b id="d1">У меня есть привычка внимательно изучать лица и поведение людей, чтобы понять их характер, наклонности, способности.</b></p>
+							<label class="variant"><input type="radio" name="o1" id="o1" value="1" required> Да</label>
+							<label class="variant"><input type="radio" name="o1" value="0"> Нет</label>
+						</div>
+						<div class="question_field">
+							<p class="designation"><b id="d2">Если окружающие проявляют признаки нервозности, я обычно остаюсь спокойным.</b></p>
+							<label class="variant"><input type="radio" name="o2" id="o2" value="0" required> Да</label>
+							<label class="variant"><input type="radio" name="o2" value="1"> Нет</label>
+						</div>
+						<div class="question_field">
+							<p class="designation"><b id="d3">Я больше верю доводам своего рассудка, чем интуиции.</b></p>
+							<label class="variant"><input type="radio" name="o3" id="o3" value="0" required> Да</label>
+							<label class="variant"><input type="radio" name="o3" value="1"> Нет</label>
+						</div>
+						<div class="question_field">
+							<p class="designation"><b id="d4">Я считаю вполне уместным для интересоваться домашними проблемами сослуживцев.</b></p>
+							<label class="variant"><input type="radio" name="o4" id="o4" value="1" required> Да</label>
+							<label class="variant"><input type="radio" name="o4" value="0"> Нет</label>
+						</div>
+						<div class="question_field">
+							<p class="designation"><b id="d5">Я могу легко войти в доверие к человеку, если потребуется.</b></p>
+							<label class="variant"><input type="radio" name="o5" id="o5" value="1" required> Да</label>
+							<label class="variant"><input type="radio" name="o5" value="0"> Нет</label>
+						</div>
+					</div>
+					<div class="tab">
+						<div class="question_field">
+							<p class="designation"><b id="d6">Обычно я с первой же встречи угадываю "родственную душу" в новом человеке.</b></p>
+							<label class="variant"><input type="radio" name="o6" id="o6" value="1" required> Да</label>
+							<label class="variant"><input type="radio" name="o6" value="0"> Нет</label>
+						</div>
+						<div class="question_field">
+							<p class="designation"><b id="d7">Я из любопытства обычно завожу разговор о жизни, работе, политике со случайными попутчиками в поезде, самолёте.</b></p>
+							<label class="variant"><input type="radio" name="o7" id="o7" value="1" required> Да</label>
+							<label class="variant"><input type="radio" name="o7" value="0"> Нет</label>
+						</div>
+						<div class="question_field">
+							<p class="designation"><b id="d8">Я теряю душевное равновесие, если окружающие чем-то угнетены.</b></p>
+							<label class="variant"><input type="radio" name="o8" id="o8" value="1" required> Да</label>
+							<label class="variant"><input type="radio" name="o8" value="0"> Нет</label>
+						</div>
+						<div class="question_field">
+							<p class="designation"><b id="d9">Моя интуиция – более надёжное средство понимания окружающих, чем знания или опыт.</b></p>
+							<label class="variant"><input type="radio" name="o9" id="o9" value="1" required> Да</label>
+							<label class="variant"><input type="radio" name="o9" value="0"> Нет</label>
+						</div>
+						<div class="question_field">
+							<p class="designation"><b id="d10">Проявлять любопытство к внутреннему миру другой личности – бестактно.</b></p>
+							<label class="variant"><input type="radio" name="o10" id="o10" value="0" required> Да</label>
+							<label class="variant"><input type="radio" name="o10" value="1"> Нет</label>
+						</div>
+					</div>
+					<div class="tab">
+						<div class="question_field">
+							<p class="designation"><b id="d11">Часто своими словами я обижаю близких мне людей, не замечая того.</b></p>
+							<label class="variant"><input type="radio" name="o11" id="o11" value="0" required> Да</label>
+							<label class="variant"><input type="radio" name="o11" value="1"> Нет</label>
+						</div>
+						<div class="question_field">
+							<p class="designation"><b id="d12">Я легко могу представить себя каким-либо животным, ощутить его повадки и состояния.</b></p>
+							<label class="variant"><input type="radio" name="o12" id="o12" value="1" required> Да</label>
+							<label class="variant"><input type="radio" name="o12" value="0"> Нет</label>
+						</div>
+						<div class="question_field">
+							<p class="designation"><b id="d13">Я редко рассуждаю о причинах поступков людей, которые имеют ко мне непосредственное отношение.</b></p>
+							<label class="variant"><input type="radio" name="o13" id="o13" value="0" required> Да</label>
+							<label class="variant"><input type="radio" name="o13" value="1"> Нет</label>
+						</div>
+						<div class="question_field">
+							<p class="designation"><b id="d14">Я редко принимаю близко к сердцу проблемы своих друзей.</b></p>
+							<label class="variant"><input type="radio" name="o14" id="o14" value="0" required> Да</label>
+							<label class="variant"><input type="radio" name="o14" value="1"> Нет</label>
+						</div>
+						<div class="question_field">
+							<p class="designation"><b id="d15">Обычно за несколько дней я чувствую: что-то должно случиться с близким мне человеком, и ожидания оправдываются.</b></p>
+							<label class="variant"><input type="radio" name="o15" id="o15" value="1" required> Да</label>
+							<label class="variant"><input type="radio" name="o15" value="0"> Нет</label>
+						</div>
+					</div>
+					<div class="tab">
+						<div class="question_field">
+							<p class="designation"><b id="d16">В общении с деловыми партнёрами обычно стараюсь избегать разговоров о личном.</b></p>
+							<label class="variant"><input type="radio" name="o16" id="o16" value="0" required> Да</label>
+							<label class="variant"><input type="radio" name="o16" value="1"> Нет</label>
+						</div>
+						<div class="question_field">
+							<p class="designation"><b id="d17">Иногда близкие упрекают меня в черствости, невнимании к ним.</b></p>
+							<label class="variant"><input type="radio" name="o17" id="o17" value="0" required> Да</label>
+							<label class="variant"><input type="radio" name="o17" value="1"> Нет</label>
+						</div>
+						<div class="question_field">
+							<p class="designation"><b id="d18">Мне легко удаётся, подражая людям, копировать их интонацию, мимику.</b></p>
+							<label class="variant"><input type="radio" name="o18" id="o18" value="1" required> Да</label>
+							<label class="variant"><input type="radio" name="o18" value="0"> Нет</label>
+						</div>
+						<div class="question_field">
+							<p class="designation"><b id="d19">Мой любопытный взгляд часто смущает новых партнёров.</b></p>
+							<label class="variant"><input type="radio" name="o19" id="o19" value="1" required> Да</label>
+							<label class="variant"><input type="radio" name="o19" value="0"> Нет</label>
+						</div>
+						<div class="question_field">
+							<p class="designation"><b id="d20">Чужой смех обычно заражает меня.</b></p>
+							<label class="variant"><input type="radio" name="o20" id="o20" value="1" required> Да</label>
+							<label class="variant"><input type="radio" name="o20" value="0"> Нет</label>
+						</div>
+					</div>
+					<div class="tab">
+						<div class="question_field">
+							<p class="designation"><b id="d21">Часто, действуя наугад, я тем не менее нахожу правильный подход к человеку.</b></p>
+							<label class="variant"><input type="radio" name="o21" id="o21" value="1" required> Да</label>
+							<label class="variant"><input type="radio" name="o21" value="0"> Нет</label>
+						</div>
+						<div class="question_field">
+							<p class="designation"><b id="d22">Плакать от счастья глупо.</b></p>
+							<label class="variant"><input type="radio" name="o22" id="o22" value="0" required> Да</label>
+							<label class="variant"><input type="radio" name="o22" value="1"> Нет</label>
+						</div>
+						<div class="question_field">
+							<p class="designation"><b id="d23">Способен полностью слиться с любимым человеком, как бы растворившись в нём.</b></p>
+							<label class="variant"><input type="radio" name="o23" id="o23" value="0" required> Да</label>
+							<label class="variant"><input type="radio" name="o23" value="1"> Нет</label>
+						</div>
+						<div class="question_field">
+							<p class="designation"><b id="d24">Мне редко встречались люди, которых я понимал бы без лишних слов.</b></p>
+							<label class="variant"><input type="radio" name="o24" id="o24" value="0" required> Да</label>
+							<label class="variant"><input type="radio" name="o24" value="1"> Нет</label>
+						</div>
+						<div class="question_field">
+							<p class="designation"><b id="d25">Я невольно или из любопытства часто подслушиваю разговоры посторонних людей.</b></p>
+							<label class="variant"><input type="radio" name="o25" id="o25" value="1" required> Да</label>
+							<label class="variant"><input type="radio" name="o25" value="0"> Нет</label>
+						</div>
+					</div>
+					<div class="tab">
+						<div class="question_field">
+							<p class="designation"><b id="d26">Я могу оставаться спокойным, даже если все вокруг меня волнуются.</b></p>
+							<label class="variant"><input type="radio" name="o26" id="o26" value="0" required> Да</label>
+							<label class="variant"><input type="radio" name="o26" value="1"> Нет</label>
+						</div>
+						<div class="question_field">
+							<p class="designation"><b id="d27">Мне проще подсознательно почувствовать сущность человека, чем понять, его, "разложив по полочкам".</b></p>
+							<label class="variant"><input type="radio" name="o27" id="o27" value="1" required> Да</label>
+							<label class="variant"><input type="radio" name="o27" value="0"> Нет</label>
+						</div>
+						<div class="question_field">
+							<p class="designation"><b id="d28">Я спокойно отношусь к мелким неприятностям, которые случаются у кого-либо из членов семьи.</b></p>
+							<label class="variant"><input type="radio" name="o28" id="o28" value="0" required> Да</label>
+							<label class="variant"><input type="radio" name="o28" value="1"> Нет</label>
+						</div>
+						<div class="question_field">
+							<p class="designation"><b id="d29">Мне было бы трудно задушевно, доверительно беседовать с настороженным, замкнутым человеком.</b></p>
+							<label class="variant"><input type="radio" name="o29" id="o29" value="0" required> Да</label>
+							<label class="variant"><input type="radio" name="o29" value="1"> Нет</label>
+						</div>
+						<div class="question_field">
+							<p class="designation"><b id="d30">У меня творческая натура – поэтическая, художественная, артистичная. </b></p>
+							<label class="variant"><input type="radio" name="o30" id="o30" value="1" required> Да</label>
+							<label class="variant"><input type="radio" name="o30" value="0"> Нет</label>
+						</div>
+					</div>
+					<div class="tab">
+						<div class="question_field">
+							<p class="designation"><b id="d31">Я без особого любопытства выслушиваю исповеди новых знакомых.</b></p>
+							<label class="variant"><input type="radio" name="o31" id="o31" value="0" required> Да</label>
+							<label class="variant"><input type="radio" name="o31" value="1"> Нет</label>
+						</div>
+						<div class="question_field">
+							<p class="designation"><b id="d32">Я расстраиваюсь, если вижу плачущего человека.</b></p>
+							<label class="variant"><input type="radio" name="o32" id="o32" value="1" required> Да</label>
+							<label class="variant"><input type="radio" name="o32" value="0"> Нет</label>
+						</div>
+						<div class="question_field">
+							<p class="designation"><b id="d33">Моё мышление больше отличается конкретностью, строгостью, последовательностью, чем интуицией.</b></p>
+							<label class="variant"><input type="radio" name="o33" id="o33" value="0" required> Да</label>
+							<label class="variant"><input type="radio" name="o33" value="1"> Нет</label>
+						</div>
+						<div class="question_field">
+							<p class="designation"><b id="d34">Когда друзья начинают говорить о своих неприятностях, я предпочитаю перевести разговор на другую тему.</b></p>
+							<label class="variant"><input type="radio" name="o34" id="o34" value="0" required> Да</label>
+							<label class="variant"><input type="radio" name="o34" value="1"> Нет</label>
+						</div>
+						<div class="question_field">
+							<p class="designation"><b id="d35">Если я вижу, что у кого-то из близких плохо на душе, то обычно воздерживаюсь от расспросов.</b></p>
+							<label class="variant"><input type="radio" name="o35" id="o35" value="0" required> Да</label>
+							<label class="variant"><input type="radio" name="o35" value="1"> Нет</label>
+						</div>
+						<div class="question_field">
+							<p class="designation"><b id="d36">Мне трудно понять, почему пустяки могут так сильно огорчать людей.</b></p>
+							<label class="variant"><input type="radio" name="o36" id="o36" value="0" required> Да</label>
+							<label class="variant"><input type="radio" name="o36" value="1"> Нет</label>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-12 progress progress-striped active text-center no-gutter">
+			<div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+				<span class="progress-message"></span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-1">
+				<a href='../../../../subsection4(2).html' class="home" data-toggle="tooltip" data-placement="top" title="Меню раздела"><span class="glyphicon glyphicon-home"></span></a>
+			</div>
+			<div class="col-md-3 text-center no-gutter">
+				<span class="switch_name">Настройки</span>
+				<input type="checkbox" id="options_button" />
+				<label class="options_switch" for="options_button"><i></i></label>
+			</div>
+			<div class="col-md-offset-1 col-md-2 text-center no-gutter">
+				<a href="results.html" class="next_button" id="method_submit" onclick="get_data();">Продолжить</a>
+			</div>
+			<div class="col-md-offset-1 col-md-3 text-center no-gutter">
+				<span class="switch_name">Секундомер</span>
+				<input type="checkbox" id="stopwatch_button" />
+				<label class="stopwatch_switch" for="stopwatch_button"><i></i></label>
+			</div>
+		</div>
+		<div class="options_container col-md-offset-1 col-md-3">
+			<table class="options_table">
+				<tbody>
+					<tr>
+						<td>
+							<span class="table_name">Тема</span>
+							<select class="switch_theme">
+								<option class="theme_option" selected disabled>Выберите</option>
+								<option class="theme_option" value="white">Белая</option>
+								<option class="theme_option" value="grey">Серая</option>
+								<option class="theme_option" value="blue">Синяя</option>
+								<option class="theme_option" value="black">Черная</option>
+								<option class="theme_option" value="yellow">Желтая</option>
+								<option class="theme_option" value="lightblue">Голубая</option>
+								<option class="theme_option" value="green">Зеленая</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span class="table_name">Шрифт</span><br>
+							<button style="width: 48%; outline: none;" type="button" class="btn btn-default btn-md plus" onclick="increase();"><span class="glyphicon glyphicon-plus-sign"></span></button>
+							<button style="width: 48%; outline: none;" type="button" class="btn btn-default btn-md minus" onclick="decrease();"><span class="glyphicon glyphicon-minus-sign"></span></button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="stopwatch_container col-md-offset-4 col-md-4">
+			<input id="start" name="controls" type="radio" />
+			<input id="stop" name="controls" type="radio" />
+			<input id="reset" name="controls" type="radio" />
+			<div class="timer">
+				<div class="cell">
+					<div class="numbers tenminute movesix">0 1 2 3 4 5 6</div>
+				</div>
+				<div class="cell">
+					<div class="numbers minute moveten">0 1 2 3 4 5 6 7 8 9</div>
+				</div>
+				<div class="cell divider">
+					<div class="numbers">:</div>
+				</div>
+				<div class="cell">
+					<div class="numbers tensecond movesix">0 1 2 3 4 5 6</div>
+				</div>
+				<div class="cell">
+					<div class="numbers second moveten">0 1 2 3 4 5 6 7 8 9</div>
+				</div>
+				<div class="cell divider">
+					<div class="numbers">:</div>
+				</div>
+				<div class="cell">
+					<div class="numbers milisecond moveten">0 1 2 3 4 5 6 7 8 9</div>
+				</div>
+				<div class="cell">
+					<div class="numbers tenmilisecond moveten">0 1 2 3 4 5 6 7 8 9</div>
+				</div>
+			</div>
+			<div id="timer_controls">
+				<label for="start">Старт</label>
+				<label for="stop">Стоп</label>
+				<label for="reset">Сброс</label>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

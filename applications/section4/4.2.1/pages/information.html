@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html onselectstart="return false;" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>О программе</title>
+	<link rel="stylesheet" href="../css/bootstrap.css" media="all">
+	<link rel="stylesheet" href="../css/page.css" media="all">
+	<link rel="stylesheet" href="../css/information.css" media="all">
+	<link rel="stylesheet" href="../css/options.css" media="all">
+	<script src="../js/jquery-3.js"></script>
+	<script src="../js/jquery-1.js"></script>
+	<script src="../js/bootstrap.js"></script>
+	<script src="../js/script.js"></script>
+	<script src="../js/themes.js"></script>
+	<script src="../js/zoom.js"></script>
+	<script src="../js/hotkeys.js"></script>
+	<script src="../js/keys.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="header text-center">
+			<h1 class="text-uppercase">Гуманитарный университет</h1>
+			<h2>Диагностика самооценки психических состояний (Г. Айзенк, 1947)</h2>
+		</div>
+		<div class="text-center no-gutter">
+			<div class="content_box note_field field_shadow text-justify">
+				<p class="note"><b>Инструкция</b>. Данная методика содержит описание различных психических состояний. Если это состояние очень подходит вам, подходит, но не очень, или если совсем не подходит - выберите <b>соответствующий</b> вариант ответа. С помощью теста можно в первом приближении <b>определить уровни</b> таких психических состояний, как тревожность, фрустрация, агрессивность, ригидность.</p>
+				<p class="note"><b>Тревожность</b> – индивидуальная психическая особенность, проявляющаяся в склонности человека к частым и интенсивным переживаниям состояния тревоги, а также в низком пороге его возникновения. Здесь тревога выступает как переживание эмоционального дискомфорта, связанное с ожиданием неблагополучия, с предчувствием грозящей или кажущейся таковой опасности.</p>
+				<p class="note"><b>Фрустрация</b> – психическое состояние, вызванное неуспехом в удовлетворении потребности, желания. Проявляется в отрицательных переживаниях: разочаровании, раздражении, тревоге, отчаянии и т. п.</p>
+				<p class="note"><b>Агрессивность</b> – не вызванная объективными обстоятельствами неспровоцированная враждебность человека по отношению к людям и окружающему миру. Проявляется в тенденции нападать, причинять неприятности, наносить вред людям, животным, окружающему миру. Иногда проявляется в форме демонстрации превосходства в силе по отношению к другому человеку или иному социальному объекту.</p>
+				<p class="note"><b>Ригидность</b> – затрудненность (вплоть до полной неспособности) в изменении намеченной субъектом программы деятельности в условиях, объективно требующих ее перестройки. Противоположное по значению свойство личности – пластичность.</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-1">
+				<a href='../../../../subsection4(2).html' class="home" data-toggle="tooltip" data-placement="top" title="Меню раздела"><span class="glyphicon glyphicon-home"></span></a>
+			</div>
+			<div class="col-md-3 text-center no-gutter">
+				<span class="switch_name">Настройки</span>
+				<input type="checkbox" id="options_button" />
+				<label class="options_switch" for="options_button"><i></i></label>
+			</div>
+			<div class="col-md-offset-1 col-md-2 text-center no-gutter">
+				<a href="method.html" class="next_button" id="information_submit">Продолжить</a>
+			</div>
+		</div>
+		<div class="options_container col-md-offset-1 col-md-3">
+			<table class="options_table">
+				<tbody>
+					<tr>
+						<td>
+							<span class="table_name">Тема</span>
+							<select class="switch_theme">
+								<option class="theme_option" selected disabled>Выберите</option>
+								<option class="theme_option" value="white">Белая</option>
+								<option class="theme_option" value="grey">Серая</option>
+								<option class="theme_option" value="blue">Синяя</option>
+								<option class="theme_option" value="black">Черная</option>
+								<option class="theme_option" value="yellow">Желтая</option>
+								<option class="theme_option" value="lightblue">Голубая</option>
+								<option class="theme_option" value="green">Зеленая</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span class="table_name">Шрифт</span><br>
+							<button style="width: 48%; outline: none;" type="button" class="btn btn-default btn-md plus" onclick="increase();"><span class="glyphicon glyphicon-plus-sign"></span></button>
+							<button style="width: 48%; outline: none;" type="button" class="btn btn-default btn-md minus" onclick="decrease();"><span class="glyphicon glyphicon-minus-sign"></span></button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</body>
+</html>

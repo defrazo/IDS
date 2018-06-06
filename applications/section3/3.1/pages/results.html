@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html onselectstart="return false;" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Результаты определения уровня физического развития методом индексов или показателей</title>
+	<link rel="stylesheet" href="../css/bootstrap.css" media="all">
+	<link rel="stylesheet" href="../css/page.css" media="all">
+	<link rel="stylesheet" href="../css/results.css" media="all">
+	<link rel="stylesheet" href="../css/options.css" media="all">
+	<script src="../js/jquery-3.js"></script>
+	<script src="../js/jquery-1.js"></script>
+	<script src="../js/bootstrap.js"></script>
+	<script src="../js/script.js"></script>
+	<script src="../js/themes.js"></script>
+	<script src="../js/zoom.js"></script>
+	<script src="../js/hotkeys.js"></script>
+	<script src="../js/keys.js"></script>
+	<script src="../js/results/handler.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="header text-center">
+			<h1 class="text-uppercase">Гуманитарный университет</h1>
+			<h2>Информационно-диагностическая система самоуправления развитием личности и ее психофизической подготовленностью</h2>
+			<h2>Результаты определения уровня физического развития методом индексов или показателей</h2>
+		</div>
+		<table class="result_table text-center table table-bordered table-hover">
+			<col width="300" valign="top">
+   			<col width="200" valign="top">
+			<tr>
+				<td>Фамилия</td>
+				<td id="sname"></td>
+			</tr>
+			<tr>
+				<td>Имя</td>
+				<td id="fname"></td>
+			</tr>
+			<tr>
+				<td>Отчество</td>
+				<td id="mname"></td>
+			</tr>
+			<tr>
+				<td>Факультет</td>
+				<td id="fac"></td>
+			</tr>
+			<tr>
+				<td>Дата обследования</td>
+				<td id="date"></td>
+			</tr>
+			<tr>
+				<td>Пол</td>
+				<td id="gender"></td>
+			</tr>
+			<tr>
+				<td>Прогнозируемый рост</td>
+				<td id="heightr"></td>
+			</tr>
+			<tr>
+				<td>Теоретическая масса тела</td>
+				<td id="tmt"></td>
+			</tr>
+			<tr>
+				<td>Показатель идеальной массы тела</td>
+				<td id="pimt"></td>
+			</tr>
+			<tr>
+				<td>Показатель гармоничности телосложения</td>
+				<td id="pgt"></td>
+			</tr>
+			<tr>
+				<td>Индекс пропорциональности</td>
+				<td id="propindex"></td>
+			</tr>
+			<tr>
+				<td>Весоростовой индекс Кетле</td>
+				<td id="quetelet"></td>
+			</tr>
+			<tr>
+				<td>Индекс тучности <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="top" title="Все уровни (по убыванию): Отличное состояние | Нормальное состояние | Повышенная тучность | Ожирение организма."></td>
+				<td id="obese"></td>
+			</tr>
+			<tr>
+				<td>Жизненный индекс</td>
+				<td id="lindex"></td>
+			</tr>
+			<tr>
+				<td>Силовой индекс</td>
+				<td id="strindex"></td>
+			</tr>
+			<tr>
+				<td>Индекс Пирке</td>
+				<td id="ipb"></td>
+			</tr>
+			<tr>
+				<td>Индекс Эрисмана</td>
+				<td id="erris"></td>
+			</tr>	
+			<tr>
+				<td>Индекс Пинье <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="top" title="Все уровни (по убыванию): Крепкое телосложение | Хорошее телосложение | Среднее телосложение | Слабое телосложение | Очень слабое телосложение."></td>
+				<td id="ipin"></td>
+			</tr>
+			<tr>
+				<td>Индекс Скелии <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="top" title="Все уровни (по убыванию): Длинные ноги | Средние ноги | Короткие ноги."></td>
+				<td id="iskell"></td>
+			</tr>
+		</table>
+		<div class="controls row text-center no-gutter">
+			<div class="col-md-offset-1 col-md-3 text-center no-gutter">
+				<span class="switch_name">Настройки</span>
+				<input type="checkbox" id="options_button" />
+				<label class="options_switch" for="options_button"><i></i></label>
+			</div>
+			<div class="col-md-4">
+				<a class="next_button" href="end.html">Продолжить</a>
+			</div>
+			<div class="col-md-3">
+				<a class="next_button" onclick="print();"><img class="printImg" src="../img/prinet.png" width="35"> Печать</a>
+			</div>
+		</div>
+		<div class="options_container col-md-offset-1 col-md-3">
+			<table class="options_table">
+				<tbody>
+					<tr>
+						<td>
+							<span class="table_name">Тема</span>
+							<select class="switch_theme">
+								<option class="theme_option" selected disabled>Выберите</option>
+								<option class="theme_option" value="white">Белая</option>
+								<option class="theme_option" value="grey">Серая</option>
+								<option class="theme_option" value="blue">Синяя</option>
+								<option class="theme_option" value="black">Черная</option>
+								<option class="theme_option" value="yellow">Желтая</option>
+								<option class="theme_option" value="lightblue">Голубая</option>
+								<option class="theme_option" value="green">Зеленая</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span class="table_name">Шрифт</span><br>
+							<button style="width: 48%; outline: none;" type="button" class="btn btn-default btn-md plus" onclick="increase();"><span class="glyphicon glyphicon-plus-sign"></span></button>
+							<button style="width: 48%; outline: none;" type="button" class="btn btn-default btn-md minus" onclick="decrease();"><span class="glyphicon glyphicon-minus-sign"></span></button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</body>
+</html>
