@@ -174,4 +174,4 @@ $(document).on('ready click focuson focusout mousemove', function() {
 		progress.attr('aria-valuenow', '100');
 		progressMessage.text('Прогресс: 100%');
 	}
-});
+}); 
