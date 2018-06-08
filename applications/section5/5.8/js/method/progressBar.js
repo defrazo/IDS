@@ -22,31 +22,31 @@ $(document).on('ready click focuson focusout mousemove', function() {
 	if (numValid == 1) {
 		progress.css('width', '2.3%');
 		progress.attr('aria-valuenow', '2.3');
-		progressMessage.text('');
+		progressMessage.text('2%');
 	}
 	
 	if (numValid == 2) {
 		progress.css('width', '4.6%');
 		progress.attr('aria-valuenow', '4.6');
-		progressMessage.text('');
+		progressMessage.text('4%');
 	}
 	
 	if (numValid == 3) {
 		progress.css('width', '6.9%');
 		progress.attr('aria-valuenow', '6.9');
-		progressMessage.text('');
+		progressMessage.text('7%');
 	}
 	
 	if (numValid == 4) {
 		progress.css('width', '9.2%');
 		progress.attr('aria-valuenow', '9.2');
-		progressMessage.text('');
+		progressMessage.text('9%');
 	}
 	
 	if (numValid == 5) {
 		progress.css('width', '11.5%');
 		progress.attr('aria-valuenow', '11.5');
-		progressMessage.text('');
+		progressMessage.text('11%');
 	}
 	
 	if (numValid == 6) {

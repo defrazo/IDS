@@ -22,19 +22,19 @@ $(document).on('ready click focuson focusout mousemove', function() {
 	if (numValid == 1) {
 		progress.css('width', '3.2%');
 		progress.attr('aria-valuenow', '3.2');
-		progressMessage.text('');
+		progressMessage.text('3%');
 	}
 	
 	if (numValid == 2) {
 		progress.css('width', '6.4%');
 		progress.attr('aria-valuenow', '6.4');
-		progressMessage.text('Прогресс: 6%');
+		progressMessage.text('6%');
 	}
 	
 	if (numValid == 3) {
 		progress.css('width', '9.6%');
 		progress.attr('aria-valuenow', '9.6');
-		progressMessage.text('Прогресс: 9%');
+		progressMessage.text('9%');
 	}
 	
 	if (numValid == 4) {

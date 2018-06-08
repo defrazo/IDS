@@ -22,25 +22,25 @@ $(document).on('ready click focuson focusout mousemove', function() {
 	if (numValid == 1) {
 		progress.css('width', '2.7%');
 		progress.attr('aria-valuenow', '2.7');
-		progressMessage.text('');
+		progressMessage.text('2%');
 	}
 	
 	if (numValid == 2) {
 		progress.css('width', '5.4%');
 		progress.attr('aria-valuenow', '5.4');
-		progressMessage.text('');
+		progressMessage.text('5%');
 	}
 	
 	if (numValid == 3) {
 		progress.css('width', '8.1%');
 		progress.attr('aria-valuenow', '8.1');
-		progressMessage.text('');
+		progressMessage.text('8%');
 	}
 	
 	if (numValid == 4) {
 		progress.css('width', '10.8%');
 		progress.attr('aria-valuenow', '10.8');
-		progressMessage.text('');
+		progressMessage.text('10%');
 	}
 	
 	if (numValid == 5) {

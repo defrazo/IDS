@@ -148,7 +148,8 @@ a.end_button:active {
     }
 
 a .glyphicon-refresh {
-    font-size: 50px;
+    color: #AAA;
+    font-size: 60px;
     cursor: pointer;
     }
 
@@ -157,7 +158,8 @@ a .glyphicon-refresh:hover {
     }
 
 a .glyphicon-info-sign {
-    font-size: 50px;
+    color: #AAA;
+    font-size: 70px;
     cursor: pointer;
     }
 
@@ -167,8 +169,8 @@ a .glyphicon-info-sign:hover {
 
 .z1 .tooltip {
     width: 350px !important;
-}
+    }
 
 .glyphicon-heart, .glyphicon-edit, .glyphicon-tasks, .glyphicon-user, .glyphicon-leaf {
     font-size: 22px;
-}
+    }

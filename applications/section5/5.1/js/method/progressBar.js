@@ -22,13 +22,13 @@ $(document).on('ready click focuson focusout mousemove', function() {
 	if (numValid == 1) {
 		progress.css('width', '4.5%');
 		progress.attr('aria-valuenow', '4.5');
-		progressMessage.text('');
+		progressMessage.text('4%');
 	}
 	
 	if (numValid == 2) {
 		progress.css('width', '9%');
 		progress.attr('aria-valuenow', '9');
-		progressMessage.text('Прогресс: 9%');
+		progressMessage.text('9%');
 	}
 	
 	if (numValid == 3) {

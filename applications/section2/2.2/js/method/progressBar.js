@@ -3,15 +3,15 @@ $(document).on('ready click focuson focusout mousemove', function() {
 	var numValid = 0;
 	
 	$('.tab input[required]').each(function() {
-	    if (this.validity.valid) numValid++;
+		if (this.validity.valid) numValid++;
 	});
 
 	$('.tab select[required]').each(function() {
-	    if (this.validity.valid) numValid++;
+		if (this.validity.valid) numValid++;
 	});
 
 	var progress = $('.progress-bar'),
-	    progressMessage = $('.progress-message');
+		progressMessage = $('.progress-message');
 
 	if (numValid == 0) {
 		progress.css('width', '0%');
@@ -22,7 +22,7 @@ $(document).on('ready click focuson focusout mousemove', function() {
 	if (numValid == 1) {
 		progress.css('width', '8.3%');
 		progress.attr('aria-valuenow', '8.3');
-		progressMessage.text('');
+		progressMessage.text('8%');
 	}
 	
 	if (numValid == 2) {
