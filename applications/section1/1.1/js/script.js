@@ -9,5 +9,5 @@ $(document).ready(function() {
 		else	$('.options_container').css('display', 'none');
 	});
 
-	$('[data-toggle="tooltip"]').tooltip()
+	$('[data-toggle="tooltip"]').tooltip();
 });

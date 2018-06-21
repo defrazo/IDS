@@ -258,3 +258,7 @@ h2 {
 .ser1, .ser2, .ser3 {
     display: none;
     }
+
+h3 {
+    cursor: default;
+    }

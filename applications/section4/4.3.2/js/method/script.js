@@ -331,6 +331,7 @@ $(document).on('ready', function () { //T1
 				$('#timer').runner('reset');
 				$('#table8c').css('display', 'none');
 				stage++;
+				get_data();
 				$(location).attr('href', 'results.html');
 			}
 		}

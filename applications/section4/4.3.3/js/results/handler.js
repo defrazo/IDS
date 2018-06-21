@@ -12,7 +12,7 @@ $(document).ready(function() {
 		q5 = localStorage.getItem('error2'),
 		q6 = localStorage.getItem('error3'),
 		fac = localStorage.getItem('facinp');
-
+		
 	if  (q1.length > 5) {
 		q1min = q1.slice(0, -6);
 		q1sec = q1.slice(3, -3);

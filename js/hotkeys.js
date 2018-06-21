@@ -1,22 +1,16 @@
-/*jslint browser: true*/
-/*jslint jquery: true*/
+$(document).ready(function() {
 
-/*
- * jQuery Hotkeys Plugin
- * Copyright 2010, John Resig
- * Dual licensed under the MIT or GPL Version 2 licenses.
- *
- * Based upon the plugin by Tzury Bar Yochay:
- * https://github.com/tzuryby/jquery.hotkeys
- *
- * Original idea by:
- * Binny V A, http://www.openjs.com/scripts/events/keyboard_shortcuts/
- */
+  var height = $(window).height();
 
-/*
- * One small change is: now keys are passed by object { keys: '...' }
- * Might be useful, when you want to pass some other data to your handler
- */
+  switch (true) {
+    case (height <= 600) : $('body').css({'padding-top' : $(window).height() * 0.05, 'padding-bottom' : $(window).height() * 0.05}); break;
+    case ((height >= 601) && (height <= 800)) : $('body').css({'padding-top' : $(window).height() * 0.1, 'padding-bottom' : $(window).height() * 0.1}); break;
+    case ((height >= 801) && (height <= 900)) : $('body').css({'padding-top' : $(window).height() * 0.15, 'padding-bottom' : $(window).height() * 0.15}); break;
+    case ((height >= 901) && (height <= 1100)) : $('body').css({'padding-top' : $(window).height() * 0.2, 'padding-bottom' : $(window).height() * 0.2}); break;
+    case ((height >= 1101) && (height <= 1200)) : $('body').css({'padding-top' : $(window).height() * 0.22, 'padding-bottom' : $(window).height() * 0.22}); break;
+    case (height >= 1201) : $('body').css({'padding-top' : $(window).height() * 0.25, 'padding-bottom' : $(window).height() * 0.25}); break;
+  }
+});
 
 (function(jQuery) {
 

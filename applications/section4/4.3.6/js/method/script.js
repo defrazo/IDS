@@ -224,6 +224,7 @@ $(document).on('ready', function () { //T1
 				$('#timer').runner('reset');
 				$('#table1c').css('visibility', 'hidden');
 				stage++;
+				get_data();
 				$(location).attr('href', 'results.html');
 			}
 		}

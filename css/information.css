@@ -24,7 +24,7 @@
 .note {
     color: #1c1a1a;
     font-weight: normal;
-    font-size: 23px;
+    font-size: 24px;
     font-family: "Exo2";
     cursor: default;
     text-indent: 1.5em;
@@ -56,5 +56,5 @@
         }
 
 .note b {
-    font-size: 23px;
+    font-size: 24px;
     }

@@ -401,7 +401,7 @@ $(document).ready(function() {
 		}
 	} else var twelveridestatus = 'Данные для расчета не внесены';
 
-	if (run != '') {
+	if ((run != '') && (run != '.')) {
 		switch (true) {
 			case (gender == 'Мужской') :
 				switch (true) {
@@ -537,7 +537,7 @@ $(document).ready(function() {
 		}
 	} else var runstatus = 'Данные для расчета не внесены';
 
-	if (walk != '') {
+	if ((walk != '') && (walk != '.')) {
 		switch (true) {
 			case (gender == 'Мужской') :
 				switch (true) {
