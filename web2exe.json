@@ -7,12 +7,12 @@
         "force_download": false,
         "mac-x64": false,
         "nw_compression_level": 0,
-        "nw_version": "0.28.0",
+        "nw_version": "0.31.2",
         "output_pattern": "",
         "sdk_build": false,
         "uncompressed_folder": false,
         "whitelist": "",
-        "windows-x32": false,
+        "windows-x32": true,
         "windows-x64": true
     }
 }
