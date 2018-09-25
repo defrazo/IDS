@@ -7,6 +7,7 @@ $(document).ready(function() {
 		mname = localStorage.getItem('mnameinp'),
 		age = localStorage.getItem('ageinp'),
 		weight = localStorage.getItem('weightinp'),
+		dia = localStorage.getItem('diainp'),
 		sist = localStorage.getItem('sistinp'),
 		inha = localStorage.getItem('inhainp'),
 		static = localStorage.getItem('staticinp'),

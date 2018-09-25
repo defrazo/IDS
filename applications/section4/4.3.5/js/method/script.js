@@ -1,4 +1,5 @@
-$(document).on('ready', function () { //T1
+$(document).on('ready mousemove change', function() {
+	
 	$('select[name=img1]').ImageSelect({dropdownWidth:700});
 	$('select[name=img2]').ImageSelect({dropdownWidth:700});
 	$('select[name=img3]').ImageSelect({dropdownWidth:700});

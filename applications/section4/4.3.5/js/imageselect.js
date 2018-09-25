@@ -55,7 +55,7 @@
 
           $options.each(function(i,el){
                 //dropdown.append('<img style="width:' + options.dropdownWidth + 'px" onclick="jQuery(\'select[name=' + selectName + ']\').val(\''+ $(el).val() + '\').ImageSelect(\'close\').ImageSelect(\'update\',{src:\''+ $(el).text() + '\'});" src="' + $(el).text() + '"/>');
-                dropdown.append('<img style="width:100%" onclick="jQuery(\'select[name=' + selectName + ']\').val(\''+ $(el).val() + '\').ImageSelect(\'close\').ImageSelect(\'update\',{src:\''+ $(el).text() + '\'});" src="' + $(el).text() + '"/>');
+                dropdown.append('<img style="width:75px" onclick="jQuery(\'select[name=' + selectName + ']\').val(\''+ $(el).val() + '\').ImageSelect(\'close\').ImageSelect(\'update\',{src:\''+ $(el).text() + '\'});" src="' + $(el).text() + '"/>');
           });
 
 
@@ -137,9 +137,9 @@
                     $(this).parent().stop();
                     //$('.jqis_dropdown',$(this).parent().parent()).stop();
                     $(this).parent().parent().stop();
-                    $(this).parent().animate({width:$(this).width() + 60});
-                    $(this).parent().parent().animate({width:$(this).width() + 60});
-                    $('.jqis_dropdown',$(this).parent().parent()).animate({width:$(this).width() + 50});
+                    $(this).parent().animate({width:$(this).css('width','75px')});
+                    $(this).parent().parent().animate({width:$(this).width() + 0});
+                    $('.jqis_dropdown',$(this).parent().parent()).animate({width:$(this).width() + 0});
 
                 }).each(function() {
                   if(this.complete) $(this).load();
@@ -238,9 +238,9 @@
     var settings = {
         width:200,
         height:75,
-        dropdownHeight:250,
+        /*dropdownHeight:250,
         dropdownWidth:200,
-        z:99999,
+        z:99999,*/
         backgroundColor:'#ffffff',
         border:true,
         borderColor:'#cccccc',
