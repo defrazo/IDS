@@ -50,9 +50,9 @@ $(document).ready(function() {
 
 	switch (true) {
 		case (lag <= -9.0) : var category = 1, status = 'Очень хорошее', arate = 'Резко замедленный'; break;
-		case (lag >= -8.9) && (lag <= -3.0) : var category = 2, status = 'Хорошее', arate = 'Замедленный'; break;
-		case (lag >= -2.9) && (lag <= 2.9) : var category = 3, status = 'Среднее', arate = 'Нормальный'; break;
-		case (lag >= 3.0) && (lag <= 8.9) : var category = 4, status = 'Плохое', arate = 'Ускоренный'; break;
+		case (lag >= -8.9 && lag <= -3.0) : var category = 2, status = 'Хорошее', arate = 'Замедленный'; break;
+		case (lag >= -2.9 && lag <= 2.9) : var category = 3, status = 'Среднее', arate = 'Нормальный'; break;
+		case (lag >= 3.0 && lag <= 8.9) : var category = 4, status = 'Плохое', arate = 'Ускоренный'; break;
 		case (lag >= 9.0) : var category = 5, status = 'Очень плохое', arate = 'Резко ускоренный'; break;
 	}
 

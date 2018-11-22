@@ -19,10 +19,10 @@ $(document).ready(function() {
 
 	switch (true) {
 		case (index <= 3.9) : var category = 1, group = 'Основная', arate = 'Высокий', grade = 'Отлично'; break;
-		case (index >= 4) && (index <= 6.9) : var category = 2, group = 'Основная', arate = 'Выше среднего', grade = 'Хорошо'; break;
-		case (index >= 7) && (index <= 10.9) : var category = 3, group = 'Подготовительная', arate = 'Средний', grade = 'Удовлетворительно'; break;
-		case (index >= 11) && (index <= 15) : var category = 4, group = 'Специальная', arate = 'Ниже среднего', grade = 'Неудовлетворительно'; break;
-		case (index >=15) : var category = 5, group = 'Специальная', arate = 'Низкий', grade = 'Плохо'; break;
+		case (index >= 4.0 && index <= 6.9) : var category = 2, group = 'Основная', arate = 'Выше среднего', grade = 'Хорошо'; break;
+		case (index >= 7.0 && index <= 10.9) : var category = 3, group = 'Подготовительная', arate = 'Средний', grade = 'Удовлетворительно'; break;
+		case (index >= 11.0 && index <= 15.9) : var category = 4, group = 'Специальная', arate = 'Ниже среднего', grade = 'Неудовлетворительно'; break;
+		case (index >= 16.0) : var category = 5, group = 'Специальная', arate = 'Низкий', grade = 'Плохо'; break;
 	}
 
 	$('#sname').append(sname);

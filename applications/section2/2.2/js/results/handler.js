@@ -18,11 +18,11 @@ $(document).ready(function() {
 	var ufc = (700 - 3 * pulse - 2.5 * parseFloat(adsrp) - 2.7 * age + 0.28 * weight) / (350 - (2.6 * age) + (0.21 * height));
 
 	switch (true) {
-		case (ufc < 0.375) : var status = 'Низкий'; break;
-		case (ufc >= 0.376) && (ufc <= 0.525) : var status = 'Ниже среднего'; break;
-		case (ufc >= 0.526) && (ufc <= 0.675) : var status = 'Средний'; break;
-		case (ufc >= 0.676) && (ufc <= 0.825) : var status = 'Выше среднего'; break;
-		case (ufc > 0.826) : var status = 'Высокий'; break;
+		case (ufc <= 0.375) : var status = 'Низкий'; break;
+		case (ufc >= 0.376 && ufc <= 0.525) : var status = 'Ниже среднего'; break;
+		case (ufc >= 0.526 && ufc <= 0.675) : var status = 'Средний'; break;
+		case (ufc >= 0.676 && ufc <= 0.825) : var status = 'Выше среднего'; break;
+		case (ufc >= 0.826) : var status = 'Высокий'; break;
 	}
 
 	$('#sname').append(sname);

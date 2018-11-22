@@ -107,7 +107,7 @@ $(document).ready(function() {
 	$('#weight').focusout(function() {
 		var weight = $('#weight').val();
 		
-		if (($(this).val() < 30) || ($(this).val() > 200)) $(this).val($(this).val().substr(0, 0));
+		if (($(this).val() < 30) || ($(this).val() > 250)) $(this).val($(this).val().substr(0, 0));
 
 		if (weight != '') {
 			
@@ -176,7 +176,7 @@ $(document).ready(function() {
 	$('#pulse').focusout(function() {
 		var pulse = $('#pulse').val();
 		
-		if (($(this).val() < 30) || ($(this).val() > 130)) $(this).val($(this).val().substr(0, 0));
+		if (($(this).val() < 45) || ($(this).val() > 130)) $(this).val($(this).val().substr(0, 0));
 
 		if (pulse != '') {
 			
@@ -213,7 +213,7 @@ $(document).ready(function() {
 	$('#sist').focusout(function() {
 		var sist = $('#sist').val();
 		
-		if (($(this).val() < 60) || ($(this).val() > 200)) $(this).val($(this).val().substr(0, 0));
+		if (($(this).val() < 70) || ($(this).val() > 220)) $(this).val($(this).val().substr(0, 0));
 		
 		if (sist != '') {
 			
@@ -250,7 +250,7 @@ $(document).ready(function() {
 	$('#dia').focusout(function() {
 		var dia = $('#dia').val();
 		
-		if (($(this).val() < 40) || ($(this).val() > 120)) $(this).val($(this).val().substr(0, 0));
+		if (($(this).val() < 30) || ($(this).val() > 140)) $(this).val($(this).val().substr(0, 0));
 
 		if (dia != '') {
 			if (isValidDia(dia)) $('#dia').css('border', '1px solid #0dd01a');
@@ -358,7 +358,7 @@ $(document).ready(function() {
 	$('#lung').focusout(function() {
 		var lung = $('#lung').val();
 		
-		if (($(this).val() < 1000) || ($(this).val() > 8000)) $(this).val($(this).val().substr(0, 0));
+		if (($(this).val() < 1500) || ($(this).val() > 9000)) $(this).val($(this).val().substr(0, 0));
 
 		if (lung != '') {
 			if (isValidLung(lung)) $('#lung').css('border', '1px solid #0dd01a');

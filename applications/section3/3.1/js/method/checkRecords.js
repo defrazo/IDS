@@ -74,7 +74,7 @@ $(document).ready(function() {
 	$('#age').focusout(function() {
 		var age = $('#age').val();
 		
-		if (($(this).val() < 6) || ($(this).val() > 75)) $(this).val($(this).val().substr(0, 0));
+		if (($(this).val() < 15) || ($(this).val() > 90)) $(this).val($(this).val().substr(0, 0));
 
 		if (age != '') {
 		
@@ -111,7 +111,7 @@ $(document).ready(function() {
 	$('#weight').focusout(function() {
 		var weight = $('#weight').val();
 		
-		if (($(this).val() < 30) || ($(this).val() > 200)) $(this).val($(this).val().substr(0, 0));
+		if (($(this).val() < 30) || ($(this).val() > 250)) $(this).val($(this).val().substr(0, 0));
 
 		if (weight != '') {
 			
@@ -180,7 +180,7 @@ $(document).ready(function() {
 	$('#heightsit').focusout(function() {
 		var heightsit = $('#heightsit').val();
 		
-		if (($(this).val() < 100) || ($(this).val() > 230)) $(this).val($(this).val().substr(0, 0));
+		if (($(this).val() < 50) || ($(this).val() > 180)) $(this).val($(this).val().substr(0, 0));
 
 		if (heightsit != '') {
 			
@@ -276,7 +276,7 @@ $(document).ready(function() {
 	$('#lung').focusout(function() {
 		var lung = $('#lung').val();
 		
-		if (($(this).val() < 1000) || ($(this).val() > 8000)) $(this).val($(this).val().substr(0, 0));
+		if (($(this).val() < 1000) || ($(this).val() > 9000)) $(this).val($(this).val().substr(0, 0));
 
 		if (lung != '') {
 			if (isValidLung(lung)) $('#lung').css('border', '1px solid #0dd01a');
@@ -307,7 +307,7 @@ $(document).ready(function() {
 	$('#dynam').focusout(function() {
 		var dynam = $('#dynam').val();
 		
-		if (($(this).val() < 8) || ($(this).val() > 80)) $(this).val($(this).val().substr(0, 0));
+		if (($(this).val() < 8) || ($(this).val() > 100)) $(this).val($(this).val().substr(0, 0));
 		
 		if (dynam != '') {
 			
@@ -349,7 +349,7 @@ $(document).ready(function() {
 	$('#chest').focusout(function() {
 		var chest = $('#chest').val();
 		
-		if (($(this).val() < 50) || ($(this).val() > 230)) $(this).val($(this).val().substr(0, 0));
+		if (($(this).val() < 20) || ($(this).val() > 230)) $(this).val($(this).val().substr(0, 0));
 
 		if (chest != '') {
 			
@@ -386,7 +386,7 @@ $(document).ready(function() {
 	$('#shoulders').focusout(function() {
 		var shoulders = $('#shoulders').val();
 		
-		if (($(this).val() < 50) || ($(this).val() > 230)) $(this).val($(this).val().substr(0, 0));
+		if (($(this).val() < 18) || ($(this).val() > 230)) $(this).val($(this).val().substr(0, 0));
 
 		if (shoulders != '') {
 			
@@ -423,7 +423,7 @@ $(document).ready(function() {
 	$('#waist').focusout(function() {
 		var waist = $('#waist').val();
 		
-		if (($(this).val() < 50) || ($(this).val() > 230)) $(this).val($(this).val().substr(0, 0));
+		if (($(this).val() < 40) || ($(this).val() > 150)) $(this).val($(this).val().substr(0, 0));
 
 		if (waist != '') {
 			
@@ -460,7 +460,7 @@ $(document).ready(function() {
 	$('#legs').focusout(function() {
 		var legs = $('#legs').val();
 		
-		if (($(this).val() < 50) || ($(this).val() > 230)) $(this).val($(this).val().substr(0, 0));
+		if (($(this).val() < 50) || ($(this).val() > 160)) $(this).val($(this).val().substr(0, 0));
 
 		if (legs != '') {
 			

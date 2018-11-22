@@ -74,7 +74,7 @@ $(document).ready(function() {
 	$('#lung').focusout(function() {
 		var lung = $('#lung').val();
 		
-		if (($(this).val() < 1000) || ($(this).val() > 8000)) $(this).val($(this).val().substr(0, 0));
+		if (($(this).val() < 1000) || ($(this).val() > 9000)) $(this).val($(this).val().substr(0, 0));
 
 		if (lung != '') {
 			if (isValidLung(lung)) $('#lung').css('border', '1px solid #0dd01a');
@@ -142,7 +142,7 @@ $(document).ready(function() {
 	$('#chestmax').focusout(function() {
 		var chestmax = $('#chestmax').val();
 		
-		if (($(this).val() < 50) || ($(this).val() > 230)) $(this).val($(this).val().substr(0, 0));
+		if (($(this).val() < 50) || ($(this).val() > 250)) $(this).val($(this).val().substr(0, 0));
 
 		if (chestmax != '') {
 			
@@ -253,7 +253,7 @@ $(document).ready(function() {
 	$('#hold').focusout(function() {
 		var hold = $('#hold').val();
 		
-		if (($(this).val() < 30) || ($(this).val() > 130)) $(this).val($(this).val().substr(0, 0));
+		if (($(this).val() < 15) || ($(this).val() > 240)) $(this).val($(this).val().substr(0, 0));
 
 		if (hold != '') {
 			

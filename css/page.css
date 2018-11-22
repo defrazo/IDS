@@ -101,7 +101,7 @@ a.next_button:active {
 
 .tooltip-inner {
     font-size: 16px;
-    max-width: 400px;
+    /*max-width: auto;*/
     }
 
 .switch_theme {

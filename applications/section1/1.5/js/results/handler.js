@@ -42,16 +42,16 @@ $(document).ready(function() {
 	
 	switch (true) {
 		case (massdiff <= 5) : var q23 = 0; break;
-		case ((massdiff >= 6) && (massdiff <= 10)) : var q23 = -2; break;
-		case ((massdiff >= 11) && (massdiff <= 20)) : var q23 = -4; break;
+		case (massdiff >= 6 && massdiff <= 10) : var q23 = -2; break;
+		case (massdiff >= 11 && massdiff <= 20) : var q23 = -4; break;
 		case (massdiff >= 21) : var q23 = -8; break;
 	}
 
 	switch (true) {
 		case (age <= 30) : var q24 = 0; break;
-		case ((age >= 31) && (age <= 40)) : var q24 = 2; break;
-		case ((age >= 41) && (age <= 50)) : var q24 = 3; break;
-		case ((age >= 51) && (age <= 70)) : var q24 = 4; break;
+		case (age >= 31 && age <= 40) : var q24 = 2; break;
+		case (age >= 41 && age <= 50) : var q24 = 3; break;
+		case (age >= 51 && age <= 70) : var q24 = 4; break;
 		case (age >= 71) : var q24 = 5; break;
 	}
 

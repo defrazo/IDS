@@ -75,7 +75,7 @@ $(document).ready(function() {
 	$('#age').focusout(function() {
 		var age = $('#age').val();
 		
-		if (($(this).val() < 6) || ($(this).val() > 75)) $(this).val($(this).val().substr(0, 0));
+		if (($(this).val() < 15) || ($(this).val() > 90)) $(this).val($(this).val().substr(0, 0));
 
 		if (age != '') {
 		
@@ -112,7 +112,7 @@ $(document).ready(function() {
 	$('#weight').focusout(function() {
 		var weight = $('#weight').val();
 		
-		if (($(this).val() < 30) || ($(this).val() > 200)) $(this).val($(this).val().substr(0, 0));
+		if (($(this).val() < 30) || ($(this).val() > 250)) $(this).val($(this).val().substr(0, 0));
 
 		if (weight != '') {
 			

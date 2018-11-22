@@ -111,7 +111,7 @@ $(document).ready(function() {
 	$('#sist').focusout(function() {
 		var sist = $('#sist').val();
 		
-		if (($(this).val() < 60) || ($(this).val() > 200)) $(this).val($(this).val().substr(0, 0));
+		if (($(this).val() < 60) || ($(this).val() > 220)) $(this).val($(this).val().substr(0, 0));
 		
 		if (sist != '') {
 			
@@ -148,7 +148,7 @@ $(document).ready(function() {
 	$('#dia').focusout(function() {
 		var dia = $('#dia').val();
 		
-		if (($(this).val() < 40) || ($(this).val() > 120)) $(this).val($(this).val().substr(0, 0));
+		if (($(this).val() < 30) || ($(this).val() > 140)) $(this).val($(this).val().substr(0, 0));
 
 		if (dia != '') {
 			if (isValidDia(dia)) $('#dia').css('border', '1px solid #0dd01a');
@@ -184,7 +184,7 @@ $(document).ready(function() {
 	$('#pulseop').focusout(function() {
 		var pulseop = $('#pulseop').val();
 		
-		if (($(this).val() < 30) || ($(this).val() > 130)) $(this).val($(this).val().substr(0, 0));
+		if (($(this).val() < 30) || ($(this).val() > 160)) $(this).val($(this).val().substr(0, 0));
 
 		if (pulseop != '') {
 			
@@ -221,7 +221,7 @@ $(document).ready(function() {
 	$('#pulsep').focusout(function() {
 		var pulsep = $('#pulsep').val();
 		
-		if (($(this).val() < 30) || ($(this).val() > 130)) $(this).val($(this).val().substr(0, 0));
+		if (($(this).val() < 30) || ($(this).val() > 160)) $(this).val($(this).val().substr(0, 0));
 
 		if (pulsep != '') {
 			
@@ -258,7 +258,7 @@ $(document).ready(function() {
 	$('#pulsebb').focusout(function() {
 		var pulsebb = $('#pulsebb').val();
 		
-		if (($(this).val() < 1) || ($(this).val() > 130)) $(this).val($(this).val().substr(0, 0));
+		if (($(this).val() < 1) || ($(this).val() > 160)) $(this).val($(this).val().substr(0, 0));
 
 		if (pulsebb != '') {
 			
@@ -295,7 +295,7 @@ $(document).ready(function() {
 	$('#pulseba').focusout(function() {
 		var pulseba = $('#pulseba').val();
 		
-		if (($(this).val() < 1) || ($(this).val() > 130)) $(this).val($(this).val().substr(0, 0));
+		if (($(this).val() < 1) || ($(this).val() > 160)) $(this).val($(this).val().substr(0, 0));
 
 		if (pulseba != '') {
 			
@@ -332,7 +332,7 @@ $(document).ready(function() {
 	$('#pulsebaa').focusout(function() {
 		var pulsebaa = $('#pulsebaa').val();
 		
-		if (($(this).val() < 1) || ($(this).val() > 130)) $(this).val($(this).val().substr(0, 0));
+		if (($(this).val() < 1) || ($(this).val() > 160)) $(this).val($(this).val().substr(0, 0));
 
 		if (pulsebaa != '') {
 			
@@ -369,7 +369,7 @@ $(document).ready(function() {
 	$('#sistp').focusout(function() {
 		var sistp = $('#sistp').val();
 		
-		if (($(this).val() < 60) || ($(this).val() > 200)) $(this).val($(this).val().substr(0, 0));
+		if (($(this).val() < 60) || ($(this).val() > 220)) $(this).val($(this).val().substr(0, 0));
 		
 		if (sistp != '') {
 			
@@ -406,7 +406,7 @@ $(document).ready(function() {
 	$('#diap').focusout(function() {
 		var diap = $('#diap').val();
 		
-		if (($(this).val() < 40) || ($(this).val() > 120)) $(this).val($(this).val().substr(0, 0));
+		if (($(this).val() < 30) || ($(this).val() > 140)) $(this).val($(this).val().substr(0, 0));
 
 		if (diap != '') {
 			if (isValidDiap(diap)) $('#diap').css('border', '1px solid #0dd01a');

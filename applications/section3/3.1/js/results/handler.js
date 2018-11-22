@@ -31,8 +31,8 @@ $(document).ready(function() {
 		
 		switch (true) {
 			case (height <= 165) : var tmt = height - 100; break;
-			case ((height >= 165.1) && (height <= 175)) : var tmt = height - 105; break;
-			case (height >= 165.1) : var tmt = height - 110; break;
+			case (height >= 165.1 && height <= 175) : var tmt = height - 105; break;
+			case (height >= 175.1) : var tmt = height - 110; break;
 		}
 
 		if (weight > tmt) {
@@ -41,9 +41,9 @@ $(document).ready(function() {
 
 			switch (true) {
 				case (tmtdiff <= 10) : var adiposity = '(У вас ожирение I степени)'; break;
-				case ((tmtdiff >= 11) && (tmtdiff <= 29)) : var adiposity = '(У вас ожирение II степени)'; break;
-				case ((tmtdiff >= 30) && (tmtdiff <= 49)) : var adiposity = '(У вас ожирение III степени)'; break;
-				case ((tmtdiff >= 50) && (tmtdiff <= 99)): var adiposity = '(У вас ожирение IV степени)'; break;
+				case (tmtdiff >= 11 && tmtdiff <= 29) : var adiposity = '(У вас ожирение II степени)'; break;
+				case (tmtdiff >= 30 && tmtdiff <= 49) : var adiposity = '(У вас ожирение III степени)'; break;
+				case (tmtdiff >= 50 && tmtdiff <= 99) : var adiposity = '(У вас ожирение IV степени)'; break;
 				case (tmtdiff >= 100) : var adiposity = '(У вас ожирение V степени)'; break;
 			}
 		} else var adiposity = '';
@@ -59,9 +59,9 @@ $(document).ready(function() {
 
 			switch (true) {
 				case (pimtdiff <= 10) : var adiposit = '(У вас ожирение I степени)'; break;
-				case ((pimtdiff >= 11) && (pimtdiff <= 29)) : var adiposit = '(У вас ожирение II степени)'; break;
-				case ((pimtdiff >= 30) && (pimtdiff <= 49)) : var adiposit = '(У вас ожирение III степени)'; break;
-				case ((pimtdiff >= 50) && (pimtdiff <= 99)): var adiposit = '(У вас ожирение IV степени)'; break;
+				case (pimtdiff >= 11 && pimtdiff <= 29) : var adiposit = '(У вас ожирение II степени)'; break;
+				case (pimtdiff >= 30 && pimtdiff <= 49) : var adiposit = '(У вас ожирение III степени)'; break;
+				case (pimtdiff >= 50 && pimtdiff <= 99) : var adiposit = '(У вас ожирение IV степени)'; break;
 				case (pimtdiff >= 100) : var adiposit = '(У вас ожирение V степени)'; break;
 			}
 		}  else var adiposit = '';
@@ -71,44 +71,44 @@ $(document).ready(function() {
 		
 			switch (true) {
 				case (obese <= 18) : var obesestatus = '(Отличное состояние)'; break;
-				case ((obese >= 19) && (obese <= 24)) : var obesestatus = '(Нормальное состояние)'; break;
-				case ((obese >= 25) && (obese <= 27)) : var obesestatus = '(Повышенная тучность)'; break;
+				case (obese >= 19 && obese <= 25) : var obesestatus = '(Нормальное состояние)'; break;
+				case (obese >= 25.01 && obese <= 27) : var obesestatus = '(Повышенная тучность)'; break;
 				case (obese >= 28) : var obesestatus = '(Ожирение организма)'; break;
 			}
 
 			if ((weight > tmt) || (weight > pimt)) {
-				var quetelet = (weight / ((height / 100) * (height / 100))).toFixed();
+				var quetelet = (weight / ((height / 100) * (height / 100))).toFixed(1);
 
 				switch (true) {
 					case (gender == 'Мужской') :
 						switch (true) {
 							case (quetelet <= 25) : var queteletstatus = '(Норма)'; break;
-							case ((quetelet >= 25.01) && (quetelet <= 29.9)) : var queteletstatus = '(Избыточная масса)'; break;
-							case ((quetelet >= 30.01) && (quetelet <= 39)) : var queteletstatus = '(Ожирение)'; break;
+							case (quetelet >= 25.01 && quetelet <= 30) : var queteletstatus = '(Избыточная масса)'; break;
+							case (quetelet >= 30.01 && quetelet <= 39) : var queteletstatus = '(Ожирение)'; break;
 							case (quetelet >= 40) : var queteletstatus = '(Значительное ожирение)'; break;
 						}
 					break;
 					case (gender == 'Женский') :
 						switch (true) {
 							case (quetelet <= 24) : var queteletstatus = '(Норма)'; break;
-							case ((quetelet >= 24.01) && (quetelet <= 29.9)) : var queteletstatus = '(Избыточная масса)'; break;
-							case ((quetelet >= 30.01) && (quetelet <= 39)) : var queteletstatus = '(Ожирение)'; break;
+							case (quetelet >= 24.01 && quetelet <= 30) : var queteletstatus = '(Избыточная масса)'; break;
+							case (quetelet >= 30.01 && quetelet <= 39) : var queteletstatus = '(Ожирение)'; break;
 							case (quetelet >= 40) : var queteletstatus = '(Значительное ожирение)'; break;
 						}
 					break;
 				}
 			} else {
-				var quetelet = (weight * 1000) / height;
+				var quetelet = ((weight * 1000) / height).toFixed(1);
 
 				switch (true) {
 					case (quetelet <= 299) : var queteletstatus = '(Истощение)'; break;
-					case ((quetelet >= 300) && (quetelet <= 319)) : var queteletstatus = '(Очень плохо)'; break;
-					case ((quetelet >= 320) && (quetelet <= 359)) : var queteletstatus = '(Плохо)'; break;
-					case ((quetelet >= 360) && (quetelet <= 389)) : var queteletstatus = '(Средне)'; break;
-					case ((quetelet >= 390) && (quetelet <= 400)) : var queteletstatus = '(Идеально)'; break;
-					case ((quetelet >= 401) && (quetelet <= 415)) : var queteletstatus = '(Хорошо)'; break;
-					case ((quetelet >= 416) && (quetelet <= 450)) : var queteletstatus = '(Излишний вес)'; break;
-					case ((quetelet >= 450) && (quetelet <= 540)) : var queteletstatus = '(Чрезмерный вес)'; break;
+					case (quetelet >= 300 && quetelet <= 319) : var queteletstatus = '(Очень плохо)'; break;
+					case (quetelet >= 320 && quetelet <= 359) : var queteletstatus = '(Плохо)'; break;
+					case (quetelet >= 360 && quetelet <= 389) : var queteletstatus = '(Средне)'; break;
+					case (quetelet >= 390 && quetelet <= 400) : var queteletstatus = '(Идеально)'; break;
+					case (quetelet >= 401 && quetelet <= 415) : var queteletstatus = '(Хорошо)'; break;
+					case (quetelet >= 416 && quetelet <= 450) : var queteletstatus = '(Излишний вес)'; break;
+					case (quetelet >= 450 && quetelet <= 540) : var queteletstatus = '(Чрезмерный вес)'; break;
 					case (quetelet >= 540) : var queteletstatus = '(Ожирение)'; break;
 				}
 			}
@@ -133,9 +133,9 @@ $(document).ready(function() {
 
 			switch (true) {
 				case (ipin <= 10) : var ipinstatus = '(Крепкое телосложение)'; break;
-				case ((ipin >= 11) && (ipin <= 20)) : var ipinstatus = '(Хорошее телосложение)'; break;
-				case ((ipin >= 21) && (ipin <= 25)) : var ipinstatus = '(Среднее телосложение)'; break;
-				case ((ipin >= 26) && (ipin <= 35)) : var ipinstatus = '(Слабое телосложение)'; break;
+				case (ipin >= 11 && ipin <= 20) : var ipinstatus = '(Хорошее телосложение)'; break;
+				case (ipin >= 21 && ipin <= 25) : var ipinstatus = '(Среднее телосложение)'; break;
+				case (ipin >= 26 && ipin <= 35) : var ipinstatus = '(Слабое телосложение)'; break;
 				case (ipin >= 36) : var ipinstatus = '(Очень слабое телосложение)'; break;
 			}
 		}
@@ -145,7 +145,7 @@ $(document).ready(function() {
 
 			switch (true) {
 				case (iskell <= 84.9) : var iskellstatus = '(Короткие ноги)'; break;
-				case ((iskell >= 85) && (iskell <= 89)) : var iskellstatus = '(Средние ноги)'; break;
+				case (iskell >= 85 && iskell <= 89) : var iskellstatus = '(Средние ноги)'; break;
 				case (iskell >= 90) : var iskellstatus = '(Длинные ноги)'; break;
 			}
 		}
@@ -157,16 +157,16 @@ $(document).ready(function() {
 	$('#date').append(date);
 	$('#heightr').append((heightr).toFixed() + ' см');
 	$('#tmt').append(tmt + ' кг. '+ adiposity);
-	$('#pimt').append(pimt + ' кг. '+ adiposit);
-	$('#obese').append(obese + '. '+ obesestatus);
-	$('#quetelet').append(quetelet + '. '+ queteletstatus);
+	$('#pimt').append(pimt + ' кг '+ adiposit);
+	$('#obese').append(obese + ' '+ obesestatus);
+	$('#quetelet').append(quetelet + ' '+ queteletstatus);
 	$('#lindex').append(lindex);
 	$('#strindex').append(strindex);
 	$('#ipb').append(ipb + '%');
 	$('#pgt').append(pgt + '%');
 	$('#propindex').append(propindex + '%');
 	$('#erris').append(erris);
-	$('#ipin').append(ipin + '. '+ ipinstatus);
+	$('#ipin').append(ipin + ' '+ ipinstatus);
 	$('#iskell').append(iskell + '%' + ' '+ iskellstatus);
 	$('#gender').append(gender);
 	$('#fac').append(fac);

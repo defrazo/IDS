@@ -24,32 +24,31 @@ $(document).ready(function() {
 	}
 
 	switch (true) {
-		case (imt > 18.5) && (imt < 24.9) : imtp = 0; break;
-		case (imt > 25) && (imt < 29.9) : imtp = 2; break;
-		case (imt > 30) && (imt < 34.9) : imtp = 3; break;
-		case (imt > 35) && (imt < 39.9) : imtp = 4; break;
-		case (imt > 40) : imtp = 5; break;
+		case (imt <= 24.9) : imtp = 0; break;
+		case (imt >= 25 && imt <= 29.9) : imtp = 2; break;
+		case (imt >= 30 && imt <= 34.9) : imtp = 3; break;
+		case (imt >= 35 && imt <= 39.9) : imtp = 4; break;
+		case (imt >= 40) : imtp = 5; break;
 	}
 
 	switch (true) {
-		case (age < 20) : var agep = 0; break;
-		case (age > 20) && (age < 29) : var agep = 1; break;
-		case (age > 30) && (age < 39) : var agep = 2; break;
-		case (age > 40) && (age < 49) : var agep = 3; break;
-		case (age > 50) && (age < 59) : var agep = 4; break;
-		case (age > 60) : var agep = 5; break;
+		case (age <= 20) : var agep = 0; break;
+		case (age >= 21 && age <= 29) : var agep = 1; break;
+		case (age >= 30 && age <= 39) : var agep = 2; break;
+		case (age >= 40 && age <= 49) : var agep = 3; break;
+		case (age >= 50 && age <= 59) : var agep = 4; break;
+		case (age >= 60) : var agep = 5; break;
 	}
 
 	var sum = parseFloat(agep) + parseFloat(genderp) + parseInt(q1) + parseInt(q2) + parseInt(q3) + parseInt(q4) + parseInt(q5) + parseInt(q6) + parseFloat(imtp);
 
 	switch (true) {
 		case (sum <= 13) : var status = 'Отсутствует'; break;
-		case (sum >= 14) && (sum <= 21) : var status = 'Минимальный'; break;
-		case (sum >= 22) && (sum <= 28) : var status = 'Явный'; break;
-		case (sum >= 29) && (sum <= 35) : var status = 'Выраженный'; break;
+		case (sum >= 14 && sum <= 21) : var status = 'Минимальный'; break;
+		case (sum >= 22 && sum <= 28) : var status = 'Явный'; break;
+		case (sum >= 29 && sum <= 35) : var status = 'Выраженный'; break;
 		case (sum >= 36) : var status = 'Максимальный'; break;
 	}
-
 
 	$('#sname').append(sname);
 	$('#fname').append(fname);

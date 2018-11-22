@@ -111,7 +111,7 @@ $(document).ready(function() {
 	$('#sist').focusout(function() {
 		var sist = $('#sist').val();
 		
-		if (($(this).val() < 60) || ($(this).val() > 200)) $(this).val($(this).val().substr(0, 0));
+		if (($(this).val() < 60) || ($(this).val() > 220)) $(this).val($(this).val().substr(0, 0));
 		
 		if (sist != '') {
 			
@@ -148,7 +148,7 @@ $(document).ready(function() {
 	$('#dia').focusout(function() {
 		var dia = $('#dia').val();
 		
-		if (($(this).val() < 40) || ($(this).val() > 120)) $(this).val($(this).val().substr(0, 0));
+		if (($(this).val() < 30) || ($(this).val() > 140)) $(this).val($(this).val().substr(0, 0));
 
 		if (dia != '') {
 			if (isValidDia(dia)) $('#dia').css('border', '1px solid #0dd01a');
