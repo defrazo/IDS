@@ -55,6 +55,7 @@ $(document).ready(function() {
 		case ((skib >= 600) && (skib <= 1000)) : var skibstatus = '(Плохо)'; break;
 		case (skib <= 500) : var skibstatus = '(Очень плохо)'; break;
 	}
+	console.log(skib);
 
 	$('#sname').append(sname);
 	$('#fname').append(fname);

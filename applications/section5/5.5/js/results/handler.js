@@ -26,12 +26,12 @@ $(document).ready(function() {
 	var value = parseInt(q1) + parseInt(q2) + parseInt(q3) + parseInt(q4) + parseInt(q5) + parseInt(q6) + parseInt(q7) + parseInt(q8) + parseInt(q9) + parseInt(q10) + parseInt(q11) + parseInt(q12) + parseInt(q13) + parseInt(q14) + parseInt(q15) + parseInt(q16);
 
 	switch (true) {
-		case ((value >= 30) && (value <= 31)) : var status = 'Низкий'; break;
-		case ((value >= 25) && (value <= 29)) : var status = 'Ниже среднего'; break;
-		case ((value >= 19) && (value <= 24)) : var status = 'Средний'; break;
-		case ((value >= 14) && (value <= 18)) : var status = 'Идеальный'; break;
-		case ((value >= 9) && (value <= 13)) : var status = 'Выше среднего (нежелательно)'; break;
-		case ((value >= 4) && (value <= 8)) : var status = 'Высокий (плохо)'; break;
+		case (value >= 30 && value <= 31) : var status = 'Низкий'; break;
+		case (value >= 25 && value <= 29) : var status = 'Ниже среднего'; break;
+		case (value >= 19 && value <= 24) : var status = 'Средний'; break;
+		case (value >= 14 && value <= 18) : var status = 'Идеальный'; break;
+		case (value >= 9 && value <= 13) : var status = 'Выше среднего (нежелательно)'; break;
+		case (value >= 4 && value <= 8) : var status = 'Высокий (плохо)'; break;
 		case (value <= 3) : var status = 'Очень высокий (очень плохо)'; break;
 	}
 

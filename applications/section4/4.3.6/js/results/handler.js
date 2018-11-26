@@ -101,11 +101,11 @@ $(document).ready(function() {
 
 	switch (true) {
 		case (points <= 13) : status = 'Очень низкий'; break;
-		case ((points >= 14) && (points <= 17)) : status = 'Низкий'; break;
-		case ((points >= 18) && (points <= 25)) : status = 'Ниже среднего'; break;
-		case ((points >= 26) && (points <= 30)) : status = 'Средний'; break;
-		case ((points >= 31) && (points <= 34)) : status = 'Выше среднего'; break;
-		case ((points >= 35) && (points <= 37)) : status = 'Высокий'; break;
+		case (points >= 14 && points <= 17) : status = 'Низкий'; break;
+		case (points >= 18 && points <= 25) : status = 'Ниже среднего'; break;
+		case (points >= 26 && points <= 30) : status = 'Средний'; break;
+		case (points >= 31 && points <= 34) : status = 'Выше среднего'; break;
+		case (points >= 35 && points <= 37) : status = 'Высокий'; break;
 		case (points >= 38) : status = 'Очень высокий'; break;
 	}
 

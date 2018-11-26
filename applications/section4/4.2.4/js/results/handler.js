@@ -89,33 +89,33 @@ $(document).ready(function() {
 	value5 = parseInt(q5) + parseInt(q10) + parseInt(q15) + parseInt(q20) + parseInt(q25) + parseInt(q30) + parseInt(q35) + parseInt(q40) + parseInt(q45) + parseInt(q50) + parseInt(q55) + parseInt(q60) + parseInt(q65) + parseInt(q70) + parseInt(q75);
 	
 	switch (true) {
-		case ((value1 >= 0) && (value1 <= 5)) : value1s = 'Низкий уровень'; break;
-		case ((value1 >= 6) && (value1 <= 9)) : value1s = 'Средний уровень'; break;
-		case ((value1 >= 10) && (value1 <= 15)) : value1s = 'Высокий уровень'; break;
+		case (value1 >= 0 && value1 <= 5) : value1s = 'Низкий уровень'; break;
+		case (value1 >= 6 && value1 <= 9) : value1s = 'Средний уровень'; break;
+		case (value1 >= 10 && value1 <= 15) : value1s = 'Высокий уровень'; break;
 	}
 
 	switch (true) {
-		case ((value2 >= 0) && (value2 <= 5)) : value2s = 'Низкий уровень'; break;
-		case ((value2 >= 6) && (value2 <= 9)) : value2s = 'Средний уровень'; break;
-		case ((value2 >= 10) && (value2 <= 15)) : value2s = 'Высокий уровень'; break;
+		case (value2 >= 0 && value2 <= 5) : value2s = 'Низкий уровень'; break;
+		case (value2 >= 6 && value2 <= 9) : value2s = 'Средний уровень'; break;
+		case (value2 >= 10 && value2 <= 15) : value2s = 'Высокий уровень'; break;
 	}
 
 	switch (true) {
-		case ((value3 >= 0) && (value3 <= 5)) : value3s = 'Низкий уровень'; break;
-		case ((value3 >= 6) && (value3 <= 9)) : value3s = 'Средний уровень'; break;
-		case ((value3 >= 10) && (value3 <= 15)) : value3s = 'Высокий уровень'; break;
+		case (value3 >= 0 && value3 <= 5) : value3s = 'Низкий уровень'; break;
+		case (value3 >= 6 && value3 <= 9) : value3s = 'Средний уровень'; break;
+		case (value3 >= 10 && value3 <= 15) : value3s = 'Высокий уровень'; break;
 	}
 
 	switch (true) {
-		case ((value4 >= 0) && (value4 <= 5)) : value4s = 'Низкий уровень'; break;
-		case ((value4 >= 6) && (value4 <= 9)) : value4s = 'Средний уровень'; break;
-		case ((value4 >= 10) && (value4 <= 15)) : value4s = 'Высокий уровень'; break;
+		case (value4 >= 0 && value4 <= 5) : value4s = 'Низкий уровень'; break;
+		case (value4 >= 6 && value4 <= 9) : value4s = 'Средний уровень'; break;
+		case (value4 >= 10 && value4 <= 15) : value4s = 'Высокий уровень'; break;
 	}
 
 	switch (true) {
-		case ((value5 >= 0) && (value5 <= 5)) : value5s = 'Низкий уровень'; break;
-		case ((value5 >= 6) && (value5 <= 9)) : value5s = 'Средний уровень'; break;
-		case ((value5 >= 10) && (value5 <= 15)) : value5s = 'Высокий уровень'; break;
+		case (value5 >= 0 && value5 <= 5) : value5s = 'Низкий уровень'; break;
+		case (value5 >= 6 && value5 <= 9) : value5s = 'Средний уровень'; break;
+		case (value5 >= 10 && value5 <= 15) : value5s = 'Высокий уровень'; break;
 	}
 
 	$('#sname').append(sname);

@@ -28,10 +28,10 @@ $(document).ready(function() {
 		+ parseInt(q11) + parseInt(q12) + parseInt(q13) + parseInt(q14) + parseInt(q15) + parseInt(q16);
 
 	switch (true) {
-		case (sum >= 60) && (sum <= 64) : var status = 'Деятельно-творческий (высокий)'; break;
-		case (sum >= 48) && (sum <= 59) : var status = 'Деятельный (средний)'; break;
-		case (sum >= 32) && (sum <= 47) : var status = 'Слабо заинтересованный (низкий)'; break;
-		case (sum >= 16) && (sum <= 31) : var status = 'Индифферентный (крайне низкий)'; break;
+		case (sum >= 60) : var status = 'Деятельно-творческий (высокий)'; break;
+		case (sum >= 48 && sum <= 59) : var status = 'Деятельный (средний)'; break;
+		case (sum >= 32 && sum <= 47) : var status = 'Слабо заинтересованный (низкий)'; break;
+		case (sum <= 31) : var status = 'Индифферентный (крайне низкий)'; break;
 	}
 
 	$('#sname').append(sname);

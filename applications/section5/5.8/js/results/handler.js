@@ -46,15 +46,15 @@ $(document).ready(function() {
 	var value = parseInt(q1) + parseInt(q2) + parseInt(q3) + parseInt(q4) + parseInt(q5) + parseInt(q6) + parseInt(q7) + parseInt(q8) + parseInt(q9) + parseInt(q10) + parseInt(q11) + parseInt(q12) + parseInt(q13) + parseInt(q14) + parseInt(q15) + parseInt(q16) + parseInt(q17) + parseInt(q18) + parseInt(q19) + parseInt(q20) + parseInt(q21) + parseInt(q22) + parseInt(q23) + parseInt(q24) + parseInt(q25) + parseInt(q26) + parseInt(q27) + parseInt(q28) + parseInt(q29) + parseInt(q30) + parseInt(q31) + parseInt(q32) + parseInt(q33) + parseInt(q34) + parseInt(q35) + parseInt(q36);
 
 	switch (true) {
-		case ((value >= 37) && (value <= 44)) : status = 'Очень низкий'; break;
-		case ((value >= 45) && (value <= 52)) : status = 'Низкий'; break;
-		case ((value >= 53) && (value <= 60)) : status = 'Ниже среднего'; break;
-		case ((value >= 61) && (value <= 68)) : status = 'Чуть ниже среднего'; break;
-		case ((value >= 69) && (value <= 76)) : status = 'Средний'; break;
-		case ((value >= 77) && (value <= 84)) : status = 'Чуть выше среднего'; break;
-		case ((value >= 85) && (value <= 92)) : status = 'Выше среднего'; break;
-		case ((value >= 93) && (value <= 100)) : status = 'Высокий'; break;
-		case ((value >= 101) && (value <= 108)) : status = 'Очень высокий'; break;
+		case (value >= 37 && value <= 44) : status = 'Очень низкий'; break;
+		case (value >= 45 && value <= 52) : status = 'Низкий'; break;
+		case (value >= 53 && value <= 60) : status = 'Ниже среднего'; break;
+		case (value >= 61 && value <= 68) : status = 'Чуть ниже среднего'; break;
+		case (value >= 69 && value <= 76) : status = 'Средний'; break;
+		case (value >= 77 && value <= 84) : status = 'Чуть выше среднего'; break;
+		case (value >= 85 && value <= 92) : status = 'Выше среднего'; break;
+		case (value >= 93 && value <= 100) : status = 'Высокий'; break;
+		case (value >= 101 && value <= 108) : status = 'Очень высокий'; break;
 	}
 	
 	$('#sname').append(sname);

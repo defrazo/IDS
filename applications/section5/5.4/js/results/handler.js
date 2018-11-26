@@ -53,18 +53,18 @@ $(document).ready(function() {
 	var kvalue2 = (0.05 * value2).toFixed(2);
 
 	switch (true) {
-		case ((kvalue1 >= 0.10) && (kvalue1 <= 0.45)) : var status1 = 'Низкий уровень'; break;
-		case ((kvalue1 >= 0.46) && (kvalue1 <= 0.55)) : var status1 = 'Уровень ниже среднего'; break;
-		case ((kvalue1 >= 0.56) && (kvalue1 <= 0.65)) : var status1 = 'Средний уровень'; break;
-		case ((kvalue1 >= 0.66) && (kvalue1 <= 0.75)) : var status1 = 'Высокий уровень'; break;
+		case (kvalue1 >= 0.10 && kvalue1 <= 0.45) : var status1 = 'Низкий уровень'; break;
+		case (kvalue1 >= 0.46 && kvalue1 <= 0.55) : var status1 = 'Уровень ниже среднего'; break;
+		case (kvalue1 >= 0.56 && kvalue1 <= 0.65) : var status1 = 'Средний уровень'; break;
+		case (kvalue1 >= 0.66 && kvalue1 <= 0.75) : var status1 = 'Высокий уровень'; break;
 		case (kvalue1 >= 0.76) : var status1 = 'Очень высокий уровень'; break;
 	}
 
 	switch (true) {
-		case ((kvalue2 >= 0.20) && (kvalue2 <= 0.55)) : var status2 = 'Низкий уровень'; break;
-		case ((kvalue2 >= 0.56) && (kvalue2 <= 0.65)) : var status2 = 'Уровень ниже среднего'; break;
-		case ((kvalue2 >= 0.66) && (kvalue2 <= 0.70)) : var status2 = 'Средний уровень'; break;
-		case ((kvalue2 >= 0.71) && (kvalue2 <= 0.80)) : var status2 = 'Высокий уровень'; break;
+		case (kvalue2 >= 0.20 && kvalue2 <= 0.55) : var status2 = 'Низкий уровень'; break;
+		case (kvalue2 >= 0.56 && kvalue2 <= 0.65) : var status2 = 'Уровень ниже среднего'; break;
+		case (kvalue2 >= 0.66 && kvalue2 <= 0.70) : var status2 = 'Средний уровень'; break;
+		case (kvalue2 >= 0.71 && kvalue2 <= 0.80) : var status2 = 'Высокий уровень'; break;
 		case (kvalue2 >= 0.81) : var status2 = 'Очень высокий уровень'; break;
 	}
 

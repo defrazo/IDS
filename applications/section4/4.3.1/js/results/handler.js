@@ -51,11 +51,11 @@ $(document).ready(function() {
 
 	switch (true) {
 		case (sum >= 293) : var status = 'Очень низкий'; break;
-		case ((sum >= 283) && (sum <= 292)) : var status = 'Низкий'; break;
-		case ((sum >= 203) && (sum <= 282)) : var status = 'Ниже среднего'; break;
-		case ((sum >= 163) && (sum <= 202)) : var status = 'Средний'; break;
-		case ((sum >= 123) && (sum <= 162)) : var status = 'Выше среднего'; break;
-		case ((sum >= 113) && (sum <= 122)) : var status = 'Высокий'; break;
+		case (sum >= 283 && sum <= 292) : var status = 'Низкий'; break;
+		case (sum >= 203 && sum <= 282) : var status = 'Ниже среднего'; break;
+		case (sum >= 163 && sum <= 202) : var status = 'Средний'; break;
+		case (sum >= 123 && sum <= 162) : var status = 'Выше среднего'; break;
+		case (sum >= 113 && sum <= 122) : var status = 'Высокий'; break;
 		case (sum <= 112) : var status = 'Очень высокий'; break;
 	}
 

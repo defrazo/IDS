@@ -41,4 +41,7 @@ function get_data() { //Вносит заполненные данные из п
 	
 	var b6 = $("input[name='b6']:checked").val();
 	if (b6) localStorage.setItem("b6inp", b6);
+
+	var fac = $('#fac').val();
+	if (fac != '') localStorage.setItem('facinp', fac);
 };

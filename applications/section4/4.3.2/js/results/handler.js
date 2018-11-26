@@ -19,9 +19,9 @@ $(document).ready(function() {
 
 	switch (true) {
 		case (res <= 2) : var status = 'Очень низкий'; break;
-		case ((res >= 3) && (res <= 4)) : var status = 'Низкий'; break;
-		case ((res >= 5) && (res <= 6)) : var status = 'Средний'; break;
-		case ((res >= 6) && (res <= 7)) : var status = 'Высокий'; break;
+		case (res >= 3 && res <= 4) : var status = 'Низкий'; break;
+		case (res >= 5 && res <= 6) : var status = 'Средний'; break;
+		case (res >= 6 && res <= 7) : var status = 'Высокий'; break;
 		case (res >= 8) : var status = 'Очень высокий'; break;
 	}
 

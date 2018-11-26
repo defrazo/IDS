@@ -31,8 +31,8 @@ $(document).ready(function() {
 
 	switch (true) {
 		case (value <= 14) : var status = 'Воля развита слабо'; break;
-		case ((value >= 15) && (value <= 25)) : var status = 'Воля достаточно тверда, а поступки взвешенные'; break;
-		case ((value >= 26) && (value <= 38)) : var status = 'Твердая воля, ответственное поведение'; break;
+		case (value >= 15 && value <= 25) : var status = 'Воля достаточно тверда, а поступки взвешенные'; break;
+		case (value >= 26 && value <= 38) : var status = 'Твердая воля, ответственное поведение'; break;
 		case (value >= 39) : var status = 'Воля развита идеально'; break;
 	}
 

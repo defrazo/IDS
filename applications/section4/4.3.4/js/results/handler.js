@@ -35,9 +35,9 @@ $(document).ready(function() {
 	
 	switch (true) {
 		case (points <= 3) : status = 'Низкий'; break;
-		case ((points >= 4) && (points <= 5)) : status = 'Ниже среднего'; break;
-		case ((points >= 6) && (points <= 7)) : status = 'Средний'; break;
-		case ((points >= 8) && (points <= 9)) : status = 'Выше среднего'; break;
+		case (points >= 4 && points <= 5) : status = 'Ниже среднего'; break;
+		case (points >= 6 && points <= 7) : status = 'Средний'; break;
+		case (points >= 8 && points <= 9) : status = 'Выше среднего'; break;
 		case (points >= 10) : status = 'Высокий'; break;
 	}
 

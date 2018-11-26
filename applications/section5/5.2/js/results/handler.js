@@ -33,8 +33,8 @@ $(document).ready(function() {
 
 	switch (true) {
 		case (value >= 60) : var status = 'Высокий'; break;
-		case ((value >= 40) && (value <= 59)) : var status = 'Средний'; break;
-		case ((value >= 20) && (value <= 39)) : var status = 'Низкий'; break;
+		case (value >= 40 && value <= 59) : var status = 'Средний'; break;
+		case (value >= 20 && value <= 39) : var status = 'Низкий'; break;
 		case (value <= 19) : var status = 'Очень низкий'; break;
 	}
 

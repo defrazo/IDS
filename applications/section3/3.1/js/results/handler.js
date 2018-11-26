@@ -67,7 +67,8 @@ $(document).ready(function() {
 		}  else var adiposit = '';
 
 		if ((weight != '') && (height != '')) {
-			var obese = (weight / (height / 100)).toFixed(1);
+
+			var obese = (weight / ((height / 100) * (height / 100))).toFixed(1);
 		
 			switch (true) {
 				case (obese <= 18) : var obesestatus = '(Отличное состояние)'; break;

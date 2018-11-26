@@ -60,8 +60,8 @@ $(document).ready(function() {
 
 	switch (true) {
 		case (sum <= 14) : var status = 'Очень низкий'; break;
-		case ((sum >= 15) && (sum <= 21)) : var status = 'Заниженный'; break;
-		case ((sum >= 22) && (sum <= 29)) : var status = 'Средний'; break;
+		case (sum >= 15 && sum <= 21) : var status = 'Заниженный'; break;
+		case (sum >= 22 && sum <= 29) : var status = 'Средний'; break;
 		case (sum >= 30): var status = 'Высокий'; break;
 	}
 

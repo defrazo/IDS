@@ -29,11 +29,11 @@ $(document).ready(function() {
 	
 	switch (true) {
 		case (value <= 5) : var status = 'Очень низкий'; break;
-		case ((value >= 6) && (value <= 9)) : var status = 'Низкий'; break;
-		case ((value >= 10) && (value <= 11)) : var status = 'Ниже среднего'; break;
-		case ((value >= 12) && (value <= 13)) : var status = 'Средний'; break;
-		case ((value >= 14) && (value <= 15)) : var status = 'Выше среднего'; break;
-		case ((value >= 16) && (value <= 17)) : var status = 'Высокий'; break;
+		case (value >= 6 && value <= 9) : var status = 'Низкий'; break;
+		case (value >= 10 && value <= 11) : var status = 'Ниже среднего'; break;
+		case (value >= 12 && value <= 13) : var status = 'Средний'; break;
+		case (value >= 14 && value <= 15) : var status = 'Выше среднего'; break;
+		case (value >= 16 && value <= 17) : var status = 'Высокий'; break;
 		case (value >= 18) : var status = 'Очень высокий'; break;
 	}
 

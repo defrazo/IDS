@@ -73,10 +73,10 @@ $(document).ready(function() {
 	var k = (1 - (sum * 0.00075)).toFixed(2);
 	
 	switch (true) {
-		case (k <= 0.5) : var ks = 'Заниженная самооценка'; break;
-		case ((k >= 0.51) && (k <= 0.75)) : var ks = 'Адекватная самооценка'; break;
-		case ((k >= 0.751) && (k <= 0.85)) : var ks = 'Высокая самооценка'; break;
-		case (k >= 0.851): var ks = 'Завышенная самооценка'; break;
+		case (k <= 0.50) : var ks = 'Заниженная самооценка'; break;
+		case (k >= 0.51 && k <= 0.75) : var ks = 'Адекватная самооценка'; break;
+		case (k >= 0.751 && k <= 0.85) : var ks = 'Высокая самооценка'; break;
+		case (k >= 0.851) : var ks = 'Завышенная самооценка'; break;
 	}
 
 	$('#sname').append(sname);

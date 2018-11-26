@@ -53,27 +53,27 @@ $(document).ready(function() {
 	value4 = parseInt(q31) + parseInt(q32) + parseInt(q33) + parseInt(q34) + parseInt(q35) + parseInt(q36) + parseInt(q37) + parseInt(q38) + parseInt(q39) + parseInt(q40);
 
 	switch (true) {
-		case ((value1 >= 0) && (value1 <= 7)) : anxiety = 'Тревожность низкая'; break;
-		case ((value1 >= 8) && (value1 <= 14)) : anxiety = 'Тревожность средняя (допустимая)'; break;
-		case ((value1 >= 15) && (value1 <= 20)) : anxiety = 'Тревожность высокая'; break;
+		case (value1 >= 0 && value1 <= 7) : anxiety = 'Тревожность низкая'; break;
+		case (value1 >= 8 && value1 <= 14) : anxiety = 'Тревожность средняя (допустимая)'; break;
+		case (value1 >= 15 && value1 <= 20) : anxiety = 'Тревожность высокая'; break;
 	}
 
 	switch (true) {
-		case ((value2 >= 0) && (value2 <= 7)) : frustration = 'Высокая самооценка. (фрустрация отсутствует)'; break;
-		case ((value2 >= 8) && (value2 <= 14)) : frustration = 'Средняя самооценка (фрустрация имеет место)'; break;
-		case ((value2 >= 15) && (value2 <= 20)) : frustration = 'Низкая самооценка (фрустрация сильная)'; break;
+		case (value2 >= 0 && value2 <= 7) : frustration = 'Высокая самооценка. (фрустрация отсутствует)'; break;
+		case (value2 >= 8 && value2 <= 14) : frustration = 'Средняя самооценка (фрустрация имеет место)'; break;
+		case (value2 >= 15 && value2 <= 20) : frustration = 'Низкая самооценка (фрустрация сильная)'; break;
 	}
 
 	switch (true) {
-		case ((value3 >= 0) && (value3 <= 7)) : calm = 'Высокий уровень спокойствия'; break;
-		case ((value3 >= 8) && (value3 <= 14)) : calm = 'Средний уровень спокойствия'; break;
-		case ((value3 >= 15) && (value3 <= 20)) : calm = 'Низкий уровень спокойствия'; break;
+		case (value3 >= 0 && value3 <= 7) : calm = 'Высокий уровень спокойствия'; break;
+		case (value3 >= 8 && value3 <= 14) : calm = 'Средний уровень спокойствия'; break;
+		case (value3 >= 15 && value3 <= 20) : calm = 'Низкий уровень спокойствия'; break;
 	}
 
 	switch (true) {
-		case ((value4 >= 0) && (value4 <= 7)) : rigidity = 'Слабая регидность'; break;
-		case ((value4 >= 8) && (value4 <= 14)) : rigidity = 'Средняя ригидность'; break;
-		case ((value4 >= 15) && (value4 <= 20)) : rigidity = 'Сильная ригидность'; break;
+		case (value4 >= 0 && value4 <= 7) : rigidity = 'Слабая регидность'; break;
+		case (value4 >= 8 && value4 <= 14) : rigidity = 'Средняя ригидность'; break;
+		case (value4 >= 15 && value4 <= 20) : rigidity = 'Сильная ригидность'; break;
 	}
 
 	$('#sname').append(sname);

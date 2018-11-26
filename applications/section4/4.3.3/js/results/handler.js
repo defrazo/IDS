@@ -45,9 +45,9 @@ $(document).ready(function() {
 
 	switch (true) {
 		case (sum >= 420) : var status = 'Очень низкий'; break;
-		case ((sum >= 352) && (sum <= 419)) : var status = 'Низкий'; break;
-		case ((sum >= 162) && (sum <= 351)) : var status = 'Средний'; break;
-		case ((sum >= 156) && (sum <= 161)) : var status = 'Высокий'; break;
+		case (sum >= 352 && sum <= 419) : var status = 'Низкий'; break;
+		case (sum >= 162 && sum <= 351) : var status = 'Средний'; break;
+		case (sum >= 156 && sum <= 161) : var status = 'Высокий'; break;
 		case (sum <= 155) : var status = 'Очень высокий'; break;
 	}
 
