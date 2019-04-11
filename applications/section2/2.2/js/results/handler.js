@@ -29,7 +29,7 @@ $(document).ready(function() {
 	$('#fname').append(fname);
 	$('#mname').append(mname);
 	$('#date').append(date);
-	$('#points').append((ufc).toFixed(3));
+	$('#points').append((ufc).toFixed(3) + ' балл(ов)');
 	$('#gender').append(gender);
 	$('#fac').append(fac);
 	$('#status').append(status);

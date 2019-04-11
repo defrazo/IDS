@@ -30,10 +30,10 @@ $(document).ready(function() {
 	value = parseInt(q1) + parseInt(q2) + parseInt(q3) + parseInt(q4) + parseInt(q5) + parseInt(q6) + parseInt(q7) + parseInt(q8) + parseInt(q9) + parseInt(q10) + parseInt(q11) + parseInt(q12) + parseInt(q13) + parseInt(q14) + parseInt(q15) + parseInt(q16) + parseInt(q17) + parseInt(q18) + parseInt(q19) + parseInt(q20);
 
 	switch (true) {
-		case (value <= 14) : var status = 'Воля развита слабо'; break;
-		case (value >= 15 && value <= 25) : var status = 'Воля достаточно тверда, а поступки взвешенные'; break;
-		case (value >= 26 && value <= 38) : var status = 'Твердая воля, ответственное поведение'; break;
-		case (value >= 39) : var status = 'Воля развита идеально'; break;
+		case (value <= 14) : var status = 'Воля развита слабо.'; break;
+		case (value >= 15 && value <= 25) : var status = 'Воля достаточно тверда, а поступки взвешенные.'; break;
+		case (value >= 26 && value <= 38) : var status = 'Твердая воля, ответственное поведение.'; break;
+		case (value >= 39) : var status = 'Воля развита идеально.'; break;
 	}
 
 	$('#sname').append(sname);
@@ -41,6 +41,7 @@ $(document).ready(function() {
 	$('#mname').append(mname);
 	$('#date').append(date);
 	$('#gender').append(gender);
+	$('#points').append(value + ' балл(ов)');
 	$('#status').append(status);
 	$('#fac').append(fac);
 });

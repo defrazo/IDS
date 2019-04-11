@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="../../../../css/bootstrap.css" media="all">
 	<link rel="stylesheet" href="../../../../css/page.css" media="all">
 	<link rel="stylesheet" href="../../../../css/results.css" media="all">
+	<link rel="stylesheet" href="../../../../css/information.css" media="all">
 	<link rel="stylesheet" href="../../../../css/options.css" media="all">
 	<script src="../../../../js/jquery-3.js"></script>
 	<script src="../../../../js/jquery-1.js"></script>
@@ -53,10 +54,20 @@
 				<td id="gender"></td>
 			</tr>
 			<tr>
-				<td>Сила воли</td>
+				<td>Сумма баллов</td>
+				<td id="points"></td>
+			</tr>
+			<tr>
+				<td>Сила воли <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-html="true" data-placement="top" title="Высокий (39+) <br> Средний (26 – 38) <br> Низкий (15 – 25) <br> Крайне низкий (0 – 14)"></td>
 				<td id="status"></td>
 			</tr>
 		</table>
+		<div class="content_box note_field field_shadow text-justify">
+				<p class="note">Если сумма набранных баллов 14 и менее, то у данного человека слабая воля.</p>
+				<p class="note">При сумме баллов от 15 до 25 характер и воля человека считаются достаточно твердыми, а поступки в основном реалистичными и взвешенными.</p>
+				<p class="note">При общей сумме баллов от 26 до 38 характер человека и его воля считаются очень твердыми, а его поведение в большинстве случаев достаточно ответственным. Есть, правда, опасность увлечения силой воли с целью самолюбования.</p>
+				<p class="note">При сумме баллов выше 38 воля и характер человека считаются близкими к идеальным, но иногда возникает сомнение в том, достаточно ли правильно и объективно человек себя оценил.</p>
+			</div>
 		<div class="controls row text-center no-gutter">
 			<div class="col-md-offset-1 col-md-3 text-center no-gutter">
 				<span class="switch_name">Настройки</span>

@@ -31,15 +31,15 @@ $(document).ready(function() {
 	var value = parseInt(q1) + parseInt(q2) + parseInt(q3) + parseInt(q4) + parseInt(q5) + parseInt(q6) + parseInt(q7) + parseInt(q8) + parseInt(q9) + parseInt(q10) + parseInt(q11) + parseInt(q12) + parseInt(q13) + parseInt(q14) + parseInt(q15) + parseInt(q16) + parseInt(q17) + parseInt(q18) + parseInt(q19) + parseInt(q20) + parseInt(q21);
 
 	switch (true) {
-		case (value >= 21 && value <= 28) : status = '1-й (очень низкий)'; break;
+		case (value >= 0 && value <= 28) : status = '1-й (очень низкий)'; break;
 		case (value >= 29 && value <= 32) : status = '2-й (низкий)'; break;
 		case (value >= 33 && value <= 36) : status = '3-й (ниже среднего)'; break;
 		case (value >= 37 && value <= 40) : status = '4-й (несколько ниже среднего)'; break;
 		case (value >= 41 && value <= 44) : status = '5-й (средний)'; break;
 		case (value >= 45 && value <= 48) : status = '6-й (несколько выше среднего)'; break;
-		case (value >= 49 && value <= 52) : status = '7-й (высше среднего)'; break;
+		case (value >= 49 && value <= 52) : status = '7-й (выше среднего)'; break;
 		case (value >= 53 && value <= 56) : status = '8-й (высокий)'; break;
-		case (value >= 57 && value <= 63) : status = '9-й (очень высокий)'; break;
+		case (value >= 57) : status = '9-й (очень высокий)'; break;
 	}
 
 	$('#sname').append(sname);
@@ -47,6 +47,7 @@ $(document).ready(function() {
 	$('#mname').append(mname);
 	$('#date').append(date);
 	$('#gender').append(gender);
+	$('#points').append(value + ' балл(ов)'); 
 	$('#status').append(status);
 	$('#fac').append(fac);
 });

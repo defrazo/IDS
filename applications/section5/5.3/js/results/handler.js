@@ -22,9 +22,9 @@ $(document).ready(function() {
 	var value = parseInt(q1) + parseInt(q2) + parseInt(q3) + parseInt(q4) + parseInt(q5) + parseInt(q6) + parseInt(q7) + parseInt(q8) + parseInt(q9) + parseInt(q10) + parseInt(q11) + parseInt(q12);
 
 	switch (true) {
-		case (value <= 17) : var status = 'Вы достигли эмоционального благополучия. Вы уважаете свою индивидуальность и умеете радоваться жизни.'; break;
-		case (value >= 18) && (value <= 21) : var status = 'Вас, вероятно, в какой-то степени можно назвать счастливым, но, по-видимуму, вы не совсем довольны собой и недооцениваете себя как личность.'; break;
-		case (value >= 22) : var status = 'Вы могли бы получать от жизни намного больше радости, чем теперь.'; break;
+		case (value <= 17) : var status = 'Отлично. <br>Вы достигли эмоционального благополучия. Вы уважаете свою индивидуальность и умеете радоваться жизни.'; break;
+		case (value >= 18) && (value <= 21) : var status = 'Хорошо. <br>Вас, вероятно, в какой-то степени можно назвать счастливым, но, по-видимуму, вы не совсем довольны собой и недооцениваете себя как личность.'; break;
+		case (value >= 22) : var status = 'Удовлетворительно. <br>Вы могли бы получать от жизни намного больше радости, чем теперь.'; break;
 	}
 
 	$('#sname').append(sname);
@@ -32,6 +32,7 @@ $(document).ready(function() {
 	$('#mname').append(mname);
 	$('#date').append(date);
 	$('#gender').append(gender);
+	$('#points').append(value + ' балл(ов)');
 	$('#status').append(status);
 	$('#fac').append(fac);
 });

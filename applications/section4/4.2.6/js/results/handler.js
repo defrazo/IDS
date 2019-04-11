@@ -49,20 +49,23 @@ $(document).ready(function() {
 	var value4 = parseInt(q4) + parseInt(q10) + parseInt(q16) + parseInt(q22) + parseInt(q28) + parseInt(q34);
 	var value5 = parseInt(q5) + parseInt(q11) + parseInt(q17) + parseInt(q23) + parseInt(q29) + parseInt(q35);
 	var value6 = parseInt(q6) + parseInt(q12) + parseInt(q18) + parseInt(q24) + parseInt(q30) + parseInt(q36);
+	var value7 = parseInt(q4) + parseInt(q10) + parseInt(q16) + parseInt(q22) + parseInt(q28) + parseInt(q34);
 
 	var valpercent1 = (16.66 * value1).toFixed();
 	var valpercent2 = (16.66 * value2).toFixed();
 	var valpercent3 = (16.66 * value3).toFixed();
 	var valpercent5 = (16.66 * value5).toFixed();
 	var valpercent6 = (16.66 * value6).toFixed();
+	var valpercent7 = (16.66 * value7).toFixed();
 
-	var sum = value1 + value2 + value3 + value4 + value5 + value6;
+
+	var sum = value1 + value2 + value3 + value4 + value5 + value6 + value7;
 
 	switch (true) {
-		case (sum <= 14) : var status = 'Очень низкий'; break;
-		case (sum >= 15 && sum <= 21) : var status = 'Заниженный'; break;
-		case (sum >= 22 && sum <= 29) : var status = 'Средний'; break;
-		case (sum >= 30): var status = 'Высокий'; break;
+		case (sum <= 14) : var status = 'Очень низкий уровень'; break;
+		case (sum >= 15 && sum <= 21) : var status = 'Заниженный уровень'; break;
+		case (sum >= 22 && sum <= 29) : var status = 'Средний уровень'; break;
+		case (sum >= 30): var status = 'Высокий уровень'; break;
 	}
 
 	$('#sname').append(sname);
@@ -75,6 +78,7 @@ $(document).ready(function() {
 	$('#value3').append(valpercent3 + '%');
 	$('#value5').append(valpercent5 + '%');
 	$('#value6').append(valpercent6 + '%');
-	$('#sum').append(sum);
+	$('#value7').append(valpercent7 + '%');
+	$('#sum').append(sum + ' балл(ов). <br>' + status);
 	$('#fac').append(fac);
 });

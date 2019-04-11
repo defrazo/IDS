@@ -31,6 +31,7 @@ $(document).ready(function() {
 	}
 	if (localStorage.getItem('b4inp') != '') {
 		if (localStorage.getItem('b4inp') == '1')	$('input:radio[name="b4"]').filter('[value="1"]').attr('checked',true);
+		if (localStorage.getItem('b4inp') == '2')	$('input:radio[name="b4"]').filter('[value="2"]').attr('checked',true);
 		if (localStorage.getItem('b4inp') == '3')	$('input:radio[name="b4"]').filter('[value="3"]').attr('checked',true);
 		if (localStorage.getItem('b4inp') == '7')	$('input:radio[name="b4"]').filter('[value="7"]').attr('checked',true);
 	}

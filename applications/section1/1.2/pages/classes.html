@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html onselectstart="return false;" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Функциональные классы</title>
+	<link rel="stylesheet" href="../../../../css/bootstrap.css" media="all">
+	<link rel="stylesheet" href="../../../../css/page.css" media="all">
+	<link rel="stylesheet" href="../../../../css/classes.css" media="all">
+	<link rel="stylesheet" href="../../../../css/options.css" media="all">
+	<script src="../../../../js/jquery-3.js"></script>
+	<script src="../../../../js/jquery-1.js"></script>
+	<script src="../../../../js/bootstrap.js"></script>
+	<script src="../js/script.js"></script>
+	<script src="../../../../js/themes.js"></script>
+	<script src="../../../../js/zoom.js"></script>
+	<script src="../../../../js/hotkeys.js"></script>
+	<script src="../../../../js/keys.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="header text-center">
+			<h1 class="text-uppercase">Гуманитарный университет</h1>
+			<h2>Информационно-диагностическая система самоуправления развитием личности и ее психофизической подготовленностью</h2>
+		</div>
+		<div class="header text-center">
+			<h2>Таблица показателей для экспресс-оценки здоровья (общая)</h2>
+		</div>
+		<table class="result_table table table-bordered table-hover text-center">
+			<tr>
+				<td rowspan="2">Наименование</td>
+				<td colspan="9">Уровень показателей в баллах</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+				<td>4</td>
+				<td>5</td>
+				<td>6</td>
+				<td>7</td>
+				<td>8</td>
+				<td>9</td>
+			</tr>
+			<tr>
+				<td>1. ЧСС в покое,  уд/мин</td>
+				<td>Более 90</td>
+				<td nowrap>76-90</td>
+				<td nowrap>68-75</td>
+				<td nowrap>60-67</td>
+				<td nowrap>51-59</td>
+				<td>50 и менее</td>
+				<td nowrap>-</td>
+				<td nowrap>-</td>
+				<td nowrap>-</td>
+			</tr>
+			<tr>
+				<td>2. Росто-весовой индекс</td>
+				<td>90 и менее</td>
+				<td nowrap>91-95</td>
+				<td nowrap>96-100</td>
+				<td nowrap>101-105</td>
+				<td nowrap>-</td>
+				<td nowrap>106-110</td>
+				<td nowrap>-</td>
+				<td>Более 110</td>
+				<td nowrap>-</td>
+			</tr>
+			<tr>
+				<td>3. Бег 2 км, мин,  мужчины</td>
+				<td>Более 12.00</td>
+				<td>11.01-12.00</td>
+				<td>10.01-11.00</td>
+				<td>9.01-10.00</td>
+				<td>8.01-9.00</td>
+				<td>-</td>
+				<td>7.30-8.00</td>
+				<td>-</td>
+				<td>Менее 7.30</td>
+			</tr>
+			<tr>
+				<td>Бег 2 км, мин, женщины </td>
+				<td>Более 14.00</td>
+				<td>13.01-14.00</td>
+				<td>12.01-13.00</td>
+				<td>11.01-12.00</td>
+				<td>10.01-11.00</td>
+				<td>-</td>
+				<td>9.30-10.00</td>
+				<td>-</td>
+				<td>Менее 9.30</td>
+			</tr>
+			<tr>
+				<td>Для начинающих: время восстановления ЧСС после 20 приседаний за 30 с</td>
+				<td>Более 3.00</td>
+				<td>-</td>
+				<td>2.01-3.00</td>
+				<td>-</td>
+				<td>1.00-2.00</td>
+				<td>-</td>
+				<td>Менее 1.00</td>
+				<td>-</td>
+				<td>-</td>
+			</tr>
+			<tr>
+				<td>4. Мужчины - подтягивание на перекладине, кол-во раз</td>
+				<td>Менее 2</td>
+				<td nowrap>2-3</td>
+				<td nowrap>4-6</td>
+				<td nowrap>7-10</td>
+				<td nowrap>11-14</td>
+				<td>15 и более</td>
+				<td nowrap>-</td>
+				<td nowrap>-</td>
+				<td nowrap>-</td>
+			</tr>
+			<tr>
+				<td>Мужчины-сгибание и разгибание рук в упоре лежа, кол-во раз</td>
+				<td>Менее 4</td>
+				<td nowrap>4-9</td>
+				<td nowrap>10-19</td>
+				<td nowrap>20-29</td>
+				<td nowrap>30-39</td>
+				<td>40 и более</td>
+				<td nowrap>-</td>
+				<td nowrap>-</td>
+				<td nowrap>-</td>
+			</tr>
+			<tr>
+				<td>Женщины-сед из положения  лежа на спине, руки за головой, ноги закреплены, кол-во раз</td>
+				<td>Менее 10</td>
+				<td nowrap>10-19</td>
+				<td nowrap>20-29</td>
+				<td nowrap>30-39</td>
+				<td nowrap>40-49</td>
+				<td>50 и более</td>
+				<td nowrap>-</td>
+				<td nowrap>-</td>
+				<td nowrap>-</td>
+			</tr>
+			<tr>
+				<td>5. Прыжки в длину с места, см, мужчины</td>
+				<td>Менее 200</td>
+				<td nowrap>200-209</td>
+				<td nowrap>210-219</td>
+				<td nowrap>220-229</td>
+				<td nowrap>230-239</td>
+				<td>240 и более</td>
+				<td nowrap>-</td>
+				<td nowrap>-</td>
+				<td nowrap>-</td>
+			</tr>
+			<tr>
+				<td>Прыжки в длину с места, см, женщины</td>
+				<td>Менее 140</td>
+				<td nowrap>140-149</td>
+				<td nowrap>150-159</td>
+				<td nowrap>160-169</td>
+				<td nowrap>170-179</td>
+				<td>180 и более</td>
+				<td nowrap>-</td>
+				<td nowrap>-</td>
+				<td nowrap>-</td>
+			</tr>
+			<tr>
+				<td>6. Количество простудных заболеваний в течение года, раз</td>
+				<td nowrap>Более 5</td>
+				<td nowrap>4-5</td>
+				<td nowrap>2-3</td>
+				<td nowrap>-</td>
+				<td nowrap>-</td>
+				<td nowrap>-</td>
+				<td nowrap>-</td>
+				<td nowrap>-</td>
+				<td nowrap>-</td>
+			</tr>
+		</table>
+
+		<div class="header text-center">
+			<h2>Таблица показателей для экспресс-оценки здоровья <br>(для студентов специальной медицинской группы)</h2>
+		</div>
+		<table class="result_table table table-bordered table-hover text-center">
+			<tr>
+				<td rowspan="2">Наименование</td>
+				<td colspan="9">Уровень показателей в баллах</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+				<td>4</td>
+				<td>5</td>
+				<td>6</td>
+				<td>7</td>
+				<td>8</td>
+				<td>9</td>
+			</tr>
+			<tr>
+				<td>1. ЧСС в покое,  уд/мин</td>
+				<td>Более 90</td>
+				<td nowrap>76-90</td>
+				<td nowrap>68-75</td>
+				<td nowrap>60-67</td>
+				<td nowrap>51-59</td>
+				<td>50 и менее</td>
+				<td nowrap>-</td>
+				<td nowrap>-</td>
+				<td nowrap>-</td>
+			</tr>
+			<tr>
+				<td rowspan="2">2. Артериальное давление в покое,<br> мм. рт. ст. <br>мужчины<br>женщины</td>
+				<td>Более 140/90</td>
+				<td nowrap>131-140/<br>81-90</td>
+				<td nowrap>131-140/<br>81-90</td>
+				<td nowrap>121-130/<br>76-78</td>
+				<td nowrap>121-130/<br>76-78</td>
+				<td nowrap>111-120/<br>71-75</td>
+				<td nowrap>111-120/<br>71-75</td>
+				<td nowrap>106-110/<br>60-70</td>
+				<td nowrap>106-110/<br>60-70</td>
+			</tr>
+			<tr>
+				<td>Менее 80/50</td>
+				<td nowrap>80-89/<br>50-54</td>
+				<td nowrap>80-89/<br>50-54</td>
+				<td nowrap>90-99/<br>55-59</td>
+				<td nowrap>90-99/<br>55-59</td>
+				<td nowrap>100-109/<br>76-80</td>
+				<td nowrap>100-109/<br>76-80</td>
+				<td nowrap>100-109/<br>76-80</td>
+				<td nowrap>100-109/<br>76-80</td>
+			</tr>
+			<tr>
+				<td rowspan="2">3. Жизненный показатель (ЖЕЛ на массу тела, мл/кг) <br>мужчины<br>женщины</td>
+				<td>Менее 50</td>
+				<td nowrap>50-55</td>
+				<td nowrap>56-60</td>
+				<td nowrap>61-65</td>
+				<td nowrap>61-65</td>
+				<td nowrap>66-70</td>
+				<td nowrap>66-70</td>
+				<td>Более 70</td>
+				<td>Более 70</td>
+			</tr>
+			<tr>
+				<td>Менее 40</td>
+				<td nowrap>40-45</td>
+				<td nowrap>46-50</td>
+				<td nowrap>51-55</td>
+				<td nowrap>51-55</td>
+				<td nowrap>56-60</td>
+				<td nowrap>56-60</td>
+				<td>Более 60</td>
+				<td>-</td>
+			</tr>
+			<tr>
+				<td>4. Стаж самостоятельных занятий <br>(более 2 раз в неделю по 30 мин.)</td>
+				<td>Не занимался</td>
+				<td>До 1 г. или менее 2 раз</td>
+				<td>1-2 года</td>
+				<td>1-2 года</td>
+				<td>3-4 года</td>
+				<td>3-4 года</td>
+				<td>5-7 лет</td>
+				<td>8-10 лет</td>
+				<td>Более 10 лет</td>
+			</tr>
+			<tr>
+				<td>5. Бег 2км, мин,  мужчины</td>
+				<td>Более 12.00</td>
+				<td>11.01-12.00</td>
+				<td>10.01-11.00</td>
+				<td>9.01-10.00</td>
+				<td>8.01-9.00</td>
+				<td>8.01-9.00</td>
+				<td>7.30-8.00</td>
+				<td>7.30-8.00</td>
+				<td>Менее 7.30</td>
+			</tr>
+			<tr>
+				<td>Бег 2км, мин, женщины </td>
+				<td>Более 14.00</td>
+				<td>13.01-14.00</td>
+				<td>12.01-13.00</td>
+				<td>11.01-12.00</td>
+				<td>10.01-11.00</td>
+				<td>10.01-11.00</td>
+				<td>9.30-10.00</td>
+				<td>9.30-10.00</td>
+				<td>Менее 9.30</td>
+			</tr>
+			<tr>
+				<td>6. Время восстановления ЧСС после 20 приседаний за 30 с</td>
+				<td>Более 3.00</td>
+				<td>2.01-3.00</td>
+				<td>2.01-3.00</td>
+				<td>2.01-3.00</td>
+				<td>1.00-2.00</td>
+				<td>1.00-2.00</td>
+				<td>Менее 1.00</td>
+				<td>Менее 1.00</td>
+				<td>Менее 1.00</td>
+			</tr>
+			<tr>
+				<td>7. Мужчины - подтягивание на перекладине, кол-во раз</td>
+				<td>Менее 2</td>
+				<td nowrap>2-3</td>
+				<td nowrap>4-6</td>
+				<td nowrap>7-10</td>
+				<td nowrap>11-14</td>
+				<td>15 и более</td>
+				<td nowrap>-</td>
+				<td nowrap>-</td>
+				<td nowrap>-</td>
+			</tr>
+			<tr>
+				<td>8. Мужчины-сгибание и разгибание рук в упоре лежа, кол-во раз</td>
+				<td>Менее 4</td>
+				<td nowrap>4-9</td>
+				<td nowrap>10-19</td>
+				<td nowrap>20-29</td>
+				<td nowrap>30-39</td>
+				<td>40 и более</td>
+				<td nowrap>-</td>
+				<td nowrap>-</td>
+				<td nowrap>-</td>
+			</tr>
+			<tr>
+				<td>Женщины-сед из положения  лежа на спине, руки за головой, ноги закреплены, кол-во раз</td>
+				<td>Менее 10</td>
+				<td nowrap>10-19</td>
+				<td nowrap>20-29</td>
+				<td nowrap>30-39</td>
+				<td nowrap>40-49</td>
+				<td>50 и более</td>
+				<td nowrap>-</td>
+				<td nowrap>-</td>
+				<td nowrap>-</td>
+			</tr>
+			<tr>
+				<td>9. Количество простудных заболеваний в течение года, раз</td>
+				<td nowrap>Более 5</td>
+				<td nowrap>4-5</td>
+				<td nowrap>2-3</td>
+				<td nowrap>1</td>
+				<td nowrap>1</td>
+				<td nowrap>1</td>
+				<td nowrap>0</td>
+				<td nowrap>0</td>
+				<td nowrap>0</td>
+			</tr>
+			<tr>
+				<td>10. Количество хронических заболеваний</td>
+				<td nowrap>Более 1</td>
+				<td nowrap>1</td>
+				<td nowrap>1</td>
+				<td nowrap>1</td>
+				<td nowrap>1</td>
+				<td nowrap>Нет</td>
+				<td nowrap>Нет</td>
+				<td nowrap>Нет</td>
+				<td nowrap>Нет</td>
+			</tr>
+		</table>
+		<div class="row controls text-center no-gutter">
+			<div class="col-md-offset-1 col-md-3 text-center no-gutter">
+				<span class="switch_name">Настройки</span>
+				<input type="checkbox" id="options_button" />
+				<label class="options_switch" for="options_button"><i></i></label>
+			</div>
+			<div class="col-md-4">
+				<a class="next_button" href="results.html">Результаты</a>
+			</div>
+			<div class="col-md-3">
+				<a class="next_button" onclick="print();"><img class="printImg" src="../img/prinet.png" width="35"> Печать</a>
+			</div>
+		</div>
+		<div class="options_container col-md-offset-1 col-md-3">
+			<table class="options_table">
+				<tbody>
+					<tr>
+						<td>
+							<span class="table_name">Тема</span>
+							<select class="switch_theme">
+								<option class="theme_option" selected disabled>Выберите</option>
+								<option class="theme_option" value="white">Белая</option>
+								<option class="theme_option" value="grey">Серая</option>
+								<option class="theme_option" value="blue">Синяя</option>
+								<option class="theme_option" value="black">Черная</option>
+								<option class="theme_option" value="yellow">Желтая</option>
+								<option class="theme_option" value="lightblue">Голубая</option>
+								<option class="theme_option" value="green">Зеленая</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span class="table_name">Шрифт</span><br>
+							<button style="width: 48%; outline: none;" type="button" class="btn btn-default btn-md plus" onclick="increase();"><span class="glyphicon glyphicon-plus-sign"></span></button>
+							<button style="width: 48%; outline: none;" type="button" class="btn btn-default btn-md minus" onclick="decrease();"><span class="glyphicon glyphicon-minus-sign"></span></button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</body>
+</html>

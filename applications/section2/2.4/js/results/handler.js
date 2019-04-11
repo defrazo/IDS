@@ -66,6 +66,7 @@ $(document).ready(function() {
 	$('#mname').append(mname);
 	$('#date').append(date);
 	$('#gender').append(gender);
+	$('#points').append(sum + ' балл(ов)');
 	$('#status').append(status);
 	$('#fac').append(fac);
 });

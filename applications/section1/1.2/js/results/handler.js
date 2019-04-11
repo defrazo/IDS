@@ -352,7 +352,7 @@ $(document).ready(function() {
 	$('#mname').append(mname);
 	$('#date').append(date);
 	$('#gender').append(gender);
-	$('#points').append(avg.toFixed(2));
+	$('#points').append(avg.toFixed(1) + ' балл(ов)');
 	$('#status').append(status);
 	$('#group').append(group);
 	$('#fac').append(fac);

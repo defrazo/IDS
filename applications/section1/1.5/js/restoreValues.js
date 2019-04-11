@@ -92,6 +92,7 @@ $(document).ready(function() {
 		if (localStorage.getItem('c20inp') == '-8')	$('input:radio[name="c20"]').filter('[value="-8"]').attr('checked',true);
 		if (localStorage.getItem('c20inp') == '-6')	$('input:radio[name="c20"]').filter('[value="-6"]').attr('checked',true);
 		if (localStorage.getItem('c20inp') == '-3')	$('input:radio[name="c20"]').filter('[value="-3"]').attr('checked',true);
+		if (localStorage.getItem('c20inp') == '0')	$('input:radio[name="c20"]').filter('[value="0"]').attr('checked',true);
 	}
 	if (localStorage.getItem('c21inp') != '') {
 		if (localStorage.getItem('c21inp') == '-1')	$('input:radio[name="c21"]').filter('[value="-1"]').attr('checked',true);

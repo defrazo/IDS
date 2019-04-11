@@ -19,7 +19,9 @@ $(document).ready(function() {
 	if (localStorage.getItem('f51inp') != '')	$('#f51').val(localStorage.getItem('f51inp'));
 	if (localStorage.getItem('f52inp') != '')	$('#f52').val(localStorage.getItem('f52inp'));
 	if (localStorage.getItem('f61inp') != '')	$('#f61').val(localStorage.getItem('f61inp'));
+	if (localStorage.getItem('f61ainp') != '')	$('#f61').val(localStorage.getItem('f61ainp'));
 	if (localStorage.getItem('f62inp') != '')	$('#f62').val(localStorage.getItem('f62inp'));
+	if (localStorage.getItem('f62ainp') != '')	$('#f62').val(localStorage.getItem('f62ainp'));
 	if (localStorage.getItem('f71inp') != '')	$('#f71').val(localStorage.getItem('f71inp'));
 	if (localStorage.getItem('f72inp') != '')	$('#f72').val(localStorage.getItem('f72inp'));
 	if (localStorage.getItem('f81inp') != '')	$('#f81').val(localStorage.getItem('f81inp'));

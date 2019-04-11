@@ -194,8 +194,8 @@ input[type=checkbox]:checked ~ .stopwatch_switch i {
     }
 
 .shulte {
-    width: 630px;
-    height: 470px;
+    width: 512px;
+    height: 512px;
     }
 h2 {
     padding-top: 15px;
@@ -230,3 +230,57 @@ h2 {
 #table1, #table1c, #timer {
     display: none;
     }
+
+.image-dropdown {
+    border:1px solid black; 
+    max-width: 128px;
+    max-height: 128px;
+    overflow:hidden;
+    -moz-transition: height 0.1s; 
+    -webkit-transition: height 0.1s; 
+    -ms-transition: height 0.1s;  
+    -o-transition: height 0.1s;  
+    transition: height 0.1s;
+}
+
+.image-dropdown:hover {
+    max-width: 128px;
+    max-height: 128px;
+    overflow-y: scroll;
+    background: #98dde0;
+    -moz-transition: height 0.5s; 
+    -webkit-transition: height 0.5s; 
+    -ms-transition: height 0.5s;  
+    -o-transition: height 0.5s;  
+    transition: height 0.5s;
+    position: absolute;    
+}
+
+.image-dropdown input {
+    position:absolute;
+    top:0;
+    left:0;
+    opacity:0;
+}
+
+.image-dropdown label {
+    display:none; 
+    margin:2px;
+}
+
+.image-dropdown:hover label{
+    display: table-cell;
+}
+
+.image-dropdown label:hover {
+    opacity:0.9;
+}
+
+.image-dropdown input:checked + label {
+    opacity:1 !important; 
+    display:block;
+}
+
+.nb {
+    display: none;
+}

@@ -73,7 +73,7 @@ $(document).ready(function() {
 			switch (true) {
 				case (obese <= 18) : var obesestatus = '(Отличное состояние)'; break;
 				case (obese >= 19 && obese <= 25) : var obesestatus = '(Нормальное состояние)'; break;
-				case (obese >= 25.01 && obese <= 27) : var obesestatus = '(Повышенная тучность)'; break;
+				case (obese >= 26 && obese <= 27) : var obesestatus = '(Повышенная тучность)'; break;
 				case (obese >= 28) : var obesestatus = '(Ожирение организма)'; break;
 			}
 
@@ -157,18 +157,18 @@ $(document).ready(function() {
 	$('#mname').append(mname);
 	$('#date').append(date);
 	$('#heightr').append((heightr).toFixed() + ' см');
-	$('#tmt').append(tmt + ' кг. '+ adiposity);
+	$('#tmt').append(tmt + ' кг '+ adiposity);
 	$('#pimt').append(pimt + ' кг '+ adiposit);
-	$('#obese').append(obese + ' '+ obesestatus);
-	$('#quetelet').append(quetelet + ' '+ queteletstatus);
-	$('#lindex').append(lindex);
-	$('#strindex').append(strindex);
-	$('#ipb').append(ipb + '%');
-	$('#pgt').append(pgt + '%');
-	$('#propindex').append(propindex + '%');
-	$('#erris').append(erris);
-	$('#ipin').append(ipin + ' '+ ipinstatus);
-	$('#iskell').append(iskell + '%' + ' '+ iskellstatus);
+	$('#obese').append(obese + ' кг/см. ' + obesestatus);
+	$('#quetelet').append(quetelet + ' г/см. '+ queteletstatus);
+	$('#lindex').append(lindex + ' мл/кг');
+	$('#strindex').append(strindex + ' %');
+	$('#ipb').append(ipb + ' %');
+	$('#pgt').append(pgt + ' %');
+	$('#propindex').append(propindex + ' %');
+	$('#erris').append(erris + ' см');
+	$('#ipin').append(ipin + ' усл. ед. '+ ipinstatus);
+	$('#iskell').append(iskell + ' % ' + ' '+ iskellstatus);
 	$('#gender').append(gender);
 	$('#fac').append(fac);
 });

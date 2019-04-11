@@ -16,7 +16,9 @@ $(document).ready(function() {
 		q9 = localStorage.getItem('f51inp');
 		q10 = localStorage.getItem('f52inp');
 		q11 = localStorage.getItem('f61inp');
+		q11a = localStorage.getItem('f61ainp');
 		q12 = localStorage.getItem('f62inp');
+		q12a = localStorage.getItem('f62ainp');
 		q13 = localStorage.getItem('f71inp');
 		q14 = localStorage.getItem('f72inp');
 		q15 = localStorage.getItem('f81inp');
@@ -43,9 +45,9 @@ $(document).ready(function() {
 
 	work2 = parseInt(q4) + parseInt(q20);
 
-	home1 = parseInt(q5) + parseInt(q7) + parseInt(q9) + parseInt(q11) + parseInt(q13);
+	home1 = parseInt(q5) + parseInt(q7) + parseInt(q9) + parseInt(q11) + parseInt(q11a) + parseInt(q13);
 
-	home2 = parseInt(q6) + parseInt(q8) + parseInt(q10) + parseInt(q12) + parseInt(q14);
+	home2 = parseInt(q6) + parseInt(q8) + parseInt(q10) + parseInt(q12) + parseInt(q12a) + parseInt(q14);
 
 	social1 = parseInt(q15) + parseInt(q17) + parseInt(q21) + parseInt(q23) + parseInt(q25);
 

@@ -31,26 +31,6 @@ $(document).on('ready mousemove change', function() {
 		v29 = $('#date').val(),
 		v30 = $('#fac').val();
 
-	var sel = $('.ranks'),
-    opt = $('option:not(:first-child)', sel);
-
-	function review(){
-	    var chosen = sel.map(function(i, el){
-	        return $(':selected',el);
-	    });
-	    var rankID = 0;
-	    opt.show();
-	    chosen.each(function(i, el){
-	        rankID = $(el).val();
-	        opt.not(el).filter(function(){
-	            return $(this).val() == rankID;
-	        }).hide();
-	    });
-	    return false;
-	}
-
-	sel.on('change',review);
-
 	if ((v1) && (v2) && (v3) && (v4) && (v5) && (v6) && (v7) && (v8) && (v9) && 
 		(v10) && (v11) && (v12) && (v13) && (v14) && (v15) && (v16) && (v17) && (v18) && (v19) && 
 		(v20) && (v21) && (v22) && (v23) && (v24) && (v25) && (v26) && (v27) && (v28) && (v29) &&

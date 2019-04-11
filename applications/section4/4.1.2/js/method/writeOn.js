@@ -51,8 +51,14 @@ function get_data() {
 	var f61 = $('#f61').val();
 	if (f61 != '') localStorage.setItem('f61inp', f61);
 
+	var f61a = $('#f61a').val();
+	if (f61a != '') localStorage.setItem('f61ainp', f61a);
+
 	var f62 = $('#f62').val();
 	if (f62 != '') localStorage.setItem('f62inp', f62);
+
+	var f62a = $('#f62a').val();
+	if (f62a != '') localStorage.setItem('f62ainp', f62a);
 
 	var f71 = $('#f71').val();
 	if (f71 != '') localStorage.setItem('f71inp', f71);

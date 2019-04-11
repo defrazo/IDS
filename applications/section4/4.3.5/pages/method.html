@@ -10,7 +10,6 @@
 	<link rel="stylesheet" href="../../../../css/slider.css" media="all">
 	<link rel="stylesheet" href="../../../../css/stopwatch.css" media="all">
 	<link rel="stylesheet" href="../../../../css/options.css" media="all">
-	<link rel="stylesheet" href="../../../../css/imageselect.css" media="all">
 	<script src="../../../../js/jquery-3.js"></script>
 	<script src="../../../../js/jquery-1.js"></script>
 	<script src="../../../../js/bootstrap.js"></script>
@@ -21,7 +20,6 @@
 	<script src="../../../../js/hotkeys.js"></script>
 	<script src="../../../../js/keys.js"></script>
 	<script src="../js/jquery.runner.js"></script>
-	<script src="../js/imageselect.js"></script>
 	<script src="../js/restoreValues.js"></script>
 	<script src="../js/method/checkAll.js"></script>
 	<script src="../js/method/checkRecords.js"></script>
@@ -77,7 +75,7 @@
 							<p class="designation">Ваше отчество:</p>
 							<input type="text" onkeydown="valide();" class="data_input_field" id="mname" required>
 						</div>
-					</div>		
+					</div>
 					<div class="tab" align="center" style="padding-top: 30px;">
 						<h2 class="s1">Для начала показа таблицы нажмите на кнопку "Старт"</h2>
 						<p class="designation s1" style="padding: 0 90px 20px;">Обратите внимание, что таблица будет показана на 20 секунд. Программа сообщит вам об истечении времени заполнения за 3 секунды до смены таблицы посредством подсветки (пример сигнала изображен на кнопке "СТАРТ")</p>
@@ -115,347 +113,315 @@
 							<col width="175" valign="middle">
 							<col width="175" valign="middle">
 							<tr>
-								<td id="tbl1c" align="center">
-									<select class="imgs" id="u1" name="img1" required>
-										<option class="imgop" selected disabled>../img/default.png</option>
-										<option class="imgop" value="1">../img/1.png</option>
-										<option class="imgop" value="2">../img/2.png</option>
-										<option class="imgop" value="3">../img/3.png</option>
-										<option class="imgop" value="4">../img/4.png</option>
-										<option class="imgop" value="5">../img/5.png</option>
-										<option class="imgop" value="6">../img/6.png</option>
-										<option class="imgop" value="7">../img/7.png</option>
-										<option class="imgop" value="8">../img/8.png</option>
-										<option class="imgop" value="9">../img/9.png</option>
-										<option class="imgop" value="10">../img/10.png</option>
-										<option class="imgop" value="11">../img/11.png</option>
-										<option class="imgop" value="12">../img/12.png</option>
-										<option class="imgop" value="13">../img/13.png</option>
-										<option class="imgop" value="14">../img/14.png</option>
-										<option class="imgop" value="15">../img/15.png</option>
-										<option class="imgop" value="16">../img/16.png</option>
-									</select>
+								<td id="tbl1c" class="image-dropdown" align="center">
+									<input checked="checked" type="radio" id="a0" name="img1" value="0" required/><label for="a0"><img src="../img/default.png" class="img-responsive"></label>
+									<input type="radio" id="a1" name="img1" value="1"  /><label for="a1"><img src="../img/1.png" class="img-responsive"></label>
+									<input type="radio" id="a2" name="img1" value="2"  /><label for="a2"><img src="../img/2.png" class="img-responsive"></label>
+									<input type="radio" id="a3" name="img1" value="3"  /><label for="a3"><img src="../img/3.png" class="img-responsive"></label>
+									<input type="radio" id="a4" name="img1" value="4"  /><label for="a4"><img src="../img/4.png" class="img-responsive"></label>
+									<input type="radio" id="a5" name="img1" value="5"  /><label for="a5"><img src="../img/5.png" class="img-responsive"></label>
+									<input type="radio" id="a6" name="img1" value="6"  /><label for="a6"><img src="../img/6.png" class="img-responsive"></label>
+									<input type="radio" id="a7" name="img1" value="7"  /><label for="a7"><img src="../img/7.png" class="img-responsive"></label>
+									<input type="radio" id="a8" name="img1" value="8"  /><label for="a8"><img src="../img/8.png" class="img-responsive"></label>
+									<input type="radio" id="a9" name="img1" value="9"  /><label for="a9"><img src="../img/9.png" class="img-responsive"></label>
+									<input type="radio" id="a10" name="img1" value="10"  /><label for="a10"><img src="../img/10.png" class="img-responsive"></label>
+									<input type="radio" id="a11" name="img1" value="11"  /><label for="a11"><img src="../img/11.png" class="img-responsive"></label>
+									<input type="radio" id="a12" name="img1" value="12"  /><label for="a12"><img src="../img/12.png" class="img-responsive"></label>
+									<input type="radio" id="a13" name="img1" value="13"  /><label for="a13"><img src="../img/13.png" class="img-responsive"></label>
+									<input type="radio" id="a14" name="img1" value="14"  /><label for="a14"><img src="../img/14.png" class="img-responsive"></label>
+									<input type="radio" id="a15" name="img1" value="15"  /><label for="a15"><img src="../img/15.png" class="img-responsive"></label>
+									<input type="radio" id="a16" name="img1" value="16"  /><label for="a16"><img src="../img/16.png" class="img-responsive"></label>
 								</td>
-								<td id="tbl2c" align="center">
-									<select class="imgs" id="u2" name="img2" required>
-										<option class="imgop" selected disabled>../img/default.png</option>
-										<option class="imgop" value="1">../img/1.png</option>
-										<option class="imgop" value="2">../img/2.png</option>
-										<option class="imgop" value="3">../img/3.png</option>
-										<option class="imgop" value="4">../img/4.png</option>
-										<option class="imgop" value="5">../img/5.png</option>
-										<option class="imgop" value="6">../img/6.png</option>
-										<option class="imgop" value="7">../img/7.png</option>
-										<option class="imgop" value="8">../img/8.png</option>
-										<option class="imgop" value="9">../img/9.png</option>
-										<option class="imgop" value="10">../img/10.png</option>
-										<option class="imgop" value="11">../img/11.png</option>
-										<option class="imgop" value="12">../img/12.png</option>
-										<option class="imgop" value="13">../img/13.png</option>
-										<option class="imgop" value="14">../img/14.png</option>
-										<option class="imgop" value="15">../img/15.png</option>
-										<option class="imgop" value="16">../img/16.png</option>
-									</select>
+								<td id="tbl2c" class="image-dropdown" align="center">
+									<input checked="checked" type="radio" id="b0" name="img2" value="0" required/><label for="b0"><img src="../img/default.png" class="img-responsive"></label>
+									<input type="radio" id="b1" name="img2" value="1"  /><label for="b1"><img src="../img/1.png" class="img-responsive"></label>
+									<input type="radio" id="b2" name="img2" value="2"  /><label for="b2"><img src="../img/2.png" class="img-responsive"></label>
+									<input type="radio" id="b3" name="img2" value="3"  /><label for="b3"><img src="../img/3.png" class="img-responsive"></label>
+									<input type="radio" id="b4" name="img2" value="4"  /><label for="b4"><img src="../img/4.png" class="img-responsive"></label>
+									<input type="radio" id="b5" name="img2" value="5"  /><label for="b5"><img src="../img/5.png" class="img-responsive"></label>
+									<input type="radio" id="b6" name="img2" value="6"  /><label for="b6"><img src="../img/6.png" class="img-responsive"></label>
+									<input type="radio" id="b7" name="img2" value="7"  /><label for="b7"><img src="../img/7.png" class="img-responsive"></label>
+									<input type="radio" id="b8" name="img2" value="8"  /><label for="b8"><img src="../img/8.png" class="img-responsive"></label>
+									<input type="radio" id="b9" name="img2" value="9"  /><label for="b9"><img src="../img/9.png" class="img-responsive"></label>
+									<input type="radio" id="b10" name="img2" value="10"  /><label for="b10"><img src="../img/10.png" class="img-responsive"></label>
+									<input type="radio" id="b11" name="img2" value="11"  /><label for="b11"><img src="../img/11.png" class="img-responsive"></label>
+									<input type="radio" id="b12" name="img2" value="12"  /><label for="b12"><img src="../img/12.png" class="img-responsive"></label>
+									<input type="radio" id="b13" name="img2" value="13"  /><label for="b13"><img src="../img/13.png" class="img-responsive"></label>
+									<input type="radio" id="b14" name="img2" value="14"  /><label for="b14"><img src="../img/14.png" class="img-responsive"></label>
+									<input type="radio" id="b15" name="img2" value="15"  /><label for="b15"><img src="../img/15.png" class="img-responsive"></label>
+									<input type="radio" id="b16" name="img2" value="16"  /><label for="b16"><img src="../img/16.png" class="img-responsive"></label>
 								</td>
-								<td id="tbl3c" align="center">
-									<select class="imgs" id="u3" name="img3" required>
-										<option class="imgop" selected disabled>../img/default.png</option>
-										<option class="imgop" value="1">../img/1.png</option>
-										<option class="imgop" value="2">../img/2.png</option>
-										<option class="imgop" value="3">../img/3.png</option>
-										<option class="imgop" value="4">../img/4.png</option>
-										<option class="imgop" value="5">../img/5.png</option>
-										<option class="imgop" value="6">../img/6.png</option>
-										<option class="imgop" value="7">../img/7.png</option>
-										<option class="imgop" value="8">../img/8.png</option>
-										<option class="imgop" value="9">../img/9.png</option>
-										<option class="imgop" value="10">../img/10.png</option>
-										<option class="imgop" value="11">../img/11.png</option>
-										<option class="imgop" value="12">../img/12.png</option>
-										<option class="imgop" value="13">../img/13.png</option>
-										<option class="imgop" value="14">../img/14.png</option>
-										<option class="imgop" value="15">../img/15.png</option>
-										<option class="imgop" value="16">../img/16.png</option>
-									</select>
+								<td id="tbl3c" class="image-dropdown" align="center">
+									<input checked="checked" type="radio" id="c0" name="img3" value="0" required/><label for="c0"><img src="../img/default.png" class="img-responsive"></label>
+									<input type="radio" id="c1" name="img3" value="1"  /><label for="c1"><img src="../img/1.png" class="img-responsive"></label>
+									<input type="radio" id="c2" name="img3" value="2"  /><label for="c2"><img src="../img/2.png" class="img-responsive"></label>
+									<input type="radio" id="c3" name="img3" value="3"  /><label for="c3"><img src="../img/3.png" class="img-responsive"></label>
+									<input type="radio" id="c4" name="img3" value="4"  /><label for="c4"><img src="../img/4.png" class="img-responsive"></label>
+									<input type="radio" id="c5" name="img3" value="5"  /><label for="c5"><img src="../img/5.png" class="img-responsive"></label>
+									<input type="radio" id="c6" name="img3" value="6"  /><label for="c6"><img src="../img/6.png" class="img-responsive"></label>
+									<input type="radio" id="c7" name="img3" value="7"  /><label for="c7"><img src="../img/7.png" class="img-responsive"></label>
+									<input type="radio" id="c8" name="img3" value="8"  /><label for="c8"><img src="../img/8.png" class="img-responsive"></label>
+									<input type="radio" id="c9" name="img3" value="9"  /><label for="c9"><img src="../img/9.png" class="img-responsive"></label>
+									<input type="radio" id="c10" name="img3" value="10"  /><label for="c10"><img src="../img/10.png" class="img-responsive"></label>
+									<input type="radio" id="c11" name="img3" value="11"  /><label for="c11"><img src="../img/11.png" class="img-responsive"></label>
+									<input type="radio" id="c12" name="img3" value="12"  /><label for="c12"><img src="../img/12.png" class="img-responsive"></label>
+									<input type="radio" id="c13" name="img3" value="13"  /><label for="c13"><img src="../img/13.png" class="img-responsive"></label>
+									<input type="radio" id="c14" name="img3" value="14"  /><label for="c14"><img src="../img/14.png" class="img-responsive"></label>
+									<input type="radio" id="c15" name="img3" value="15"  /><label for="c15"><img src="../img/15.png" class="img-responsive"></label>
+									<input type="radio" id="c16" name="img3" value="16"  /><label for="c16"><img src="../img/16.png" class="img-responsive"></label>
 								</td>
-								<td id="tbl4c" align="center">
-									<select class="imgs" id="u4" name="img4" required>
-										<option class="imgop" selected disabled>../img/default.png</option>
-										<option class="imgop" value="1">../img/1.png</option>
-										<option class="imgop" value="2">../img/2.png</option>
-										<option class="imgop" value="3">../img/3.png</option>
-										<option class="imgop" value="4">../img/4.png</option>
-										<option class="imgop" value="5">../img/5.png</option>
-										<option class="imgop" value="6">../img/6.png</option>
-										<option class="imgop" value="7">../img/7.png</option>
-										<option class="imgop" value="8">../img/8.png</option>
-										<option class="imgop" value="9">../img/9.png</option>
-										<option class="imgop" value="10">../img/10.png</option>
-										<option class="imgop" value="11">../img/11.png</option>
-										<option class="imgop" value="12">../img/12.png</option>
-										<option class="imgop" value="13">../img/13.png</option>
-										<option class="imgop" value="14">../img/14.png</option>
-										<option class="imgop" value="15">../img/15.png</option>
-										<option class="imgop" value="16">../img/16.png</option>
-									</select>
+								<td id="tbl4c" class="image-dropdown" align="center">
+									<input checked="checked" type="radio" id="d0" name="img4" value="0" required/><label for="d0"><img src="../img/default.png" class="img-responsive"></label>
+									<input type="radio" id="d1" name="img4" value="1"  /><label for="d1"><img src="../img/1.png" class="img-responsive"></label>
+									<input type="radio" id="d2" name="img4" value="2"  /><label for="d2"><img src="../img/2.png" class="img-responsive"></label>
+									<input type="radio" id="d3" name="img4" value="3"  /><label for="d3"><img src="../img/3.png" class="img-responsive"></label>
+									<input type="radio" id="d4" name="img4" value="4"  /><label for="d4"><img src="../img/4.png" class="img-responsive"></label>
+									<input type="radio" id="d5" name="img4" value="5"  /><label for="d5"><img src="../img/5.png" class="img-responsive"></label>
+									<input type="radio" id="d6" name="img4" value="6"  /><label for="d6"><img src="../img/6.png" class="img-responsive"></label>
+									<input type="radio" id="d7" name="img4" value="7"  /><label for="d7"><img src="../img/7.png" class="img-responsive"></label>
+									<input type="radio" id="d8" name="img4" value="8"  /><label for="d8"><img src="../img/8.png" class="img-responsive"></label>
+									<input type="radio" id="d9" name="img4" value="9"  /><label for="d9"><img src="../img/9.png" class="img-responsive"></label>
+									<input type="radio" id="d10" name="img4" value="10"  /><label for="d10"><img src="../img/10.png" class="img-responsive"></label>
+									<input type="radio" id="d11" name="img4" value="11"  /><label for="d11"><img src="../img/11.png" class="img-responsive"></label>
+									<input type="radio" id="d12" name="img4" value="12"  /><label for="d12"><img src="../img/12.png" class="img-responsive"></label>
+									<input type="radio" id="d13" name="img4" value="13"  /><label for="d13"><img src="../img/13.png" class="img-responsive"></label>
+									<input type="radio" id="d14" name="img4" value="14"  /><label for="d14"><img src="../img/14.png" class="img-responsive"></label>
+									<input type="radio" id="d15" name="img4" value="15"  /><label for="d15"><img src="../img/15.png" class="img-responsive"></label>
+									<input type="radio" id="d16" name="img4" value="16"  /><label for="d16"><img src="../img/16.png" class="img-responsive"></label>
 								</td>
 							</tr>
 							<tr>
-								<td id="tbl5c" align="center">
-									<select class="imgs" id="u5" name="img5" required>
-										<option class="imgop" selected disabled>../img/default.png</option>
-										<option class="imgop" value="1">../img/1.png</option>
-										<option class="imgop" value="2">../img/2.png</option>
-										<option class="imgop" value="3">../img/3.png</option>
-										<option class="imgop" value="4">../img/4.png</option>
-										<option class="imgop" value="5">../img/5.png</option>
-										<option class="imgop" value="6">../img/6.png</option>
-										<option class="imgop" value="7">../img/7.png</option>
-										<option class="imgop" value="8">../img/8.png</option>
-										<option class="imgop" value="9">../img/9.png</option>
-										<option class="imgop" value="10">../img/10.png</option>
-										<option class="imgop" value="11">../img/11.png</option>
-										<option class="imgop" value="12">../img/12.png</option>
-										<option class="imgop" value="13">../img/13.png</option>
-										<option class="imgop" value="14">../img/14.png</option>
-										<option class="imgop" value="15">../img/15.png</option>
-										<option class="imgop" value="16">../img/16.png</option>
-									</select>
+								<td id="tbl5c" class="image-dropdown" align="center">
+									<input checked="checked" type="radio" id="e0" name="img5" value="0" required/><label for="e0"><img src="../img/default.png" class="img-responsive"></label>
+									<input type="radio" id="e1" name="img5" value="1"  /><label for="e1"><img src="../img/1.png" class="img-responsive"></label>
+									<input type="radio" id="e2" name="img5" value="2"  /><label for="e2"><img src="../img/2.png" class="img-responsive"></label>
+									<input type="radio" id="e3" name="img5" value="3"  /><label for="e3"><img src="../img/3.png" class="img-responsive"></label>
+									<input type="radio" id="e4" name="img5" value="4"  /><label for="e4"><img src="../img/4.png" class="img-responsive"></label>
+									<input type="radio" id="e5" name="img5" value="5"  /><label for="e5"><img src="../img/5.png" class="img-responsive"></label>
+									<input type="radio" id="e6" name="img5" value="6"  /><label for="e6"><img src="../img/6.png" class="img-responsive"></label>
+									<input type="radio" id="e7" name="img5" value="7"  /><label for="e7"><img src="../img/7.png" class="img-responsive"></label>
+									<input type="radio" id="e8" name="img5" value="8"  /><label for="e8"><img src="../img/8.png" class="img-responsive"></label>
+									<input type="radio" id="e9" name="img5" value="9"  /><label for="e9"><img src="../img/9.png" class="img-responsive"></label>
+									<input type="radio" id="e10" name="img5" value="10"  /><label for="e10"><img src="../img/10.png" class="img-responsive"></label>
+									<input type="radio" id="e11" name="img5" value="11"  /><label for="e11"><img src="../img/11.png" class="img-responsive"></label>
+									<input type="radio" id="e12" name="img5" value="12"  /><label for="e12"><img src="../img/12.png" class="img-responsive"></label>
+									<input type="radio" id="e13" name="img5" value="13"  /><label for="e13"><img src="../img/13.png" class="img-responsive"></label>
+									<input type="radio" id="e14" name="img5" value="14"  /><label for="e14"><img src="../img/14.png" class="img-responsive"></label>
+									<input type="radio" id="e15" name="img5" value="15"  /><label for="e15"><img src="../img/15.png" class="img-responsive"></label>
+									<input type="radio" id="e16" name="img5" value="16"  /><label for="e16"><img src="../img/16.png" class="img-responsive"></label>
 								</td>
-								<td id="tbl6c" align="center">
-									<select class="imgs" id="u6" name="img6" required>
-										<option class="imgop" selected disabled>../img/default.png</option>
-										<option class="imgop" value="1">../img/1.png</option>
-										<option class="imgop" value="2">../img/2.png</option>
-										<option class="imgop" value="3">../img/3.png</option>
-										<option class="imgop" value="4">../img/4.png</option>
-										<option class="imgop" value="5">../img/5.png</option>
-										<option class="imgop" value="6">../img/6.png</option>
-										<option class="imgop" value="7">../img/7.png</option>
-										<option class="imgop" value="8">../img/8.png</option>
-										<option class="imgop" value="9">../img/9.png</option>
-										<option class="imgop" value="10">../img/10.png</option>
-										<option class="imgop" value="11">../img/11.png</option>
-										<option class="imgop" value="12">../img/12.png</option>
-										<option class="imgop" value="13">../img/13.png</option>
-										<option class="imgop" value="14">../img/14.png</option>
-										<option class="imgop" value="15">../img/15.png</option>
-										<option class="imgop" value="16">../img/16.png</option>
-									</select>
+								<td id="tbl6c" class="image-dropdown" align="center">
+									<input checked="checked" type="radio" id="f0" name="img6" value="0" required/><label for="f0"><img src="../img/default.png" class="img-responsive"></label>
+									<input type="radio" id="f1" name="img6" value="1"  /><label for="f1"><img src="../img/1.png" class="img-responsive"></label>
+									<input type="radio" id="f2" name="img6" value="2"  /><label for="f2"><img src="../img/2.png" class="img-responsive"></label>
+									<input type="radio" id="f3" name="img6" value="3"  /><label for="f3"><img src="../img/3.png" class="img-responsive"></label>
+									<input type="radio" id="f4" name="img6" value="4"  /><label for="f4"><img src="../img/4.png" class="img-responsive"></label>
+									<input type="radio" id="f5" name="img6" value="5"  /><label for="f5"><img src="../img/5.png" class="img-responsive"></label>
+									<input type="radio" id="f6" name="img6" value="6"  /><label for="f6"><img src="../img/6.png" class="img-responsive"></label>
+									<input type="radio" id="f7" name="img6" value="7"  /><label for="f7"><img src="../img/7.png" class="img-responsive"></label>
+									<input type="radio" id="f8" name="img6" value="8"  /><label for="f8"><img src="../img/8.png" class="img-responsive"></label>
+									<input type="radio" id="f9" name="img6" value="9"  /><label for="f9"><img src="../img/9.png" class="img-responsive"></label>
+									<input type="radio" id="f10" name="img6" value="10"  /><label for="f10"><img src="../img/10.png" class="img-responsive"></label>
+									<input type="radio" id="f11" name="img6" value="11"  /><label for="f11"><img src="../img/11.png" class="img-responsive"></label>
+									<input type="radio" id="f12" name="img6" value="12"  /><label for="f12"><img src="../img/12.png" class="img-responsive"></label>
+									<input type="radio" id="f13" name="img6" value="13"  /><label for="f13"><img src="../img/13.png" class="img-responsive"></label>
+									<input type="radio" id="f14" name="img6" value="14"  /><label for="f14"><img src="../img/14.png" class="img-responsive"></label>
+									<input type="radio" id="f15" name="img6" value="15"  /><label for="f15"><img src="../img/15.png" class="img-responsive"></label>
+									<input type="radio" id="f16" name="img6" value="16"  /><label for="f16"><img src="../img/16.png" class="img-responsive"></label>
 								</td>
-								<td id="tbl7c" align="center">
-									<select class="imgs" id="u7" name="img7" required>
-										<option class="imgop" selected disabled>../img/default.png</option>
-										<option class="imgop" value="1">../img/1.png</option>
-										<option class="imgop" value="2">../img/2.png</option>
-										<option class="imgop" value="3">../img/3.png</option>
-										<option class="imgop" value="4">../img/4.png</option>
-										<option class="imgop" value="5">../img/5.png</option>
-										<option class="imgop" value="6">../img/6.png</option>
-										<option class="imgop" value="7">../img/7.png</option>
-										<option class="imgop" value="8">../img/8.png</option>
-										<option class="imgop" value="9">../img/9.png</option>
-										<option class="imgop" value="10">../img/10.png</option>
-										<option class="imgop" value="11">../img/11.png</option>
-										<option class="imgop" value="12">../img/12.png</option>
-										<option class="imgop" value="13">../img/13.png</option>
-										<option class="imgop" value="14">../img/14.png</option>
-										<option class="imgop" value="15">../img/15.png</option>
-										<option class="imgop" value="16">../img/16.png</option>
-									</select>
+								<td id="tbl7c" class="image-dropdown" align="center">
+									<input checked="checked" type="radio" id="g0" name="img7" value="0" required/><label for="g0"><img src="../img/default.png" class="img-responsive"></label>
+									<input type="radio" id="g1" name="img7" value="1"  /><label for="g1"><img src="../img/1.png" class="img-responsive"></label>
+									<input type="radio" id="g2" name="img7" value="2"  /><label for="g2"><img src="../img/2.png" class="img-responsive"></label>
+									<input type="radio" id="g3" name="img7" value="3"  /><label for="g3"><img src="../img/3.png" class="img-responsive"></label>
+									<input type="radio" id="g4" name="img7" value="4"  /><label for="g4"><img src="../img/4.png" class="img-responsive"></label>
+									<input type="radio" id="g5" name="img7" value="5"  /><label for="g5"><img src="../img/5.png" class="img-responsive"></label>
+									<input type="radio" id="g6" name="img7" value="6"  /><label for="g6"><img src="../img/6.png" class="img-responsive"></label>
+									<input type="radio" id="g7" name="img7" value="7"  /><label for="g7"><img src="../img/7.png" class="img-responsive"></label>
+									<input type="radio" id="g8" name="img7" value="8"  /><label for="g8"><img src="../img/8.png" class="img-responsive"></label>
+									<input type="radio" id="g9" name="img7" value="9"  /><label for="g9"><img src="../img/9.png" class="img-responsive"></label>
+									<input type="radio" id="g10" name="img7" value="10"  /><label for="g10"><img src="../img/10.png" class="img-responsive"></label>
+									<input type="radio" id="g11" name="img7" value="11"  /><label for="g11"><img src="../img/11.png" class="img-responsive"></label>
+									<input type="radio" id="g12" name="img7" value="12"  /><label for="g12"><img src="../img/12.png" class="img-responsive"></label>
+									<input type="radio" id="g13" name="img7" value="13"  /><label for="g13"><img src="../img/13.png" class="img-responsive"></label>
+									<input type="radio" id="g14" name="img7" value="14"  /><label for="g14"><img src="../img/14.png" class="img-responsive"></label>
+									<input type="radio" id="g15" name="img7" value="15"  /><label for="g15"><img src="../img/15.png" class="img-responsive"></label>
+									<input type="radio" id="g16" name="img7" value="16"  /><label for="g16"><img src="../img/16.png" class="img-responsive"></label>
 								</td>
-								<td id="tbl8c" align="center">
-									<select class="imgs" id="u8" name="img8" required>
-										<option class="imgop" selected disabled>../img/default.png</option>
-										<option class="imgop" value="1">../img/1.png</option>
-										<option class="imgop" value="2">../img/2.png</option>
-										<option class="imgop" value="3">../img/3.png</option>
-										<option class="imgop" value="4">../img/4.png</option>
-										<option class="imgop" value="5">../img/5.png</option>
-										<option class="imgop" value="6">../img/6.png</option>
-										<option class="imgop" value="7">../img/7.png</option>
-										<option class="imgop" value="8">../img/8.png</option>
-										<option class="imgop" value="9">../img/9.png</option>
-										<option class="imgop" value="10">../img/10.png</option>
-										<option class="imgop" value="11">../img/11.png</option>
-										<option class="imgop" value="12">../img/12.png</option>
-										<option class="imgop" value="13">../img/13.png</option>
-										<option class="imgop" value="14">../img/14.png</option>
-										<option class="imgop" value="15">../img/15.png</option>
-										<option class="imgop" value="16">../img/16.png</option>
-									</select>
+								<td id="tbl8c" class="image-dropdown" align="center">
+									<input checked="checked" type="radio" id="h0" name="img8" value="0" required/><label for="h0"><img src="../img/default.png" class="img-responsive"></label>
+									<input type="radio" id="h1" name="img8" value="1"  /><label for="h1"><img src="../img/1.png" class="img-responsive"></label>
+									<input type="radio" id="h2" name="img8" value="2"  /><label for="h2"><img src="../img/2.png" class="img-responsive"></label>
+									<input type="radio" id="h3" name="img8" value="3"  /><label for="h3"><img src="../img/3.png" class="img-responsive"></label>
+									<input type="radio" id="h4" name="img8" value="4"  /><label for="h4"><img src="../img/4.png" class="img-responsive"></label>
+									<input type="radio" id="h5" name="img8" value="5"  /><label for="h5"><img src="../img/5.png" class="img-responsive"></label>
+									<input type="radio" id="h6" name="img8" value="6"  /><label for="h6"><img src="../img/6.png" class="img-responsive"></label>
+									<input type="radio" id="h7" name="img8" value="7"  /><label for="h7"><img src="../img/7.png" class="img-responsive"></label>
+									<input type="radio" id="h8" name="img8" value="8"  /><label for="h8"><img src="../img/8.png" class="img-responsive"></label>
+									<input type="radio" id="h9" name="img8" value="9"  /><label for="h9"><img src="../img/9.png" class="img-responsive"></label>
+									<input type="radio" id="h10" name="img8" value="10"  /><label for="h10"><img src="../img/10.png" class="img-responsive"></label>
+									<input type="radio" id="h11" name="img8" value="11"  /><label for="h11"><img src="../img/11.png" class="img-responsive"></label>
+									<input type="radio" id="h12" name="img8" value="12"  /><label for="h12"><img src="../img/12.png" class="img-responsive"></label>
+									<input type="radio" id="h13" name="img8" value="13"  /><label for="h13"><img src="../img/13.png" class="img-responsive"></label>
+									<input type="radio" id="h14" name="img8" value="14"  /><label for="h14"><img src="../img/14.png" class="img-responsive"></label>
+									<input type="radio" id="h15" name="img8" value="15"  /><label for="h15"><img src="../img/15.png" class="img-responsive"></label>
+									<input type="radio" id="h16" name="img8" value="16"  /><label for="h16"><img src="../img/16.png" class="img-responsive"></label>
 								</td>
 							</tr>
 							<tr>
-								<td id="tbl9c" align="center">
-									<select class="imgs" id="u9" name="img9" required>
-										<option class="imgop" selected disabled>../img/default.png</option>
-										<option class="imgop" value="1">../img/1.png</option>
-										<option class="imgop" value="2">../img/2.png</option>
-										<option class="imgop" value="3">../img/3.png</option>
-										<option class="imgop" value="4">../img/4.png</option>
-										<option class="imgop" value="5">../img/5.png</option>
-										<option class="imgop" value="6">../img/6.png</option>
-										<option class="imgop" value="7">../img/7.png</option>
-										<option class="imgop" value="8">../img/8.png</option>
-										<option class="imgop" value="9">../img/9.png</option>
-										<option class="imgop" value="10">../img/10.png</option>
-										<option class="imgop" value="11">../img/11.png</option>
-										<option class="imgop" value="12">../img/12.png</option>
-										<option class="imgop" value="13">../img/13.png</option>
-										<option class="imgop" value="14">../img/14.png</option>
-										<option class="imgop" value="15">../img/15.png</option>
-										<option class="imgop" value="16">../img/16.png</option>
-									</select>
+								<td id="tbl9c" class="image-dropdown" align="center">
+									<input checked="checked" type="radio" id="i0" name="img9" value="0" required/><label for="i0"><img src="../img/default.png" class="img-responsive"></label>
+									<input type="radio" id="i1" name="img9" value="1"  /><label for="i1"><img src="../img/1.png" class="img-responsive"></label>
+									<input type="radio" id="i2" name="img9" value="2"  /><label for="i2"><img src="../img/2.png" class="img-responsive"></label>
+									<input type="radio" id="i3" name="img9" value="3"  /><label for="i3"><img src="../img/3.png" class="img-responsive"></label>
+									<input type="radio" id="i4" name="img9" value="4"  /><label for="i4"><img src="../img/4.png" class="img-responsive"></label>
+									<input type="radio" id="i5" name="img9" value="5"  /><label for="i5"><img src="../img/5.png" class="img-responsive"></label>
+									<input type="radio" id="i6" name="img9" value="6"  /><label for="i6"><img src="../img/6.png" class="img-responsive"></label>
+									<input type="radio" id="i7" name="img9" value="7"  /><label for="i7"><img src="../img/7.png" class="img-responsive"></label>
+									<input type="radio" id="i8" name="img9" value="8"  /><label for="i8"><img src="../img/8.png" class="img-responsive"></label>
+									<input type="radio" id="i9" name="img9" value="9"  /><label for="i9"><img src="../img/9.png" class="img-responsive"></label>
+									<input type="radio" id="i10" name="img9" value="10"  /><label for="i10"><img src="../img/10.png" class="img-responsive"></label>
+									<input type="radio" id="i11" name="img9" value="11"  /><label for="i11"><img src="../img/11.png" class="img-responsive"></label>
+									<input type="radio" id="i12" name="img9" value="12"  /><label for="i12"><img src="../img/12.png" class="img-responsive"></label>
+									<input type="radio" id="i13" name="img9" value="13"  /><label for="i13"><img src="../img/13.png" class="img-responsive"></label>
+									<input type="radio" id="i14" name="img9" value="14"  /><label for="i14"><img src="../img/14.png" class="img-responsive"></label>
+									<input type="radio" id="i15" name="img9" value="15"  /><label for="i15"><img src="../img/15.png" class="img-responsive"></label>
+									<input type="radio" id="i16" name="img9" value="16"  /><label for="i16"><img src="../img/16.png" class="img-responsive"></label>
 								</td>
-								<td id="tbl10c" align="center">
-									<select class="imgs" id="u10" name="img10" required>
-										<option class="imgop" selected disabled>../img/default.png</option>
-										<option class="imgop" value="1">../img/1.png</option>
-										<option class="imgop" value="2">../img/2.png</option>
-										<option class="imgop" value="3">../img/3.png</option>
-										<option class="imgop" value="4">../img/4.png</option>
-										<option class="imgop" value="5">../img/5.png</option>
-										<option class="imgop" value="6">../img/6.png</option>
-										<option class="imgop" value="7">../img/7.png</option>
-										<option class="imgop" value="8">../img/8.png</option>
-										<option class="imgop" value="9">../img/9.png</option>
-										<option class="imgop" value="10">../img/10.png</option>
-										<option class="imgop" value="11">../img/11.png</option>
-										<option class="imgop" value="12">../img/12.png</option>
-										<option class="imgop" value="13">../img/13.png</option>
-										<option class="imgop" value="14">../img/14.png</option>
-										<option class="imgop" value="15">../img/15.png</option>
-										<option class="imgop" value="16">../img/16.png</option>
-									</select>
+								<td id="tbl10c" class="image-dropdown" align="center">
+									<input checked="checked" type="radio" id="j0" name="img10" value="0" required/><label for="j0"><img src="../img/default.png" class="img-responsive"></label>
+									<input type="radio" id="j1" name="img10" value="1"  /><label for="j1"><img src="../img/1.png" class="img-responsive"></label>
+									<input type="radio" id="j2" name="img10" value="2"  /><label for="j2"><img src="../img/2.png" class="img-responsive"></label>
+									<input type="radio" id="j3" name="img10" value="3"  /><label for="j3"><img src="../img/3.png" class="img-responsive"></label>
+									<input type="radio" id="j4" name="img10" value="4"  /><label for="j4"><img src="../img/4.png" class="img-responsive"></label>
+									<input type="radio" id="j5" name="img10" value="5"  /><label for="j5"><img src="../img/5.png" class="img-responsive"></label>
+									<input type="radio" id="j6" name="img10" value="6"  /><label for="j6"><img src="../img/6.png" class="img-responsive"></label>
+									<input type="radio" id="j7" name="img10" value="7"  /><label for="j7"><img src="../img/7.png" class="img-responsive"></label>
+									<input type="radio" id="j8" name="img10" value="8"  /><label for="j8"><img src="../img/8.png" class="img-responsive"></label>
+									<input type="radio" id="j9" name="img10" value="9"  /><label for="j9"><img src="../img/9.png" class="img-responsive"></label>
+									<input type="radio" id="j10" name="img10" value="10"  /><label for="j10"><img src="../img/10.png" class="img-responsive"></label>
+									<input type="radio" id="j11" name="img10" value="11"  /><label for="j11"><img src="../img/11.png" class="img-responsive"></label>
+									<input type="radio" id="j12" name="img10" value="12"  /><label for="j12"><img src="../img/12.png" class="img-responsive"></label>
+									<input type="radio" id="j13" name="img10" value="13"  /><label for="j13"><img src="../img/13.png" class="img-responsive"></label>
+									<input type="radio" id="j14" name="img10" value="14"  /><label for="j14"><img src="../img/14.png" class="img-responsive"></label>
+									<input type="radio" id="j15" name="img10" value="15"  /><label for="j15"><img src="../img/15.png" class="img-responsive"></label>
+									<input type="radio" id="j16" name="img10" value="16"  /><label for="j16"><img src="../img/16.png" class="img-responsive"></label>
 								</td>
-								<td id="tbl11c" align="center">
-									<select class="imgs" id="u11" name="img11" required>
-										<option class="imgop" selected disabled>../img/default.png</option>
-										<option class="imgop" value="1">../img/1.png</option>
-										<option class="imgop" value="2">../img/2.png</option>
-										<option class="imgop" value="3">../img/3.png</option>
-										<option class="imgop" value="4">../img/4.png</option>
-										<option class="imgop" value="5">../img/5.png</option>
-										<option class="imgop" value="6">../img/6.png</option>
-										<option class="imgop" value="7">../img/7.png</option>
-										<option class="imgop" value="8">../img/8.png</option>
-										<option class="imgop" value="9">../img/9.png</option>
-										<option class="imgop" value="10">../img/10.png</option>
-										<option class="imgop" value="11">../img/11.png</option>
-										<option class="imgop" value="12">../img/12.png</option>
-										<option class="imgop" value="13">../img/13.png</option>
-										<option class="imgop" value="14">../img/14.png</option>
-										<option class="imgop" value="15">../img/15.png</option>
-										<option class="imgop" value="16">../img/16.png</option>
-									</select>
+								<td id="tbl11c" class="image-dropdown" align="center">
+									<input checked="checked" type="radio" id="k0" name="img11" value="0" required/><label for="k0"><img src="../img/default.png" class="img-responsive"></label>
+									<input type="radio" id="k1" name="img11" value="1"  /><label for="k1"><img src="../img/1.png" class="img-responsive"></label>
+									<input type="radio" id="k2" name="img11" value="2"  /><label for="k2"><img src="../img/2.png" class="img-responsive"></label>
+									<input type="radio" id="k3" name="img11" value="3"  /><label for="k3"><img src="../img/3.png" class="img-responsive"></label>
+									<input type="radio" id="k4" name="img11" value="4"  /><label for="k4"><img src="../img/4.png" class="img-responsive"></label>
+									<input type="radio" id="k5" name="img11" value="5"  /><label for="k5"><img src="../img/5.png" class="img-responsive"></label>
+									<input type="radio" id="k6" name="img11" value="6"  /><label for="k6"><img src="../img/6.png" class="img-responsive"></label>
+									<input type="radio" id="k7" name="img11" value="7"  /><label for="k7"><img src="../img/7.png" class="img-responsive"></label>
+									<input type="radio" id="k8" name="img11" value="8"  /><label for="k8"><img src="../img/8.png" class="img-responsive"></label>
+									<input type="radio" id="k9" name="img11" value="9"  /><label for="k9"><img src="../img/9.png" class="img-responsive"></label>
+									<input type="radio" id="k10" name="img11" value="10"  /><label for="k10"><img src="../img/10.png" class="img-responsive"></label>
+									<input type="radio" id="k11" name="img11" value="11"  /><label for="k11"><img src="../img/11.png" class="img-responsive"></label>
+									<input type="radio" id="k12" name="img11" value="12"  /><label for="k12"><img src="../img/12.png" class="img-responsive"></label>
+									<input type="radio" id="k13" name="img11" value="13"  /><label for="k13"><img src="../img/13.png" class="img-responsive"></label>
+									<input type="radio" id="k14" name="img11" value="14"  /><label for="k14"><img src="../img/14.png" class="img-responsive"></label>
+									<input type="radio" id="k15" name="img11" value="15"  /><label for="k15"><img src="../img/15.png" class="img-responsive"></label>
+									<input type="radio" id="k16" name="img11" value="16"  /><label for="k16"><img src="../img/16.png" class="img-responsive"></label>
 								</td>
-								<td id="tbl12c" align="center">
-									<select class="imgs" id="u12" name="img12" required>
-										<option class="imgop" selected disabled>../img/default.png</option>
-										<option class="imgop" value="1">../img/1.png</option>
-										<option class="imgop" value="2">../img/2.png</option>
-										<option class="imgop" value="3">../img/3.png</option>
-										<option class="imgop" value="4">../img/4.png</option>
-										<option class="imgop" value="5">../img/5.png</option>
-										<option class="imgop" value="6">../img/6.png</option>
-										<option class="imgop" value="7">../img/7.png</option>
-										<option class="imgop" value="8">../img/8.png</option>
-										<option class="imgop" value="9">../img/9.png</option>
-										<option class="imgop" value="10">../img/10.png</option>
-										<option class="imgop" value="11">../img/11.png</option>
-										<option class="imgop" value="12">../img/12.png</option>
-										<option class="imgop" value="13">../img/13.png</option>
-										<option class="imgop" value="14">../img/14.png</option>
-										<option class="imgop" value="15">../img/15.png</option>
-										<option class="imgop" value="16">../img/16.png</option>
-									</select>
+								<td id="tbl2c" class="image-dropdown" align="center">
+									<input checked="checked" type="radio" id="l0" name="img12" value="0" required/><label for="l0"><img src="../img/default.png" class="img-responsive"></label>
+									<input type="radio" id="l1" name="img12" value="1"  /><label for="l1"><img src="../img/1.png" class="img-responsive"></label>
+									<input type="radio" id="l2" name="img12" value="2"  /><label for="l2"><img src="../img/2.png" class="img-responsive"></label>
+									<input type="radio" id="l3" name="img12" value="3"  /><label for="l3"><img src="../img/3.png" class="img-responsive"></label>
+									<input type="radio" id="l4" name="img12" value="4"  /><label for="l4"><img src="../img/4.png" class="img-responsive"></label>
+									<input type="radio" id="l5" name="img12" value="5"  /><label for="l5"><img src="../img/5.png" class="img-responsive"></label>
+									<input type="radio" id="l6" name="img12" value="6"  /><label for="l6"><img src="../img/6.png" class="img-responsive"></label>
+									<input type="radio" id="l7" name="img12" value="7"  /><label for="l7"><img src="../img/7.png" class="img-responsive"></label>
+									<input type="radio" id="l8" name="img12" value="8"  /><label for="l8"><img src="../img/8.png" class="img-responsive"></label>
+									<input type="radio" id="l9" name="img12" value="9"  /><label for="l9"><img src="../img/9.png" class="img-responsive"></label>
+									<input type="radio" id="l10" name="img12" value="10"  /><label for="l10"><img src="../img/10.png" class="img-responsive"></label>
+									<input type="radio" id="l11" name="img12" value="11"  /><label for="l11"><img src="../img/11.png" class="img-responsive"></label>
+									<input type="radio" id="l12" name="img12" value="12"  /><label for="l12"><img src="../img/12.png" class="img-responsive"></label>
+									<input type="radio" id="l13" name="img12" value="13"  /><label for="l13"><img src="../img/13.png" class="img-responsive"></label>
+									<input type="radio" id="l14" name="img12" value="14"  /><label for="l14"><img src="../img/14.png" class="img-responsive"></label>
+									<input type="radio" id="l15" name="img12" value="15"  /><label for="l15"><img src="../img/15.png" class="img-responsive"></label>
+									<input type="radio" id="l16" name="img12" value="16"  /><label for="l16"><img src="../img/16.png" class="img-responsive"></label>
 								</td>
 							</tr>
 							<tr>
-								<td id="tbl9c" align="center">
-									<select class="imgs" id="u13" name="img13" required>
-										<option class="imgop" selected disabled>../img/default.png</option>
-										<option class="imgop" value="1">../img/1.png</option>
-										<option class="imgop" value="2">../img/2.png</option>
-										<option class="imgop" value="3">../img/3.png</option>
-										<option class="imgop" value="4">../img/4.png</option>
-										<option class="imgop" value="5">../img/5.png</option>
-										<option class="imgop" value="6">../img/6.png</option>
-										<option class="imgop" value="7">../img/7.png</option>
-										<option class="imgop" value="8">../img/8.png</option>
-										<option class="imgop" value="9">../img/9.png</option>
-										<option class="imgop" value="10">../img/10.png</option>
-										<option class="imgop" value="11">../img/11.png</option>
-										<option class="imgop" value="12">../img/12.png</option>
-										<option class="imgop" value="13">../img/13.png</option>
-										<option class="imgop" value="14">../img/14.png</option>
-										<option class="imgop" value="15">../img/15.png</option>
-										<option class="imgop" value="16">../img/16.png</option>
-									</select>
+								<td id="tbl3c" class="image-dropdown" align="center">
+									<input checked="checked" type="radio" id="m0" name="img13" value="0" required/><label for="m0"><img src="../img/default.png" class="img-responsive"></label>
+									<input type="radio" id="m1" name="img13" value="1"  /><label for="m1"><img src="../img/1.png" class="img-responsive"></label>
+									<input type="radio" id="m2" name="img13" value="2"  /><label for="m2"><img src="../img/2.png" class="img-responsive"></label>
+									<input type="radio" id="m3" name="img13" value="3"  /><label for="m3"><img src="../img/3.png" class="img-responsive"></label>
+									<input type="radio" id="m4" name="img13" value="4"  /><label for="m4"><img src="../img/4.png" class="img-responsive"></label>
+									<input type="radio" id="m5" name="img13" value="5"  /><label for="m5"><img src="../img/5.png" class="img-responsive"></label>
+									<input type="radio" id="m6" name="img13" value="6"  /><label for="m6"><img src="../img/6.png" class="img-responsive"></label>
+									<input type="radio" id="m7" name="img13" value="7"  /><label for="m7"><img src="../img/7.png" class="img-responsive"></label>
+									<input type="radio" id="m8" name="img13" value="8"  /><label for="m8"><img src="../img/8.png" class="img-responsive"></label>
+									<input type="radio" id="m9" name="img13" value="9"  /><label for="m9"><img src="../img/9.png" class="img-responsive"></label>
+									<input type="radio" id="m10" name="img13" value="10"  /><label for="m10"><img src="../img/10.png" class="img-responsive"></label>
+									<input type="radio" id="m11" name="img13" value="11"  /><label for="m11"><img src="../img/11.png" class="img-responsive"></label>
+									<input type="radio" id="m12" name="img13" value="12"  /><label for="m12"><img src="../img/12.png" class="img-responsive"></label>
+									<input type="radio" id="m13" name="img13" value="13"  /><label for="m13"><img src="../img/13.png" class="img-responsive"></label>
+									<input type="radio" id="m14" name="img13" value="14"  /><label for="m14"><img src="../img/14.png" class="img-responsive"></label>
+									<input type="radio" id="m15" name="img13" value="15"  /><label for="m15"><img src="../img/15.png" class="img-responsive"></label>
+									<input type="radio" id="m16" name="img13" value="16"  /><label for="m16"><img src="../img/16.png" class="img-responsive"></label>
 								</td>
-								<td id="tbl10c" align="center">
-									<select class="imgs" id="u14" name="img14" required>
-										<option class="imgop" selected disabled>../img/default.png</option>
-										<option class="imgop" value="1">../img/1.png</option>
-										<option class="imgop" value="2">../img/2.png</option>
-										<option class="imgop" value="3">../img/3.png</option>
-										<option class="imgop" value="4">../img/4.png</option>
-										<option class="imgop" value="5">../img/5.png</option>
-										<option class="imgop" value="6">../img/6.png</option>
-										<option class="imgop" value="7">../img/7.png</option>
-										<option class="imgop" value="8">../img/8.png</option>
-										<option class="imgop" value="9">../img/9.png</option>
-										<option class="imgop" value="10">../img/10.png</option>
-										<option class="imgop" value="11">../img/11.png</option>
-										<option class="imgop" value="12">../img/12.png</option>
-										<option class="imgop" value="13">../img/13.png</option>
-										<option class="imgop" value="14">../img/14.png</option>
-										<option class="imgop" value="15">../img/15.png</option>
-										<option class="imgop" value="16">../img/16.png</option>
-									</select>
+								<td id="tbl14c" class="image-dropdown" align="center">
+									<input checked="checked" type="radio" id="n0" name="img14" value="0" required/><label for="n0"><img src="../img/default.png" class="img-responsive"></label>
+									<input type="radio" id="n1" name="img14" value="1"  /><label for="n1"><img src="../img/1.png" class="img-responsive"></label>
+									<input type="radio" id="n2" name="img14" value="2"  /><label for="n2"><img src="../img/2.png" class="img-responsive"></label>
+									<input type="radio" id="n3" name="img14" value="3"  /><label for="n3"><img src="../img/3.png" class="img-responsive"></label>
+									<input type="radio" id="n4" name="img14" value="4"  /><label for="n4"><img src="../img/4.png" class="img-responsive"></label>
+									<input type="radio" id="n5" name="img14" value="5"  /><label for="n5"><img src="../img/5.png" class="img-responsive"></label>
+									<input type="radio" id="n6" name="img14" value="6"  /><label for="n6"><img src="../img/6.png" class="img-responsive"></label>
+									<input type="radio" id="n7" name="img14" value="7"  /><label for="n7"><img src="../img/7.png" class="img-responsive"></label>
+									<input type="radio" id="n8" name="img14" value="8"  /><label for="n8"><img src="../img/8.png" class="img-responsive"></label>
+									<input type="radio" id="n9" name="img14" value="9"  /><label for="n9"><img src="../img/9.png" class="img-responsive"></label>
+									<input type="radio" id="n10" name="img14" value="10"  /><label for="n10"><img src="../img/10.png" class="img-responsive"></label>
+									<input type="radio" id="n11" name="img14" value="11"  /><label for="n11"><img src="../img/11.png" class="img-responsive"></label>
+									<input type="radio" id="n12" name="img14" value="12"  /><label for="n12"><img src="../img/12.png" class="img-responsive"></label>
+									<input type="radio" id="n13" name="img14" value="13"  /><label for="n13"><img src="../img/13.png" class="img-responsive"></label>
+									<input type="radio" id="n14" name="img14" value="14"  /><label for="n14"><img src="../img/14.png" class="img-responsive"></label>
+									<input type="radio" id="n15" name="img14" value="15"  /><label for="n15"><img src="../img/15.png" class="img-responsive"></label>
+									<input type="radio" id="n16" name="img14" value="16"  /><label for="n16"><img src="../img/16.png" class="img-responsive"></label>
 								</td>
-								<td id="tbl11c" align="center">
-									<select class="imgs" id="u15" name="img15" required>
-										<option class="imgop" selected disabled>../img/default.png</option>
-										<option class="imgop" value="1">../img/1.png</option>
-										<option class="imgop" value="2">../img/2.png</option>
-										<option class="imgop" value="3">../img/3.png</option>
-										<option class="imgop" value="4">../img/4.png</option>
-										<option class="imgop" value="5">../img/5.png</option>
-										<option class="imgop" value="6">../img/6.png</option>
-										<option class="imgop" value="7">../img/7.png</option>
-										<option class="imgop" value="8">../img/8.png</option>
-										<option class="imgop" value="9">../img/9.png</option>
-										<option class="imgop" value="10">../img/10.png</option>
-										<option class="imgop" value="11">../img/11.png</option>
-										<option class="imgop" value="12">../img/12.png</option>
-										<option class="imgop" value="13">../img/13.png</option>
-										<option class="imgop" value="14">../img/14.png</option>
-										<option class="imgop" value="15">../img/15.png</option>
-										<option class="imgop" value="16">../img/16.png</option>
-									</select>
+								<td id="tbl5c" class="image-dropdown" align="center">
+									<input checked="checked" type="radio" id="o0" name="img15" value="0" required/><label for="o0"><img src="../img/default.png" class="img-responsive"></label>
+									<input type="radio" id="o1" name="img15" value="1"  /><label for="o1"><img src="../img/1.png" class="img-responsive"></label>
+									<input type="radio" id="o2" name="img15" value="2"  /><label for="o2"><img src="../img/2.png" class="img-responsive"></label>
+									<input type="radio" id="o3" name="img15" value="3"  /><label for="o3"><img src="../img/3.png" class="img-responsive"></label>
+									<input type="radio" id="o4" name="img15" value="4"  /><label for="o4"><img src="../img/4.png" class="img-responsive"></label>
+									<input type="radio" id="o5" name="img15" value="5"  /><label for="o5"><img src="../img/5.png" class="img-responsive"></label>
+									<input type="radio" id="o6" name="img15" value="6"  /><label for="o6"><img src="../img/6.png" class="img-responsive"></label>
+									<input type="radio" id="o7" name="img15" value="7"  /><label for="o7"><img src="../img/7.png" class="img-responsive"></label>
+									<input type="radio" id="o8" name="img15" value="8"  /><label for="o8"><img src="../img/8.png" class="img-responsive"></label>
+									<input type="radio" id="o9" name="img15" value="9"  /><label for="o9"><img src="../img/9.png" class="img-responsive"></label>
+									<input type="radio" id="o10" name="img15" value="10"  /><label for="o10"><img src="../img/10.png" class="img-responsive"></label>
+									<input type="radio" id="o11" name="img15" value="11"  /><label for="o11"><img src="../img/11.png" class="img-responsive"></label>
+									<input type="radio" id="o12" name="img15" value="12"  /><label for="o12"><img src="../img/12.png" class="img-responsive"></label>
+									<input type="radio" id="o13" name="img15" value="13"  /><label for="o13"><img src="../img/13.png" class="img-responsive"></label>
+									<input type="radio" id="o14" name="img15" value="14"  /><label for="o14"><img src="../img/14.png" class="img-responsive"></label>
+									<input type="radio" id="o15" name="img15" value="15"  /><label for="o15"><img src="../img/15.png" class="img-responsive"></label>
+									<input type="radio" id="o16" name="img15" value="16"  /><label for="o16"><img src="../img/16.png" class="img-responsive"></label>
 								</td>
-								<td id="tbl12c" align="center">
-									<select class="imgs" id="u16" name="img16" required>
-										<option class="imgop" selected disabled>../img/default.png</option>
-										<option class="imgop" value="1">../img/1.png</option>
-										<option class="imgop" value="2">../img/2.png</option>
-										<option class="imgop" value="3">../img/3.png</option>
-										<option class="imgop" value="4">../img/4.png</option>
-										<option class="imgop" value="5">../img/5.png</option>
-										<option class="imgop" value="6">../img/6.png</option>
-										<option class="imgop" value="7">../img/7.png</option>
-										<option class="imgop" value="8">../img/8.png</option>
-										<option class="imgop" value="9">../img/9.png</option>
-										<option class="imgop" value="10">../img/10.png</option>
-										<option class="imgop" value="11">../img/11.png</option>
-										<option class="imgop" value="12">../img/12.png</option>
-										<option class="imgop" value="13">../img/13.png</option>
-										<option class="imgop" value="14">../img/14.png</option>
-										<option class="imgop" value="15">../img/15.png</option>
-										<option class="imgop" value="16">../img/16.png</option>
-									</select>
+								<td id="tbl16c" class="image-dropdown" align="center">
+									<input checked="checked" type="radio" id="p0" name="img16" value="0" required/><label for="p0"><img src="../img/default.png" class="img-responsive"></label>
+									<input type="radio" id="p1" name="img16" value="1"  /><label for="p1"><img src="../img/1.png" class="img-responsive"></label>
+									<input type="radio" id="p2" name="img16" value="2"  /><label for="p2"><img src="../img/2.png" class="img-responsive"></label>
+									<input type="radio" id="p3" name="img16" value="3"  /><label for="p3"><img src="../img/3.png" class="img-responsive"></label>
+									<input type="radio" id="p4" name="img16" value="4"  /><label for="p4"><img src="../img/4.png" class="img-responsive"></label>
+									<input type="radio" id="p5" name="img16" value="5"  /><label for="p5"><img src="../img/5.png" class="img-responsive"></label>
+									<input type="radio" id="p6" name="img16" value="6"  /><label for="p6"><img src="../img/6.png" class="img-responsive"></label>
+									<input type="radio" id="p7" name="img16" value="7"  /><label for="p7"><img src="../img/7.png" class="img-responsive"></label>
+									<input type="radio" id="p8" name="img16" value="8"  /><label for="p8"><img src="../img/8.png" class="img-responsive"></label>
+									<input type="radio" id="p9" name="img16" value="9"  /><label for="p9"><img src="../img/9.png" class="img-responsive"></label>
+									<input type="radio" id="p10" name="img16" value="10"  /><label for="p10"><img src="../img/10.png" class="img-responsive"></label>
+									<input type="radio" id="p11" name="img16" value="11"  /><label for="p11"><img src="../img/11.png" class="img-responsive"></label>
+									<input type="radio" id="p12" name="img16" value="12"  /><label for="p12"><img src="../img/12.png" class="img-responsive"></label>
+									<input type="radio" id="p13" name="img16" value="13"  /><label for="p13"><img src="../img/13.png" class="img-responsive"></label>
+									<input type="radio" id="p14" name="img16" value="14"  /><label for="p14"><img src="../img/14.png" class="img-responsive"></label>
+									<input type="radio" id="p15" name="img16" value="15"  /><label for="p15"><img src="../img/15.png" class="img-responsive"></label>
+									<input type="radio" id="p16" name="img16" value="16"  /><label for="p16"><img src="../img/16.png" class="img-responsive"></label>
 								</td>
 							</tr>
 						</table>
@@ -478,7 +444,7 @@
 				<label class="options_switch" for="options_button"><i></i></label>
 			</div>
 			<div class="col-md-offset-1 col-md-2 text-center no-gutter">
-				<a href="results.html" class="next_button" id="method_submit" onclick="get_data();">Продолжить</a>
+				<div class="nb"><a href="results.html" class="next_button" id="method_submit" onclick="get_data();">Продолжить</a></div>
 			</div>
 			<div class="col-md-offset-1 col-md-3 text-center no-gutter">
 				<span class="switch_name">Секундомер</span>

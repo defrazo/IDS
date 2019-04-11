@@ -16,14 +16,14 @@ $(document).ready(function() {
 		fac = localStorage.getItem('facinp');
 	
 	switch (true) {
-			case (stab >= 15) : var romberg = 'Хорошо'; break;
-			case (stab <= 14.99) : var romberg = 'Плохо'; break;
+			case (stab >= 15) : var romberg = '(Хорошо)'; break;
+			case (stab <= 14.99) : var romberg = '(Плохо)'; break;
 		}
 
 	var cerdo = ((1 - dia / pulse) * 100).toFixed();
 
 	switch (true) {
-			case (cerdo >= -10.01) : var cerdostatus = '(Плохо)'; break;
+			case (cerdo <= -10.01) : var cerdostatus = '(Плохо)'; break;
 			case (cerdo >= -10 && cerdo <= 10) : var cerdostatus = '(Норма)'; break;
 			case (cerdo >= 10.01) : var cerdostatus = '(Плохо)'; break;
 		}
@@ -31,10 +31,10 @@ $(document).ready(function() {
 	var orto = Math.abs((ortopulseh - ortopulsev)).toFixed();
 
 	switch (true) {
-			case (orto <= 12) : var ortostatus = 'Отлично'; break;
-			case (orto >= 12.01 && orto <= 18) : var ortostatus = 'Хорошо'; break;
-			case (orto >= 18.01 && orto <= 24) : var ortostatus = 'Удовлетворительно'; break;
-			case (orto >= 24.01) : var ortostatus = 'Плохо'; break;
+			case (orto <= 12) : var ortostatus = '(Отлично)'; break;
+			case (orto >= 12.01 && orto <= 18) : var ortostatus = '(Хорошо)'; break;
+			case (orto >= 18.01 && orto <= 24) : var ortostatus = '(Удовлетворительно)'; break;
+			case (orto >= 24.01) : var ortostatus = '(Плохо)'; break;
 		}
 
 	var clino = Math.abs((clinopulsev - clinopulseh)).toFixed();
@@ -49,17 +49,17 @@ $(document).ready(function() {
 			case (clinopercent >= 24.7 && clinopercent <= 30.8) : var clinostatus = 'Повышенная возбудимость (заметная)'; break;
 			case (clinopercent >= 30.9 && clinopercent <= 37.0) : var clinostatus = 'Повышенная возбудимость (значительная)'; break;
 			case (clinopercent >= 37.1 && clinopercent <= 43.1) : var clinostatus = 'Повышенная возбудимость (резкая)'; break;
-			case (clinopercent >= 43.2) : var clinostatus = 'Повышенная возбудимость (Очень резкая)'; break;
+			case (clinopercent >= 43.2) : var clinostatus = 'Повышенная возбудимость (очень резкая)'; break;
 		}
 
 	$('#sname').append(sname);
 	$('#fname').append(fname);
 	$('#mname').append(mname);
 	$('#date').append(date);
-	$('#cerdo').append(cerdo).append('% ' + cerdostatus);
-	$('#romberg').append(romberg);
-	$('#orto').append(ortostatus);
-	$('#clino').append(clinostatus);
+	$('#cerdo').append(cerdo + '%. ' + cerdostatus);
+	$('#romberg').append(stab + ' сек. ' + romberg);
+	$('#orto').append(orto + ' ударов. ' + ortostatus);
+	$('#clino').append(clino + '%. ' + clinostatus);
 	$('#gender').append(gender);
 	$('#fac').append(fac);
 });

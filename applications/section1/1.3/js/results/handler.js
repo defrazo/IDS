@@ -15,15 +15,15 @@ $(document).ready(function() {
 		dynam = parseInt(localStorage.getItem('dynaminp')),
 		fac = localStorage.getItem('facinp');
 	
-	imt = parseFloat(weight / Math.pow((height/100), 2));
+	imt = parseFloat(weight / Math.pow((height/100), 2)).toFixed(1);
 
-	lindex = parseFloat(lung / weight);
+	lindex = parseFloat(lung / weight).toFixed(1);
 
-	strindex = parseFloat((dynam * 100) / weight);
+	strindex = parseFloat((dynam * 100) / weight).toFixed(1);
 
-	robins = parseFloat((pulse * sist) / 100);
+	robins = parseFloat((pulse * sist) / 100).toFixed(1);
 
-	recovery = ((parseFloat(rec1) * 60) + parseFloat(rec2)) / 60;
+	recovery = (((parseFloat(rec1) * 60) + parseFloat(rec2)) / 60).toFixed(1);
 
 	var points = 0;
 
@@ -122,7 +122,12 @@ $(document).ready(function() {
 	$('#mname').append(mname);
 	$('#date').append(date);
 	$('#gender').append(gender);
-	$('#points').append(points.toFixed(2));
+	$('#imt').append(imt + ' кг/м<sup>2</sup>');
+	$('#strindex').append(strindex + ' %');
+	$('#lindex').append(lindex + ' мл/кг');
+	$('#robins').append(robins + ' усл. ед.');
+	$('#recovery').append(recovery + ' усл. ед.');
+	$('#points').append(points.toFixed(0) + ' балл(ов)');
 	$('#status').append(status);
 	$('#fac').append(fac);
 });

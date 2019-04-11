@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html onselectstart="return false;" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Проверка лицензии</title>
+	<link rel="stylesheet" href="css/bootstrap.css" media="all">
+	<link rel="stylesheet" href="css/styles.css" media="all">
+	<link rel="stylesheet" href="css/license.css" media="all">
+	<script src="js/jquery-3.js"></script>
+	<script src="js/jquery-1.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/themes.js"></script>
+	<script src="js/zoom.js"></script>
+	<script src="js/information/script.js"></script>
+	<script src="js/hotkeys.js"></script>
+	<script src="js/keys.js"></script>
+	<script src="js/lock.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="header text-center">
+			<h1 class="text-uppercase">Гуманитарный университет</h1>
+			<h2>Информационно-диагностическая система самоуправления развитием личности и ее психофизической подготовленностью</h2>
+		</div>
+		<div class="text-center no-gutter">
+			<div class="check content_box note_field field_shadow">
+				<p class="note"><b>Проверка активации</b></p>
+				<p class="note"><img src="img/load.gif"></p>
+				<div align="center"><img src="img/logo.png" class="img-responsive">v. 1.2</div>
+			</div>
+		</div>
+		<div class="text-center no-gutter">
+			<div align="center" class="wrong content_box note_field field_shadow">
+				<p class="note"><b>Подписка недействительна</b></p>
+				<div align="center"><img src="img/logo.png" class="img-responsive">v. 1.2</div>
+			</div>
+		</div>
+		<div class="text-center no-gutter">
+			<div align="center" class="wrong text-center">
+				<a class="end_button" onclick="window.close(); localStorage.clear();">Завершить работу</a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -667,9 +667,9 @@ $(document).ready(function() {
 	$('#date').append(date);
 	$('#gender').append(gender);
 	$('#fac').append(fac);
-	$('#twelvewalkr').append(twelvewalkstatus);
-	$('#twelveswimr').append(twelveswimstatus);
-	$('#twelverider').append(twelveridestatus);
-	$('#runr').append(runstatus);
-	$('#walkr').append(walkstatus);
+	$('#twelvewalkr').append(twelvewalk +' км. '+ twelvewalkstatus);
+	$('#twelveswimr').append(twelveswim +' м. '+ twelveswimstatus);
+	$('#twelverider').append(twelveride +' км. '+ twelveridestatus);
+	$('#runr').append(run +' мин/сек. '+ runstatus);
+	$('#walkr').append(walk +' мин/сек. '+ walkstatus);
 });

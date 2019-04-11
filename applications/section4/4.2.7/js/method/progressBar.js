@@ -284,12 +284,6 @@ $(document).on('ready click focuson focusout mousemove', function() {
 	}
 
 	if (numValid == 45) {
-		progress.css('width', '94.5%');
-		progress.attr('aria-valuenow', '94.5');
-		progressMessage.text('Прогресс: 95%');
-	}
-
-	if (numValid == 46) {
 		progress.css('width', '100%');
 		progress.attr('aria-valuenow', '100');
 		progressMessage.text('Прогресс: 100%');

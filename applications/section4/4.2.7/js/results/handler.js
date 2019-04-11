@@ -72,6 +72,10 @@ $(document).ready(function() {
 	
 	var k = (1 - (sum * 0.00075)).toFixed(2);
 	
+	var maxhave = Math.max(q1, q3, q5, q7, q9, q11, q13, q15, q17, q19);
+
+	console.log(maxhave);
+
 	switch (true) {
 		case (k <= 0.50) : var ks = 'Заниженная самооценка'; break;
 		case (k >= 0.51 && k <= 0.75) : var ks = 'Адекватная самооценка'; break;

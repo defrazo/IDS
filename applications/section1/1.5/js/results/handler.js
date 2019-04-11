@@ -54,26 +54,38 @@ $(document).ready(function() {
 		case (age >= 51 && age <= 70) : var q24 = 4; break;
 		case (age >= 71) : var q24 = 5; break;
 	}
-
-	var sum = parseFloat(q1) + parseFloat(q2) + parseFloat(q3) + parseFloat(q4) + parseFloat(q5)
-	 + parseFloat(q6)  + parseFloat(q7)  + parseFloat(q8) + parseFloat(q9) + parseFloat(q10)
-	 + parseFloat(q11) + parseFloat(q12) + parseFloat(q13) + parseFloat(q14) + parseFloat(q15)
-	 + parseFloat(q16) + parseFloat(q17) + parseFloat(q18) + parseFloat(q19) + parseFloat(q20)
-	 + parseFloat(q21) + parseFloat(q22) + parseFloat(q23) + parseFloat(q24) + parseFloat(age);
-
-	console.log(sum);
+	var sum = parseInt(q1) + parseInt(q2) + parseInt(q3) + parseInt(q4) + parseInt(q5)
+	 + parseInt(q6)  + parseInt(q7)  + parseInt(q8) + parseInt(q9) + parseInt(q10)
+	 + parseInt(q11) + parseInt(q12) + parseInt(q13) + parseInt(q14) + parseInt(q15)
+	 + parseInt(q16) + parseInt(q17) + parseInt(q18) + parseInt(q19) + parseInt(q20)
+	 + parseInt(q21) + parseInt(q22) + parseInt(q23) + parseInt(q24) + parseInt(age);
 
 	switch (true) {
 		case (gender == 'Женский') : var life = sum + 78; break;
 		case (gender == 'Мужской') : var life = sum + 70; break;
 	}
-
+	var c1 = parseInt(q1) + parseInt(q2) + parseInt(q3);
+	var c2 = parseInt(q4) + parseInt(q5);
+	var c3 = parseInt(q11) + parseInt(q12);
+	var c4 = parseInt(q15) + parseInt(q16);
+	var c5 = parseInt(q17) + parseInt(q18);
 	$('#sname').append(sname);
 	$('#fname').append(fname);
 	$('#mname').append(mname);
 	$('#date').append(date);
 	$('#gender').append(gender);
-	$('#sum').append(life + ' лет/год');
+	$('#sum').append(life + ' год(а)/лет');
+	$('#c1').append(c1 + ' год(а)/лет');
+	$('#c2').append(c2 + ' год(а)/лет');
+	$('#c3').append(c3 + ' год(а)/лет');
+	$('#c4').append(q14 + ' год(а)/лет');
+	$('#c5').append(c4 + ' год(а)/лет');
+	$('#c6').append(q7 + ' год(а)/лет');
+	$('#c7').append(q19 + ' год(а)/лет');
+	$('#c8').append(q20 + ' год(а)/лет');
+	$('#c9').append(q21 + ' год(а)/лет');
+	$('#c10').append(q23 + ' год(а)/лет');
+	$('#c11').append(c5 + ' год(а)/лет');
 	$('#status').append(status);
 	$('#fac').append(fac);
 });

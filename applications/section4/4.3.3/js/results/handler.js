@@ -61,6 +61,9 @@ $(document).ready(function() {
 		localStorage.removeItem('series1');
 		localStorage.removeItem('series2');
 		localStorage.removeItem('series3');
+		$('.ser1').css('display', 'block');
+		$('.ser2').css('display', 'none');
+		$('.ser3').css('display', 'none');
 	});
 
 	$('#sname').append(sname);

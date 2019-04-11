@@ -52,32 +52,76 @@
 				<td>Пол</td>
 				<td id="gender"></td>
 			</tr>
+		</table>
+		<table class="result_table text-center table table-bordered table-hover">
+			<col width="300" valign="top">
+   			<col width="200" valign="top">
+			<h2 style="text-align:center; font-weight: bold;">Показатели деятельности ССС</h2>
 			<tr>
-				<td>Коэффициент экономичности кровообращения <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="top" title="Все уровни (по убыванию): Отличное состояние | Нормальное состояние | Утомление организма."></td>
+				<td>Коэффициент экономичности кровообращения <br> (характеризует минутный объем крови) <img src="../img/help.png" class="help-icon" data-html="true" data-toggle="tooltip" data-placement="top" title="Отличное состояние (до 2600) <br> Нормальное состояние (2601 - 3000) <br> Утомление организма (3000+)"></td>
 				<td id="kek"></td>
 			</tr>
 			<tr>
-				<td>Коэффициент выносливости <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="top" title="Все уровни (по убыванию): Ослабленная деятельность ССС | Нормальная деятельность ССС | Усиленная деятельность ССС."></td>
+				<td>Коэффициент выносливости <br> (оценка степени тренированности ССС) <img src="../img/help.png" class="help-icon" data-html="true" data-toggle="tooltip" data-placement="top" title="Ослабленная деятельность ССС (17+) <br> Нормальная деятельность ССС (15 - 16) <br> Усиленная деятельность ССС (до 15)"></td>
 				<td id="endur"></td>
 			</tr>
 			<tr>
-				<td>Показатель двойного произведения <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="top" title="Все уровни (по убыванию): Выше среднего | Среднее состояние | Ниже среднего."></td>
+				<td>Показатель двойного произведения <br> (оценка функционального состояния ССС) <img src="../img/help.png" class="help-icon" data-html="true" data-toggle="tooltip" data-placement="top" title="Выше среднего (до 75) <br> Среднее состояние (76 - 89) <br> Ниже среднего (90+)"></td>
 				<td id="pdp"></td>
 			</tr>
 			<tr>
-				<td>Индекс Робинсона <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="top" title="Все уровни (по убыванию): Выше среднего | Среднее состояние | Ниже среднего."></td>
+				<td>Индекс Робинсона <br> (оценка уровня обменноэнергетических процессов в миокарде) <img src="../img/help.png" class="help-icon" data-html="true" data-toggle="tooltip" data-placement="top" title="Выше среднего (до 75) <br> Среднее состояние (76 - 89) <br> Ниже среднего (90+)"></td>
 				<td id="robin"></td>
 			</tr>
+		</table>
+		<table class="result_table text-center table table-bordered table-hover">
+			<col width="300" valign="top">
+   			<col width="200" valign="top">
+			<h2 style="text-align:center; font-weight: bold;">Оценка функциональных резервов ССС</h2>
 			<tr>
-				<td>Одномоментная функциональная проба с приседанием <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="top" title="Все уровни (по убыванию): Отлично | Хорошо | Удовлетворительно | Плохо | Очень плохо."></td>
+				<td colspan="2">Проба Мартинета (упрощенная методика)</td>
+			</tr>
+			<tr>
+				<td>ЧСС в положении сидя в покое</td>
+				<td id="pulse"></td>
+			</tr>
+			<tr>
+				<td>ЧСС в положении сидя через 3 минуты отдыха <br> после 20 приседаний за 30 сек</td>
+				<td id="pulseop"></td>
+			</tr>
+			<tr>
+				<td>Систолическое артериальное давление через 3 минуты <br> отдыха после физической нагрузки</td>
+				<td id="sistp"></td>
+			</tr>
+			<tr>
+				<td>Диастолическое артериальное давление через 3 минуты <br> отдыха после физической нагрузки</td>
+				<td id="diap"></td>
+			</tr>
+			<tr>
+				<td>Оценка способности ССС к восстановлению через 3 минуты <br> отдыха после физической нагрузки <img src="../img/help.png" class="help-icon" data-html="true" data-toggle="tooltip" data-placement="top" title="Отлично (до 20) <br> Хорошо (20 - 40) <br> Удовлетворительно (41 - 65) <br> Плохо (66 - 75) <br> Очень плохо (76+)"></td>
 				<td id="onestage"></td>
 			</tr>
-			<tr>
+			<!--tr>
 				<td>Проба с приседанием</td>
 				<td id="bobs"></td>
+			</tr-->
+			<tr>
+				<td colspan="2">Бельгийский тест</td>
 			</tr>
 			<tr>
-				<td>Бельгийский тест <img src="../img/help.png" class="help-icon" data-toggle="tooltip" data-placement="top" title="Все уровни (по убыванию): Отлично | Хорошо | Удовлетворительно | Плохо | Очень плохо."></td>
+				<td>ЧСС в положении сидя в покое</td>
+				<td id="pulsebb"></td>
+			</tr>
+			<tr>
+				<td>ЧСС за первые 10 сек в положении стоя после выполнения 20 наклонов вперед за 1.5 мин</td>
+				<td id="pulseba"></td>
+			</tr>
+			<tr>
+				<td>ЧСС за 10 сек в положении стоя через 1 минуту отдыха</td>
+				<td id="pulsebaa"></td>
+			</tr>
+			<tr>
+				<td>Бельгийский тест <img src="../img/help.png" class="help-icon" data-html="true" data-toggle="tooltip" data-placement="top" title="Отлично (до 0.3) <br> Хорошо (0.31 - 0.6) <br> Удовлетворительно (0.61 - 0.9) <br> Плохо (0.91 - 1.2) <br> Очень плохо (1.21+)"></td>
 				<td id="belg"></td>
 			</tr>
 		</table>

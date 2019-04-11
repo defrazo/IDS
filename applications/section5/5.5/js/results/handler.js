@@ -30,9 +30,9 @@ $(document).ready(function() {
 		case (value >= 25 && value <= 29) : var status = 'Ниже среднего'; break;
 		case (value >= 19 && value <= 24) : var status = 'Средний'; break;
 		case (value >= 14 && value <= 18) : var status = 'Идеальный'; break;
-		case (value >= 9 && value <= 13) : var status = 'Выше среднего (нежелательно)'; break;
-		case (value >= 4 && value <= 8) : var status = 'Высокий (плохо)'; break;
-		case (value <= 3) : var status = 'Очень высокий (очень плохо)'; break;
+		case (value >= 9 && value <= 13) : var status = 'Выше среднего'; break;
+		case (value >= 4 && value <= 8) : var status = 'Высокий'; break;
+		case (value <= 3) : var status = 'Очень высокий'; break;
 	}
 
 	$('#sname').append(sname);
@@ -40,6 +40,7 @@ $(document).ready(function() {
 	$('#mname').append(mname);
 	$('#date').append(date);
 	$('#gender').append(gender);
+	$('#points').append(value + ' балл(ов)');
 	$('#status').append(status);
 	$('#fac').append(fac);
 });

@@ -59,15 +59,15 @@ $(document).ready(function() {
 	}
 
 	switch (true) {
-		case (value2 >= 0 && value2 <= 7) : frustration = 'Высокая самооценка. (фрустрация отсутствует)'; break;
+		case (value2 >= 0 && value2 <= 7) : frustration = 'Высокая самооценка (фрустрация отсутствует)'; break;
 		case (value2 >= 8 && value2 <= 14) : frustration = 'Средняя самооценка (фрустрация имеет место)'; break;
 		case (value2 >= 15 && value2 <= 20) : frustration = 'Низкая самооценка (фрустрация сильная)'; break;
 	}
 
 	switch (true) {
-		case (value3 >= 0 && value3 <= 7) : calm = 'Высокий уровень спокойствия'; break;
-		case (value3 >= 8 && value3 <= 14) : calm = 'Средний уровень спокойствия'; break;
-		case (value3 >= 15 && value3 <= 20) : calm = 'Низкий уровень спокойствия'; break;
+		case (value3 >= 0 && value3 <= 7) : calm = 'Высокий уровень агрессивности'; break;
+		case (value3 >= 8 && value3 <= 14) : calm = 'Средний уровень агрессивности'; break;
+		case (value3 >= 15 && value3 <= 20) : calm = 'Низкий уровень агрессивности'; break;
 	}
 
 	switch (true) {
@@ -81,9 +81,9 @@ $(document).ready(function() {
 	$('#mname').append(mname);
 	$('#date').append(date);
 	$('#gender').append(gender);
-	$('#anxiety').append(anxiety);
-	$('#frustration').append(frustration);
-	$('#calm').append(calm);
-	$('#rigidity').append(rigidity);
+	$('#anxiety').append(value1 + ' балл(ов). <br>' + anxiety);
+	$('#frustration').append(value2 + ' балл(ов). <br>' + frustration);
+	$('#calm').append(value3 + ' балл(ов). <br>' + calm);
+	$('#rigidity').append(value4 + ' балл(ов). <br>' + rigidity);
 	$('#fac').append(fac);
 });

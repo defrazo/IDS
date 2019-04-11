@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html onselectstart="return false;" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Функциональные классы</title>
+	<link rel="stylesheet" href="../../../../css/bootstrap.css" media="all">
+	<link rel="stylesheet" href="../../../../css/page.css" media="all">
+	<link rel="stylesheet" href="../../../../css/classes.css" media="all">
+	<link rel="stylesheet" href="../../../../css/options.css" media="all">
+	<script src="../../../../js/jquery-3.js"></script>
+	<script src="../../../../js/jquery-1.js"></script>
+	<script src="../../../../js/bootstrap.js"></script>
+	<script src="../js/script.js"></script>
+	<script src="../../../../js/themes.js"></script>
+	<script src="../../../../js/zoom.js"></script>
+	<script src="../../../../js/hotkeys.js"></script>
+	<script src="../../../../js/keys.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="header text-center">
+			<h1 class="text-uppercase">Гуманитарный университет</h1>
+			<h2>Информационно-диагностическая система самоуправления развитием личности и ее психофизической подготовленностью</h2>
+		</div>
+		<div class="header text-center">
+			<h2>Таблица показателей для определения уровня физического здоровья (мужчины)</h2>
+		</div>
+		<table class="result_table table table-bordered table-hover text-center">
+			<tr>
+				<td>Показатель</td>
+				<td>Низкий</td>
+				<td>Ниже среднего</td>
+				<td>Средний</td>
+				<td>Выше среднего</td>
+				<td>Высокий</td>
+			</tr>
+			<tr>
+				<td>Индекс массы тела, кг/м2</td>
+				<td><=18.9</td>
+				<td>19.0-20.0</td>
+				<td>20.1-25.0</td>
+				<td>25.1-28.0</td>
+				<td>>28.1</td>
+			</tr>
+			<tr>
+				<td>Баллы</td>
+				<td>-2</td>
+				<td>-1</td>
+				<td>0</td>
+				<td>-1</td>
+				<td>-2</td>
+			</tr>
+			<tr>
+				<td>Жизненный индекс, мл/кг</td>
+				<td><=50</td>
+				<td>51-55</td>
+				<td>56-60</td>
+				<td>61-65</td>
+				<td>>65</td>
+			</tr>
+			<tr>
+				<td>Баллы</td>
+				<td>-1</td>
+				<td>0</td>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+			</tr>
+			<tr>
+				<td>Силовой индекс, %</td>
+				<td><=60</td>
+				<td>61-65</td>
+				<td>66-70</td>
+				<td>71-80</td>
+				<td>>80</td>
+			</tr>
+			<tr>
+				<td>Баллы</td>
+				<td>-1</td>
+				<td>0</td>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+			</tr>
+			<tr>
+				<td>Индекс Робинсона, усл. ед</td>
+				<td>>=111</td>
+				<td>110-95</td>
+				<td>94-85</td>
+				<td>84-70</td>
+				<td><=69</td>
+			</tr>
+			<tr>
+				<td>Баллы</td>
+				<td>-2</td>
+				<td>-1</td>
+				<td>0</td>
+				<td>3</td>
+				<td>5</td>
+			</tr>
+			<tr>
+				<td>Время восстановления, сек</td>
+				<td>>=180</td>
+				<td>179-120</td>
+				<td>119-90</td>
+				<td>89-60</td>
+				<td><=59</td>
+			</tr>
+			<tr>
+				<td>Баллы</td>
+				<td>-2</td>
+				<td>1</td>
+				<td>3</td>
+				<td>5</td>
+				<td>7</td>
+			</tr>
+			<tr>
+				<td>Общая оценка (сумма баллов)</td>
+				<td><=3</td>
+				<td>4-6</td>
+				<td>7-11</td>
+				<td>12-15</td>
+				<td>16-18</td>
+			</tr>
+		</table>
+		<div class="header text-center">
+			<h2>Таблица показателей для определения уровня физического здоровья (женщины)</h2>
+		</div>
+		<table class="result_table table table-bordered table-hover text-center">
+			<tr>
+				<td>Показатель</td>
+				<td>Низкий</td>
+				<td>Ниже среднего</td>
+				<td>Средний</td>
+				<td>Выше среднего</td>
+				<td>Высокий</td>
+			</tr>
+			<tr>
+				<td>Индекс массы тела, кг/м2</td>
+				<td><=16.9</td>
+				<td>17.0-18.6</td>
+				<td>18.7-23.8</td>
+				<td>23.9-26.0</td>
+				<td>>26.0</td>
+			</tr>
+			<tr>
+				<td>Баллы</td>
+				<td>-2</td>
+				<td>-1</td>
+				<td>0</td>
+				<td>-1</td>
+				<td>-2</td>
+			</tr>
+			<tr>
+				<td>Жизненный индекс, мл/кг</td>
+				<td><=40</td>
+				<td>41-45</td>
+				<td>46-50</td>
+				<td>51-56</td>
+				<td>>56</td>
+			</tr>
+			<tr>
+				<td>Баллы</td>
+				<td>-1</td>
+				<td>0</td>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+			</tr>
+			<tr>
+				<td>Силовой индекс, %</td>
+				<td><=40</td>
+				<td>41-50</td>
+				<td>51-55</td>
+				<td>56-60</td>
+				<td>>60</td>
+			</tr>
+			<tr>
+				<td>Баллы</td>
+				<td>-1</td>
+				<td>0</td>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+			</tr>
+			<tr>
+				<td>Индекс Робинсона, усл. ед</td>
+				<td>>=111</td>
+				<td>110-95</td>
+				<td>94-85</td>
+				<td>84-70</td>
+				<td><=69</td>
+			</tr>
+			<tr>
+				<td>Баллы</td>
+				<td>-2</td>
+				<td>-1</td>
+				<td>0</td>
+				<td>3</td>
+				<td>5</td>
+			</tr>
+			<tr>
+				<td>Время восстановления, сек</td>
+				<td>>=180</td>
+				<td>179-120</td>
+				<td>119-90</td>
+				<td>89-60</td>
+				<td><=59</td>
+			</tr>
+			<tr>
+				<td>Баллы</td>
+				<td>-2</td>
+				<td>1</td>
+				<td>3</td>
+				<td>5</td>
+				<td>7</td>
+			</tr>
+			<tr>
+				<td>Общая оценка (сумма баллов)</td>
+				<td><=3</td>
+				<td>4-6</td>
+				<td>7-11</td>
+				<td>12-15</td>
+				<td>16-18</td>
+			</tr>
+		</table>
+		<div class="row controls text-center no-gutter">
+			<div class="col-md-offset-1 col-md-3 text-center no-gutter">
+				<span class="switch_name">Настройки</span>
+				<input type="checkbox" id="options_button" />
+				<label class="options_switch" for="options_button"><i></i></label>
+			</div>
+			<div class="col-md-4">
+				<a class="next_button" href="results.html">Результаты</a>
+			</div>
+			<div class="col-md-3">
+				<a class="next_button" onclick="print();"><img class="printImg" src="../img/prinet.png" width="35"> Печать</a>
+			</div>
+		</div>
+		<div class="options_container col-md-offset-1 col-md-3">
+			<table class="options_table">
+				<tbody>
+					<tr>
+						<td>
+							<span class="table_name">Тема</span>
+							<select class="switch_theme">
+								<option class="theme_option" selected disabled>Выберите</option>
+								<option class="theme_option" value="white">Белая</option>
+								<option class="theme_option" value="grey">Серая</option>
+								<option class="theme_option" value="blue">Синяя</option>
+								<option class="theme_option" value="black">Черная</option>
+								<option class="theme_option" value="yellow">Желтая</option>
+								<option class="theme_option" value="lightblue">Голубая</option>
+								<option class="theme_option" value="green">Зеленая</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span class="table_name">Шрифт</span><br>
+							<button style="width: 48%; outline: none;" type="button" class="btn btn-default btn-md plus" onclick="increase();"><span class="glyphicon glyphicon-plus-sign"></span></button>
+							<button style="width: 48%; outline: none;" type="button" class="btn btn-default btn-md minus" onclick="decrease();"><span class="glyphicon glyphicon-minus-sign"></span></button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</body>
+</html>

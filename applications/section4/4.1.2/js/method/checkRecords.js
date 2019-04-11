@@ -74,7 +74,7 @@ $(document).ready(function() {
 	$('#f11').focusout(function() {
 		var q11 = $('#f11').val();
 		
-		if (($(this).val() < 1) || ($(this).val() > 300)) $(this).val($(this).val().substr(0, 0));
+		if ($(this).val() > 300) $(this).val($(this).val().substr(0, 0));
 
 		if (q11 != '') {
 			
@@ -97,17 +97,17 @@ $(document).ready(function() {
 
 function isValidQ11(valq11) {
 	if ($('#f11').val().length == 1) {
-		var pattern = new RegExp(/[1-9]/);
+		var pattern = new RegExp(/[0-9]/);
 		return pattern.test(valq11);
 	}
 
 	if ($('#f11').val().length == 2) {
-		var pattern = new RegExp(/[1-9][0-9]/);
+		var pattern = new RegExp(/[0-9][0-9]/);
 		return pattern.test(valq11);
 	}
 
 	if ($('#f11').val().length == 3) {
-		var pattern = new RegExp(/[1-9][0-9][1-9]/);
+		var pattern = new RegExp(/[0-9][0-9][0-9]/);
 		return pattern.test(valq11);
 	}
 }
@@ -116,7 +116,7 @@ $(document).ready(function() {
 	$('#f12').focusout(function() {
 		var q12 = $('#f12').val();
 		
-		if (($(this).val() < 1) || ($(this).val() > 300)) $(this).val($(this).val().substr(0, 0));
+		if ($(this).val() > 300) $(this).val($(this).val().substr(0, 0));
 
 		if (q12 != '') {
 			
@@ -139,17 +139,17 @@ $(document).ready(function() {
 
 function isValidQ12(valq12) {
 	if ($('#f12').val().length == 1) {
-		var pattern = new RegExp(/[1-9]/);
+		var pattern = new RegExp(/[0-9]/);
 		return pattern.test(valq12);
 	}
 
 	if ($('#f12').val().length == 2) {
-		var pattern = new RegExp(/[1-9][0-9]/);
+		var pattern = new RegExp(/[0-9][0-9]/);
 		return pattern.test(valq12);
 	}
 
 	if ($('#f12').val().length == 3) {
-		var pattern = new RegExp(/[1-9][0-9][1-9]/);
+		var pattern = new RegExp(/[0-9][0-9][0-9]/);
 		return pattern.test(valq12);
 	}
 }
@@ -158,7 +158,7 @@ $(document).ready(function() {
 	$('#f21').focusout(function() {
 		var q21 = $('#f21').val();
 		
-		if (($(this).val() < 1) || ($(this).val() > 300)) $(this).val($(this).val().substr(0, 0));
+		if ($(this).val() > 300) $(this).val($(this).val().substr(0, 0));
 
 		if (q21 != '') {
 			
@@ -181,17 +181,17 @@ $(document).ready(function() {
 
 function isValidQ21(valq21) {
 	if ($('#f21').val().length == 1) {
-		var pattern = new RegExp(/[1-9]/);
+		var pattern = new RegExp(/[0-9]/);
 		return pattern.test(valq21);
 	}
 
 	if ($('#f21').val().length == 2) {
-		var pattern = new RegExp(/[1-9][0-9]/);
+		var pattern = new RegExp(/[0-9][0-9]/);
 		return pattern.test(valq21);
 	}
 
 	if ($('#f21').val().length == 3) {
-		var pattern = new RegExp(/[1-9][0-9][1-9]/);
+		var pattern = new RegExp(/[0-9][0-9][0-9]/);
 		return pattern.test(valq21);
 	}
 }
@@ -200,7 +200,7 @@ $(document).ready(function() {
 	$('#f22').focusout(function() {
 		var q22 = $('#f22').val();
 		
-		if (($(this).val() < 1) || ($(this).val() > 300)) $(this).val($(this).val().substr(0, 0));
+		if ($(this).val() > 300) $(this).val($(this).val().substr(0, 0));
 
 		if (q22 != '') {
 			
@@ -223,17 +223,17 @@ $(document).ready(function() {
 
 function isValidQ22(valq22) {
 	if ($('#f22').val().length == 1) {
-		var pattern = new RegExp(/[1-9]/);
+		var pattern = new RegExp(/[0-9]/);
 		return pattern.test(valq22);
 	}
 
 	if ($('#f22').val().length == 2) {
-		var pattern = new RegExp(/[1-9][0-9]/);
+		var pattern = new RegExp(/[0-9][0-9]/);
 		return pattern.test(valq22);
 	}
 
 	if ($('#f22').val().length == 3) {
-		var pattern = new RegExp(/[1-9][0-9][1-9]/);
+		var pattern = new RegExp(/[0-9][0-9][0-9]/);
 		return pattern.test(valq22);
 	}
 }
@@ -242,7 +242,7 @@ $(document).ready(function() {
 	$('#f31').focusout(function() {
 		var q31 = $('#f31').val();
 		
-		if (($(this).val() < 1) || ($(this).val() > 300)) $(this).val($(this).val().substr(0, 0));
+		if ($(this).val() > 300) $(this).val($(this).val().substr(0, 0));
 
 		if (q31 != '') {
 			
@@ -265,17 +265,17 @@ $(document).ready(function() {
 
 function isValidQ31(valq31) {
 	if ($('#f31').val().length == 1) {
-		var pattern = new RegExp(/[1-9]/);
+		var pattern = new RegExp(/[0-9]/);
 		return pattern.test(valq31);
 	}
 
 	if ($('#f31').val().length == 2) {
-		var pattern = new RegExp(/[1-9][0-9]/);
+		var pattern = new RegExp(/[0-9][0-9]/);
 		return pattern.test(valq31);
 	}
 
 	if ($('#f31').val().length == 3) {
-		var pattern = new RegExp(/[1-9][0-9][1-9]/);
+		var pattern = new RegExp(/[0-9][0-9][0-9]/);
 		return pattern.test(valq31);
 	}
 }
@@ -284,7 +284,7 @@ $(document).ready(function() {
 	$('#f32').focusout(function() {
 		var q32 = $('#f32').val();
 		
-		if (($(this).val() < 1) || ($(this).val() > 300)) $(this).val($(this).val().substr(0, 0));
+		if ($(this).val() > 300) $(this).val($(this).val().substr(0, 0));
 
 		if (q32 != '') {
 			
@@ -307,17 +307,17 @@ $(document).ready(function() {
 
 function isValidQ32(valq32) {
 	if ($('#f32').val().length == 1) {
-		var pattern = new RegExp(/[1-9]/);
+		var pattern = new RegExp(/[0-9]/);
 		return pattern.test(valq32);
 	}
 
 	if ($('#f32').val().length == 2) {
-		var pattern = new RegExp(/[1-9][0-9]/);
+		var pattern = new RegExp(/[0-9][0-9]/);
 		return pattern.test(valq32);
 	}
 
 	if ($('#f32').val().length == 3) {
-		var pattern = new RegExp(/[1-9][0-9][1-9]/);
+		var pattern = new RegExp(/[0-9][0-9][0-9]/);
 		return pattern.test(valq32);
 	}
 }
@@ -326,7 +326,7 @@ $(document).ready(function() {
 	$('#f41').focusout(function() {
 		var q41 = $('#f41').val();
 		
-		if (($(this).val() < 1) || ($(this).val() > 300)) $(this).val($(this).val().substr(0, 0));
+		if ($(this).val() > 300) $(this).val($(this).val().substr(0, 0));
 
 		if (q41 != '') {
 			
@@ -349,17 +349,17 @@ $(document).ready(function() {
 
 function isValidQ41(valq41) {
 	if ($('#f41').val().length == 1) {
-		var pattern = new RegExp(/[1-9]/);
+		var pattern = new RegExp(/[0-9]/);
 		return pattern.test(valq41);
 	}
 
 	if ($('#f41').val().length == 2) {
-		var pattern = new RegExp(/[1-9][0-9]/);
+		var pattern = new RegExp(/[0-9][0-9]/);
 		return pattern.test(valq41);
 	}
 
 	if ($('#f41').val().length == 3) {
-		var pattern = new RegExp(/[1-9][0-9][1-9]/);
+		var pattern = new RegExp(/[0-9][0-9][0-9]/);
 		return pattern.test(valq41);
 	}
 }
@@ -368,7 +368,7 @@ $(document).ready(function() {
 	$('#f42').focusout(function() {
 		var q42 = $('#f42').val();
 		
-		if (($(this).val() < 1) || ($(this).val() > 300)) $(this).val($(this).val().substr(0, 0));
+		if ($(this).val() > 300) $(this).val($(this).val().substr(0, 0));
 
 		if (q42 != '') {
 			
@@ -391,17 +391,17 @@ $(document).ready(function() {
 
 function isValidQ42(valq42) {
 	if ($('#f42').val().length == 1) {
-		var pattern = new RegExp(/[1-9]/);
+		var pattern = new RegExp(/[0-9]/);
 		return pattern.test(valq42);
 	}
 
 	if ($('#f42').val().length == 2) {
-		var pattern = new RegExp(/[1-9][0-9]/);
+		var pattern = new RegExp(/[0-9][0-9]/);
 		return pattern.test(valq42);
 	}
 
 	if ($('#f42').val().length == 3) {
-		var pattern = new RegExp(/[1-9][0-9][1-9]/);
+		var pattern = new RegExp(/[0-9][0-9][0-9]/);
 		return pattern.test(valq42);
 	}
 }
@@ -410,7 +410,7 @@ $(document).ready(function() {
 	$('#f51').focusout(function() {
 		var q51 = $('#f51').val();
 		
-		if (($(this).val() < 1) || ($(this).val() > 300)) $(this).val($(this).val().substr(0, 0));
+		if ($(this).val() > 300) $(this).val($(this).val().substr(0, 0));
 
 		if (q51 != '') {
 			
@@ -433,17 +433,17 @@ $(document).ready(function() {
 
 function isValidQ51(valq51) {
 	if ($('#f51').val().length == 1) {
-		var pattern = new RegExp(/[1-9]/);
+		var pattern = new RegExp(/[0-9]/);
 		return pattern.test(valq51);
 	}
 
 	if ($('#f51').val().length == 2) {
-		var pattern = new RegExp(/[1-9][0-9]/);
+		var pattern = new RegExp(/[0-9][0-9]/);
 		return pattern.test(valq51);
 	}
 
 	if ($('#f51').val().length == 3) {
-		var pattern = new RegExp(/[1-9][0-9][1-9]/);
+		var pattern = new RegExp(/[0-9][0-9][0-9]/);
 		return pattern.test(valq51);
 	}
 }
@@ -452,7 +452,7 @@ $(document).ready(function() {
 	$('#f52').focusout(function() {
 		var q52 = $('#f52').val();
 		
-		if (($(this).val() < 1) || ($(this).val() > 300)) $(this).val($(this).val().substr(0, 0));
+		if ($(this).val() > 300) $(this).val($(this).val().substr(0, 0));
 
 		if (q52 != '') {
 			
@@ -475,17 +475,17 @@ $(document).ready(function() {
 
 function isValidQ52(valq52) {
 	if ($('#f52').val().length == 1) {
-		var pattern = new RegExp(/[1-9]/);
+		var pattern = new RegExp(/[0-9]/);
 		return pattern.test(valq52);
 	}
 
 	if ($('#f52').val().length == 2) {
-		var pattern = new RegExp(/[1-9][0-9]/);
+		var pattern = new RegExp(/[0-9][0-9]/);
 		return pattern.test(valq52);
 	}
 
 	if ($('#f52').val().length == 3) {
-		var pattern = new RegExp(/[1-9][0-9][1-9]/);
+		var pattern = new RegExp(/[0-9][0-9][0-9]/);
 		return pattern.test(valq52);
 	}
 }
@@ -494,7 +494,7 @@ $(document).ready(function() {
 	$('#f61').focusout(function() {
 		var q61 = $('#f61').val();
 		
-		if (($(this).val() < 1) || ($(this).val() > 300)) $(this).val($(this).val().substr(0, 0));
+		if ($(this).val() > 300) $(this).val($(this).val().substr(0, 0));
 
 		if (q61 != '') {
 			
@@ -517,17 +517,17 @@ $(document).ready(function() {
 
 function isValidQ61(valq61) {
 	if ($('#f61').val().length == 1) {
-		var pattern = new RegExp(/[1-9]/);
+		var pattern = new RegExp(/[0-9]/);
 		return pattern.test(valq61);
 	}
 
 	if ($('#f61').val().length == 2) {
-		var pattern = new RegExp(/[1-9][0-9]/);
+		var pattern = new RegExp(/[0-9][0-9]/);
 		return pattern.test(valq61);
 	}
 
 	if ($('#f61').val().length == 3) {
-		var pattern = new RegExp(/[1-9][0-9][1-9]/);
+		var pattern = new RegExp(/[0-9][0-9][0-9]/);
 		return pattern.test(valq61);
 	}
 }
@@ -536,7 +536,7 @@ $(document).ready(function() {
 	$('#f62').focusout(function() {
 		var q62 = $('#f62').val();
 		
-		if (($(this).val() < 1) || ($(this).val() > 300)) $(this).val($(this).val().substr(0, 0));
+		if ($(this).val() > 300) $(this).val($(this).val().substr(0, 0));
 
 		if (q62 != '') {
 			
@@ -559,18 +559,102 @@ $(document).ready(function() {
 
 function isValidQ62(valq62) {
 	if ($('#f62').val().length == 1) {
-		var pattern = new RegExp(/[1-9]/);
+		var pattern = new RegExp(/[0-9]/);
 		return pattern.test(valq62);
 	}
 
 	if ($('#f62').val().length == 2) {
-		var pattern = new RegExp(/[1-9][0-9]/);
+		var pattern = new RegExp(/[0-9][0-9]/);
 		return pattern.test(valq62);
 	}
 
 	if ($('#f62').val().length == 3) {
-		var pattern = new RegExp(/[1-9][0-9][1-9]/);
+		var pattern = new RegExp(/[0-9][0-9][0-9]/);
 		return pattern.test(valq62);
+	}
+}
+
+$(document).ready(function() { 
+	$('#f61a').focusout(function() {
+		var q61a = $('#f61a').val();
+		
+		if ($(this).val() > 300) $(this).val($(this).val().substr(0, 0));
+
+		if (q61a != '') {
+			
+			if (isValidQ61a(q61a)) $('#f61a').css('border', '1px solid #0dd01a');
+			else {
+				$('#f61a').css('border', '1px solid #f00');
+				$(this).val($(this).val().substr(0, 0));
+			}
+		}
+		
+		$('#f61a').keyup(function() {
+			$(this).val($(this).val().trim());
+		});
+	});
+	
+	$('#f61a').keyup(function() {
+		if ($(this).val().length > 3) $(this).val($(this).val().substr(0, 3));          
+	});
+});
+
+function isValidQ61a(valq61a) {
+	if ($('#f61a').val().length == 1) {
+		var pattern = new RegExp(/[0-9]/);
+		return pattern.test(valq61a);
+	}
+
+	if ($('#f61a').val().length == 2) {
+		var pattern = new RegExp(/[0-9][0-9]/);
+		return pattern.test(valq61a);
+	}
+
+	if ($('#f61a').val().length == 3) {
+		var pattern = new RegExp(/[0-9][0-9][0-9]/);
+		return pattern.test(valq61a);
+	}
+}
+
+$(document).ready(function() { 
+	$('#f62a').focusout(function() {
+		var q62a = $('#f62a').val();
+		
+		if ($(this).val() > 300) $(this).val($(this).val().substr(0, 0));
+
+		if (q62a != '') {
+			
+			if (isValidQ62a(q62a)) $('#f62a').css('border', '1px solid #0dd01a');
+			else {
+				$('#f62a').css('border', '1px solid #f00');
+				$(this).val($(this).val().substr(0, 0));
+			}
+		}
+		
+		$('#f62a').keyup(function() {
+			$(this).val($(this).val().trim());
+		});
+	});
+	
+	$('#f62a').keyup(function() {
+		if ($(this).val().length > 3) $(this).val($(this).val().substr(0, 3));          
+	});
+});
+
+function isValidQ62a(valq62a) {
+	if ($('#f62a').val().length == 1) {
+		var pattern = new RegExp(/[0-9]/);
+		return pattern.test(valq62a);
+	}
+
+	if ($('#f62a').val().length == 2) {
+		var pattern = new RegExp(/[0-9][0-9]/);
+		return pattern.test(valq62a);
+	}
+
+	if ($('#f62a').val().length == 3) {
+		var pattern = new RegExp(/[0-9][0-9][0-9]/);
+		return pattern.test(valq62a);
 	}
 }
 
@@ -578,7 +662,7 @@ $(document).ready(function() {
 	$('#f71').focusout(function() {
 		var q71 = $('#f71').val();
 		
-		if (($(this).val() < 1) || ($(this).val() > 300)) $(this).val($(this).val().substr(0, 0));
+		if ($(this).val() > 300) $(this).val($(this).val().substr(0, 0));
 
 		if (q71 != '') {
 			
@@ -601,17 +685,17 @@ $(document).ready(function() {
 
 function isValidQ71(valq71) {
 	if ($('#f71').val().length == 1) {
-		var pattern = new RegExp(/[1-9]/);
+		var pattern = new RegExp(/[0-9]/);
 		return pattern.test(valq71);
 	}
 
 	if ($('#f71').val().length == 2) {
-		var pattern = new RegExp(/[1-9][0-9]/);
+		var pattern = new RegExp(/[0-9][0-9]/);
 		return pattern.test(valq71);
 	}
 
 	if ($('#f71').val().length == 3) {
-		var pattern = new RegExp(/[1-9][0-9][1-9]/);
+		var pattern = new RegExp(/[0-9][0-9][0-9]/);
 		return pattern.test(valq71);
 	}
 }
@@ -620,7 +704,7 @@ $(document).ready(function() {
 	$('#f72').focusout(function() {
 		var q72 = $('#f72').val();
 		
-		if (($(this).val() < 1) || ($(this).val() > 300)) $(this).val($(this).val().substr(0, 0));
+		if ($(this).val() > 300) $(this).val($(this).val().substr(0, 0));
 
 		if (q72 != '') {
 			
@@ -643,17 +727,17 @@ $(document).ready(function() {
 
 function isValidQ72(valq72) {
 	if ($('#f72').val().length == 1) {
-		var pattern = new RegExp(/[1-9]/);
+		var pattern = new RegExp(/[0-9]/);
 		return pattern.test(valq72);
 	}
 
 	if ($('#f72').val().length == 2) {
-		var pattern = new RegExp(/[1-9][0-9]/);
+		var pattern = new RegExp(/[0-9][0-9]/);
 		return pattern.test(valq72);
 	}
 
 	if ($('#f72').val().length == 3) {
-		var pattern = new RegExp(/[1-9][0-9][1-9]/);
+		var pattern = new RegExp(/[0-9][0-9][0-9]/);
 		return pattern.test(valq72);
 	}
 }
@@ -662,7 +746,7 @@ $(document).ready(function() {
 	$('#f81').focusout(function() {
 		var q81 = $('#f81').val();
 		
-		if (($(this).val() < 1) || ($(this).val() > 300)) $(this).val($(this).val().substr(0, 0));
+		if ($(this).val() > 300) $(this).val($(this).val().substr(0, 0));
 
 		if (q81 != '') {
 			
@@ -685,17 +769,17 @@ $(document).ready(function() {
 
 function isValidQ81(valq81) {
 	if ($('#f81').val().length == 1) {
-		var pattern = new RegExp(/[1-9]/);
+		var pattern = new RegExp(/[0-9]/);
 		return pattern.test(valq81);
 	}
 
 	if ($('#f81').val().length == 2) {
-		var pattern = new RegExp(/[1-9][0-9]/);
+		var pattern = new RegExp(/[0-9][0-9]/);
 		return pattern.test(valq81);
 	}
 
 	if ($('#f81').val().length == 3) {
-		var pattern = new RegExp(/[1-9][0-9][1-9]/);
+		var pattern = new RegExp(/[0-9][0-9][0-9]/);
 		return pattern.test(valq81);
 	}
 }
@@ -704,7 +788,7 @@ $(document).ready(function() {
 	$('#f82').focusout(function() {
 		var q82 = $('#f82').val();
 		
-		if (($(this).val() < 1) || ($(this).val() > 300)) $(this).val($(this).val().substr(0, 0));
+		if ($(this).val() > 300) $(this).val($(this).val().substr(0, 0));
 
 		if (q82 != '') {
 			
@@ -727,17 +811,17 @@ $(document).ready(function() {
 
 function isValidQ82(valq82) {
 	if ($('#f82').val().length == 1) {
-		var pattern = new RegExp(/[1-9]/);
+		var pattern = new RegExp(/[0-9]/);
 		return pattern.test(valq82);
 	}
 
 	if ($('#f82').val().length == 2) {
-		var pattern = new RegExp(/[1-9][0-9]/);
+		var pattern = new RegExp(/[0-9][0-9]/);
 		return pattern.test(valq82);
 	}
 
 	if ($('#f82').val().length == 3) {
-		var pattern = new RegExp(/[1-9][0-9][1-9]/);
+		var pattern = new RegExp(/[0-9][0-9][0-9]/);
 		return pattern.test(valq82);
 	}
 }
@@ -746,7 +830,7 @@ $(document).ready(function() {
 	$('#f91').focusout(function() {
 		var q91 = $('#f91').val();
 		
-		if (($(this).val() < 1) || ($(this).val() > 300)) $(this).val($(this).val().substr(0, 0));
+		if ($(this).val() > 300) $(this).val($(this).val().substr(0, 0));
 
 		if (q91 != '') {
 			
@@ -769,17 +853,17 @@ $(document).ready(function() {
 
 function isValidQ91(valq91) {
 	if ($('#f91').val().length == 1) {
-		var pattern = new RegExp(/[1-9]/);
+		var pattern = new RegExp(/[0-9]/);
 		return pattern.test(valq91);
 	}
 
 	if ($('#f91').val().length == 2) {
-		var pattern = new RegExp(/[1-9][0-9]/);
+		var pattern = new RegExp(/[0-9][0-9]/);
 		return pattern.test(valq91);
 	}
 
 	if ($('#f91').val().length == 3) {
-		var pattern = new RegExp(/[1-9][0-9][1-9]/);
+		var pattern = new RegExp(/[0-9][0-9][0-9]/);
 		return pattern.test(valq91);
 	}
 }
@@ -788,7 +872,7 @@ $(document).ready(function() {
 	$('#f92').focusout(function() {
 		var q92 = $('#f92').val();
 		
-		if (($(this).val() < 1) || ($(this).val() > 300)) $(this).val($(this).val().substr(0, 0));
+		if ($(this).val() > 300) $(this).val($(this).val().substr(0, 0));
 
 		if (q92 != '') {
 			
@@ -811,17 +895,17 @@ $(document).ready(function() {
 
 function isValidQ92(valq92) {
 	if ($('#f92').val().length == 1) {
-		var pattern = new RegExp(/[1-9]/);
+		var pattern = new RegExp(/[0-9]/);
 		return pattern.test(valq92);
 	}
 
 	if ($('#f92').val().length == 2) {
-		var pattern = new RegExp(/[1-9][0-9]/);
+		var pattern = new RegExp(/[0-9][0-9]/);
 		return pattern.test(valq92);
 	}
 
 	if ($('#f92').val().length == 3) {
-		var pattern = new RegExp(/[1-9][0-9][1-9]/);
+		var pattern = new RegExp(/[0-9][0-9][0-9]/);
 		return pattern.test(valq92);
 	}
 }
@@ -830,7 +914,7 @@ $(document).ready(function() {
 	$('#f101').focusout(function() {
 		var q101 = $('#f101').val();
 		
-		if (($(this).val() < 1) || ($(this).val() > 300)) $(this).val($(this).val().substr(0, 0));
+		if ($(this).val() > 300) $(this).val($(this).val().substr(0, 0));
 
 		if (q101 != '') {
 			
@@ -853,17 +937,17 @@ $(document).ready(function() {
 
 function isValidQ101(valq101) {
 	if ($('#f101').val().length == 1) {
-		var pattern = new RegExp(/[1-9]/);
+		var pattern = new RegExp(/[0-9]/);
 		return pattern.test(valq101);
 	}
 
 	if ($('#f101').val().length == 2) {
-		var pattern = new RegExp(/[1-9][0-9]/);
+		var pattern = new RegExp(/[0-9][0-9]/);
 		return pattern.test(valq101);
 	}
 
 	if ($('#f101').val().length == 3) {
-		var pattern = new RegExp(/[1-9][0-9][1-9]/);
+		var pattern = new RegExp(/[0-9][0-9][0-9]/);
 		return pattern.test(valq101);
 	}
 }
@@ -872,7 +956,7 @@ $(document).ready(function() {
 	$('#f102').focusout(function() {
 		var q102 = $('#f102').val();
 		
-		if (($(this).val() < 1) || ($(this).val() > 300)) $(this).val($(this).val().substr(0, 0));
+		if ($(this).val() > 300) $(this).val($(this).val().substr(0, 0));
 
 		if (q102 != '') {
 			
@@ -895,17 +979,17 @@ $(document).ready(function() {
 
 function isValidQ102(valq102) {
 	if ($('#f102').val().length == 1) {
-		var pattern = new RegExp(/[1-9]/);
+		var pattern = new RegExp(/[0-9]/);
 		return pattern.test(valq102);
 	}
 
 	if ($('#f102').val().length == 2) {
-		var pattern = new RegExp(/[1-9][0-9]/);
+		var pattern = new RegExp(/[0-9][0-9]/);
 		return pattern.test(valq102);
 	}
 
 	if ($('#f102').val().length == 3) {
-		var pattern = new RegExp(/[1-9][0-9][1-9]/);
+		var pattern = new RegExp(/[0-9][0-9][0-9]/);
 		return pattern.test(valq102);
 	}
 }
@@ -914,7 +998,7 @@ $(document).ready(function() {
 	$('#f111').focusout(function() {
 		var q111 = $('#f111').val();
 		
-		if (($(this).val() < 1) || ($(this).val() > 300)) $(this).val($(this).val().substr(0, 0));
+		if ($(this).val() > 300) $(this).val($(this).val().substr(0, 0));
 
 		if (q111 != '') {
 			
@@ -937,17 +1021,17 @@ $(document).ready(function() {
 
 function isValidQ111(valq111) {
 	if ($('#f111').val().length == 1) {
-		var pattern = new RegExp(/[1-9]/);
+		var pattern = new RegExp(/[0-9]/);
 		return pattern.test(valq111);
 	}
 
 	if ($('#f111').val().length == 2) {
-		var pattern = new RegExp(/[1-9][0-9]/);
+		var pattern = new RegExp(/[0-9][0-9]/);
 		return pattern.test(valq111);
 	}
 
 	if ($('#f111').val().length == 3) {
-		var pattern = new RegExp(/[1-9][0-9][1-9]/);
+		var pattern = new RegExp(/[0-9][0-9][0-9]/);
 		return pattern.test(valq111);
 	}
 }
@@ -956,7 +1040,7 @@ $(document).ready(function() {
 	$('#f112').focusout(function() {
 		var q112 = $('#f112').val();
 		
-		if (($(this).val() < 1) || ($(this).val() > 300)) $(this).val($(this).val().substr(0, 0));
+		if ($(this).val() > 300) $(this).val($(this).val().substr(0, 0));
 
 		if (q112 != '') {
 			
@@ -979,17 +1063,17 @@ $(document).ready(function() {
 
 function isValidQ112(valq112) {
 	if ($('#f112').val().length == 1) {
-		var pattern = new RegExp(/[1-9]/);
+		var pattern = new RegExp(/[0-9]/);
 		return pattern.test(valq112);
 	}
 
 	if ($('#f112').val().length == 2) {
-		var pattern = new RegExp(/[1-9][0-9]/);
+		var pattern = new RegExp(/[0-9][0-9]/);
 		return pattern.test(valq112);
 	}
 
 	if ($('#f112').val().length == 3) {
-		var pattern = new RegExp(/[1-9][0-9][1-9]/);
+		var pattern = new RegExp(/[0-9][0-9][0-9]/);
 		return pattern.test(valq112);
 	}
 }
@@ -998,7 +1082,7 @@ $(document).ready(function() {
 	$('#f121').focusout(function() {
 		var q121 = $('#f121').val();
 		
-		if (($(this).val() < 1) || ($(this).val() > 300)) $(this).val($(this).val().substr(0, 0));
+		if ($(this).val() > 300) $(this).val($(this).val().substr(0, 0));
 
 		if (q121 != '') {
 			
@@ -1021,17 +1105,17 @@ $(document).ready(function() {
 
 function isValidQ121(valq121) {
 	if ($('#f121').val().length == 1) {
-		var pattern = new RegExp(/[1-9]/);
+		var pattern = new RegExp(/[0-9]/);
 		return pattern.test(valq121);
 	}
 
 	if ($('#f121').val().length == 2) {
-		var pattern = new RegExp(/[1-9][0-9]/);
+		var pattern = new RegExp(/[0-9][0-9]/);
 		return pattern.test(valq121);
 	}
 
 	if ($('#f121').val().length == 3) {
-		var pattern = new RegExp(/[1-9][0-9][1-9]/);
+		var pattern = new RegExp(/[0-9][0-9][0-9]/);
 		return pattern.test(valq121);
 	}
 }
@@ -1040,7 +1124,7 @@ $(document).ready(function() {
 	$('#f122').focusout(function() {
 		var q122 = $('#f122').val();
 		
-		if (($(this).val() < 1) || ($(this).val() > 300)) $(this).val($(this).val().substr(0, 0));
+		if ($(this).val() > 300) $(this).val($(this).val().substr(0, 0));
 
 		if (q122 != '') {
 			
@@ -1063,17 +1147,17 @@ $(document).ready(function() {
 
 function isValidQ122(valq122) {
 	if ($('#f122').val().length == 1) {
-		var pattern = new RegExp(/[1-9]/);
+		var pattern = new RegExp(/[0-9]/);
 		return pattern.test(valq122);
 	}
 
 	if ($('#f122').val().length == 2) {
-		var pattern = new RegExp(/[1-9][0-9]/);
+		var pattern = new RegExp(/[0-9][0-9]/);
 		return pattern.test(valq122);
 	}
 
 	if ($('#f122').val().length == 3) {
-		var pattern = new RegExp(/[1-9][0-9][1-9]/);
+		var pattern = new RegExp(/[0-9][0-9][0-9]/);
 		return pattern.test(valq122);
 	}
 }
@@ -1082,7 +1166,7 @@ $(document).ready(function() {
 	$('#f131').focusout(function() {
 		var q131 = $('#f131').val();
 		
-		if (($(this).val() < 1) || ($(this).val() > 300)) $(this).val($(this).val().substr(0, 0));
+		if ($(this).val() > 300) $(this).val($(this).val().substr(0, 0));
 
 		if (q131 != '') {
 			
@@ -1105,17 +1189,17 @@ $(document).ready(function() {
 
 function isValidQ131(valq131) {
 	if ($('#f131').val().length == 1) {
-		var pattern = new RegExp(/[1-9]/);
+		var pattern = new RegExp(/[0-9]/);
 		return pattern.test(valq131);
 	}
 
 	if ($('#f131').val().length == 2) {
-		var pattern = new RegExp(/[1-9][0-9]/);
+		var pattern = new RegExp(/[0-9][0-9]/);
 		return pattern.test(valq131);
 	}
 
 	if ($('#f131').val().length == 3) {
-		var pattern = new RegExp(/[1-9][0-9][1-9]/);
+		var pattern = new RegExp(/[0-9][0-9][0-9]/);
 		return pattern.test(valq131);
 	}
 }
@@ -1124,7 +1208,7 @@ $(document).ready(function() {
 	$('#f132').focusout(function() {
 		var q132 = $('#f132').val();
 		
-		if (($(this).val() < 1) || ($(this).val() > 300)) $(this).val($(this).val().substr(0, 0));
+		if ($(this).val() > 300) $(this).val($(this).val().substr(0, 0));
 
 		if (q132 != '') {
 			
@@ -1147,17 +1231,17 @@ $(document).ready(function() {
 
 function isValidQ132(valq132) {
 	if ($('#f132').val().length == 1) {
-		var pattern = new RegExp(/[1-9]/);
+		var pattern = new RegExp(/[0-9]/);
 		return pattern.test(valq132);
 	}
 
 	if ($('#f132').val().length == 2) {
-		var pattern = new RegExp(/[1-9][0-9]/);
+		var pattern = new RegExp(/[0-9][0-9]/);
 		return pattern.test(valq132);
 	}
 
 	if ($('#f132').val().length == 3) {
-		var pattern = new RegExp(/[1-9][0-9][1-9]/);
+		var pattern = new RegExp(/[0-9][0-9][0-9]/);
 		return pattern.test(valq132);
 	}
 }
@@ -1166,7 +1250,7 @@ $(document).ready(function() {
 	$('#f141').focusout(function() {
 		var q141 = $('#f141').val();
 		
-		if (($(this).val() < 1) || ($(this).val() > 300)) $(this).val($(this).val().substr(0, 0));
+		if ($(this).val() > 300) $(this).val($(this).val().substr(0, 0));
 
 		if (q141 != '') {
 			
@@ -1189,17 +1273,17 @@ $(document).ready(function() {
 
 function isValidQ141(valq141) {
 	if ($('#f141').val().length == 1) {
-		var pattern = new RegExp(/[1-9]/);
+		var pattern = new RegExp(/[0-9]/);
 		return pattern.test(valq141);
 	}
 
 	if ($('#f141').val().length == 2) {
-		var pattern = new RegExp(/[1-9][0-9]/);
+		var pattern = new RegExp(/[0-9][0-9]/);
 		return pattern.test(valq141);
 	}
 
 	if ($('#f141').val().length == 3) {
-		var pattern = new RegExp(/[1-9][0-9][1-9]/);
+		var pattern = new RegExp(/[0-9][0-9][0-9]/);
 		return pattern.test(valq141);
 	}
 }
@@ -1208,7 +1292,7 @@ $(document).ready(function() {
 	$('#f142').focusout(function() {
 		var q142 = $('#f142').val();
 		
-		if (($(this).val() < 1) || ($(this).val() > 300)) $(this).val($(this).val().substr(0, 0));
+		if ($(this).val() > 300) $(this).val($(this).val().substr(0, 0));
 
 		if (q142 != '') {
 			
@@ -1231,17 +1315,17 @@ $(document).ready(function() {
 
 function isValidQ142(valq142) {
 	if ($('#f142').val().length == 1) {
-		var pattern = new RegExp(/[1-9]/);
+		var pattern = new RegExp(/[0-9]/);
 		return pattern.test(valq142);
 	}
 
 	if ($('#f142').val().length == 2) {
-		var pattern = new RegExp(/[1-9][0-9]/);
+		var pattern = new RegExp(/[0-9][0-9]/);
 		return pattern.test(valq142);
 	}
 
 	if ($('#f142').val().length == 3) {
-		var pattern = new RegExp(/[1-9][0-9][1-9]/);
+		var pattern = new RegExp(/[0-9][0-9][0-9]/);
 		return pattern.test(valq142);
 	}
 }
@@ -1250,7 +1334,7 @@ $(document).ready(function() {
 	$('#f151').focusout(function() {
 		var q151 = $('#f151').val();
 		
-		if (($(this).val() < 1) || ($(this).val() > 300)) $(this).val($(this).val().substr(0, 0));
+		if ($(this).val() > 300) $(this).val($(this).val().substr(0, 0));
 
 		if (q151 != '') {
 			
@@ -1273,17 +1357,17 @@ $(document).ready(function() {
 
 function isValidQ151(valq151) {
 	if ($('#f151').val().length == 1) {
-		var pattern = new RegExp(/[1-9]/);
+		var pattern = new RegExp(/[0-9]/);
 		return pattern.test(valq151);
 	}
 
 	if ($('#f151').val().length == 2) {
-		var pattern = new RegExp(/[1-9][0-9]/);
+		var pattern = new RegExp(/[0-9][0-9]/);
 		return pattern.test(valq151);
 	}
 
 	if ($('#f151').val().length == 3) {
-		var pattern = new RegExp(/[1-9][0-9][1-9]/);
+		var pattern = new RegExp(/[0-9][0-9][0-9]/);
 		return pattern.test(valq151);
 	}
 }
@@ -1292,7 +1376,7 @@ $(document).ready(function() {
 	$('#f152').focusout(function() {
 		var q152 = $('#f152').val();
 		
-		if (($(this).val() < 1) || ($(this).val() > 300)) $(this).val($(this).val().substr(0, 0));
+		if ($(this).val() > 300) $(this).val($(this).val().substr(0, 0));
 
 		if (q152 != '') {
 			
@@ -1315,17 +1399,17 @@ $(document).ready(function() {
 
 function isValidQ152(valq152) {
 	if ($('#f152').val().length == 1) {
-		var pattern = new RegExp(/[1-9]/);
+		var pattern = new RegExp(/[0-9]/);
 		return pattern.test(valq152);
 	}
 
 	if ($('#f152').val().length == 2) {
-		var pattern = new RegExp(/[1-9][0-9]/);
+		var pattern = new RegExp(/[0-9][0-9]/);
 		return pattern.test(valq152);
 	}
 
 	if ($('#f152').val().length == 3) {
-		var pattern = new RegExp(/[1-9][0-9][1-9]/);
+		var pattern = new RegExp(/[0-9][0-9][0-9]/);
 		return pattern.test(valq152);
 	}
 }
@@ -1334,7 +1418,7 @@ $(document).ready(function() {
 	$('#f161').focusout(function() {
 		var q161 = $('#f161').val();
 		
-		if (($(this).val() < 1) || ($(this).val() > 300)) $(this).val($(this).val().substr(0, 0));
+		if ($(this).val() > 300) $(this).val($(this).val().substr(0, 0));
 
 		if (q161 != '') {
 			
@@ -1357,17 +1441,17 @@ $(document).ready(function() {
 
 function isValidQ161(valq161) {
 	if ($('#f161').val().length == 1) {
-		var pattern = new RegExp(/[1-9]/);
+		var pattern = new RegExp(/[0-9]/);
 		return pattern.test(valq161);
 	}
 
 	if ($('#f161').val().length == 2) {
-		var pattern = new RegExp(/[1-9][0-9]/);
+		var pattern = new RegExp(/[0-9][0-9]/);
 		return pattern.test(valq161);
 	}
 
 	if ($('#f161').val().length == 3) {
-		var pattern = new RegExp(/[1-9][0-9][1-9]/);
+		var pattern = new RegExp(/[0-9][0-9][0-9]/);
 		return pattern.test(valq161);
 	}
 }
@@ -1376,7 +1460,7 @@ $(document).ready(function() {
 	$('#f162').focusout(function() {
 		var q162 = $('#f162').val();
 		
-		if (($(this).val() < 1) || ($(this).val() > 300)) $(this).val($(this).val().substr(0, 0));
+		if ($(this).val() > 300) $(this).val($(this).val().substr(0, 0));
 
 		if (q162 != '') {
 			
@@ -1399,17 +1483,17 @@ $(document).ready(function() {
 
 function isValidQ162(valq162) {
 	if ($('#f162').val().length == 1) {
-		var pattern = new RegExp(/[1-9]/);
+		var pattern = new RegExp(/[0-9]/);
 		return pattern.test(valq162);
 	}
 
 	if ($('#f162').val().length == 2) {
-		var pattern = new RegExp(/[1-9][0-9]/);
+		var pattern = new RegExp(/[0-9][0-9]/);
 		return pattern.test(valq162);
 	}
 
 	if ($('#f162').val().length == 3) {
-		var pattern = new RegExp(/[1-9][0-9][1-9]/);
+		var pattern = new RegExp(/[0-9][0-9][0-9]/);
 		return pattern.test(valq162);
 	}
 }

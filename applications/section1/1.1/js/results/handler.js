@@ -49,11 +49,11 @@ $(document).ready(function() {
 	}
 
 	switch (true) {
-		case (lag <= -9.0) : var category = 1, status = 'Очень хорошее', arate = 'Резко замедленный'; break;
-		case (lag >= -8.9 && lag <= -3.0) : var category = 2, status = 'Хорошее', arate = 'Замедленный'; break;
-		case (lag >= -2.9 && lag <= 2.9) : var category = 3, status = 'Среднее', arate = 'Нормальный'; break;
-		case (lag >= 3.0 && lag <= 8.9) : var category = 4, status = 'Плохое', arate = 'Ускоренный'; break;
-		case (lag >= 9.0) : var category = 5, status = 'Очень плохое', arate = 'Резко ускоренный'; break;
+		case (lag <= -9.0) : var category = 1, status = '(Очень хорошее)', arate = '(Резко замедленный)'; break;
+		case (lag >= -8.9 && lag <= -3.0) : var category = 2, status = '(Хорошее)', arate = '(Замедленный)'; break;
+		case (lag >= -2.9 && lag <= 2.9) : var category = 3, status = '(Среднее)', arate = '(Нормальный)'; break;
+		case (lag >= 3.0 && lag <= 8.9) : var category = 4, status = '(Плохое)', arate = '(Ускоренный)'; break;
+		case (lag >= 9.0) : var category = 5, status = '(Очень плохое)', arate = '(Резко ускоренный)'; break;
 	}
 
 	$('#sname').append(sname);
@@ -62,12 +62,13 @@ $(document).ready(function() {
 	$('#fac').append(fac);
 	$('#date').append(date);
 	$('#gender').append(gender);
-	$('#age').append(age+' лет');
-	$('#ibage').append(bage+' лет');
-	$('#pbage').append(dbage+' лет');
+	$('#static').append(static + ' сек');
+	$('#age').append(age + ' лет');
+	$('#ibage').append(bage + ' лет');
+	$('#pbage').append(dbage + ' лет');
 	$('#faclass').append(category);
-	$('#arate').append(arate);
-	$('#outrun').append(lag+' лет');
-	$('#status').append(status);
+	$('#arate').append(lag + ' ' + arate);
+	$('#outrun').append(lag + ' лет');
+	$('#status').append(lag + ' ' + status);
 	$('#index').append(index);
 });

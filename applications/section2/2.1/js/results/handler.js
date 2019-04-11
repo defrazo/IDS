@@ -29,7 +29,7 @@ $(document).ready(function() {
 	$('#gender').append(gender);
 	$('#fac').append(fac);
 	$('#age').append(age + ' лет');
-	$('#points').append(ac);
+	$('#points').append(ac + ' балл(ов)');
 	$('#status').append(status);
 	$('#group').append(group);
 });

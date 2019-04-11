@@ -34,6 +34,6 @@ $(document).ready(function() {
 	$('#arate').append(arate);
 	$('#grade').append(grade);
 	$('#group').append(group);
-	$('#index').append(index);
+	$('#index').append(index + ' усл. ед.');
 	$('#fac').append(fac);
 });

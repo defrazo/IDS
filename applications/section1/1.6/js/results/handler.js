@@ -37,17 +37,17 @@ $(document).ready(function() {
 	 + parseFloat(q21) + parseFloat(q22) + parseFloat(q23);
 
 	switch (true) {
-		case (sum <= 41) : var status = 'Четко выраженный вечерний тип'; break;
-		case (sum >= 42 && sum <= 58) : var status = 'Слабо выраженный вечерний тип'; break;
-		case (sum >= 59 && sum <= 76) : var status = 'Аритмичный тип'; break;
-		case (sum >= 77 && sum <= 91) : var status = 'Слабо выраженный утренний тип'; break;
-		case (sum >= 92) : var status = 'Четко выраженный утренний тип'; break;
+		case (sum <= 41) : var status = '(Четко выраженный вечерний тип)'; break;
+		case (sum >= 42 && sum <= 58) : var status = '(Слабо выраженный вечерний тип)'; break;
+		case (sum >= 59 && sum <= 76) : var status = '(Аритмичный тип)'; break;
+		case (sum >= 77 && sum <= 91) : var status = '(Слабо выраженный утренний тип)'; break;
+		case (sum >= 92) : var status = '(Четко выраженный утренний тип)'; break;
 	}
 
 	$('#sname').append(sname);
 	$('#fname').append(fname);
 	$('#mname').append(mname);
 	$('#date').append(date);
-	$('#status').append(status);
+	$('#status').append(sum + ' ' + status);
 	$('#fac').append(fac);
 });
